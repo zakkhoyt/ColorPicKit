@@ -14,7 +14,6 @@
 		C607EEE41DA96F1400A73F51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C607EEE21DA96F1400A73F51 /* LaunchScreen.storyboard */; };
 		C607EEEF1DA96F1400A73F51 /* ColorPicKitExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C607EEEE1DA96F1400A73F51 /* ColorPicKitExampleTests.swift */; };
 		C607EEFA1DA96F1400A73F51 /* ColorPicKitExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C607EEF91DA96F1400A73F51 /* ColorPicKitExampleUITests.swift */; };
-		C6D87FA91DA9F2E3004CB7E3 /* Links.md in Sources */ = {isa = PBXBuildFile; fileRef = C6D87F901DA9F2E3004CB7E3 /* Links.md */; };
 		C6D87FAA1DA9F2E3004CB7E3 /* CMYKSliderGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D87F921DA9F2E3004CB7E3 /* CMYKSliderGroup.swift */; };
 		C6D87FAB1DA9F2E3004CB7E3 /* GradientData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D87F931DA9F2E3004CB7E3 /* GradientData.swift */; };
 		C6D87FAC1DA9F2E3004CB7E3 /* GradientSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D87F941DA9F2E3004CB7E3 /* GradientSlider.swift */; };
@@ -548,7 +547,6 @@
 				C6D87FAF1DA9F2E3004CB7E3 /* HueSlider.swift in Sources */,
 				C6D87FF61DA9F50F004CB7E3 /* HSBWheelView.swift in Sources */,
 				C6D87FAA1DA9F2E3004CB7E3 /* CMYKSliderGroup.swift in Sources */,
-				C6D87FA91DA9F2E3004CB7E3 /* Links.md in Sources */,
 				C6D87FD21DA9F402004CB7E3 /* HSBWheelViewController.swift in Sources */,
 				C6D87FCA1DA9F3D4004CB7E3 /* RGBSliderGroupViewController.swift in Sources */,
 				C6D87FC81DA9F3CC004CB7E3 /* HueSliderViewController.swift in Sources */,

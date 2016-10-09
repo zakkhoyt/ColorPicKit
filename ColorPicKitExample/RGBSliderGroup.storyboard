@@ -17,12 +17,39 @@
                     <view key="view" contentMode="scaleToFill" id="QHp-4S-vas">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ufi-EU-Nlq" customClass="RGBSliderGroup" customModule="ColorPicKitExample" customModuleProvider="target">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="roundedCorners" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.047114620820000001" green="1" blue="0.065685705730000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="grayscaleSliderTouchDown:" destination="q77-8J-POf" eventType="touchDown" id="aCD-pi-Tm2"/>
+                                    <action selector="grayscaleSliderTouchUpInside:" destination="q77-8J-POf" eventType="touchUpInside" id="790-pT-YnB"/>
+                                    <action selector="grayscaleSliderValueChanged:" destination="q77-8J-POf" eventType="valueChanged" id="Jm1-at-a8v"/>
+                                </connections>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ufi-EU-Nlq" firstAttribute="centerY" secondItem="QHp-4S-vas" secondAttribute="centerY" id="2Gu-oS-KRc"/>
+                            <constraint firstAttribute="trailing" secondItem="ufi-EU-Nlq" secondAttribute="trailing" constant="20" id="gJr-Fz-DxM"/>
+                            <constraint firstItem="ufi-EU-Nlq" firstAttribute="leading" secondItem="QHp-4S-vas" secondAttribute="leading" constant="20" id="z83-Mr-Drq"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="rgbSliderGroup" destination="ufi-EU-Nlq" id="OqT-Ux-dqS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="09L-LI-G1X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="230" y="200"/>
+            <point key="canvasLocation" x="229.59999999999999" y="199.25037481259372"/>
         </scene>
     </scenes>
 </document>

@@ -97,29 +97,6 @@ import UIKit
         }
     }
     
-//    private var _color1: UIColor = .black
-//    @IBInspectable var color1: UIColor  {
-//        get {
-//            return _color1
-//        }
-//        set {
-//            _color1 = newValue
-//            gradientView.color1 = newValue
-//        }
-//    }
-//    
-//    private var _color2: UIColor = .white
-//    @IBInspectable var color2: UIColor {
-//        get {
-//            return _color2
-//        }
-//        set {
-//            _color2 = newValue
-//            gradientView.color2 = newValue
-//        }
-//    }
-    
-    
     private var hueView = HueView()
     
     

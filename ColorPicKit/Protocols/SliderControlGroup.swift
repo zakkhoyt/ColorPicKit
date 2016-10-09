@@ -7,3 +7,9 @@
 //
 
 import UIKit
+
+protocol SliderControlGroup: ColorControl {
+    
+    var sliders: [SliderControl] { set get }
+    
+}
