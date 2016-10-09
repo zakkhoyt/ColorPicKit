@@ -10,26 +10,45 @@ import UIKit
 
 class HSBWheelBrightnessViewController: BaseViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBOutlet weak var hsbWheel: HSBWheel!
+    @IBOutlet weak var brightnessSlider: GradientSlider!
+    
+    
+    // MARK: colorWheel actions
+    @IBAction func colorWheelValueChanged(_ sender: HSBWheel) {
+        updateBackgroundColor()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func colorWheelTouchDown(_ sender: HSBWheel) {
+        updateBackgroundColor()
     }
-    */
-
+    
+    @IBAction func colorWheelTouchUpInside(_ sender: HSBWheel) {
+        updateBackgroundColor()
+    }
+    
+    // MARK: brightnessSlider actions
+    @IBAction func brightnessSliderTouchDown(_ sender: GradientSlider) {
+        updateBackgroundColor()
+    }
+    
+    @IBAction func brightnessSliderTouchUpInside(_ sender: GradientSlider) {
+        updateBackgroundColor()
+    }
+    
+    @IBAction func brightnessSliderValueChanged(_ sender: GradientSlider) {
+        updateBackgroundColor()
+    }
+    
+    
+    private func updateBackgroundColor() {
+        let brightness = brightnessSlider.value
+        hsbWheel.brightness = brightness
+        view.backgroundColor = hsbWheel.color
+    }
+    
+    override func reset() {
+        hsbWheel.color = resetColor
+        updateBackgroundColor()
+    }
 }

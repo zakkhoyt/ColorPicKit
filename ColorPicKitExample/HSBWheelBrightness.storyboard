@@ -1,28 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A320" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="TX9-GQ-Tdl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A320" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="XjD-Lg-ApU">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Wheel Brightness View Controller-->
-        <scene sceneID="Bw0-Tm-TeL">
+        <scene sceneID="pa1-yt-fLv">
             <objects>
-                <viewController id="TX9-GQ-Tdl" customClass="HSBWheelBrightnessViewController" customModule="ColorPicKitExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XjD-Lg-ApU" customClass="HSBWheelBrightnessViewController" customModule="ColorPicKitExample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ArL-Jp-IAM"/>
-                        <viewControllerLayoutGuide type="bottom" id="PeG-Wj-Mlt"/>
+                        <viewControllerLayoutGuide type="top" id="LV4-i8-V1Z"/>
+                        <viewControllerLayoutGuide type="bottom" id="nHz-bA-kbE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="b9l-xc-7Pg">
+                    <view key="view" contentMode="scaleToFill" id="AhZ-Xg-lwF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c43-pS-Z5U" customClass="HSBWheel" customModule="ColorPicKitExample" customModuleProvider="target">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="c43-pS-Z5U" secondAttribute="height" multiplier="1:1" id="j0z-Jf-Ujx"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="colorWheelTouchDown:" destination="XjD-Lg-ApU" eventType="touchDown" id="OM6-1Y-rn6"/>
+                                    <action selector="colorWheelTouchUpInside:" destination="XjD-Lg-ApU" eventType="touchUpInside" id="KnY-zt-Whw"/>
+                                    <action selector="colorWheelValueChanged:" destination="XjD-Lg-ApU" eventType="valueChanged" id="n2o-Uk-tBP"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q1r-Ho-bcj" customClass="GradientSlider" customModule="ColorPickerExample" customModuleProvider="target">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="MA0-gz-QBZ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color1">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color2">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="brightnessSliderTouchDown:" destination="XjD-Lg-ApU" eventType="touchDown" id="qne-Ag-8Ph"/>
+                                    <action selector="brightnessSliderTouchUpInside:" destination="XjD-Lg-ApU" eventType="touchUpInside" id="iGv-cS-X6Q"/>
+                                    <action selector="brightnessSliderValueChanged:" destination="XjD-Lg-ApU" eventType="valueChanged" id="WAe-7f-z6B"/>
+                                </connections>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="q1r-Ho-bcj" firstAttribute="top" secondItem="c43-pS-Z5U" secondAttribute="bottom" constant="8" id="6fv-nV-AAM"/>
+                            <constraint firstAttribute="trailing" secondItem="c43-pS-Z5U" secondAttribute="trailing" id="7gX-GW-5Zc"/>
+                            <constraint firstAttribute="trailing" secondItem="q1r-Ho-bcj" secondAttribute="trailing" constant="20" id="MWa-0U-chg"/>
+                            <constraint firstItem="c43-pS-Z5U" firstAttribute="leading" secondItem="AhZ-Xg-lwF" secondAttribute="leading" id="cn5-QT-PAP"/>
+                            <constraint firstItem="c43-pS-Z5U" firstAttribute="centerY" secondItem="AhZ-Xg-lwF" secondAttribute="centerY" id="flx-Jn-Fbb"/>
+                            <constraint firstItem="q1r-Ho-bcj" firstAttribute="leading" secondItem="AhZ-Xg-lwF" secondAttribute="leading" constant="20" id="lya-WS-Bth"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="brightnessSlider" destination="q1r-Ho-bcj" id="Pog-mL-Mrg"/>
+                        <outlet property="colorWheel" destination="c43-pS-Z5U" id="Zyt-cz-aoP"/>
+                        <outlet property="hsbWheel" destination="c43-pS-Z5U" id="opf-Fo-slp"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="je6-16-YLO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MhY-Mu-MG6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="135" y="116"/>
+            <point key="canvasLocation" x="1616.8" y="-1599.8500749625189"/>
         </scene>
     </scenes>
 </document>

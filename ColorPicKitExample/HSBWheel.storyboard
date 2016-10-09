@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,12 +18,38 @@
                     <view key="view" contentMode="scaleToFill" id="VfG-yA-gYb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K0V-0L-8u9" customClass="HSBWheel" customModule="ColorPicKitExample" customModuleProvider="target">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="K0V-0L-8u9" secondAttribute="height" multiplier="1:1" id="qWx-U6-WgC"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="position">
+                                        <point key="value" x="100" y="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="imagePickerTouchDown:" destination="WtT-Um-q71" eventType="touchDown" id="neH-LZ-6m7"/>
+                                    <action selector="imagePickerTouchUpInside:" destination="WtT-Um-q71" eventType="touchUpInside" id="6Rf-Ak-EED"/>
+                                    <action selector="imagePickerValueChanged:" destination="WtT-Um-q71" eventType="valueChanged" id="eYr-sZ-2Ca"/>
+                                </connections>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="K0V-0L-8u9" firstAttribute="centerY" secondItem="VfG-yA-gYb" secondAttribute="centerY" id="K0G-OK-hJA"/>
+                            <constraint firstAttribute="trailing" secondItem="K0V-0L-8u9" secondAttribute="trailing" id="k1c-7U-wXK"/>
+                            <constraint firstItem="K0V-0L-8u9" firstAttribute="leading" secondItem="VfG-yA-gYb" secondAttribute="leading" id="l0n-ip-hNq"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="hsbWheel" destination="K0V-0L-8u9" id="egf-yj-jMj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mXJ-iI-zPH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="239" y="159"/>
+            <point key="canvasLocation" x="237.59999999999999" y="158.77061469265368"/>
         </scene>
     </scenes>
 </document>

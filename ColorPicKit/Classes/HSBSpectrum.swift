@@ -1,5 +1,5 @@
 //
-//  SpectrumPicker.swift
+//  HSBSpectum.swift
 //  ColorPicKitExample
 //
 //  Created by Zakk Hoyt on 10/8/16.
