@@ -1,9 +1,9 @@
-## ColorPicker
+## ColorPicKit
 
 
 This repository provides several UIControls for picking colors
 
-![IB](https://github.com/zakkhoyt/ColorPicker/blob/master/images/all_100816.png)
+![IB](https://github.com/zakkhoyt/ColorPicKit/blob/master/images/all_100816.png)
 
 - An Image color picker
 - An HSB color picker wheel
@@ -55,78 +55,66 @@ Written in Swift 3.0
 
 ## Example
 
-See the example project. Clone this repository and open ColorPickerExample.xcodeproj
+See the example project. Clone this repository and open ColorPicKitExample.xcodeproj
 
 ## Cocoapods
 
 For the time being, this pod needs to be pulled from its github master branch.
 
 ````
-pod 'ColorPicker', :git => 'https://github.com/zakkhoyt/ColorPicker', :branch => 'master'
+pod 'ColorPicKit', :git => 'https://github.com/zakkhoyt/ColorPicKit', :branch => 'master'
 ````
 
 ## Images
 
 ### Image Picker
 
-![IB](https://raw.githubusercontent.com/zakkhoyt/ColorPicker/master/images/ib_image.png)
+![IB](https://raw.githubusercontent.com/zakkhoyt/ColorPicKit/master/images/ib_image.png)
 
-![In use](https://raw.githubusercontent.com/zakkhoyt/ColorPicker/master/images/image.png)
+![In use](https://raw.githubusercontent.com/zakkhoyt/ColorPicKit/master/images/image.png)
 
 
 ### Color Wheel
 
-![IB](https://raw.githubusercontent.com/zakkhoyt/ColorPicker/master/images/ib_wheel.png)
+![IB](https://raw.githubusercontent.com/zakkhoyt/ColorPicKit/master/images/ib_wheel.png)
 
-![In use](https://raw.githubusercontent.com/zakkhoyt/ColorPicker/master/images/wheel.png)
+![In use](https://raw.githubusercontent.com/zakkhoyt/ColorPicKit/master/images/wheel.png)
 
 ### Spectrum Picker
 
-![IB](https://raw.githubusercontent.com/zakkhoyt/ColorPicker/master/images/ib_spectrum.png)
+![IB](https://raw.githubusercontent.com/zakkhoyt/ColorPicKit/master/images/ib_spectrum.png)
 
-![In use](https://raw.githubusercontent.com/zakkhoyt/ColorPicker/master/images/spectrum.png)
+![In use](https://raw.githubusercontent.com/zakkhoyt/ColorPicKit/master/images/spectrum.png)
 
 
 ### RGB Sliders
 
-![IB](https://raw.githubusercontent.com/zakkhoyt/ColorPicker/master/images/ib_rgb.png)
+![IB](https://raw.githubusercontent.com/zakkhoyt/ColorPicKit/master/images/ib_rgb.png)
 
-![In use](https://raw.githubusercontent.com/zakkhoyt/ColorPicker/master/images/rgb.png)
+![In use](https://raw.githubusercontent.com/zakkhoyt/ColorPicKit/master/images/rgb.png)
 
 
 ### HSB Sliders
 
-![IB](https://raw.githubusercontent.com/zakkhoyt/ColorPicker/master/images/ib_hsb.png)
+![IB](https://raw.githubusercontent.com/zakkhoyt/ColorPicKit/master/images/ib_hsb.png)
 
-![In use](https://raw.githubusercontent.com/zakkhoyt/ColorPicker/master/images/hsb.png)
+![In use](https://raw.githubusercontent.com/zakkhoyt/ColorPicKit/master/images/hsb.png)
 
 
 ### CMYK Sliders
 
-![IB](https://raw.githubusercontent.com/zakkhoyt/ColorPicker/master/images/ib_cmyk.png)
+![IB](https://raw.githubusercontent.com/zakkhoyt/ColorPicKit/master/images/ib_cmyk.png)
 
-![In use](https://raw.githubusercontent.com/zakkhoyt/ColorPicker/master/images/cmyk.png)
+![In use](https://raw.githubusercontent.com/zakkhoyt/ColorPicKit/master/images/cmyk.png)
 
 ### Gradient Slider
 
-![IB](https://raw.githubusercontent.com/zakkhoyt/ColorPicker/master/images/ib_gradient.png)
+![IB](https://raw.githubusercontent.com/zakkhoyt/ColorPicKit/master/images/ib_gradient.png)
 
-![In use](https://raw.githubusercontent.com/zakkhoyt/ColorPicker/master/images/gradient.png)
+![In use](https://raw.githubusercontent.com/zakkhoyt/ColorPicKit/master/images/gradient.png)
 
 ### Hue Slider
 
-![IB](https://raw.githubusercontent.com/zakkhoyt/ColorPicker/master/images/ib_hue.png)
+![IB](https://raw.githubusercontent.com/zakkhoyt/ColorPicKit/master/images/ib_hue.png)
 
-![In use](https://raw.githubusercontent.com/zakkhoyt/ColorPicker/master/images/hue.png)
-
-## Contributions
-
-Please feel free to clone this repository or submit pull requests to improve functionality or add new controls.
-
-A few things that could make these controls more useful:
-* Expose the color property as IBDesignable so that the consumer can set the starting color in IB.
-* Integrating alpha sliders as an optional IBDesignable so that the consumer can set/get colors with alpha included.
-* Integrating an optional brightness slider to WheelPicker as IBDesignable.
-* Add and optional IBDesignable property "showLabels" so that (for example) the RGB sliders are labeled Red, Green, Blue. Expose the labels to the consumer so that they may be customized.
-* Refactoring classes so that more code is reused.
-* Add a UIPanGesture to WheelPicker and SpectrumPicker so that the user can move the KnobView without their finger covering it.
+![In use](https://raw.githubusercontent.com/zakkhoyt/ColorPicKit/master/images/hue.png)
