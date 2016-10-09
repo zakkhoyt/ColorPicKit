@@ -25,8 +25,8 @@
                                     <constraint firstAttribute="width" secondItem="K0V-0L-8u9" secondAttribute="height" multiplier="1:1" id="qWx-U6-WgC"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="point" keyPath="position">
-                                        <point key="value" x="100" y="100"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>

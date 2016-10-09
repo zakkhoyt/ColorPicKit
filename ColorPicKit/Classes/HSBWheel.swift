@@ -180,11 +180,12 @@ private let invalidPositionValue = CGFloat(-1.0)
         wheelView.frame = self.bounds
         
         
-        // Position
+//        // Position
         if position.x == invalidPositionValue || position.y == invalidPositionValue {
-            position = CGPoint(x: wheelView.frame.midX, y: wheelView.frame.midY)
+//            position = CGPoint(x: frame.midX, y: frame.midY)
+            position = self.center
         }
-        
+
         // KnobView
         knobView.borderWidth = borderWidth
         knobView.borderColor = borderColor

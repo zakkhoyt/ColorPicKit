@@ -17,14 +17,17 @@ class HSBWheelBrightnessViewController: BaseViewController {
     // MARK: colorWheel actions
     @IBAction func colorWheelValueChanged(_ sender: HSBWheel) {
         updateBackgroundColor()
+        updateBrightnessSlider()
     }
     
     @IBAction func colorWheelTouchDown(_ sender: HSBWheel) {
         updateBackgroundColor()
+        updateBrightnessSlider()
     }
     
     @IBAction func colorWheelTouchUpInside(_ sender: HSBWheel) {
         updateBackgroundColor()
+        updateBrightnessSlider()
     }
     
     // MARK: brightnessSlider actions
@@ -40,6 +43,12 @@ class HSBWheelBrightnessViewController: BaseViewController {
         updateBackgroundColor()
     }
     
+    private func updateBrightnessSlider() {
+        
+        let hsb = hsbWheel.color.hsb()
+        let color = UIColor(hue: hsb.hue, saturation: 1.0, brightness: 1.0, alpha: 1.0)
+        brightnessSlider.color2 = color
+    }
     
     private func updateBackgroundColor() {
         let brightness = brightnessSlider.value

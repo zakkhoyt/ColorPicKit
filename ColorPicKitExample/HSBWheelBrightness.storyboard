@@ -24,18 +24,13 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="c43-pS-Z5U" secondAttribute="height" multiplier="1:1" id="j0z-Jf-Ujx"/>
                                 </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="colorWheelTouchDown:" destination="XjD-Lg-ApU" eventType="touchDown" id="OM6-1Y-rn6"/>
                                     <action selector="colorWheelTouchUpInside:" destination="XjD-Lg-ApU" eventType="touchUpInside" id="KnY-zt-Whw"/>
                                     <action selector="colorWheelValueChanged:" destination="XjD-Lg-ApU" eventType="valueChanged" id="n2o-Uk-tBP"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q1r-Ho-bcj" customClass="GradientSlider" customModule="ColorPickerExample" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q1r-Ho-bcj" customClass="GradientSlider" customModule="ColorPicKitExample" customModuleProvider="target">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="MA0-gz-QBZ"/>
@@ -70,7 +65,6 @@
                     </view>
                     <connections>
                         <outlet property="brightnessSlider" destination="q1r-Ho-bcj" id="Pog-mL-Mrg"/>
-                        <outlet property="colorWheel" destination="c43-pS-Z5U" id="Zyt-cz-aoP"/>
                         <outlet property="hsbWheel" destination="c43-pS-Z5U" id="opf-Fo-slp"/>
                     </connections>
                 </viewController>
