@@ -202,7 +202,6 @@ import UIKit
             x = bounds.width
         }
         self.value = x / bounds.width
-        
     }
     
     private func updateKnob() {

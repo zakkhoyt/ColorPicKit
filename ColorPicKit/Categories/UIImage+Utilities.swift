@@ -136,7 +136,18 @@ extension UIImage {
         return pixelBuffer!
     }
     
-    class func getColorFrom(point: CGPoint, in pixelBuffer: CVPixelBuffer) -> UIColor? {
+    class func getColorAt(point: CGPoint, in pixelBuffer: CVPixelBuffer) -> UIColor? {
+        
+        // We don't want to accept infinities or NaN
+        if fabs(point.x) == CGFloat.infinity ||
+            fabs(point.y) == CGFloat.infinity {
+            print("Cannot get color at point (infinity): \(point)")
+            return nil
+        }
+        if point.x == CGFloat.nan || point.y == CGFloat.nan {
+            print("Cannot get color at point (NaN): \(point)")
+            return nil
+        }
         
         CVPixelBufferLockBaseAddress(pixelBuffer, [])
         let baseAddress = CVPixelBufferGetBaseAddress(pixelBuffer)
@@ -163,6 +174,15 @@ extension UIImage {
         }
         
         return nil
+    }
+    
+    class func getSizeOf(pixelBuffer: CVPixelBuffer) -> CGSize {
+        CVPixelBufferLockBaseAddress(pixelBuffer, [])
+        //let baseAddress = CVPixelBufferGetBaseAddress(pixelBuffer)
+        let width = CVPixelBufferGetWidth(pixelBuffer)
+        let height = CVPixelBufferGetHeight(pixelBuffer)
+        return CGSize(width: width, height: height)
+        
     }
 }
 

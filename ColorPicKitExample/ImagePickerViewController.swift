@@ -10,26 +10,33 @@ import UIKit
 
 class ImagePickerViewController: BaseViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBOutlet weak var imagePicker: ImagePicker!
+    
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        //        imagePicker.image = #imageLiteral(resourceName: "gradient_landscape")
+//    }
+    
+    @IBAction func imagePickerTouchDown(_ sender: ImagePicker) {
+        updateBackgroundColor()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func imagePickerTouchUpInside(_ sender: AnyObject) {
+        updateBackgroundColor()
     }
-    */
+    
+    @IBAction func imagePickerValueChanged(_ sender: AnyObject) {
+        updateBackgroundColor()
+    }
+    
+    private func updateBackgroundColor() {
+        view.backgroundColor = imagePicker.color
+    }
 
+    override func reset() {
+        imagePicker.position = CGPoint(x: imagePicker.bounds.midX, y: imagePicker.bounds.midY)
+        updateBackgroundColor()
+    }
+
+    
 }
