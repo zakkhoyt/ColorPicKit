@@ -10,7 +10,7 @@ import UIKit
 
 @IBDesignable public class KnobView: UIView, Knob {
     
-    private var _color: UIColor = UIColor.yellow
+    private var _color: UIColor = UIColor.white
     @IBInspectable var color: UIColor {
         get {
             return _color
@@ -28,7 +28,6 @@ import UIKit
         }
         set {
             _borderColor = newValue
-//            layer.borderColor = newValue.cgColor
             setNeedsDisplay()
         }
     }
@@ -40,7 +39,6 @@ import UIKit
         }
         set {
             _borderWidth = newValue
-//            layer.borderWidth = newValue
             setNeedsDisplay()
         }
     }

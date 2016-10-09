@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A320" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="qqW-XO-3df">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Hue Slider View Controller-->
+        <scene sceneID="nDo-JS-mWy">
+            <objects>
+                <viewController id="qqW-XO-3df" customClass="HueSliderViewController" customModule="ColorPicKitExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ch4-GI-Exd"/>
+                        <viewControllerLayoutGuide type="bottom" id="4rr-qS-e0Q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kpP-qO-J85">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="27M-FV-EM9" customClass="HueSlider" customModule="ColorPicKitExample" customModuleProvider="target">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="grayscaleSliderTouchDown:" destination="qqW-XO-3df" eventType="touchDown" id="ke7-df-Mwk"/>
+                                    <action selector="grayscaleSliderTouchUpInside:" destination="qqW-XO-3df" eventType="touchUpInside" id="9fs-W6-pFo"/>
+                                    <action selector="grayscaleSliderValueChanged:" destination="qqW-XO-3df" eventType="valueChanged" id="IEQ-FF-Ucd"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="27M-FV-EM9" firstAttribute="leading" secondItem="kpP-qO-J85" secondAttribute="leadingMargin" id="8kM-1w-Q3f"/>
+                            <constraint firstItem="27M-FV-EM9" firstAttribute="centerY" secondItem="kpP-qO-J85" secondAttribute="centerY" id="V96-vv-xLR"/>
+                            <constraint firstItem="27M-FV-EM9" firstAttribute="trailing" secondItem="kpP-qO-J85" secondAttribute="trailingMargin" id="cZn-k4-aCq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="hueSlider" destination="27M-FV-EM9" id="1La-Mj-OJz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UKF-ac-J5n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="232.80000000000001" y="286.50674662668666"/>
+        </scene>
+    </scenes>
+</document>

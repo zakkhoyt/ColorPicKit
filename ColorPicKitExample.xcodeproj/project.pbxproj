@@ -14,26 +14,50 @@
 		C607EEE41DA96F1400A73F51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C607EEE21DA96F1400A73F51 /* LaunchScreen.storyboard */; };
 		C607EEEF1DA96F1400A73F51 /* ColorPicKitExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C607EEEE1DA96F1400A73F51 /* ColorPicKitExampleTests.swift */; };
 		C607EEFA1DA96F1400A73F51 /* ColorPicKitExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C607EEF91DA96F1400A73F51 /* ColorPicKitExampleUITests.swift */; };
-		C607EF081DA96F2200A73F51 /* Links.md in Resources */ = {isa = PBXBuildFile; fileRef = C607EF071DA96F2200A73F51 /* Links.md */; };
-		C607EF0B1DA9764000A73F51 /* Colorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C607EF0A1DA9764000A73F51 /* Colorable.swift */; };
-		C607EF0E1DA9765300A73F51 /* Knob.swift in Sources */ = {isa = PBXBuildFile; fileRef = C607EF0D1DA9765300A73F51 /* Knob.swift */; };
-		C607EF101DA9765D00A73F51 /* ColorControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C607EF0F1DA9765D00A73F51 /* ColorControl.swift */; };
-		C607EF121DA9766500A73F51 /* KnobbedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C607EF111DA9766500A73F51 /* KnobbedControl.swift */; };
-		C607EF141DA9769000A73F51 /* SliderControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C607EF131DA9769000A73F51 /* SliderControl.swift */; };
-		C607EF181DA976B700A73F51 /* SliderControlGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C607EF171DA976B700A73F51 /* SliderControlGroup.swift */; };
-		C607EF1A1DA976DA00A73F51 /* KnobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C607EF191DA976DA00A73F51 /* KnobView.swift */; };
-		C607EF1D1DA976EE00A73F51 /* WheelPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C607EF1C1DA976EE00A73F51 /* WheelPicker.swift */; };
-		C607EF1F1DA9770200A73F51 /* SpectrumPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C607EF1E1DA9770200A73F51 /* SpectrumPicker.swift */; };
-		C607EF211DA9770900A73F51 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C607EF201DA9770900A73F51 /* ImagePicker.swift */; };
-		C607EF231DA9771600A73F51 /* GradientSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C607EF221DA9771600A73F51 /* GradientSlider.swift */; };
-		C607EF251DA9771C00A73F51 /* HueSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C607EF241DA9771C00A73F51 /* HueSlider.swift */; };
-		C607EF271DA9772900A73F51 /* RGBSliders.swift in Sources */ = {isa = PBXBuildFile; fileRef = C607EF261DA9772900A73F51 /* RGBSliders.swift */; };
-		C607EF291DA9773000A73F51 /* HSBSliders.swift in Sources */ = {isa = PBXBuildFile; fileRef = C607EF281DA9773000A73F51 /* HSBSliders.swift */; };
-		C607EF2B1DA9773700A73F51 /* CMYKSliders.swift in Sources */ = {isa = PBXBuildFile; fileRef = C607EF2A1DA9773700A73F51 /* CMYKSliders.swift */; };
-		C607EF311DA97CF200A73F51 /* UIColor+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C607EF301DA97CF200A73F51 /* UIColor+Utilities.swift */; };
-		C607EF351DA97CFF00A73F51 /* UIImage+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C607EF321DA97CFF00A73F51 /* UIImage+Utilities.swift */; };
-		C607EF361DA97CFF00A73F51 /* UIView+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C607EF331DA97CFF00A73F51 /* UIView+Utilities.swift */; };
-		C607EF371DA97CFF00A73F51 /* GradientData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C607EF341DA97CFF00A73F51 /* GradientData.swift */; };
+		C6D87FA91DA9F2E3004CB7E3 /* Links.md in Sources */ = {isa = PBXBuildFile; fileRef = C6D87F901DA9F2E3004CB7E3 /* Links.md */; };
+		C6D87FAA1DA9F2E3004CB7E3 /* CMYKSliderGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D87F921DA9F2E3004CB7E3 /* CMYKSliderGroup.swift */; };
+		C6D87FAB1DA9F2E3004CB7E3 /* GradientData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D87F931DA9F2E3004CB7E3 /* GradientData.swift */; };
+		C6D87FAC1DA9F2E3004CB7E3 /* GradientSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D87F941DA9F2E3004CB7E3 /* GradientSlider.swift */; };
+		C6D87FAD1DA9F2E3004CB7E3 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D87F951DA9F2E3004CB7E3 /* GradientView.swift */; };
+		C6D87FAE1DA9F2E3004CB7E3 /* HSBSliderGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D87F961DA9F2E3004CB7E3 /* HSBSliderGroup.swift */; };
+		C6D87FAF1DA9F2E3004CB7E3 /* HueSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D87F971DA9F2E3004CB7E3 /* HueSlider.swift */; };
+		C6D87FB01DA9F2E3004CB7E3 /* HueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D87F981DA9F2E3004CB7E3 /* HueView.swift */; };
+		C6D87FB11DA9F2E3004CB7E3 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D87F991DA9F2E3004CB7E3 /* ImagePicker.swift */; };
+		C6D87FB21DA9F2E3004CB7E3 /* KnobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D87F9A1DA9F2E3004CB7E3 /* KnobView.swift */; };
+		C6D87FB31DA9F2E3004CB7E3 /* RGBSliderGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D87F9B1DA9F2E3004CB7E3 /* RGBSliderGroup.swift */; };
+		C6D87FB41DA9F2E3004CB7E3 /* HSBSpectrum.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D87F9C1DA9F2E3004CB7E3 /* HSBSpectrum.swift */; };
+		C6D87FB51DA9F2E3004CB7E3 /* HSBWheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D87F9D1DA9F2E3004CB7E3 /* HSBWheel.swift */; };
+		C6D87FB61DA9F2E3004CB7E3 /* Colorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D87F9F1DA9F2E3004CB7E3 /* Colorable.swift */; };
+		C6D87FB71DA9F2E3004CB7E3 /* ColorControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D87FA01DA9F2E3004CB7E3 /* ColorControl.swift */; };
+		C6D87FB81DA9F2E3004CB7E3 /* Knob.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D87FA11DA9F2E3004CB7E3 /* Knob.swift */; };
+		C6D87FB91DA9F2E3004CB7E3 /* KnobbedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D87FA21DA9F2E3004CB7E3 /* KnobbedControl.swift */; };
+		C6D87FBA1DA9F2E3004CB7E3 /* SliderControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D87FA31DA9F2E3004CB7E3 /* SliderControl.swift */; };
+		C6D87FBB1DA9F2E3004CB7E3 /* SliderControlGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D87FA41DA9F2E3004CB7E3 /* SliderControlGroup.swift */; };
+		C6D87FBC1DA9F2E3004CB7E3 /* UIColor+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D87FA61DA9F2E3004CB7E3 /* UIColor+Utilities.swift */; };
+		C6D87FBD1DA9F2E3004CB7E3 /* UIImage+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D87FA71DA9F2E3004CB7E3 /* UIImage+Utilities.swift */; };
+		C6D87FBE1DA9F2E3004CB7E3 /* UIView+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D87FA81DA9F2E3004CB7E3 /* UIView+Utilities.swift */; };
+		C6D87FC01DA9F2FE004CB7E3 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = C6D87FBF1DA9F2FE004CB7E3 /* LICENSE */; };
+		C6D87FC41DA9F3B1004CB7E3 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D87FC31DA9F3B1004CB7E3 /* BaseViewController.swift */; };
+		C6D87FC61DA9F3C2004CB7E3 /* GradientSliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D87FC51DA9F3C2004CB7E3 /* GradientSliderViewController.swift */; };
+		C6D87FC81DA9F3CC004CB7E3 /* HueSliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D87FC71DA9F3CC004CB7E3 /* HueSliderViewController.swift */; };
+		C6D87FCA1DA9F3D4004CB7E3 /* RGBSliderGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D87FC91DA9F3D4004CB7E3 /* RGBSliderGroupViewController.swift */; };
+		C6D87FCC1DA9F3DC004CB7E3 /* HSBSliderGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D87FCB1DA9F3DC004CB7E3 /* HSBSliderGroupViewController.swift */; };
+		C6D87FCE1DA9F3E3004CB7E3 /* CMYKSliderGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D87FCD1DA9F3E3004CB7E3 /* CMYKSliderGroupViewController.swift */; };
+		C6D87FD01DA9F3F6004CB7E3 /* HSBSpectrumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D87FCF1DA9F3F6004CB7E3 /* HSBSpectrumViewController.swift */; };
+		C6D87FD21DA9F402004CB7E3 /* HSBWheelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D87FD11DA9F402004CB7E3 /* HSBWheelViewController.swift */; };
+		C6D87FD41DA9F40D004CB7E3 /* HSBWheelBrightnessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D87FD31DA9F40D004CB7E3 /* HSBWheelBrightnessViewController.swift */; };
+		C6D87FD61DA9F41D004CB7E3 /* ImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D87FD51DA9F41D004CB7E3 /* ImagePickerViewController.swift */; };
+		C6D87FD81DA9F428004CB7E3 /* GradientSlider.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6D87FD71DA9F428004CB7E3 /* GradientSlider.storyboard */; };
+		C6D87FDA1DA9F42F004CB7E3 /* HueSlider.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6D87FD91DA9F42F004CB7E3 /* HueSlider.storyboard */; };
+		C6D87FDC1DA9F437004CB7E3 /* RGBSliderGroup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6D87FDB1DA9F437004CB7E3 /* RGBSliderGroup.storyboard */; };
+		C6D87FDE1DA9F43F004CB7E3 /* HSBSliderGroup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6D87FDD1DA9F43F004CB7E3 /* HSBSliderGroup.storyboard */; };
+		C6D87FE01DA9F448004CB7E3 /* CMYKSliderGroup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6D87FDF1DA9F448004CB7E3 /* CMYKSliderGroup.storyboard */; };
+		C6D87FE21DA9F452004CB7E3 /* HSBSpectrum.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6D87FE11DA9F452004CB7E3 /* HSBSpectrum.storyboard */; };
+		C6D87FE41DA9F45A004CB7E3 /* HSBWheel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6D87FE31DA9F45A004CB7E3 /* HSBWheel.storyboard */; };
+		C6D87FE61DA9F464004CB7E3 /* HSBWheelBrightness.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6D87FE51DA9F464004CB7E3 /* HSBWheelBrightness.storyboard */; };
+		C6D87FE81DA9F46C004CB7E3 /* ImagePicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6D87FE71DA9F46C004CB7E3 /* ImagePicker.storyboard */; };
+		C6D87FF41DA9F506004CB7E3 /* HSBSpectrumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D87FF31DA9F506004CB7E3 /* HSBSpectrumView.swift */; };
+		C6D87FF61DA9F50F004CB7E3 /* HSBWheelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D87FF51DA9F50F004CB7E3 /* HSBWheelView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,26 +91,50 @@
 		C607EEF51DA96F1400A73F51 /* ColorPicKitExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorPicKitExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C607EEF91DA96F1400A73F51 /* ColorPicKitExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPicKitExampleUITests.swift; sourceTree = "<group>"; };
 		C607EEFB1DA96F1400A73F51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C607EF071DA96F2200A73F51 /* Links.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Links.md; sourceTree = "<group>"; };
-		C607EF0A1DA9764000A73F51 /* Colorable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colorable.swift; sourceTree = "<group>"; };
-		C607EF0D1DA9765300A73F51 /* Knob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Knob.swift; sourceTree = "<group>"; };
-		C607EF0F1DA9765D00A73F51 /* ColorControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorControl.swift; sourceTree = "<group>"; };
-		C607EF111DA9766500A73F51 /* KnobbedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KnobbedControl.swift; sourceTree = "<group>"; };
-		C607EF131DA9769000A73F51 /* SliderControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderControl.swift; sourceTree = "<group>"; };
-		C607EF171DA976B700A73F51 /* SliderControlGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderControlGroup.swift; sourceTree = "<group>"; };
-		C607EF191DA976DA00A73F51 /* KnobView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KnobView.swift; sourceTree = "<group>"; };
-		C607EF1C1DA976EE00A73F51 /* WheelPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WheelPicker.swift; sourceTree = "<group>"; };
-		C607EF1E1DA9770200A73F51 /* SpectrumPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpectrumPicker.swift; sourceTree = "<group>"; };
-		C607EF201DA9770900A73F51 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
-		C607EF221DA9771600A73F51 /* GradientSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientSlider.swift; sourceTree = "<group>"; };
-		C607EF241DA9771C00A73F51 /* HueSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HueSlider.swift; sourceTree = "<group>"; };
-		C607EF261DA9772900A73F51 /* RGBSliders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGBSliders.swift; sourceTree = "<group>"; };
-		C607EF281DA9773000A73F51 /* HSBSliders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSBSliders.swift; sourceTree = "<group>"; };
-		C607EF2A1DA9773700A73F51 /* CMYKSliders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMYKSliders.swift; sourceTree = "<group>"; };
-		C607EF301DA97CF200A73F51 /* UIColor+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Utilities.swift"; sourceTree = "<group>"; };
-		C607EF321DA97CFF00A73F51 /* UIImage+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Utilities.swift"; sourceTree = "<group>"; };
-		C607EF331DA97CFF00A73F51 /* UIView+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Utilities.swift"; sourceTree = "<group>"; };
-		C607EF341DA97CFF00A73F51 /* GradientData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientData.swift; sourceTree = "<group>"; };
+		C6D87F901DA9F2E3004CB7E3 /* Links.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Links.md; sourceTree = "<group>"; };
+		C6D87F921DA9F2E3004CB7E3 /* CMYKSliderGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMYKSliderGroup.swift; sourceTree = "<group>"; };
+		C6D87F931DA9F2E3004CB7E3 /* GradientData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientData.swift; sourceTree = "<group>"; };
+		C6D87F941DA9F2E3004CB7E3 /* GradientSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientSlider.swift; sourceTree = "<group>"; };
+		C6D87F951DA9F2E3004CB7E3 /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		C6D87F961DA9F2E3004CB7E3 /* HSBSliderGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSBSliderGroup.swift; sourceTree = "<group>"; };
+		C6D87F971DA9F2E3004CB7E3 /* HueSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HueSlider.swift; sourceTree = "<group>"; };
+		C6D87F981DA9F2E3004CB7E3 /* HueView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HueView.swift; sourceTree = "<group>"; };
+		C6D87F991DA9F2E3004CB7E3 /* ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		C6D87F9A1DA9F2E3004CB7E3 /* KnobView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KnobView.swift; sourceTree = "<group>"; };
+		C6D87F9B1DA9F2E3004CB7E3 /* RGBSliderGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGBSliderGroup.swift; sourceTree = "<group>"; };
+		C6D87F9C1DA9F2E3004CB7E3 /* HSBSpectrum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSBSpectrum.swift; sourceTree = "<group>"; };
+		C6D87F9D1DA9F2E3004CB7E3 /* HSBWheel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSBWheel.swift; sourceTree = "<group>"; };
+		C6D87F9F1DA9F2E3004CB7E3 /* Colorable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colorable.swift; sourceTree = "<group>"; };
+		C6D87FA01DA9F2E3004CB7E3 /* ColorControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorControl.swift; sourceTree = "<group>"; };
+		C6D87FA11DA9F2E3004CB7E3 /* Knob.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Knob.swift; sourceTree = "<group>"; };
+		C6D87FA21DA9F2E3004CB7E3 /* KnobbedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KnobbedControl.swift; sourceTree = "<group>"; };
+		C6D87FA31DA9F2E3004CB7E3 /* SliderControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderControl.swift; sourceTree = "<group>"; };
+		C6D87FA41DA9F2E3004CB7E3 /* SliderControlGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderControlGroup.swift; sourceTree = "<group>"; };
+		C6D87FA61DA9F2E3004CB7E3 /* UIColor+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Utilities.swift"; sourceTree = "<group>"; };
+		C6D87FA71DA9F2E3004CB7E3 /* UIImage+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Utilities.swift"; sourceTree = "<group>"; };
+		C6D87FA81DA9F2E3004CB7E3 /* UIView+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Utilities.swift"; sourceTree = "<group>"; };
+		C6D87FBF1DA9F2FE004CB7E3 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		C6D87FC31DA9F3B1004CB7E3 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		C6D87FC51DA9F3C2004CB7E3 /* GradientSliderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientSliderViewController.swift; sourceTree = "<group>"; };
+		C6D87FC71DA9F3CC004CB7E3 /* HueSliderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HueSliderViewController.swift; sourceTree = "<group>"; };
+		C6D87FC91DA9F3D4004CB7E3 /* RGBSliderGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGBSliderGroupViewController.swift; sourceTree = "<group>"; };
+		C6D87FCB1DA9F3DC004CB7E3 /* HSBSliderGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSBSliderGroupViewController.swift; sourceTree = "<group>"; };
+		C6D87FCD1DA9F3E3004CB7E3 /* CMYKSliderGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMYKSliderGroupViewController.swift; sourceTree = "<group>"; };
+		C6D87FCF1DA9F3F6004CB7E3 /* HSBSpectrumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSBSpectrumViewController.swift; sourceTree = "<group>"; };
+		C6D87FD11DA9F402004CB7E3 /* HSBWheelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSBWheelViewController.swift; sourceTree = "<group>"; };
+		C6D87FD31DA9F40D004CB7E3 /* HSBWheelBrightnessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSBWheelBrightnessViewController.swift; sourceTree = "<group>"; };
+		C6D87FD51DA9F41D004CB7E3 /* ImagePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerViewController.swift; sourceTree = "<group>"; };
+		C6D87FD71DA9F428004CB7E3 /* GradientSlider.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GradientSlider.storyboard; sourceTree = "<group>"; };
+		C6D87FD91DA9F42F004CB7E3 /* HueSlider.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HueSlider.storyboard; sourceTree = "<group>"; };
+		C6D87FDB1DA9F437004CB7E3 /* RGBSliderGroup.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RGBSliderGroup.storyboard; sourceTree = "<group>"; };
+		C6D87FDD1DA9F43F004CB7E3 /* HSBSliderGroup.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HSBSliderGroup.storyboard; sourceTree = "<group>"; };
+		C6D87FDF1DA9F448004CB7E3 /* CMYKSliderGroup.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CMYKSliderGroup.storyboard; sourceTree = "<group>"; };
+		C6D87FE11DA9F452004CB7E3 /* HSBSpectrum.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HSBSpectrum.storyboard; sourceTree = "<group>"; };
+		C6D87FE31DA9F45A004CB7E3 /* HSBWheel.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HSBWheel.storyboard; sourceTree = "<group>"; };
+		C6D87FE51DA9F464004CB7E3 /* HSBWheelBrightness.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HSBWheelBrightness.storyboard; sourceTree = "<group>"; };
+		C6D87FE71DA9F46C004CB7E3 /* ImagePicker.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ImagePicker.storyboard; sourceTree = "<group>"; };
+		C6D87FF31DA9F506004CB7E3 /* HSBSpectrumView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSBSpectrumView.swift; sourceTree = "<group>"; };
+		C6D87FF51DA9F50F004CB7E3 /* HSBWheelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSBWheelView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,13 +186,11 @@
 		C607EED81DA96F1400A73F51 /* ColorPicKitExample */ = {
 			isa = PBXGroup;
 			children = (
+				C6D87FC11DA9F390004CB7E3 /* ViewControllers */,
 				C607EED91DA96F1400A73F51 /* AppDelegate.swift */,
-				C607EEDB1DA96F1400A73F51 /* ViewController.swift */,
-				C607EEDD1DA96F1400A73F51 /* Main.storyboard */,
 				C607EEE01DA96F1400A73F51 /* Assets.xcassets */,
 				C607EEE21DA96F1400A73F51 /* LaunchScreen.storyboard */,
 				C607EEE51DA96F1400A73F51 /* Info.plist */,
-				C607EF071DA96F2200A73F51 /* Links.md */,
 			);
 			path = ColorPicKitExample;
 			sourceTree = "<group>";
@@ -170,67 +216,181 @@
 		C607EF091DA9763200A73F51 /* ColorPicKit */ = {
 			isa = PBXGroup;
 			children = (
-				C607EF2F1DA97CE400A73F51 /* Categories */,
-				C607EF0C1DA9764300A73F51 /* Protocols */,
-				C607EF1B1DA976DE00A73F51 /* Classes */,
+				C6D87F8F1DA9F2E3004CB7E3 /* Documents */,
+				C6D87F911DA9F2E3004CB7E3 /* Classes */,
+				C6D87F9E1DA9F2E3004CB7E3 /* Protocols */,
+				C6D87FA51DA9F2E3004CB7E3 /* Categories */,
 			);
 			path = ColorPicKit;
 			sourceTree = "<group>";
 		};
-		C607EF0C1DA9764300A73F51 /* Protocols */ = {
+		C6D87F8F1DA9F2E3004CB7E3 /* Documents */ = {
 			isa = PBXGroup;
 			children = (
-				C607EF0A1DA9764000A73F51 /* Colorable.swift */,
-				C607EF0D1DA9765300A73F51 /* Knob.swift */,
-				C607EF0F1DA9765D00A73F51 /* ColorControl.swift */,
-				C607EF111DA9766500A73F51 /* KnobbedControl.swift */,
-				C607EF131DA9769000A73F51 /* SliderControl.swift */,
-				C607EF171DA976B700A73F51 /* SliderControlGroup.swift */,
+				C6D87FBF1DA9F2FE004CB7E3 /* LICENSE */,
+				C6D87F901DA9F2E3004CB7E3 /* Links.md */,
 			);
-			name = Protocols;
+			path = Documents;
 			sourceTree = "<group>";
 		};
-		C607EF1B1DA976DE00A73F51 /* Classes */ = {
+		C6D87F911DA9F2E3004CB7E3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				C607EF2D1DA9774A00A73F51 /* Helpers */,
-				C607EF2C1DA9774400A73F51 /* Controls */,
+				C6D87FF21DA9F4DF004CB7E3 /* Helpers */,
+				C6D87F941DA9F2E3004CB7E3 /* GradientSlider.swift */,
+				C6D87F971DA9F2E3004CB7E3 /* HueSlider.swift */,
+				C6D87F9B1DA9F2E3004CB7E3 /* RGBSliderGroup.swift */,
+				C6D87F961DA9F2E3004CB7E3 /* HSBSliderGroup.swift */,
+				C6D87F921DA9F2E3004CB7E3 /* CMYKSliderGroup.swift */,
+				C6D87F9C1DA9F2E3004CB7E3 /* HSBSpectrum.swift */,
+				C6D87F9D1DA9F2E3004CB7E3 /* HSBWheel.swift */,
+				C6D87F991DA9F2E3004CB7E3 /* ImagePicker.swift */,
 			);
-			name = Classes;
+			path = Classes;
 			sourceTree = "<group>";
 		};
-		C607EF2C1DA9774400A73F51 /* Controls */ = {
+		C6D87F9E1DA9F2E3004CB7E3 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				C607EF1C1DA976EE00A73F51 /* WheelPicker.swift */,
-				C607EF1E1DA9770200A73F51 /* SpectrumPicker.swift */,
-				C607EF201DA9770900A73F51 /* ImagePicker.swift */,
-				C607EF221DA9771600A73F51 /* GradientSlider.swift */,
-				C607EF261DA9772900A73F51 /* RGBSliders.swift */,
-				C607EF281DA9773000A73F51 /* HSBSliders.swift */,
-				C607EF2A1DA9773700A73F51 /* CMYKSliders.swift */,
+				C6D87F9F1DA9F2E3004CB7E3 /* Colorable.swift */,
+				C6D87FA01DA9F2E3004CB7E3 /* ColorControl.swift */,
+				C6D87FA11DA9F2E3004CB7E3 /* Knob.swift */,
+				C6D87FA21DA9F2E3004CB7E3 /* KnobbedControl.swift */,
+				C6D87FA31DA9F2E3004CB7E3 /* SliderControl.swift */,
+				C6D87FA41DA9F2E3004CB7E3 /* SliderControlGroup.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		C6D87FA51DA9F2E3004CB7E3 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				C6D87FA61DA9F2E3004CB7E3 /* UIColor+Utilities.swift */,
+				C6D87FA71DA9F2E3004CB7E3 /* UIImage+Utilities.swift */,
+				C6D87FA81DA9F2E3004CB7E3 /* UIView+Utilities.swift */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		C6D87FC11DA9F390004CB7E3 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C607EEDD1DA96F1400A73F51 /* Main.storyboard */,
+				C607EEDB1DA96F1400A73F51 /* ViewController.swift */,
+				C6D87FC21DA9F3A0004CB7E3 /* Controls */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C6D87FC21DA9F3A0004CB7E3 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				C6D87FC31DA9F3B1004CB7E3 /* BaseViewController.swift */,
+				C6D87FEA1DA9F47F004CB7E3 /* GradientSlider */,
+				C6D87FEF1DA9F4AA004CB7E3 /* HueSlider */,
+				C6D87FF11DA9F4B4004CB7E3 /* RGBSliderGroup */,
+				C6D87FEB1DA9F48C004CB7E3 /* HSBSliderGroup */,
+				C6D87FE91DA9F47B004CB7E3 /* CMYKSliderGroup */,
+				C6D87FEC1DA9F492004CB7E3 /* HSBSpectrum */,
+				C6D87FED1DA9F49D004CB7E3 /* HSBWheel */,
+				C6D87FEE1DA9F4A3004CB7E3 /* HSBWheelBrightness */,
+				C6D87FF01DA9F4AF004CB7E3 /* ImagePicker */,
 			);
 			name = Controls;
 			sourceTree = "<group>";
 		};
-		C607EF2D1DA9774A00A73F51 /* Helpers */ = {
+		C6D87FE91DA9F47B004CB7E3 /* CMYKSliderGroup */ = {
 			isa = PBXGroup;
 			children = (
-				C607EF191DA976DA00A73F51 /* KnobView.swift */,
-				C607EF241DA9771C00A73F51 /* HueSlider.swift */,
+				C6D87FDF1DA9F448004CB7E3 /* CMYKSliderGroup.storyboard */,
+				C6D87FCD1DA9F3E3004CB7E3 /* CMYKSliderGroupViewController.swift */,
 			);
-			name = Helpers;
+			name = CMYKSliderGroup;
 			sourceTree = "<group>";
 		};
-		C607EF2F1DA97CE400A73F51 /* Categories */ = {
+		C6D87FEA1DA9F47F004CB7E3 /* GradientSlider */ = {
 			isa = PBXGroup;
 			children = (
-				C607EF321DA97CFF00A73F51 /* UIImage+Utilities.swift */,
-				C607EF331DA97CFF00A73F51 /* UIView+Utilities.swift */,
-				C607EF341DA97CFF00A73F51 /* GradientData.swift */,
-				C607EF301DA97CF200A73F51 /* UIColor+Utilities.swift */,
+				C6D87FD71DA9F428004CB7E3 /* GradientSlider.storyboard */,
+				C6D87FC51DA9F3C2004CB7E3 /* GradientSliderViewController.swift */,
 			);
-			name = Categories;
+			name = GradientSlider;
+			sourceTree = "<group>";
+		};
+		C6D87FEB1DA9F48C004CB7E3 /* HSBSliderGroup */ = {
+			isa = PBXGroup;
+			children = (
+				C6D87FDD1DA9F43F004CB7E3 /* HSBSliderGroup.storyboard */,
+				C6D87FCB1DA9F3DC004CB7E3 /* HSBSliderGroupViewController.swift */,
+			);
+			name = HSBSliderGroup;
+			sourceTree = "<group>";
+		};
+		C6D87FEC1DA9F492004CB7E3 /* HSBSpectrum */ = {
+			isa = PBXGroup;
+			children = (
+				C6D87FE11DA9F452004CB7E3 /* HSBSpectrum.storyboard */,
+				C6D87FCF1DA9F3F6004CB7E3 /* HSBSpectrumViewController.swift */,
+			);
+			name = HSBSpectrum;
+			sourceTree = "<group>";
+		};
+		C6D87FED1DA9F49D004CB7E3 /* HSBWheel */ = {
+			isa = PBXGroup;
+			children = (
+				C6D87FE31DA9F45A004CB7E3 /* HSBWheel.storyboard */,
+				C6D87FD11DA9F402004CB7E3 /* HSBWheelViewController.swift */,
+			);
+			name = HSBWheel;
+			sourceTree = "<group>";
+		};
+		C6D87FEE1DA9F4A3004CB7E3 /* HSBWheelBrightness */ = {
+			isa = PBXGroup;
+			children = (
+				C6D87FE51DA9F464004CB7E3 /* HSBWheelBrightness.storyboard */,
+				C6D87FD31DA9F40D004CB7E3 /* HSBWheelBrightnessViewController.swift */,
+			);
+			name = HSBWheelBrightness;
+			sourceTree = "<group>";
+		};
+		C6D87FEF1DA9F4AA004CB7E3 /* HueSlider */ = {
+			isa = PBXGroup;
+			children = (
+				C6D87FD91DA9F42F004CB7E3 /* HueSlider.storyboard */,
+				C6D87FC71DA9F3CC004CB7E3 /* HueSliderViewController.swift */,
+			);
+			name = HueSlider;
+			sourceTree = "<group>";
+		};
+		C6D87FF01DA9F4AF004CB7E3 /* ImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				C6D87FE71DA9F46C004CB7E3 /* ImagePicker.storyboard */,
+				C6D87FD51DA9F41D004CB7E3 /* ImagePickerViewController.swift */,
+			);
+			name = ImagePicker;
+			sourceTree = "<group>";
+		};
+		C6D87FF11DA9F4B4004CB7E3 /* RGBSliderGroup */ = {
+			isa = PBXGroup;
+			children = (
+				C6D87FDB1DA9F437004CB7E3 /* RGBSliderGroup.storyboard */,
+				C6D87FC91DA9F3D4004CB7E3 /* RGBSliderGroupViewController.swift */,
+			);
+			name = RGBSliderGroup;
+			sourceTree = "<group>";
+		};
+		C6D87FF21DA9F4DF004CB7E3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C6D87F931DA9F2E3004CB7E3 /* GradientData.swift */,
+				C6D87F951DA9F2E3004CB7E3 /* GradientView.swift */,
+				C6D87F981DA9F2E3004CB7E3 /* HueView.swift */,
+				C6D87F9A1DA9F2E3004CB7E3 /* KnobView.swift */,
+				C6D87FF31DA9F506004CB7E3 /* HSBSpectrumView.swift */,
+				C6D87FF51DA9F50F004CB7E3 /* HSBWheelView.swift */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,10 +503,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C607EF081DA96F2200A73F51 /* Links.md in Resources */,
+				C6D87FE01DA9F448004CB7E3 /* CMYKSliderGroup.storyboard in Resources */,
+				C6D87FDA1DA9F42F004CB7E3 /* HueSlider.storyboard in Resources */,
+				C6D87FDC1DA9F437004CB7E3 /* RGBSliderGroup.storyboard in Resources */,
 				C607EEE41DA96F1400A73F51 /* LaunchScreen.storyboard in Resources */,
 				C607EEE11DA96F1400A73F51 /* Assets.xcassets in Resources */,
+				C6D87FE21DA9F452004CB7E3 /* HSBSpectrum.storyboard in Resources */,
+				C6D87FD81DA9F428004CB7E3 /* GradientSlider.storyboard in Resources */,
+				C6D87FE81DA9F46C004CB7E3 /* ImagePicker.storyboard in Resources */,
+				C6D87FDE1DA9F43F004CB7E3 /* HSBSliderGroup.storyboard in Resources */,
+				C6D87FC01DA9F2FE004CB7E3 /* LICENSE in Resources */,
 				C607EEDF1DA96F1400A73F51 /* Main.storyboard in Resources */,
+				C6D87FE41DA9F45A004CB7E3 /* HSBWheel.storyboard in Resources */,
+				C6D87FE61DA9F464004CB7E3 /* HSBWheelBrightness.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,27 +540,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C607EF351DA97CFF00A73F51 /* UIImage+Utilities.swift in Sources */,
 				C607EEDC1DA96F1400A73F51 /* ViewController.swift in Sources */,
-				C607EF1D1DA976EE00A73F51 /* WheelPicker.swift in Sources */,
-				C607EF0B1DA9764000A73F51 /* Colorable.swift in Sources */,
-				C607EF371DA97CFF00A73F51 /* GradientData.swift in Sources */,
-				C607EF271DA9772900A73F51 /* RGBSliders.swift in Sources */,
-				C607EF2B1DA9773700A73F51 /* CMYKSliders.swift in Sources */,
+				C6D87FCE1DA9F3E3004CB7E3 /* CMYKSliderGroupViewController.swift in Sources */,
+				C6D87FC61DA9F3C2004CB7E3 /* GradientSliderViewController.swift in Sources */,
+				C6D87FB51DA9F2E3004CB7E3 /* HSBWheel.swift in Sources */,
 				C607EEDA1DA96F1400A73F51 /* AppDelegate.swift in Sources */,
-				C607EF121DA9766500A73F51 /* KnobbedControl.swift in Sources */,
-				C607EF181DA976B700A73F51 /* SliderControlGroup.swift in Sources */,
-				C607EF361DA97CFF00A73F51 /* UIView+Utilities.swift in Sources */,
-				C607EF141DA9769000A73F51 /* SliderControl.swift in Sources */,
-				C607EF101DA9765D00A73F51 /* ColorControl.swift in Sources */,
-				C607EF1F1DA9770200A73F51 /* SpectrumPicker.swift in Sources */,
-				C607EF211DA9770900A73F51 /* ImagePicker.swift in Sources */,
-				C607EF231DA9771600A73F51 /* GradientSlider.swift in Sources */,
-				C607EF251DA9771C00A73F51 /* HueSlider.swift in Sources */,
-				C607EF311DA97CF200A73F51 /* UIColor+Utilities.swift in Sources */,
-				C607EF1A1DA976DA00A73F51 /* KnobView.swift in Sources */,
-				C607EF291DA9773000A73F51 /* HSBSliders.swift in Sources */,
-				C607EF0E1DA9765300A73F51 /* Knob.swift in Sources */,
+				C6D87FAF1DA9F2E3004CB7E3 /* HueSlider.swift in Sources */,
+				C6D87FF61DA9F50F004CB7E3 /* HSBWheelView.swift in Sources */,
+				C6D87FAA1DA9F2E3004CB7E3 /* CMYKSliderGroup.swift in Sources */,
+				C6D87FA91DA9F2E3004CB7E3 /* Links.md in Sources */,
+				C6D87FD21DA9F402004CB7E3 /* HSBWheelViewController.swift in Sources */,
+				C6D87FCA1DA9F3D4004CB7E3 /* RGBSliderGroupViewController.swift in Sources */,
+				C6D87FC81DA9F3CC004CB7E3 /* HueSliderViewController.swift in Sources */,
+				C6D87FB31DA9F2E3004CB7E3 /* RGBSliderGroup.swift in Sources */,
+				C6D87FD01DA9F3F6004CB7E3 /* HSBSpectrumViewController.swift in Sources */,
+				C6D87FB01DA9F2E3004CB7E3 /* HueView.swift in Sources */,
+				C6D87FAD1DA9F2E3004CB7E3 /* GradientView.swift in Sources */,
+				C6D87FB41DA9F2E3004CB7E3 /* HSBSpectrum.swift in Sources */,
+				C6D87FB11DA9F2E3004CB7E3 /* ImagePicker.swift in Sources */,
+				C6D87FB71DA9F2E3004CB7E3 /* ColorControl.swift in Sources */,
+				C6D87FAC1DA9F2E3004CB7E3 /* GradientSlider.swift in Sources */,
+				C6D87FCC1DA9F3DC004CB7E3 /* HSBSliderGroupViewController.swift in Sources */,
+				C6D87FD61DA9F41D004CB7E3 /* ImagePickerViewController.swift in Sources */,
+				C6D87FB81DA9F2E3004CB7E3 /* Knob.swift in Sources */,
+				C6D87FBA1DA9F2E3004CB7E3 /* SliderControl.swift in Sources */,
+				C6D87FD41DA9F40D004CB7E3 /* HSBWheelBrightnessViewController.swift in Sources */,
+				C6D87FBD1DA9F2E3004CB7E3 /* UIImage+Utilities.swift in Sources */,
+				C6D87FBB1DA9F2E3004CB7E3 /* SliderControlGroup.swift in Sources */,
+				C6D87FBE1DA9F2E3004CB7E3 /* UIView+Utilities.swift in Sources */,
+				C6D87FBC1DA9F2E3004CB7E3 /* UIColor+Utilities.swift in Sources */,
+				C6D87FAE1DA9F2E3004CB7E3 /* HSBSliderGroup.swift in Sources */,
+				C6D87FC41DA9F3B1004CB7E3 /* BaseViewController.swift in Sources */,
+				C6D87FF41DA9F506004CB7E3 /* HSBSpectrumView.swift in Sources */,
+				C6D87FB61DA9F2E3004CB7E3 /* Colorable.swift in Sources */,
+				C6D87FB21DA9F2E3004CB7E3 /* KnobView.swift in Sources */,
+				C6D87FB91DA9F2E3004CB7E3 /* KnobbedControl.swift in Sources */,
+				C6D87FAB1DA9F2E3004CB7E3 /* GradientData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -642,6 +826,7 @@
 				C607EF001DA96F1500A73F51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C607EF011DA96F1500A73F51 /* Build configuration list for PBXNativeTarget "ColorPicKitExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -650,6 +835,7 @@
 				C607EF031DA96F1500A73F51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C607EF041DA96F1500A73F51 /* Build configuration list for PBXNativeTarget "ColorPicKitExampleUITests" */ = {
 			isa = XCConfigurationList;
@@ -658,6 +844,7 @@
 				C607EF061DA96F1500A73F51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

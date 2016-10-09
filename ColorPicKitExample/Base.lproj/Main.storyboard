@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A320" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A320" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gBJ-wa-MHp">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Examples-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ColorPicKitExample" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,26 +18,168 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T08-S9-0Xw" customClass="GradientSlider" customModule="ColorPicKitExample" customModuleProvider="target">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="b7Z-wO-9VO">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18x-aw-f6x">
+                                        <state key="normal" title="Gradient Slider"/>
+                                        <connections>
+                                            <segue destination="aJ5-Og-NlE" kind="show" id="GEv-Pa-jRq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kea-hP-2rR">
+                                        <state key="normal" title="Hue Slider"/>
+                                        <connections>
+                                            <segue destination="l1y-ZD-tJi" kind="show" id="NPj-oE-tIn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aaB-XR-ny4">
+                                        <state key="normal" title="RGB Slider Group"/>
+                                        <connections>
+                                            <segue destination="u3e-4C-EWr" kind="show" id="2Dp-YN-22O"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Otd-iV-ETP">
+                                        <state key="normal" title="HSB Slider Group"/>
+                                        <connections>
+                                            <segue destination="Ozn-yM-Pkk" kind="show" id="r8x-1s-OoB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zn-CH-p9E">
+                                        <state key="normal" title="CMYK Slider Group"/>
+                                        <connections>
+                                            <segue destination="ffB-QV-Dly" kind="show" id="fvO-ey-5dd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="klB-H5-QHw">
+                                        <state key="normal" title="HSB Spectrum"/>
+                                        <connections>
+                                            <segue destination="SHr-3M-ohP" kind="show" id="5Sh-d1-a0D"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PPS-sK-0e4">
+                                        <state key="normal" title="HSB Wheel"/>
+                                        <connections>
+                                            <segue destination="w3I-G0-utt" kind="show" id="l95-Iz-Jy1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Lj-9F-xU5">
+                                        <state key="normal" title="HSB Wheel + Brightness"/>
+                                        <connections>
+                                            <segue destination="HXk-WY-bLa" kind="show" id="R9p-hQ-Wem"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6l-UH-i8S">
+                                        <state key="normal" title="Image Picker"/>
+                                        <connections>
+                                            <segue destination="Rv9-ir-wdN" kind="show" id="7j6-88-3Pr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="T08-S9-0Xw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Kvy-sf-m5c"/>
-                            <constraint firstAttribute="trailing" secondItem="T08-S9-0Xw" secondAttribute="trailing" id="R5o-wh-t3R"/>
-                            <constraint firstItem="T08-S9-0Xw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="YYt-03-EXP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="b7Z-wO-9VO" secondAttribute="bottom" id="Btm-l5-4iR"/>
+                            <constraint firstAttribute="trailing" secondItem="b7Z-wO-9VO" secondAttribute="trailing" id="DsJ-fR-ASH"/>
+                            <constraint firstItem="b7Z-wO-9VO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MPJ-SS-PJJ"/>
+                            <constraint firstItem="b7Z-wO-9VO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="64" id="RQt-4E-Buz"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Examples" id="Doq-sL-xXj"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+            <point key="canvasLocation" x="1072.8" y="216.34182908545728"/>
+        </scene>
+        <!--GradientSlider-->
+        <scene sceneID="JVT-ql-M4z">
+            <objects>
+                <viewControllerPlaceholder storyboardName="GradientSlider" id="aJ5-Og-NlE" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UOe-7l-iTk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1778" y="2"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Bs0-ta-TLN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gBJ-wa-MHp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Wj6-ca-l84">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="CJL-aS-ORD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V2l-ho-ekc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="216.34182908545728"/>
+        </scene>
+        <!--HueSlider-->
+        <scene sceneID="CTV-kc-2YT">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HueSlider" id="l1y-ZD-tJi" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Je3-rc-B4r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1778" y="51"/>
+        </scene>
+        <!--RGBSliderGroup-->
+        <scene sceneID="7bz-aI-fXv">
+            <objects>
+                <viewControllerPlaceholder storyboardName="RGBSliderGroup" id="u3e-4C-EWr" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hGi-4J-Kbl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1778" y="115"/>
+        </scene>
+        <!--HSBSliderGroup-->
+        <scene sceneID="A2o-xc-MPE">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HSBSliderGroup" id="Ozn-yM-Pkk" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B8y-ez-oIw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1778" y="172"/>
+        </scene>
+        <!--CMYKSliderGroup-->
+        <scene sceneID="uOD-S1-Q4y">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CMYKSliderGroup" id="ffB-QV-Dly" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AQk-Cd-j2f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1778" y="240"/>
+        </scene>
+        <!--HSBSpectrum-->
+        <scene sceneID="5hd-ts-Sc8">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HSBSpectrum" id="SHr-3M-ohP" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QHg-dB-TkT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1778" y="295"/>
+        </scene>
+        <!--HSBWheel-->
+        <scene sceneID="8Vf-sD-w5j">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HSBWheel" id="w3I-G0-utt" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RJz-x7-9vm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1778" y="354"/>
+        </scene>
+        <!--HSBWheelBrightness-->
+        <scene sceneID="ZzT-jw-WYd">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HSBWheelBrightness" id="HXk-WY-bLa" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="chV-c3-JMc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1778" y="417"/>
+        </scene>
+        <!--ImagePicker-->
+        <scene sceneID="nIS-WK-BnB">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ImagePicker" id="Rv9-ir-wdN" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IeL-Dh-csU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1778" y="482"/>
         </scene>
     </scenes>
 </document>

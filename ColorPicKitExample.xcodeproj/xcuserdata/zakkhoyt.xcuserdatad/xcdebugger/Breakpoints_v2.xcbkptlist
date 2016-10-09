@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ColorPicKit/GradientSlider.swift"
-            timestampString = "497649387.789878"
+            timestampString = "497652107.101632"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "249"
-            endingLineNumber = "249"
+            startingLineNumber = "223"
+            endingLineNumber = "223"
             landmarkName = "touchesHappened(_:with:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -25,13 +25,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ColorPicKit/GradientSlider.swift"
-            timestampString = "497649401.167516"
+            filePath = "ColorPicKitExample/GradientSliderViewController.swift"
+            timestampString = "497678105.042955"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "171"
-            endingLineNumber = "171"
-            landmarkName = "updateKnobPosition()"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "grayscaleSliderTouchUpInside(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

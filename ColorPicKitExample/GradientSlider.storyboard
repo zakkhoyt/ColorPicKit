@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A320" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="atJ-OO-c7x">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Gradient Slider View Controller-->
+        <scene sceneID="dNX-r9-92q">
+            <objects>
+                <viewController id="atJ-OO-c7x" customClass="GradientSliderViewController" customModule="ColorPicKitExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="v05-sb-WpF"/>
+                        <viewControllerLayoutGuide type="bottom" id="seR-ar-h5Q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="imJ-m3-2Sh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VRJ-lU-8iY" customClass="GradientSlider" customModule="ColorPicKitExample" customModuleProvider="target">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="P7n-k9-ZAa"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color1">
+                                        <color key="value" red="0.87462022569999998" green="0.0" blue="0.01457700376" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color2">
+                                        <color key="value" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="grayscaleSliderTouchDown:" destination="atJ-OO-c7x" eventType="touchDown" id="PXi-Cj-AjC"/>
+                                    <action selector="grayscaleSliderTouchUpInside:" destination="atJ-OO-c7x" eventType="touchUpInside" id="Tca-sx-YKk"/>
+                                    <action selector="grayscaleSliderValueChanged:" destination="atJ-OO-c7x" eventType="valueChanged" id="Hte-PT-cdA"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VRJ-lU-8iY" firstAttribute="trailing" secondItem="imJ-m3-2Sh" secondAttribute="trailingMargin" id="22z-pU-MNf"/>
+                            <constraint firstItem="VRJ-lU-8iY" firstAttribute="centerY" secondItem="imJ-m3-2Sh" secondAttribute="centerY" id="KzT-1v-pOt"/>
+                            <constraint firstItem="VRJ-lU-8iY" firstAttribute="leading" secondItem="imJ-m3-2Sh" secondAttribute="leadingMargin" id="wUc-Ob-GlP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="gradientSlider" destination="VRJ-lU-8iY" id="Bkb-Vk-BiJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kgS-rD-PJC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="180" y="44.527736131934034"/>
+        </scene>
+    </scenes>
+</document>
