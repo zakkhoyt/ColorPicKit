@@ -13,12 +13,6 @@ class RGBSliderGroupViewController: BaseViewController {
     
     @IBOutlet weak var rgbSliderGroup: RGBSliderGroup!
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
-    
     @IBAction func grayscaleSliderValueChanged(_ sender: RGBSliderGroup) {
         updateBackgroundColor()
     }

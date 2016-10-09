@@ -1,5 +1,5 @@
 //
-//  RGBSliders.swift
+//  RGBSliderGroup.swift
 //  ColorPicKitExample
 //
 //  Created by Zakk Hoyt on 10/8/16.

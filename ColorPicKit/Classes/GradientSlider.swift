@@ -102,6 +102,7 @@ import UIKit
         set {
             _color1 = newValue
             gradientView.color1 = newValue
+            updateKnobColor()
         }
     }
     
@@ -113,6 +114,7 @@ import UIKit
         set {
             _color2 = newValue
             gradientView.color2 = newValue
+            updateKnobColor()
         }
     }
     

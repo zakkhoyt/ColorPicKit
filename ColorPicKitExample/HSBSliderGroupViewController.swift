@@ -10,26 +10,27 @@ import UIKit
 
 class HSBSliderGroupViewController: BaseViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBOutlet weak var hsbSliderGroup: HSBSliderGroup!
+    
+    
+    @IBAction func grayscaleSliderValueChanged(_ sender: HSBSliderGroup) {
+        updateBackgroundColor()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func grayscaleSliderTouchDown(_ sender: HSBSliderGroup) {
+        updateBackgroundColor()
     }
-    */
-
+    
+    @IBAction func grayscaleSliderTouchUpInside(_ sender: HSBSliderGroup) {
+        updateBackgroundColor()
+    }
+    
+    private func updateBackgroundColor() {
+        view.backgroundColor = hsbSliderGroup.color
+    }
+    
+    override func reset() {
+        hsbSliderGroup.color = resetColor
+        updateBackgroundColor()
+    }
 }

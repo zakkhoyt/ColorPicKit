@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,12 +18,30 @@
                     <view key="view" contentMode="scaleToFill" id="sRS-dI-BXJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AJe-bn-UDM" customClass="HSBSliderGroup" customModule="ColorPicKitExample" customModuleProvider="target">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="grayscaleSliderTouchDown:" destination="iDW-Re-Q2k" eventType="touchDown" id="mhN-il-E4Z"/>
+                                    <action selector="grayscaleSliderTouchUpInside:" destination="iDW-Re-Q2k" eventType="touchUpInside" id="bgR-hG-HsX"/>
+                                    <action selector="grayscaleSliderValueChanged:" destination="iDW-Re-Q2k" eventType="valueChanged" id="f62-UR-6ne"/>
+                                </connections>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AJe-bn-UDM" firstAttribute="trailing" secondItem="sRS-dI-BXJ" secondAttribute="trailingMargin" id="E1K-h3-vdy"/>
+                            <constraint firstItem="AJe-bn-UDM" firstAttribute="centerY" secondItem="sRS-dI-BXJ" secondAttribute="centerY" id="Ibp-7R-olu"/>
+                            <constraint firstItem="AJe-bn-UDM" firstAttribute="leading" secondItem="sRS-dI-BXJ" secondAttribute="leadingMargin" id="y3V-yQ-wgf"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="hsbSliderGroup" destination="AJe-bn-UDM" id="sHB-sw-VcH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IFG-HV-Cky" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="169" y="139"/>
+            <point key="canvasLocation" x="168.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>

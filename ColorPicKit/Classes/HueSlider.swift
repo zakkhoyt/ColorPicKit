@@ -89,6 +89,32 @@ import UIKit
         }
     }
     
+    private var _saturation: CGFloat = 1.0
+    @IBInspectable open var saturation: CGFloat {
+        get {
+            return _saturation
+        }
+        set {
+            if _saturation != newValue {
+                _saturation = newValue
+                hueView.saturation = newValue
+            }
+        }
+    }
+    
+    private var _brightness: CGFloat = 1.0
+    @IBInspectable open var brightness: CGFloat {
+        get {
+            return _brightness
+        }
+        set {
+            if _brightness != newValue {
+                _brightness = newValue
+                hueView.brightness = newValue
+            }
+        }
+    }
+    
     var color: UIColor {
         get {
             let hue = value
