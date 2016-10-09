@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,12 +18,30 @@
                     <view key="view" contentMode="scaleToFill" id="paF-Ng-aHl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GhC-lv-1Oj" customClass="CMYKSliderGroup" customModule="ColorPicKitExample" customModuleProvider="target">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="grayscaleSliderTouchDown:" destination="g06-aW-YqY" eventType="touchDown" id="OAE-QN-drD"/>
+                                    <action selector="grayscaleSliderTouchUpInside:" destination="g06-aW-YqY" eventType="touchUpInside" id="6j4-9q-Z9G"/>
+                                    <action selector="grayscaleSliderValueChanged:" destination="g06-aW-YqY" eventType="valueChanged" id="4R0-W1-Se5"/>
+                                </connections>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GhC-lv-1Oj" firstAttribute="centerY" secondItem="paF-Ng-aHl" secondAttribute="centerY" id="JAM-Uj-qgt"/>
+                            <constraint firstItem="GhC-lv-1Oj" firstAttribute="leading" secondItem="paF-Ng-aHl" secondAttribute="leadingMargin" id="ZWi-DZ-hFV"/>
+                            <constraint firstItem="GhC-lv-1Oj" firstAttribute="trailing" secondItem="paF-Ng-aHl" secondAttribute="trailingMargin" id="rFD-gA-iX1"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cmykSliderGroup" destination="GhC-lv-1Oj" id="Qqo-Wm-bHt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6vW-Uo-9OY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="278" y="216"/>
+            <point key="canvasLocation" x="277.60000000000002" y="215.44227886056973"/>
         </scene>
     </scenes>
 </document>

@@ -9,27 +9,28 @@
 import UIKit
 
 class CMYKSliderGroupViewController: BaseViewController {
+    
+    @IBOutlet weak var cmykSliderGroup: CMYKSliderGroup!
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func grayscaleSliderValueChanged(_ sender: CMYKSliderGroup) {
+        updateBackgroundColor()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func grayscaleSliderTouchDown(_ sender: CMYKSliderGroup) {
+        updateBackgroundColor()
     }
-    */
+    
+    @IBAction func grayscaleSliderTouchUpInside(_ sender: CMYKSliderGroup) {
+        updateBackgroundColor()
+    }
+    
+    private func updateBackgroundColor() {
+        view.backgroundColor = cmykSliderGroup.color
+    }
+    
+    override func reset() {
+        cmykSliderGroup.color = resetColor
+        updateBackgroundColor()
+    }
 
 }

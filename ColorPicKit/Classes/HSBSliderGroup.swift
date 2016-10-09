@@ -184,9 +184,6 @@ import UIKit
     }
     
     // MARK: Private methods
-    
-    
-    
     func touchDown() {
         self.sendActions(for: .touchDown)
     }
