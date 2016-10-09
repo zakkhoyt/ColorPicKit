@@ -12,10 +12,6 @@ class ImagePickerViewController: BaseViewController {
 
     @IBOutlet weak var imagePicker: ImagePicker!
     
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//        //        imagePicker.image = #imageLiteral(resourceName: "gradient_landscape")
-//    }
     
     @IBAction func imagePickerTouchDown(_ sender: ImagePicker) {
         updateBackgroundColor()

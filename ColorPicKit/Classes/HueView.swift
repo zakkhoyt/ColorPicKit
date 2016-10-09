@@ -12,6 +12,7 @@ import UIKit
 
 class HueView: UIView {
     
+    // MARK: Variables
     
     private var _roundedCornders: Bool = false
     @IBInspectable var roundedCorners: Bool {
@@ -81,6 +82,10 @@ class HueView: UIView {
     fileprivate var imageDataLength = Int(0)
     fileprivate var radialImage: CGImage? = nil
     
+    
+    // MARK: Init
+    
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit()
@@ -96,7 +101,7 @@ class HueView: UIView {
     }
     
     
-    
+    // MARK: Private methods
     
     override open func layoutSubviews() {
         super.layoutSubviews()
@@ -178,7 +183,8 @@ class HueView: UIView {
         setNeedsDisplay()
     }
     
-    fileprivate func colorForPoint(_ point: CGPoint) -> RGB {
+    // MARK: Public methods
+    func colorForPoint(_ point: CGPoint) -> RGB {
         let hue = point.x / bounds.width
         let rgb = UIColor.hsbToRGB(hsb: (hue, saturation, brightness))
         return rgb

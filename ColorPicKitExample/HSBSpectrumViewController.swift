@@ -10,26 +10,27 @@ import UIKit
 
 class HSBSpectrumViewController: BaseViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBOutlet weak var hsbSpectrum: HSBSpectum!
+    
+    @IBAction func imagePickerTouchDown(_ sender: HSBSpectum) {
+        updateBackgroundColor()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func imagePickerTouchUpInside(_ sender: HSBSpectum) {
+        updateBackgroundColor()
     }
-    */
-
+    
+    @IBAction func imagePickerValueChanged(_ sender: HSBSpectum) {
+        updateBackgroundColor()
+    }
+    
+    private func updateBackgroundColor() {
+        view.backgroundColor = hsbSpectrum.color
+    }
+    
+    override func reset() {
+        hsbSpectrum.position = CGPoint(x: hsbSpectrum.bounds.midX, y: hsbSpectrum.bounds.midY)
+        updateBackgroundColor()
+    }
 }

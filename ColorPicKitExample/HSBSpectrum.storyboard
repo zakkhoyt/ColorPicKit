@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,12 +19,33 @@
                     <view key="view" contentMode="scaleToFill" id="prt-NC-g2W">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cX7-9V-JgS" customClass="HSBSpectum" customModule="ColorPicKitExample" customModuleProvider="target">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="cX7-9V-JgS" secondAttribute="height" multiplier="1:1" id="hP4-Zz-2hw"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="imagePickerTouchDown:" destination="dyJ-Jn-gYC" eventType="touchDown" id="7Jx-I2-BCU"/>
+                                    <action selector="imagePickerTouchUpInside:" destination="dyJ-Jn-gYC" eventType="touchUpInside" id="dX5-yq-tDk"/>
+                                    <action selector="imagePickerValueChanged:" destination="dyJ-Jn-gYC" eventType="valueChanged" id="gIe-RS-m6a"/>
+                                </connections>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cX7-9V-JgS" firstAttribute="leading" secondItem="prt-NC-g2W" secondAttribute="leadingMargin" id="4dw-R1-bUn"/>
+                            <constraint firstItem="cX7-9V-JgS" firstAttribute="trailing" secondItem="prt-NC-g2W" secondAttribute="trailingMargin" id="Dvr-oD-Wca"/>
+                            <constraint firstItem="cX7-9V-JgS" firstAttribute="centerY" secondItem="prt-NC-g2W" secondAttribute="centerY" id="I8T-zg-fB0"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="hsbSpectrum" destination="cX7-9V-JgS" id="Xjn-MT-UyN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jlN-9e-EAX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="156" y="177"/>
+            <point key="canvasLocation" x="156" y="176.76161919040482"/>
         </scene>
     </scenes>
 </document>
