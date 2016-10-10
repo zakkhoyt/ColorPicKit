@@ -15,7 +15,7 @@ class HueView: UIView {
     // MARK: Variables
     
     private var _roundedCornders: Bool = false
-    @IBInspectable var roundedCorners: Bool {
+    @IBInspectable public var roundedCorners: Bool {
         get {
             return _roundedCornders
         }
@@ -26,7 +26,7 @@ class HueView: UIView {
     }
     
     private var _borderColor: UIColor = .darkGray
-    @IBInspectable var borderColor: UIColor{
+    @IBInspectable public var borderColor: UIColor{
         get {
             return _borderColor
         }
@@ -38,7 +38,7 @@ class HueView: UIView {
     }
     
     private var _borderWidth: CGFloat = 1.0
-    @IBInspectable var borderWidth: CGFloat{
+    @IBInspectable public var borderWidth: CGFloat{
         get {
             return _borderWidth
         }
@@ -51,7 +51,7 @@ class HueView: UIView {
     
     
     private var _saturation: CGFloat = 1.0
-    open var saturation: CGFloat {
+    public var saturation: CGFloat {
         get {
             return _saturation
         }
@@ -65,7 +65,7 @@ class HueView: UIView {
     }
     
     private var _brightness: CGFloat = 1.0
-    open var brightness: CGFloat {
+    public var brightness: CGFloat {
         get {
             return _brightness
         }

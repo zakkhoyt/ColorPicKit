@@ -14,7 +14,7 @@ private let invalidPositionValue = CGFloat(-1.0)
     // MARK: Variables
     
     private var _roundedCornders: Bool = true
-    @IBInspectable var roundedCorners: Bool {
+    @IBInspectable public var roundedCorners: Bool {
         get {
             return _roundedCornders
         }
@@ -33,7 +33,7 @@ private let invalidPositionValue = CGFloat(-1.0)
     }
     
     private var _borderColor: UIColor = .darkGray
-    @IBInspectable var borderColor: UIColor{
+    @IBInspectable public var borderColor: UIColor{
         get {
             return _borderColor
         }
@@ -46,7 +46,7 @@ private let invalidPositionValue = CGFloat(-1.0)
     }
     
     private var _borderWidth: CGFloat = 1.0
-    @IBInspectable var borderWidth: CGFloat{
+    @IBInspectable public var borderWidth: CGFloat{
         get {
             return _borderWidth
         }
@@ -65,7 +65,7 @@ private let invalidPositionValue = CGFloat(-1.0)
     }
     
     private var _knobView: KnobView = KnobView()
-    var knobView: KnobView {
+    public var knobView: KnobView {
         get {
             return _knobView
         }
@@ -76,7 +76,7 @@ private let invalidPositionValue = CGFloat(-1.0)
     }
     
     private var _knobSize: CGSize = CGSize(width: 90, height: 90)
-    @IBInspectable var knobSize: CGSize {
+    @IBInspectable public var knobSize: CGSize {
         get {
             return _knobSize
         }
@@ -87,7 +87,7 @@ private let invalidPositionValue = CGFloat(-1.0)
     }
     
     private var _color: UIColor = .white
-    @IBInspectable var color: UIColor {
+    @IBInspectable public var color: UIColor {
         get {
             let rgb = spectrumView.colorForPoint(position)
             return UIColor(red: rgb.red, green: rgb.green, blue: rgb.blue, alpha: 1.0)
@@ -95,7 +95,7 @@ private let invalidPositionValue = CGFloat(-1.0)
     }
     
     private var _position: CGPoint = CGPoint(x: invalidPositionValue, y: invalidPositionValue)
-    @IBInspectable var position: CGPoint {
+    @IBInspectable public var position: CGPoint {
         get {
             return _position
         }
@@ -230,7 +230,7 @@ private let invalidPositionValue = CGFloat(-1.0)
         if mPoint.y > spectrumFrame.origin.y + spectrumFrame.size.height - 1.0 {
             mPoint.y = spectrumFrame.origin.y + spectrumFrame.size.height - 1.0
         }
-        print("point: \(point) mPoint: \(mPoint)")
+        //print("point: \(point) mPoint: \(mPoint)")
         _position = mPoint
     }
     
