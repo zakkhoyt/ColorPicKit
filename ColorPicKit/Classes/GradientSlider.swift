@@ -14,7 +14,7 @@ import UIKit
     // MARK: Variables
     
     private var _roundedCornders: Bool = true
-    @IBInspectable var roundedCorners: Bool {
+    @IBInspectable public var roundedCorners: Bool {
         get {
             return _roundedCornders
         }
@@ -25,7 +25,7 @@ import UIKit
     }
     
     private var _borderColor: UIColor = .darkGray
-    @IBInspectable var borderColor: UIColor{
+    @IBInspectable public var borderColor: UIColor{
         get {
             return _borderColor
         }
@@ -37,7 +37,7 @@ import UIKit
     }
 
     private var _borderWidth: CGFloat = 1.0
-    @IBInspectable var borderWidth: CGFloat{
+    @IBInspectable public var borderWidth: CGFloat{
         get {
             return _borderWidth
         }
@@ -55,7 +55,7 @@ import UIKit
     }
     
     private var _knobView: KnobView = KnobView()
-    var knobView: KnobView {
+    public var knobView: KnobView {
         get {
             return _knobView
         }
@@ -66,7 +66,7 @@ import UIKit
     }
 
     private var _knobSize: CGSize = CGSize(width: 30, height: 30)
-    @IBInspectable var knobSize: CGSize {
+    @IBInspectable public var knobSize: CGSize {
         get {
             return _knobSize
         }
@@ -78,7 +78,7 @@ import UIKit
 
 
     private var _value: CGFloat = 0.5
-    @IBInspectable var value: CGFloat {
+    @IBInspectable public var value: CGFloat {
         get {
             return _value
         }
@@ -88,14 +88,14 @@ import UIKit
         }
     }
     
-    var color: UIColor {
+    public var color: UIColor {
         get {
             return UIColor.interpolateAt(percent: value, betweenColor1: color1, andColor2: color2)
         }
     }
  
     private var _color1: UIColor = .black
-    @IBInspectable var color1: UIColor  {
+    @IBInspectable public var color1: UIColor  {
         get {
             return _color1
         }
@@ -107,7 +107,7 @@ import UIKit
     }
     
     private var _color2: UIColor = .white
-    @IBInspectable var color2: UIColor {
+    @IBInspectable public var color2: UIColor {
         get {
             return _color2
         }

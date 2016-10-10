@@ -15,7 +15,7 @@ import UIKit
     // MARK: Variables
     
     private var _roundedCornders: Bool = true
-    @IBInspectable var roundedCorners: Bool {
+    @IBInspectable public var roundedCorners: Bool {
         get {
             return _roundedCornders
         }
@@ -26,7 +26,7 @@ import UIKit
     }
     
     private var _borderColor: UIColor = .darkGray
-    @IBInspectable var borderColor: UIColor{
+    @IBInspectable public var borderColor: UIColor{
         get {
             return _borderColor
         }
@@ -38,7 +38,7 @@ import UIKit
     }
     
     private var _borderWidth: CGFloat = 1.0
-    @IBInspectable var borderWidth: CGFloat{
+    @IBInspectable public var borderWidth: CGFloat{
         get {
             return _borderWidth
         }
@@ -56,7 +56,7 @@ import UIKit
     }
     
     private var _knobView: KnobView = KnobView()
-    var knobView: KnobView {
+    public var knobView: KnobView {
         get {
             return _knobView
         }
@@ -67,7 +67,7 @@ import UIKit
     }
     
     private var _knobSize: CGSize = CGSize(width: 30, height: 30)
-    @IBInspectable var knobSize: CGSize {
+    @IBInspectable public var knobSize: CGSize {
         get {
             return _knobSize
         }
@@ -79,7 +79,7 @@ import UIKit
     
     
     private var _value: CGFloat = 0.5
-    @IBInspectable var value: CGFloat {
+    @IBInspectable public var value: CGFloat {
         get {
             return _value
         }
@@ -90,7 +90,7 @@ import UIKit
     }
     
     private var _saturation: CGFloat = 1.0
-    @IBInspectable open var saturation: CGFloat {
+    @IBInspectable public var saturation: CGFloat {
         get {
             return _saturation
         }
@@ -103,7 +103,7 @@ import UIKit
     }
     
     private var _brightness: CGFloat = 1.0
-    @IBInspectable open var brightness: CGFloat {
+    @IBInspectable public var brightness: CGFloat {
         get {
             return _brightness
         }
@@ -115,7 +115,7 @@ import UIKit
         }
     }
     
-    var color: UIColor {
+    public var color: UIColor {
         get {
             let hue = value
             let color = UIColor(hue: hue, saturation: 1.0, brightness: 1.0, alpha: 1.0)

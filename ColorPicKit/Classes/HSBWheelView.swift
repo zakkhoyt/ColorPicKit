@@ -10,26 +10,26 @@ import UIKit
 
 class HSBWheelView: UIView {
     
-    @IBInspectable open var borderWidth: CGFloat = 1.0 {
+    @IBInspectable public var borderWidth: CGFloat = 1.0 {
         didSet {
             setNeedsDisplay()
         }
     }
-    @IBInspectable open var borderColor: UIColor = UIColor.darkGray {
+    @IBInspectable public var borderColor: UIColor = UIColor.darkGray {
         didSet {
             setNeedsDisplay()
         }
     }
     
     
-    @IBInspectable open var inset: CGFloat = 8.0 {
+    @IBInspectable public var inset: CGFloat = 8.0 {
         didSet {
             setNeedsDisplay()
         }
     }
     
     private var _brightness: CGFloat = 1.0
-    @IBInspectable open var brightness: CGFloat {
+    @IBInspectable public var brightness: CGFloat {
         get {
             return _brightness
         }
@@ -73,6 +73,7 @@ class HSBWheelView: UIView {
     fileprivate func commonInit() {
         self.backgroundColor = UIColor.clear
     }
+    
     
     
     func colorForPoint(_ point: CGPoint) -> RGB {
@@ -119,7 +120,7 @@ class HSBWheelView: UIView {
         updateGradient()
     }
     
-    fileprivate func updateGradient() {
+    func updateGradient() {
         if bounds.width == 0 || bounds.height == 0 {
             return
         }

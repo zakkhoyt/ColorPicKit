@@ -11,7 +11,7 @@ import UIKit
 @IBDesignable public class KnobView: UIView, Knob {
     
     private var _color: UIColor = UIColor.white
-    @IBInspectable var color: UIColor {
+    @IBInspectable public var color: UIColor {
         get {
             return _color
         }
@@ -22,7 +22,7 @@ import UIKit
     }
     
     private var _borderColor: UIColor = UIColor.darkGray
-    @IBInspectable var borderColor: UIColor {
+    @IBInspectable public var borderColor: UIColor {
         get {
             return _borderColor
         }
@@ -33,7 +33,7 @@ import UIKit
     }
 
     private var _borderWidth: CGFloat = 1.0
-    @IBInspectable var borderWidth: CGFloat {
+    @IBInspectable public var borderWidth: CGFloat {
         get {
             return _borderWidth
         }

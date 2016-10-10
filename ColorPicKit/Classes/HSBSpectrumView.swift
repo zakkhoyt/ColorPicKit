@@ -13,7 +13,7 @@ class HSBSpectrumView: UIView {
     // MARK: Variables
     
     private var _borderColor: UIColor = .darkGray
-    @IBInspectable var borderColor: UIColor{
+    @IBInspectable public var borderColor: UIColor{
         get {
             return _borderColor
         }
@@ -26,7 +26,7 @@ class HSBSpectrumView: UIView {
     }
     
     private var _borderWidth: CGFloat = 1.0
-    @IBInspectable var borderWidth: CGFloat{
+    @IBInspectable public var borderWidth: CGFloat{
         get {
             return _borderWidth
         }

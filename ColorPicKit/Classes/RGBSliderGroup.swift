@@ -14,7 +14,7 @@ import UIKit
     // MARK: Variables
     
     private var _roundedCornders: Bool = true
-    @IBInspectable var roundedCorners: Bool {
+    @IBInspectable public var roundedCorners: Bool {
         get {
             return _roundedCornders
         }
@@ -30,7 +30,7 @@ import UIKit
     }
     
     private var _borderColor: UIColor = .darkGray
-    @IBInspectable var borderColor: UIColor{
+    @IBInspectable public var borderColor: UIColor{
         get {
             return _borderColor
         }
@@ -45,7 +45,7 @@ import UIKit
     }
     
     private var _borderWidth: CGFloat = 1.0
-    @IBInspectable var borderWidth: CGFloat{
+    @IBInspectable public var borderWidth: CGFloat{
         get {
             return _borderWidth
         }
@@ -68,7 +68,7 @@ import UIKit
     }
     
 
-    var color: UIColor {
+    public var color: UIColor {
         get {
             let red = redSlider.value
             let blue = blueSlider.value

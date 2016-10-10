@@ -18,6 +18,10 @@ class BaseViewController: UIViewController {
         super.viewDidLoad()
         let resetBarb = UIBarButtonItem(title: "Reset", style: .plain, target: self, action: #selector(resetBarbAction))
         navigationItem.rightBarButtonItem = resetBarb
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
         reset()
     }
     
