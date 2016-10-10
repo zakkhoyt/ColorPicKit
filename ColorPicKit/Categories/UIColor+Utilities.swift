@@ -15,7 +15,26 @@ public typealias HSB = (hue: CGFloat, saturation: CGFloat, brightness: CGFloat)
 
 
 public extension UIColor {
-    public convenience init(hexString:String) {
+
+    // MARK: Class factory
+    public class func colorWith(hexString: String, alpha: CGFloat = 1.0) -> UIColor {
+        return UIColor(hexString: hexString, alpha: alpha)
+    }
+    
+    public class func colorWith(rgb: RGB, alpha: CGFloat = 1.0) -> UIColor {
+        return UIColor(rgb: rgb, alpha: alpha)
+    }
+
+    public class func colorWith(hsb: HSB, alpha: CGFloat = 1.0) -> UIColor {
+        return UIColor(hsb: hsb, alpha: alpha)
+    }
+
+    public class func colorWith(cmyk: CMYK, alpha: CGFloat = 1.0) -> UIColor {
+        return UIColor(cmyk: cmyk, alpha: alpha)
+    }
+    
+    // MARK: Init methods
+    public convenience init(hexString:String, alpha: CGFloat = 1.0) {
         let scanner = Scanner(string: hexString)
         
         if (hexString.hasPrefix("#")) {
@@ -34,9 +53,23 @@ public extension UIColor {
         let green = CGFloat(g) / 255.0
         let blue  = CGFloat(b) / 255.0
         
-        self.init(red:red, green:green, blue:blue, alpha:1)
+        self.init(red:red, green:green, blue:blue, alpha:alpha)
     }
     
+    public convenience init(rgb: RGB, alpha: CGFloat = 1.0) {
+        self.init(red:rgb.red, green:rgb.green, blue:rgb.blue, alpha:alpha)
+    }
+
+    public convenience init(hsb: HSB, alpha: CGFloat = 1.0) {
+        self.init(hue: hsb.hue, saturation: hsb.saturation, brightness: hsb.brightness, alpha: alpha)
+    }
+
+    public convenience init(cmyk: CMYK, alpha: CGFloat = 1.0) {
+        let rgb = UIColor.cmykToRGB(cmyk: cmyk)
+        self.init(red:rgb.red, green:rgb.green, blue:rgb.blue, alpha:alpha)
+    }
+
+    // MARK: Helpers
     public func hexString() -> String {
         var r:CGFloat = 0
         var g:CGFloat = 0
@@ -74,6 +107,8 @@ public extension UIColor {
         let rgb = self.rgb()
         return UIColor.rgbToCMYK(rgb: rgb)
     }
+    
+    // MARK: Class helpers
     
     // http://www.rapidtables.com/convert/color/rgb-to-cmyk.htm
     public class func rgbToCMYK(rgb: RGB) -> CMYK {

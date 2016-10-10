@@ -31,6 +31,7 @@
                                     <userDefinedRuntimeAttribute type="color" keyPath="color2">
                                         <color key="value" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="roundedCorners" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="grayscaleSliderTouchDown:" destination="atJ-OO-c7x" eventType="touchDown" id="PXi-Cj-AjC"/>
