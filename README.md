@@ -118,3 +118,7 @@ pod 'ColorPicKit', :git => 'https://github.com/zakkhoyt/ColorPicKit', :branch =>
 ![IB](https://raw.githubusercontent.com/zakkhoyt/ColorPicKit/master/images/ib_hue.png)
 
 ![In use](https://raw.githubusercontent.com/zakkhoyt/ColorPicKit/master/images/hue.png)
+
+## Contributions
+
+See the issues page for new features, bugs, and improvements. 

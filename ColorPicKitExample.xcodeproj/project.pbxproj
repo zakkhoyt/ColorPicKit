@@ -90,6 +90,9 @@
 		C607EEF51DA96F1400A73F51 /* ColorPicKitExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ColorPicKitExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C607EEF91DA96F1400A73F51 /* ColorPicKitExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPicKitExampleUITests.swift; sourceTree = "<group>"; };
 		C607EEFB1DA96F1400A73F51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C68AF68F1DAB3F8F00DA93B5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C68AF6901DAB3F8F00DA93B5 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		C68AF6911DAB3F8F00DA93B5 /* ColorPicKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ColorPicKit.podspec; sourceTree = "<group>"; };
 		C6D87F901DA9F2E3004CB7E3 /* Links.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Links.md; sourceTree = "<group>"; };
 		C6D87F921DA9F2E3004CB7E3 /* CMYKSliderGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMYKSliderGroup.swift; sourceTree = "<group>"; };
 		C6D87F931DA9F2E3004CB7E3 /* GradientData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientData.swift; sourceTree = "<group>"; };
@@ -164,6 +167,9 @@
 		C607EECD1DA96F1400A73F51 = {
 			isa = PBXGroup;
 			children = (
+				C68AF68F1DAB3F8F00DA93B5 /* README.md */,
+				C68AF6901DAB3F8F00DA93B5 /* LICENSE */,
+				C68AF6911DAB3F8F00DA93B5 /* ColorPicKit.podspec */,
 				C607EF091DA9763200A73F51 /* ColorPicKit */,
 				C607EED81DA96F1400A73F51 /* ColorPicKitExample */,
 				C607EEED1DA96F1400A73F51 /* ColorPicKitExampleTests */,
