@@ -10,6 +10,118 @@ import UIKit
 
 extension UIImage {
     
+    
+    // MARK: Public class functions
+    public class func pixelColorOf(image: UIImage, at point: CGPoint) -> UIColor? {
+        return image.pixelColorAt(point: point)
+    }
+    
+    public class func pixelBufferOf(image: UIImage) -> CVPixelBuffer? {
+        return image.pixelBuffer()
+    }
+    
+    public class func pixelBufferPropertiesOf(image: UIImage) -> (pixelBuffer: CVPixelBuffer?, size:CGSize, bytesPerRow: Int) {
+        return image.pixelBufferProperties()
+    }
+    
+    
+    public class func getSizeOf(pixelBuffer: CVPixelBuffer) -> CGSize {
+        CVPixelBufferLockBaseAddress(pixelBuffer, [])
+        let width = CVPixelBufferGetWidth(pixelBuffer)
+        let height = CVPixelBufferGetHeight(pixelBuffer)
+        CVPixelBufferUnlockBaseAddress(pixelBuffer, [])
+        return CGSize(width: width, height: height)
+        
+    }
+    
+    public class func getBytesPerRowOf(pixelBuffer: CVPixelBuffer) -> Int {
+        CVPixelBufferLockBaseAddress(pixelBuffer, [])
+        let bytesPerRow = CVPixelBufferGetBytesPerRow(pixelBuffer)
+        CVPixelBufferUnlockBaseAddress(pixelBuffer, [])
+        return bytesPerRow
+    }
+
+    
+    // MARK: Public methods
+    
+    // Creates a pixel buffer and gets the color of the specified point
+    // Creating the pixel buffer is resource intensive, so if you are repeatedly calling
+    // this method, it would be best to instead call pixelBuffer(), store it, and then
+    // call UIImage.getColorAt(point: point, in: pixelBuffer)
+    public func pixelColorAt(point: CGPoint) -> UIColor? {
+        guard let pixelBuffer = self.pixelBuffer() else {
+            print("Failed to convert image to pixelBuffer")
+            return nil
+        }
+        
+        return UIImage.getColorAt(point: point, in: pixelBuffer)
+    }
+    
+    // Draw self.cgImage into a pixel buffer
+    public func pixelBuffer() -> CVPixelBuffer? {
+        
+        guard let cgImage = self.cgImage else {
+            print("image has no cgImage")
+            return nil
+        }
+        
+        let width = Int(cgImage.width)
+        let height = Int(cgImage.height)
+        
+        
+        let attributes: [NSString : NSNumber] = [
+            kCVPixelBufferCGImageCompatibilityKey as NSString: true as NSNumber,
+            kCVPixelBufferCGBitmapContextCompatibilityKey as NSString: true as NSNumber
+        ]
+        
+        var pixelBuffer: CVPixelBuffer? = nil
+        
+        let status = CVPixelBufferCreate(kCFAllocatorDefault,
+                                         width,
+                                         height,
+                                         kCVPixelFormatType_32ARGB,
+                                         attributes as CFDictionary,
+                                         &pixelBuffer)
+        assert(status == kCVReturnSuccess && pixelBuffer != nil)
+        
+        
+        CVPixelBufferLockBaseAddress(pixelBuffer!, [])
+        
+        let pxdata = CVPixelBufferGetBaseAddress(pixelBuffer!)
+        
+        let colorSpace = CGColorSpaceCreateDeviceRGB()
+        
+        let bitmapInfo = CGBitmapInfo(rawValue: CGImageAlphaInfo.premultipliedFirst.rawValue | CGBitmapInfo.byteOrder32Little.rawValue)
+        let context =  CGContext(
+            data: pxdata,
+            width: width,
+            height: height,
+            bitsPerComponent: 8,
+            bytesPerRow: CVPixelBufferGetBytesPerRow(pixelBuffer!),
+            space: colorSpace,
+            bitmapInfo: bitmapInfo.rawValue)
+        
+        let frame = CGRect(x: 0, y: 0, width: size.width, height: size.height)
+        context?.draw(cgImage, in: frame)
+        
+        CVPixelBufferUnlockBaseAddress(pixelBuffer!, [])
+        return pixelBuffer!
+    }
+    
+    
+    public func pixelBufferProperties() -> (pixelBuffer: CVPixelBuffer?, size:CGSize, bytesPerRow: Int) {
+        guard let pixelBuffer = self.pixelBuffer() else {
+            print("Failed to convert image to pixelBuffer")
+            return (nil, CGSize.zero, 0)
+        }
+        let size = UIImage.getSizeOf(pixelBuffer: pixelBuffer)
+        let bytesPerRow = UIImage.getBytesPerRowOf(pixelBuffer: pixelBuffer)
+        return (pixelBuffer, size, bytesPerRow)
+    }
+    
+    
+    // MARK: Internal methods
+    
     func getPixelColor(point: CGPoint) -> UIColor? {
         
         
@@ -43,98 +155,8 @@ extension UIImage {
         
     }
     
-    // Convert self to pixel buffer then index the point
-    func getPixelColorFromPixelBuffer(point: CGPoint) -> UIColor? {
-    
-        guard let imageBuffer = self.pixelBuffer() else {
-            print("could not create pixelBuffer")
-            return nil
-        }
-    
-        
-        CVPixelBufferLockBaseAddress(imageBuffer, [])
-        let baseAddress = CVPixelBufferGetBaseAddress(imageBuffer)
-        let width = CVPixelBufferGetWidth(imageBuffer)
-        let height = CVPixelBufferGetHeight(imageBuffer)
-        let bytesPerRow = CVPixelBufferGetBytesPerRow(imageBuffer)
-        let colorSpace = CGColorSpaceCreateDeviceRGB()
-        
-        let bitmapInfo = CGBitmapInfo(rawValue: CGImageAlphaInfo.premultipliedFirst.rawValue | CGBitmapInfo.byteOrder32Little.rawValue)
-        
-        guard let context = CGContext(data: baseAddress, width: width, height: height, bitsPerComponent: 8, bytesPerRow: bytesPerRow, space: colorSpace, bitmapInfo: bitmapInfo.rawValue) else {
-            print("Failed to create context for pixel buffer")
-            return nil
-        }
-        
-        let cgImage = context.makeImage()
-        
-        CVPixelBufferUnlockBaseAddress(imageBuffer, [])
-        
-        let image = UIImage(cgImage: cgImage!)
-        
-        if let color = image.getPixelColor(point: point) {
-            return color
-        }
 
-        return nil
-    }
-    
-    
-    
-    
-    
-    // Draw self.cgImage into a pixel buffer
-    func pixelBuffer() -> CVPixelBuffer? {
-        
-        guard let cgImage = self.cgImage else {
-            print("image has no cgImage")
-            return nil
-        }
-        
-        let width = Int(cgImage.width)
-        let height = Int(cgImage.height)
-        
-
-        let attributes: [NSString : NSNumber] = [
-            kCVPixelBufferCGImageCompatibilityKey as NSString: true as NSNumber,
-            kCVPixelBufferCGBitmapContextCompatibilityKey as NSString: true as NSNumber
-        ]
-        
-        var pixelBuffer: CVPixelBuffer? = nil
-        
-        let status = CVPixelBufferCreate(kCFAllocatorDefault,
-                                         width,
-                                         height,
-                                         kCVPixelFormatType_32ARGB,
-                                         attributes as CFDictionary,
-                                         &pixelBuffer)
-        assert(status == kCVReturnSuccess && pixelBuffer != nil)
-        
-        
-        CVPixelBufferLockBaseAddress(pixelBuffer!, [])
-        
-        let pxdata = CVPixelBufferGetBaseAddress(pixelBuffer!)
-        
-        let colorSpace = CGColorSpaceCreateDeviceRGB()
-        
-        
-    
-        let bitmapInfo = CGBitmapInfo(rawValue: CGImageAlphaInfo.premultipliedFirst.rawValue | CGBitmapInfo.byteOrder32Little.rawValue)
-        let context =  CGContext(
-            data: pxdata,
-            width: width,
-            height: height,
-            bitsPerComponent: 8,
-            bytesPerRow: CVPixelBufferGetBytesPerRow(pixelBuffer!),
-            space: colorSpace,
-            bitmapInfo: bitmapInfo.rawValue)
-
-        let frame = CGRect(x: 0, y: 0, width: size.width, height: size.height)
-        context?.draw(cgImage, in: frame)
-
-        CVPixelBufferUnlockBaseAddress(pixelBuffer!, [])
-        return pixelBuffer!
-    }
+    // MARK: Internal Class functions
     
     class func getColorAt(point: CGPoint, in pixelBuffer: CVPixelBuffer) -> UIColor? {
         
@@ -175,14 +197,19 @@ extension UIImage {
         
         return nil
     }
+
+
     
-    class func getSizeOf(pixelBuffer: CVPixelBuffer) -> CGSize {
-        CVPixelBufferLockBaseAddress(pixelBuffer, [])
-        //let baseAddress = CVPixelBufferGetBaseAddress(pixelBuffer)
-        let width = CVPixelBufferGetWidth(pixelBuffer)
-        let height = CVPixelBufferGetHeight(pixelBuffer)
-        return CGSize(width: width, height: height)
-        
-    }
+    
+
+    
+    
+
+    
+
+    
+    
+
+    
 }
 

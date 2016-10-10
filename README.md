@@ -1,54 +1,94 @@
 ## ColorPicKit
 
+Written in Swift 3.0
 
-This repository provides several UIControls for picking colors
+This repository provides several UIControls for picking colors as well as class extensions for UIColor and UIImage which are related to colors.
 
 ![IB](https://github.com/zakkhoyt/ColorPicKit/blob/master/images/all_100816.png)
 
-- An Image color picker
-- An HSB color picker wheel
-- An HSB spectrum slider
-- An RGB slider set
-- An HSB slider set
-- An CMYK slider set
-- A gradient slider
-- A hue slider
+* An Image color picker - Get the color of any individual pixel.
+* An HSB color picker wheel - Hue vs saturation.
+* An HSB spectrum picker - A 2 dimensional plot where y = hue and x = saturation from 0.0 ..< 0.5 and x = brightness from 0.5 >.. 1.0
+* An RGB slider set - 3 sliders to select red, green, and blue.
+* An HSB slider set - 3 sliders to select hue, saturation, and brightness.
+* An CMYK slider set - 4 sliders to select cyan, magenta, yellow, and black.
+* A gradient slider - Interpolate a color between two established colors.
+* A hue slider - Select a hue value.
 
+#### UIColor utilities
 
-It also exposes a functions and data structures for working with hex strings, RGB, HSB, and CMYK.
+ColorPicKit also exposes several functions and data structures for working with hex strings, RGB, HSB, and CMYK, and interpolating a color between two known colors.
 
 ````
+
 extension UIColor {
-    init(hexString:String) {...}
-    func hexString() -> String {...}
-    func rgb() -> RGB
-    func hsb() -> HSB
-    func cmyk() -> CMYK
-    class func rgbToCMYK(rgb: RGB) -> CMYK
-    class func rgbToHSB(rgb: RGB) -> HSB
-    class func hsbToRGB(hsb: HSB) -> RGB
-    class func hsbToCMYK(hsb: HSB) -> CMYK
-    class func cmykToRGB(cmyk: CMYK) -> RGB
-    class func cmykToHSB(cmyk: CMYK) -> HSB
+
+    public convenience init(hexString:String)
+    public convenience init(rgb: RGB, alpha: CGFloat = 1.0)
+    public convenience init(hsb: HSB, alpha: CGFloat = 1.0)
+    public convenience init(cmyk: CMYK, alpha: CGFloat = 1.0)
+
+    public func hexString() -> String
+    public func rgb() -> RGB
+    public func hsb() -> HSB
+    public func cmyk() -> CMYK
+
+    public class func colorWith(hexString: String, alpha: CGFloat = 1.0) -> UIColor
+    public class func colorWith(rgb: RGB, alpha: CGFloat = 1.0) -> UIColor
+    public class func colorWith(hsb: HSB, alpha: CGFloat = 1.0) -> UIColor
+    public class func colorWith(cmyk: CMYK, alpha: CGFloat = 1.0) -> UIColor
+
+    public class func interpolateAt(percent: CGFloat, betweenColor1 color1: UIColor, andColor2 color2: UIColor) -> UIColor
+    public class func rgbToCMYK(rgb: RGB) -> CMYK
+    public class func rgbToHSB(rgb: RGB) -> HSB
+    public class func hsbToRGB(hsb: HSB) -> RGB
+    public class func hsbToCMYK(hsb: HSB) -> CMYK
+    public class func cmykToRGB(cmyk: CMYK) -> RGB
+    public class func cmykToHSB(cmyk: CMYK) -> HSB
+
 }
-````
-
-where RGB, HSB, and CMYK are defined as tuples
-
-````
-typealias RGB = (red: CGFloat, green: CGFloat, blue: CGFloat)
-typealias CMYK = (cyan: CGFloat, magenta: CGFloat, yellow: CGFloat, black: CGFloat)
-typealias HSB = (hue: CGFloat, saturation: CGFloat, brightness: CGFloat)
 
 ````
 
-Written in Swift 3.0
+RGB, HSB, and CMYK are defined as tuples
+
+````
+
+public typealias RGB = (red: CGFloat, green: CGFloat, blue: CGFloat)
+public typealias CMYK = (cyan: CGFloat, magenta: CGFloat, yellow: CGFloat, black: CGFloat)
+public typealias HSB = (hue: CGFloat, saturation: CGFloat, brightness: CGFloat)
+
+````
+
+#### UIImage and CVPixelBuffer utilities
+
+Additionally, I've exposed instance methods and class functions which allow you to convert UIImage to CVPixelBuffer, get CVPixelBuffer properties, and query a pixel color.
+
+````
+
+extension UIImage {
+
+    // Class functions
+    public class func pixelBufferOf(image: UIImage) -> CVPixelBuffer?
+    public class func pixelBufferPropertiesOf(image: UIImage) -> (pixelBuffer: CVPixelBuffer?, size:CGSize, bytesPerRow: Int)
+    public class func getSizeOf(pixelBuffer: CVPixelBuffer) -> CGSize
+    public class func getBytesPerRowOf(pixelBuffer: CVPixelBuffer) -> Int
+    public class func pixelColorOf(image: UIImage, at point: CGPoint) -> UIColor?
+
+    // Instance methods
+    public func pixelBuffer() -> CVPixelBuffer? {
+    public func pixelColorAt(point: CGPoint) -> UIColor? {
+    public func pixelBufferProperties() -> (pixelBuffer: CVPixelBuffer?, size:CGSize, bytesPerRow: Int)
+
+}
+
+````
 
 ## Usage
 - Drag and drop a UIView onto your view controller
-- Set the view's class to GradientSlider, RGBSliders, HSBSliders, CMYKSliders, HSBWheelPicker, ImagePicker, or HSBSpectrumPicker.
-- Configure IB properties in the Attributes Inspector (color, rounded corners, border color, etc...)
-- Drag and drop your IBActions just like any other control. These controls support
+- Set the view's class to GradientSlider, HueSlider, RGBSliderGroup, HSBSliderGroup, CMYKSliderGroup, HSBWheelPicker, HSBSpectrumPicker, or ImagePicker.
+- Using the Attributes Inspector, configure IB properties (color, rounded corners, border color, etc...)
+- Drag and drop your IBActions just like any other control. All controls support
   - ValueChanged
   - TouchDown
   - TouchUpInside
@@ -62,7 +102,9 @@ See the example project. Clone this repository and open ColorPicKitExample.xcode
 For the time being, this pod needs to be pulled from its github master branch.
 
 ````
+
 pod 'ColorPicKit', :git => 'https://github.com/zakkhoyt/ColorPicKit', :branch => 'master'
+
 ````
 
 ## Images
@@ -121,4 +163,4 @@ pod 'ColorPicKit', :git => 'https://github.com/zakkhoyt/ColorPicKit', :branch =>
 
 ## Contributions
 
-See the issues page for new features, bugs, and improvements. 
+See the issues page for new features, bugs, and improvements.

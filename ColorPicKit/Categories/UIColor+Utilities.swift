@@ -161,7 +161,6 @@ public extension UIColor {
         let rgb1 = color1.rgb()
         let rgb2 = color2.rgb()
         
-        
         let redDiff = rgb2.red - rgb1.red
         let red = rgb1.red  + redDiff * percent
         

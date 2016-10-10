@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,10 +19,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hS1-lM-2fw" customClass="ImagePicker" customModule="ColorPicKitExample" customModuleProvider="target">
-                                <frame key="frameInset" minY="146" width="375" height="375"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hS1-lM-2fw" customClass="ImagePicker" customModule="ColorPicKitExample" customModuleProvider="target">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hS1-lM-2fw" secondAttribute="height" multiplier="1:1" id="GpB-Yx-I6Q"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="image" keyPath="image" value="gradient_portrait"/>
                                 </userDefinedRuntimeAttributes>
@@ -33,6 +35,11 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="hS1-lM-2fw" secondAttribute="trailing" id="Ig5-sn-9iZ"/>
+                            <constraint firstItem="hS1-lM-2fw" firstAttribute="centerY" secondItem="QfI-aE-Obb" secondAttribute="centerY" id="XF3-SB-xBo"/>
+                            <constraint firstItem="hS1-lM-2fw" firstAttribute="leading" secondItem="QfI-aE-Obb" secondAttribute="leading" id="eHB-9Q-2l9"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="imagePicker" destination="hS1-lM-2fw" id="PYY-Uj-fjy"/>
