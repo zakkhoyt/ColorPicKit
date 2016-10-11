@@ -9,7 +9,6 @@
 import UIKit
 
 
-protocol Colorable {
-    
+public protocol Colorable {
     var color: UIColor { get }
 }
