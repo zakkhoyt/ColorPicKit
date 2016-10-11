@@ -6,7 +6,7 @@ This repository provides several UIControls for picking colors as well as class 
 
 ![IB](https://github.com/zakkhoyt/ColorPicKit/blob/master/images/all_100816.png)
 
-* An Image color picker - Get the color of any individual pixel.
+* An Image Pixel Picker - Get the color of any individual pixel.
 * An HSB color picker wheel - Hue vs saturation.
 * An HSB spectrum picker - A 2 dimensional plot where y = hue and x = saturation from 0.0 ..< 0.5 and x = brightness from 0.5 >.. 1.0
 * An RGB slider set - 3 sliders to select red, green, and blue.
