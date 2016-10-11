@@ -69,7 +69,7 @@ import UIKit
     }
     
     
-    public var color: UIColor {
+    /* @IBInspectable */ public var color: UIColor {
         get {
             let hue = hueSlider.value
             let saturation = saturationSlider.value

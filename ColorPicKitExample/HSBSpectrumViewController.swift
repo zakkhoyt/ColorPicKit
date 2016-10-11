@@ -13,15 +13,15 @@ class HSBSpectrumViewController: BaseViewController {
 
     @IBOutlet weak var hsbSpectrum: HSBSpectum!
     
-    @IBAction func imagePickerTouchDown(_ sender: HSBSpectum) {
+    @IBAction func imagePixelPickerTouchDown(_ sender: HSBSpectum) {
         updateBackgroundColor()
     }
     
-    @IBAction func imagePickerTouchUpInside(_ sender: HSBSpectum) {
+    @IBAction func imagePixelPickerTouchUpInside(_ sender: HSBSpectum) {
         updateBackgroundColor()
     }
     
-    @IBAction func imagePickerValueChanged(_ sender: HSBSpectum) {
+    @IBAction func imagePixelPickerValueChanged(_ sender: HSBSpectum) {
         updateBackgroundColor()
     }
     

@@ -12,15 +12,15 @@ class HSBWheelViewController: BaseViewController {
 
     @IBOutlet weak var hsbWheel: HSBWheel!
     
-    @IBAction func imagePickerTouchDown(_ sender: HSBWheel) {
+    @IBAction func imagePixelPickerTouchDown(_ sender: HSBWheel) {
         updateBackgroundColor()
     }
     
-    @IBAction func imagePickerTouchUpInside(_ sender: HSBWheel) {
+    @IBAction func imagePixelPickerTouchUpInside(_ sender: HSBWheel) {
         updateBackgroundColor()
     }
     
-    @IBAction func imagePickerValueChanged(_ sender: HSBWheel) {
+    @IBAction func imagePixelPickerValueChanged(_ sender: HSBWheel) {
         updateBackgroundColor()
     }
     

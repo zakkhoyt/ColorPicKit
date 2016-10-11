@@ -69,7 +69,7 @@ import UIKit
     }
     
     
-    public var color: UIColor {
+    /* @IBInspectable */ public var color: UIColor {
         get {
             let cyan = cyanSlider.value
             let magenta = magentaSlider.value

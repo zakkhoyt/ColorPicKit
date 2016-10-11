@@ -69,7 +69,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6l-UH-i8S">
-                                        <state key="normal" title="Image Picker"/>
+                                        <state key="normal" title="Image Pixel Picker"/>
                                         <connections>
                                             <segue destination="Rv9-ir-wdN" kind="show" id="7j6-88-3Pr"/>
                                         </connections>
@@ -173,10 +173,10 @@
             </objects>
             <point key="canvasLocation" x="1778" y="417"/>
         </scene>
-        <!--ImagePicker-->
+        <!--ImagePixelPicker-->
         <scene sceneID="nIS-WK-BnB">
             <objects>
-                <viewControllerPlaceholder storyboardName="ImagePicker" id="Rv9-ir-wdN" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="ImagePixelPicker" id="Rv9-ir-wdN" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IeL-Dh-csU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1778" y="482"/>

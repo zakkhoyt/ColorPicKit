@@ -86,7 +86,7 @@ extension UIImage {
 
 ## Usage
 - Drag and drop a UIView onto your view controller
-- Set the view's class to GradientSlider, HueSlider, RGBSliderGroup, HSBSliderGroup, CMYKSliderGroup, HSBWheelPicker, HSBSpectrumPicker, or ImagePicker.
+- Set the view's class to GradientSlider, HueSlider, RGBSliderGroup, HSBSliderGroup, CMYKSliderGroup, HSBWheelPicker, HSBSpectrumPicker, or ImagePixelPicker.
 - Using the Attributes Inspector, configure IB properties (color, rounded corners, border color, etc...)
 - Drag and drop your IBActions just like any other control. All controls support
   - ValueChanged

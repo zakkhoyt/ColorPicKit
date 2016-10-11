@@ -10,7 +10,7 @@ import UIKit
 
 
 private let invalidPositionValue = CGFloat(-1.0)
-@IBDesignable public class HSBWheel: UIControl, KnobbedControl, Colorable {
+@IBDesignable public class HSBWheel: UIControl, PositionableControl, Colorable {
     
     // MARK: Variables
     
@@ -152,7 +152,7 @@ private let invalidPositionValue = CGFloat(-1.0)
         commonInit()
     }
     
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
     }

@@ -68,7 +68,7 @@ import UIKit
     }
     
 
-    public var color: UIColor {
+    /* @IBInspectable */ public var color: UIColor {
         get {
             let red = redSlider.value
             let blue = blueSlider.value

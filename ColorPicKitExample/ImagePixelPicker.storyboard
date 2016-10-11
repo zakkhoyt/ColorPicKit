@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Image Picker View Controller-->
+        <!--Image Pixel Picker View Controller-->
         <scene sceneID="XTo-TY-fdk">
             <objects>
-                <viewController id="2K6-Aw-pNc" customClass="ImagePickerViewController" customModule="ColorPicKitExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2K6-Aw-pNc" customClass="ImagePixelPickerViewController" customModule="ColorPicKitExample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IS7-o5-QPh"/>
                         <viewControllerLayoutGuide type="bottom" id="QjU-bF-0jI"/>
@@ -19,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hS1-lM-2fw" customClass="ImagePicker" customModule="ColorPicKitExample" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hS1-lM-2fw" customClass="ImagePixelPicker" customModule="ColorPicKitExample" customModuleProvider="target">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="hS1-lM-2fw" secondAttribute="height" multiplier="1:1" id="GpB-Yx-I6Q"/>
@@ -28,9 +28,9 @@
                                     <userDefinedRuntimeAttribute type="image" keyPath="image" value="gradient_portrait"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="imagePickerTouchDown:" destination="2K6-Aw-pNc" eventType="touchDown" id="Idp-X3-f4e"/>
-                                    <action selector="imagePickerTouchUpInside:" destination="2K6-Aw-pNc" eventType="touchUpInside" id="Lau-Nq-7j9"/>
-                                    <action selector="imagePickerValueChanged:" destination="2K6-Aw-pNc" eventType="valueChanged" id="l67-k6-ShJ"/>
+                                    <action selector="imagePixelPickerTouchDown:" destination="2K6-Aw-pNc" eventType="touchDown" id="ARW-Tm-TcR"/>
+                                    <action selector="imagePixelPickerTouchUpInside:" destination="2K6-Aw-pNc" eventType="touchUpInside" id="l8c-dR-qxX"/>
+                                    <action selector="imagePixelPickerValueChanged:" destination="2K6-Aw-pNc" eventType="valueChanged" id="yjb-Oa-iV2"/>
                                 </connections>
                             </view>
                         </subviews>
@@ -42,7 +42,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="imagePicker" destination="hS1-lM-2fw" id="PYY-Uj-fjy"/>
+                        <outlet property="imagePixelPicker" destination="hS1-lM-2fw" id="jwL-tA-VOk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tMN-4M-eB8" userLabel="First Responder" sceneMemberID="firstResponder"/>

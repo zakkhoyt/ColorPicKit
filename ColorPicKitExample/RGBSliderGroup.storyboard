@@ -18,8 +18,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ufi-EU-Nlq" customClass="RGBSliderGroup" customModule="ColorPicKitExample" customModuleProvider="target">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ufi-EU-Nlq" customClass="RGBSliderGroup" customModule="ColorPicKitExample" customModuleProvider="target">
+                                <frame key="frameInset" width="1000" height="1000"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" cyan="0.0" magenta="1" yellow="0.0" black="0.0" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="grayscaleSliderTouchDown:" destination="q77-8J-POf" eventType="touchDown" id="aCD-pi-Tm2"/>
                                     <action selector="grayscaleSliderTouchUpInside:" destination="q77-8J-POf" eventType="touchUpInside" id="790-pT-YnB"/>

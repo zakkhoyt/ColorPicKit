@@ -1,5 +1,5 @@
 //
-//  ImagePicker.swift
+//  ImagePixelPicker.swift
 //  ColorPicKitExample
 //
 //  Created by Zakk Hoyt on 10/8/16.
@@ -9,7 +9,7 @@
 import UIKit
 
 private let invalidPositionValue = CGFloat(-1.0)
-@IBDesignable public class ImagePicker: UIControl, KnobbedControl, Colorable {
+@IBDesignable public class ImagePixelPicker: UIControl, PositionableControl, Colorable {
     
     
     // MARK: Variables
@@ -160,7 +160,7 @@ private let invalidPositionValue = CGFloat(-1.0)
         commonInit()
     }
     
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
     }
