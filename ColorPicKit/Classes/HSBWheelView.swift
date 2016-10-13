@@ -10,7 +10,7 @@ import UIKit
 
 class HSBWheelView: UIView {
     
-    @IBInspectable public var borderWidth: CGFloat = 1.0 {
+    @IBInspectable public var borderWidth: CGFloat = 0.5 {
         didSet {
             setNeedsDisplay()
         }

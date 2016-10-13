@@ -21,6 +21,10 @@ public extension UIColor {
         return UIColor(hexString: hexString, alpha: alpha)
     }
     
+    public class func colorWith(rgbP3: RGB, alpha: CGFloat = 1.0) -> UIColor {
+        return UIColor(rgb: rgbP3, alpha: alpha)
+    }
+
     public class func colorWith(rgb: RGB, alpha: CGFloat = 1.0) -> UIColor {
         return UIColor(rgb: rgb, alpha: alpha)
     }
@@ -55,6 +59,11 @@ public extension UIColor {
         
         self.init(red:red, green:green, blue:blue, alpha:alpha)
     }
+
+    public convenience init(rgbP3: RGB, alpha: CGFloat = 1.0) {
+        self.init(red:rgbP3.red, green:rgbP3.green, blue:rgbP3.blue, alpha:alpha)
+    }
+
     
     public convenience init(rgb: RGB, alpha: CGFloat = 1.0) {
         self.init(red:rgb.red, green:rgb.green, blue:rgb.blue, alpha:alpha)

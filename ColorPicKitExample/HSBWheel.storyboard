@@ -25,9 +25,9 @@
                                     <constraint firstAttribute="width" secondItem="K0V-0L-8u9" secondAttribute="height" multiplier="1:1" id="qWx-U6-WgC"/>
                                 </constraints>
                                 <connections>
-                                    <action selector="imagePickerTouchDown:" destination="WtT-Um-q71" eventType="touchDown" id="neH-LZ-6m7"/>
-                                    <action selector="imagePickerTouchUpInside:" destination="WtT-Um-q71" eventType="touchUpInside" id="6Rf-Ak-EED"/>
-                                    <action selector="imagePickerValueChanged:" destination="WtT-Um-q71" eventType="valueChanged" id="eYr-sZ-2Ca"/>
+                                    <action selector="imagePixelPickerTouchDown:" destination="WtT-Um-q71" eventType="touchDown" id="ceI-D0-9IM"/>
+                                    <action selector="imagePixelPickerTouchUpInside:" destination="WtT-Um-q71" eventType="touchUpInside" id="P9E-6o-F2P"/>
+                                    <action selector="imagePixelPickerValueChanged:" destination="WtT-Um-q71" eventType="valueChanged" id="hv1-Ea-KYe"/>
                                 </connections>
                             </view>
                         </subviews>

@@ -33,7 +33,7 @@ private let invalidPositionValue = CGFloat(-1.0)
         }
     }
     
-    private var _borderColor: UIColor = .darkGray
+    private var _borderColor: UIColor = .lightGray
     @IBInspectable public var borderColor: UIColor{
         get {
             return _borderColor
@@ -47,7 +47,7 @@ private let invalidPositionValue = CGFloat(-1.0)
         }
     }
     
-    private var _borderWidth: CGFloat = 1.0
+    private var _borderWidth: CGFloat = 0.5
     @IBInspectable public var borderWidth: CGFloat{
         get {
             return _borderWidth
@@ -78,7 +78,7 @@ private let invalidPositionValue = CGFloat(-1.0)
         }
     }
     
-    private var _knobSize: CGSize = CGSize(width: 90, height: 90)
+    private var _knobSize: CGSize = CGSize(width: 30, height: 30)
     @IBInspectable public var knobSize: CGSize {
         get {
             return _knobSize
@@ -105,16 +105,24 @@ private let invalidPositionValue = CGFloat(-1.0)
         }
     }
     
+    private var _brightnessDate = Date()
     private var _brightness: CGFloat = 1.0
     @IBInspectable public var brightness: CGFloat {
         get {
             return _brightness
         }
         set {
-            if _brightness != newValue {
-                _brightness = newValue
-                wheelView.brightness = newValue
-                updateKnob()
+            // Throttle brightness changes as the cause the gradient to redraw
+            let now = Date()
+            if now.timeIntervalSince(_brightnessDate) > 0.1 {
+                
+                if _brightness != newValue {
+                    _brightness = newValue
+                    wheelView.brightness = newValue
+                    updateKnob()
+                }
+
+                _brightnessDate = now
             }
         }
     }

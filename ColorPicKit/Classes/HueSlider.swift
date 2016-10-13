@@ -25,7 +25,7 @@ import UIKit
         }
     }
     
-    private var _borderColor: UIColor = .darkGray
+    private var _borderColor: UIColor = .lightGray
     @IBInspectable public var borderColor: UIColor{
         get {
             return _borderColor
@@ -37,7 +37,7 @@ import UIKit
         }
     }
     
-    private var _borderWidth: CGFloat = 1.0
+    private var _borderWidth: CGFloat = 0.5
     @IBInspectable public var borderWidth: CGFloat{
         get {
             return _borderWidth
@@ -84,8 +84,16 @@ import UIKit
             return _value
         }
         set {
-            _value = newValue
-            updateKnob()
+            if _value != newValue {
+                if newValue < 0 {
+                    _value = 0
+                } else if newValue > 1.0 {
+                    _value = 1.0
+                } else {
+                    _value = newValue
+                }
+                updateKnob()
+            }
         }
     }
     
@@ -221,7 +229,8 @@ import UIKit
     }
     
     private func updateKnobColor() {
-        knobView.borderColor = color
+//        knobView.borderColor = color
+        knobView.color = color
     }
     
     

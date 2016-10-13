@@ -32,7 +32,7 @@ private let invalidPositionValue = CGFloat(-1.0)
         }
     }
     
-    private var _borderColor: UIColor = .darkGray
+    private var _borderColor: UIColor = .lightGray
     @IBInspectable public var borderColor: UIColor{
         get {
             return _borderColor
@@ -45,7 +45,7 @@ private let invalidPositionValue = CGFloat(-1.0)
         }
     }
     
-    private var _borderWidth: CGFloat = 1.0
+    private var _borderWidth: CGFloat = 0.5
     @IBInspectable public var borderWidth: CGFloat{
         get {
             return _borderWidth
@@ -75,7 +75,7 @@ private let invalidPositionValue = CGFloat(-1.0)
         }
     }
     
-    private var _knobSize: CGSize = CGSize(width: 90, height: 90)
+    private var _knobSize: CGSize = CGSize(width: 30, height: 30)
     @IBInspectable public var knobSize: CGSize {
         get {
             return _knobSize

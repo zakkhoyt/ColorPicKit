@@ -21,7 +21,7 @@ import UIKit
         }
     }
     
-    private var _borderColor: UIColor = UIColor.darkGray
+    private var _borderColor: UIColor = UIColor.lightGray
     @IBInspectable public var borderColor: UIColor {
         get {
             return _borderColor
@@ -32,7 +32,7 @@ import UIKit
         }
     }
 
-    private var _borderWidth: CGFloat = 1.0
+    private var _borderWidth: CGFloat = 0.5
     @IBInspectable public var borderWidth: CGFloat {
         get {
             return _borderWidth
@@ -57,6 +57,12 @@ import UIKit
     
     private func commonInit() {
         backgroundColor = UIColor.clear
+        
+        layer.masksToBounds = false
+        layer.shadowRadius = 1.0
+        layer.shadowColor = UIColor.darkGray.withAlphaComponent(0.5).cgColor
+        layer.shadowOpacity = 1.0
+        layer.shadowOffset = CGSize(width: 0, height: 2)
     }
     
     public override func draw(_ rect: CGRect) {

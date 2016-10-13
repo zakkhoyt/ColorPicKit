@@ -22,7 +22,7 @@ class GradientView: UIView {
         }
     }
     
-    private var _borderColor: UIColor = .darkGray
+    private var _borderColor: UIColor = .lightGray
     @IBInspectable public var borderColor: UIColor{
         get {
             return _borderColor
@@ -34,7 +34,7 @@ class GradientView: UIView {
         }
     }
     
-    private var _borderWidth: CGFloat = 1.0
+    private var _borderWidth: CGFloat = 0.5
     @IBInspectable public var borderWidth: CGFloat{
         get {
             return _borderWidth
