@@ -76,6 +76,21 @@ import UIKit
         }
     }
 
+    
+    private var _barHeight: CGFloat = 10
+    @IBInspectable public var barHeight: CGFloat {
+        get {
+            return _barHeight
+        }
+        set {
+            if _barHeight != newValue {
+                _barHeight = newValue
+                layoutSubviews()
+            }
+        }
+    }
+
+    
 
     private var _value: CGFloat = 0.5
     @IBInspectable public var value: CGFloat {
@@ -158,8 +173,7 @@ import UIKit
     
     override open func layoutSubviews() {
         super.layoutSubviews()
-        
-        gradientView.frame = self.bounds
+        gradientView.frame = frameForGradientView()
         updateKnob()
     }
 
@@ -227,6 +241,14 @@ import UIKit
     private func updateKnobColor() {
         knobView.color = UIColor.interpolateAt(percent: value, betweenColor1: color1, andColor2: color2)
 //        knobView.borderColor = UIColor.interpolateAt(percent: value, betweenColor1: color1, andColor2: color2)
+    }
+    
+    private func frameForGradientView() -> CGRect {
+        let x: CGFloat = 0
+        let y: CGFloat = (bounds.height - barHeight) / 2.0
+        let w: CGFloat = bounds.width
+        let h: CGFloat = barHeight
+        return CGRect(x: x, y: y, width: w, height: h)
     }
     
     

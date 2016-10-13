@@ -21,11 +21,6 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AJe-bn-UDM" customClass="HSBSliderGroup" customModule="ColorPicKitExample" customModuleProvider="target">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                        <color key="value" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="grayscaleSliderTouchDown:" destination="iDW-Re-Q2k" eventType="touchDown" id="mhN-il-E4Z"/>
                                     <action selector="grayscaleSliderTouchUpInside:" destination="iDW-Re-Q2k" eventType="touchUpInside" id="bgR-hG-HsX"/>

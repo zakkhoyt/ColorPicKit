@@ -22,9 +22,10 @@ import UIKit
         set {
             if _roundedCornders != newValue {
                 _roundedCornders = newValue
-                cyanSlider.roundedCorners = roundedCorners
-                magentaSlider.roundedCorners = roundedCorners
-                yellowSlider.roundedCorners = roundedCorners
+                cyanSlider.roundedCorners = newValue
+                magentaSlider.roundedCorners = newValue
+                yellowSlider.roundedCorners = newValue
+                blackSlider.roundedCorners = newValue
             }
             
         }
@@ -41,6 +42,7 @@ import UIKit
                 cyanSlider.borderColor = newValue
                 magentaSlider.borderColor = newValue
                 yellowSlider.borderColor = newValue
+                blackSlider.borderColor = newValue
             }
         }
     }
@@ -56,6 +58,7 @@ import UIKit
                 cyanSlider.borderWidth = newValue
                 magentaSlider.borderWidth = newValue
                 yellowSlider.borderWidth = newValue
+                blackSlider.borderWidth = newValue
             }
             
         }
@@ -65,6 +68,22 @@ import UIKit
         get {
             let height = 5 * spacing + 4.0 * sliderHeight
             return CGSize(width: bounds.width, height: height)
+        }
+    }
+    
+    private var _barHeight: CGFloat = 10
+    @IBInspectable public var barHeight: CGFloat {
+        get {
+            return _barHeight
+        }
+        set {
+            if _barHeight != newValue {
+                _barHeight = newValue
+                cyanSlider.barHeight = newValue
+                magentaSlider.barHeight = newValue
+                yellowSlider.barHeight = newValue
+                blackSlider.barHeight = newValue
+            }
         }
     }
     
@@ -121,6 +140,7 @@ import UIKit
         cyanSlider.roundedCorners = roundedCorners
         cyanSlider.borderColor = borderColor
         cyanSlider.borderWidth = borderWidth
+        cyanSlider.barHeight = barHeight
         cyanSlider.color1 = UIColor.white
         cyanSlider.color2 = UIColor.cyan
         cyanSlider.value = rgb.red
@@ -132,6 +152,7 @@ import UIKit
         magentaSlider.roundedCorners = roundedCorners
         magentaSlider.borderColor = borderColor
         magentaSlider.borderWidth = borderWidth
+        magentaSlider.barHeight = barHeight
         magentaSlider.color1 = UIColor.white
         magentaSlider.color2 = UIColor.magenta
         magentaSlider.value = rgb.green
@@ -144,6 +165,7 @@ import UIKit
         yellowSlider.roundedCorners = roundedCorners
         yellowSlider.borderColor = borderColor
         yellowSlider.borderWidth = borderWidth
+        yellowSlider.barHeight = barHeight
         yellowSlider.color1 = UIColor.white
         yellowSlider.color2 = UIColor.yellow
         yellowSlider.value = rgb.blue

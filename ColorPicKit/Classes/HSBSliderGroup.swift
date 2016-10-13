@@ -68,6 +68,22 @@ import UIKit
         }
     }
     
+    private var _barHeight: CGFloat = 10
+    @IBInspectable public var barHeight: CGFloat {
+        get {
+            return _barHeight
+        }
+        set {
+            if _barHeight != newValue {
+                _barHeight = newValue
+                hueSlider.barHeight = newValue
+                saturationSlider.barHeight = newValue
+                brightnessSlider.barHeight = newValue
+            }
+        }
+    }
+
+    
     
     @IBInspectable public var color: UIColor {
         get {
@@ -118,6 +134,7 @@ import UIKit
         hueSlider.roundedCorners = roundedCorners
         hueSlider.borderColor = borderColor
         hueSlider.borderWidth = borderWidth
+        hueSlider.barHeight = barHeight
         hueSlider.value = hsb.hue
         hueSlider.addTarget(self, action: #selector(hueSliderValueChanged), for: .valueChanged)
         hueSlider.addTarget(self, action: #selector(hueSliderTouchDown), for: .touchDown)
@@ -127,6 +144,7 @@ import UIKit
         saturationSlider.roundedCorners = roundedCorners
         saturationSlider.borderColor = borderColor
         saturationSlider.borderWidth = borderWidth
+        saturationSlider.barHeight = barHeight
         saturationSlider.color1 = UIColor.black
         saturationSlider.color2 = UIColor.white
         saturationSlider.value = hsb.saturation
@@ -139,6 +157,7 @@ import UIKit
         brightnessSlider.roundedCorners = roundedCorners
         brightnessSlider.borderColor = borderColor
         brightnessSlider.borderWidth = borderWidth
+        brightnessSlider.barHeight = barHeight
         brightnessSlider.color1 = UIColor.white
         brightnessSlider.color2 = UIColor.black
         brightnessSlider.value = hsb.brightness

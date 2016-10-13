@@ -67,6 +67,21 @@ import UIKit
         }
     }
     
+    private var _barHeight: CGFloat = 10
+    @IBInspectable public var barHeight: CGFloat {
+        get {
+            return _barHeight
+        }
+        set {
+            if _barHeight != newValue {
+                _barHeight = newValue
+                redSlider.barHeight = newValue
+                greenSlider.barHeight = newValue
+                blueSlider.barHeight = newValue
+            }
+        }
+    }
+    
 
     @IBInspectable public var color: UIColor {
         get {
@@ -115,6 +130,7 @@ import UIKit
         redSlider.roundedCorners = roundedCorners
         redSlider.borderColor = borderColor
         redSlider.borderWidth = borderWidth
+        redSlider.barHeight = barHeight
         redSlider.color1 = UIColor.white
         redSlider.color2 = UIColor.red
         redSlider.value = rgb.red
@@ -126,6 +142,7 @@ import UIKit
         greenSlider.roundedCorners = roundedCorners
         greenSlider.borderColor = borderColor
         greenSlider.borderWidth = borderWidth
+        greenSlider.barHeight = barHeight
         greenSlider.color1 = UIColor.white
         greenSlider.color2 = UIColor.green
         greenSlider.value = rgb.green
@@ -138,6 +155,7 @@ import UIKit
         blueSlider.roundedCorners = roundedCorners
         blueSlider.borderColor = borderColor
         blueSlider.borderWidth = borderWidth
+        blueSlider.barHeight = barHeight
         blueSlider.color1 = UIColor.white
         blueSlider.color2 = UIColor.blue
         blueSlider.value = rgb.blue
