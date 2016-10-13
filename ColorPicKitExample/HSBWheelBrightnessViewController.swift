@@ -57,8 +57,11 @@ class HSBWheelBrightnessViewController: BaseViewController {
     }
     
     override func reset() {
-        hsbWheel.color = resetColor
+        hsbWheel.position = CGPoint(x: hsbWheel.bounds.midX, y: hsbWheel.bounds.midY)
         brightnessSlider.value = resetValue
+        
         updateBackgroundColor()
+        updateBrightnessSlider()
+        
     }
 }

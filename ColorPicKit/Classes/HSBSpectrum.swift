@@ -86,13 +86,6 @@ private let invalidPositionValue = CGFloat(-1.0)
         }
     }
     
-    private var _color: UIColor = .white
-    @IBInspectable public var color: UIColor {
-        get {
-            let rgb = spectrumView.colorForPoint(position)
-            return UIColor(red: rgb.red, green: rgb.green, blue: rgb.blue, alpha: 1.0)
-        }
-    }
     
     private var _position: CGPoint = CGPoint(x: invalidPositionValue, y: invalidPositionValue)
     @IBInspectable public var position: CGPoint {
@@ -116,6 +109,16 @@ private let invalidPositionValue = CGFloat(-1.0)
         }
     }
     
+    private var _color: UIColor = .white
+    @IBInspectable public var color: UIColor {
+        get {
+            let rgb = spectrumView.colorForPoint(position)
+            return UIColor(red: rgb.red, green: rgb.green, blue: rgb.blue, alpha: 1.0)
+        }
+    }
+    
+
+    
     
     private var spectrumView: HSBSpectrumView = HSBSpectrumView()
     
@@ -133,7 +136,7 @@ private let invalidPositionValue = CGFloat(-1.0)
     
     fileprivate func commonInit() {
         self.backgroundColor = UIColor.clear
-        
+                
         // SpectrumView
         spectrumView.borderWidth = borderWidth
         spectrumView.borderColor = borderColor
@@ -150,8 +153,6 @@ private let invalidPositionValue = CGFloat(-1.0)
     
     override open func layoutSubviews() {
         super.layoutSubviews()
-        
-        
         
         // Spectrum View
         spectrumView.frame = self.bounds

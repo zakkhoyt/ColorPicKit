@@ -120,7 +120,6 @@ class HSBSpectrumView: UIView {
     
     func colorForPoint(_ point: CGPoint) -> RGB {
         
-        // TODO: Reuse
         let hue = point.y / bounds.height
         let normalizedX = (point.x / bounds.height) // 0...1
         

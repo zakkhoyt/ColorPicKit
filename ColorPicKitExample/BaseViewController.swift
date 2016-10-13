@@ -22,6 +22,13 @@ class BaseViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.01) { 
+            self.reset()
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         reset()
     }
     
