@@ -83,6 +83,20 @@ import UIKit
         }
     }
 
+    private var _knobSize: CGSize = CGSize(width: 30, height: 30)
+    @IBInspectable public var knobSize: CGSize {
+        get {
+            return _knobSize
+        }
+        set {
+            if _knobSize != newValue {
+                _knobSize = newValue
+                hueSlider.knobSize = newValue
+                saturationSlider.knobSize = newValue
+                brightnessSlider.knobSize = newValue
+            }
+        }
+    }
     
     
     @IBInspectable public var color: UIColor {
@@ -107,7 +121,6 @@ import UIKit
     private let sliderHeight: CGFloat = 20
     
     
-    var sliders: [SliderControl] = [SliderControl]()
     private var hueSlider = HueSlider()
     private var saturationSlider = GradientSlider()
     private var brightnessSlider = GradientSlider()
@@ -135,6 +148,7 @@ import UIKit
         hueSlider.borderColor = borderColor
         hueSlider.borderWidth = borderWidth
         hueSlider.barHeight = barHeight
+        hueSlider.knobSize = knobSize
         hueSlider.value = hsb.hue
         hueSlider.addTarget(self, action: #selector(hueSliderValueChanged), for: .valueChanged)
         hueSlider.addTarget(self, action: #selector(hueSliderTouchDown), for: .touchDown)
@@ -145,6 +159,7 @@ import UIKit
         saturationSlider.borderColor = borderColor
         saturationSlider.borderWidth = borderWidth
         saturationSlider.barHeight = barHeight
+        saturationSlider.knobSize = knobSize
         saturationSlider.color1 = UIColor.black
         saturationSlider.color2 = UIColor.white
         saturationSlider.value = hsb.saturation
@@ -158,6 +173,7 @@ import UIKit
         brightnessSlider.borderColor = borderColor
         brightnessSlider.borderWidth = borderWidth
         brightnessSlider.barHeight = barHeight
+        brightnessSlider.knobSize = knobSize
         brightnessSlider.color1 = UIColor.white
         brightnessSlider.color2 = UIColor.black
         brightnessSlider.value = hsb.brightness

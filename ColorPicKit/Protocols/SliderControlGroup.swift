@@ -9,7 +9,6 @@
 import UIKit
 
 protocol SliderControlGroup: ColorControl {
-    
-    var sliders: [SliderControl] { set get }
-    
+    var barHeight: CGFloat { set get }
+    var knobSize: CGSize { set get }
 }

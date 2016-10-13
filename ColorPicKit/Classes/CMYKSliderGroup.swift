@@ -87,6 +87,23 @@ import UIKit
         }
     }
     
+    private var _knobSize: CGSize = CGSize(width: 30, height: 30)
+    @IBInspectable public var knobSize: CGSize {
+        get {
+            return _knobSize
+        }
+        set {
+            if _knobSize != newValue {
+                _knobSize = newValue
+                cyanSlider.knobSize = newValue
+                magentaSlider.knobSize = newValue
+                yellowSlider.knobSize = newValue
+                blackSlider.knobSize = newValue
+            }
+        }
+    }
+
+    
     
     @IBInspectable public var color: UIColor {
         get {
@@ -113,7 +130,6 @@ import UIKit
     private let sliderHeight: CGFloat = 20
     
     
-    var sliders: [SliderControl] = [SliderControl]()
     private var cyanSlider = GradientSlider()
     private var magentaSlider = GradientSlider()
     private var yellowSlider = GradientSlider()
@@ -141,6 +157,7 @@ import UIKit
         cyanSlider.borderColor = borderColor
         cyanSlider.borderWidth = borderWidth
         cyanSlider.barHeight = barHeight
+        cyanSlider.knobSize = knobSize
         cyanSlider.color1 = UIColor.white
         cyanSlider.color2 = UIColor.cyan
         cyanSlider.value = rgb.red
@@ -153,6 +170,7 @@ import UIKit
         magentaSlider.borderColor = borderColor
         magentaSlider.borderWidth = borderWidth
         magentaSlider.barHeight = barHeight
+        magentaSlider.knobSize = knobSize
         magentaSlider.color1 = UIColor.white
         magentaSlider.color2 = UIColor.magenta
         magentaSlider.value = rgb.green
@@ -166,6 +184,7 @@ import UIKit
         yellowSlider.borderColor = borderColor
         yellowSlider.borderWidth = borderWidth
         yellowSlider.barHeight = barHeight
+        yellowSlider.knobSize = knobSize
         yellowSlider.color1 = UIColor.white
         yellowSlider.color2 = UIColor.yellow
         yellowSlider.value = rgb.blue
