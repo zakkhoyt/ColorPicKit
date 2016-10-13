@@ -105,7 +105,7 @@ private let invalidPositionValue = CGFloat(-1.0)
         }
     }
     
-    private var _brightnessDate = Date()
+    private var _brightnessDate = Date(timeInterval: -1000, since: Date())
     private var _brightness: CGFloat = 1.0
     @IBInspectable public var brightness: CGFloat {
         get {
