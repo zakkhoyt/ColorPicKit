@@ -4,16 +4,14 @@ Written in Swift 3.0
 
 This repository provides several UIControls for picking colors as well as class extensions for UIColor and UIImage which are related to colors.
 
-![IB](https://github.com/zakkhoyt/ColorPicKit/blob/master/images/all_100816.png)
-
-* An Image Pixel Picker - Get the color of any individual pixel.
-* An HSB color picker wheel - Hue vs saturation.
-* An HSB spectrum picker - A 2 dimensional plot where y = hue and x = saturation from 0.0 ..< 0.5 and x = brightness from 0.5 >.. 1.0
-* An RGB slider set - 3 sliders to select red, green, and blue.
-* An HSB slider set - 3 sliders to select hue, saturation, and brightness.
-* An CMYK slider set - 4 sliders to select cyan, magenta, yellow, and black.
-* A gradient slider - Interpolate a color between two established colors.
-* A hue slider - Select a hue value.
+* ImagePixelPicker - Get the color of any individual pixel.
+* HSBWheel - Hue vs saturation.
+* HSBSpectrum - A 2 dimensional plot where y = hue and x = saturation from 0.0 ..< 0.5 and x = brightness from 0.5 >.. 1.0
+* RGBSliderGroup - 3 sliders to select red, green, and blue.
+* HSBSliderGroup - 3 sliders to select hue, saturation, and brightness.
+* CMYKSliderGroup - 4 sliders to select cyan, magenta, yellow, and black.
+* GradientSlider - Interpolate a color between two established colors.
+* HueSlider - Select a hue value.
 
 #### UIColor utilities
 
@@ -85,6 +83,8 @@ extension UIImage {
 ````
 
 ## Usage
+
+#### InterfaceBuilder
 - Drag and drop a UIView onto your view controller
 - Set the view's class to GradientSlider, HueSlider, RGBSliderGroup, HSBSliderGroup, CMYKSliderGroup, HSBWheelPicker, HSBSpectrumPicker, or ImagePixelPicker.
 - Using the Attributes Inspector, configure IB properties (color, rounded corners, border color, etc...)
@@ -93,13 +93,28 @@ extension UIImage {
   - TouchDown
   - TouchUpInside
 
+#### Programmatically
+- Create an instance of GradientSlider, HueSlider, RGBSliderGroup, HSBSliderGroup, CMYKSliderGroup, HSBWheelPicker, HSBSpectrumPicker, or ImagePixelPicker using init(frame) or init(coder).
+- Use addTarget() to receive ValueChanged, TouchDown, or TouchUpInside
+
+````
+func setupWheel() {
+    self.hsbWheel = HSBWheel(frame: self.view.bounds)
+    hsbWheel.addTarget(self, action: #selector(hsbWheelValueChanged), for: .valueChanged)
+}
+func hsbWheelValueChanged(sender: HSBWheel) {
+    view.backgroundColor = sender.color
+}
+
+````
+
 ## Example
 
 See the example project. Clone this repository and open ColorPicKitExample.xcodeproj
 
 ## Cocoapods
 
-For the time being, this pod needs to be pulled from its github master branch.
+This pod is not in the cocooapods trunk and needs to be pulled from its github master branch.
 
 ````
 
@@ -109,57 +124,57 @@ pod 'ColorPicKit', :git => 'https://github.com/zakkhoyt/ColorPicKit', :branch =>
 
 ## Images
 
-### Image Picker
+### ImagePixelPicker
 
-![IB](https://raw.githubusercontent.com/zakkhoyt/ColorPicKit/master/images/ib_image.png)
+![IB](http://i.imgur.com/Mf9Laoj.png)
 
-![In use](https://raw.githubusercontent.com/zakkhoyt/ColorPicKit/master/images/image.png)
-
-
-### Color Wheel
-
-![IB](https://raw.githubusercontent.com/zakkhoyt/ColorPicKit/master/images/ib_wheel.png)
-
-![In use](https://raw.githubusercontent.com/zakkhoyt/ColorPicKit/master/images/wheel.png)
-
-### Spectrum Picker
-
-![IB](https://raw.githubusercontent.com/zakkhoyt/ColorPicKit/master/images/ib_spectrum.png)
-
-![In use](https://raw.githubusercontent.com/zakkhoyt/ColorPicKit/master/images/spectrum.png)
+![In use](http://i.imgur.com/8yaZiBF.png)
 
 
-### RGB Sliders
+### HSBWheel
 
-![IB](https://raw.githubusercontent.com/zakkhoyt/ColorPicKit/master/images/ib_rgb.png)
+![IB](http://i.imgur.com/STCTD02.png)
 
-![In use](https://raw.githubusercontent.com/zakkhoyt/ColorPicKit/master/images/rgb.png)
+![In use](http://i.imgur.com/AVtix56.png)
+
+### HSBSpectrum
+
+![IB](http://i.imgur.com/AAL8lMB.png)
+
+![In use](http://i.imgur.com/Rak6ukf.png)
 
 
-### HSB Sliders
+### RGBSliderGroup
 
-![IB](https://raw.githubusercontent.com/zakkhoyt/ColorPicKit/master/images/ib_hsb.png)
+![IB](http://i.imgur.com/rCY68tR.png)
 
-![In use](https://raw.githubusercontent.com/zakkhoyt/ColorPicKit/master/images/hsb.png)
+![In use](http://i.imgur.com/jUmgXb0.png)
 
 
-### CMYK Sliders
+### HSBSliderGroup
 
-![IB](https://raw.githubusercontent.com/zakkhoyt/ColorPicKit/master/images/ib_cmyk.png)
+![IB](http://i.imgur.com/SL0F2DT.png)
 
-![In use](https://raw.githubusercontent.com/zakkhoyt/ColorPicKit/master/images/cmyk.png)
+![In use](http://i.imgur.com/PFIWWLa.png)
 
-### Gradient Slider
 
-![IB](https://raw.githubusercontent.com/zakkhoyt/ColorPicKit/master/images/ib_gradient.png)
+### CMYKSliderGroup
 
-![In use](https://raw.githubusercontent.com/zakkhoyt/ColorPicKit/master/images/gradient.png)
+![IB](http://i.imgur.com/t3vyZvY.png)
 
-### Hue Slider
+![In use](http://i.imgur.com/jWvX44n.png)
 
-![IB](https://raw.githubusercontent.com/zakkhoyt/ColorPicKit/master/images/ib_hue.png)
+### GradientSlider
 
-![In use](https://raw.githubusercontent.com/zakkhoyt/ColorPicKit/master/images/hue.png)
+![IB](http://i.imgur.com/BJjK7Me.png)
+
+![In use](http://i.imgur.com/hX2MQ9q.png)
+
+### HueSlider
+
+![IB](http://i.imgur.com/YJuVTFX.png)
+
+![In use](http://i.imgur.com/7IUiq1b.png)
 
 ## Contributions
 
