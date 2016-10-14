@@ -1,14 +1,22 @@
+
+
+![](http://i.imgur.com/GHkQixd.png)
+
 ## ColorPicKit
 
-This repository provides several UIControls for picking colors as well as class extensions for UIColor and UIImage which are related to colors.
+#### UIControls
 
-* ImagePixelPicker - Get the color of any individual pixel.
+Provides several UIControls for defining and selecting colors:
+* ImagePixelPicker - Obtain the color of any individual pixel.
 * HSBWheel - Hue vs saturation.
-* HSBSpectrum - A 2 dimensional plot where y = hue and x = saturation from 0.0 ..< 0.5 and x = brightness from 0.5 >.. 1.0
-* RGBSliderGroup - 3 sliders to select red, green, and blue.
-* HSBSliderGroup - 3 sliders to select hue, saturation, and brightness.
-* CMYKSliderGroup - 4 sliders to select cyan, magenta, yellow, and black.
-* GradientSlider - Interpolate a color between two established colors.
+* HSBSpectrum - Hue vs brightness & saturation where
+    * y = hue
+    * x = saturation from 0.0 ..< 0.5
+    * x = brightness from 0.5 >.. 1.0
+* RGBSliderGroup - 3 sliders to define red, green, and blue components.
+* HSBSliderGroup - 3 sliders to define hue, saturation, and brightness components.
+* CMYKSliderGroup - 4 sliders to define cyan, magenta, yellow, and black components.
+* GradientSlider - Interpolates a color between the two colors on the ends.
 * HueSlider - Select a hue value.
 
 #### UIColor utilities
@@ -101,76 +109,75 @@ func setupWheel() {
     hsbWheel.addTarget(self, action: #selector(hsbWheelValueChanged), for: .valueChanged)
 }
 func hsbWheelValueChanged(sender: HSBWheel) {
-    view.backgroundColor = sender.color
+    let color = sender.color
 }
-
 ````
 
 ## Example
 
-See the example project. Clone this repository and open ColorPicKitExample.xcodeproj
+ColorPicKit includes a full example project. Clone this repository and open ColorPicKitExample.xcodeproj
 
 ## Cocoapods
 
-This pod is not in the cocooapods trunk and needs to be pulled from its github master branch.
+This pod is not yet in the cocooapods trunk, so you will need to be install it using a tag.
 
 ````
+pod 'ColorPicKit', :git => 'https://github.com/zakkhoyt/ColorPicKit', :tag => '1.1'
+````
 
+Alternatively you can use the unstable master branch:
+
+````
 pod 'ColorPicKit', :git => 'https://github.com/zakkhoyt/ColorPicKit', :branch => 'master'
-
 ````
 
-## Images
-
+## Interface Builder Images
 ### ImagePixelPicker
-
 ![IB](http://i.imgur.com/Mf9Laoj.png)
 
-![In use](http://i.imgur.com/8yaZiBF.png)
-
-
 ### HSBWheel
-
 ![IB](http://i.imgur.com/STCTD02.png)
 
+### HSBSpectrum
+![IB](http://i.imgur.com/AAL8lMB.png)
+
+### RGBSliderGroup
+![IB](http://i.imgur.com/rCY68tR.png)
+
+### HSBSliderGroup
+![IB](http://i.imgur.com/SL0F2DT.png)
+
+### CMYKSliderGroup
+![IB](http://i.imgur.com/t3vyZvY.png)
+
+### GradientSlider
+![IB](http://i.imgur.com/BJjK7Me.png)
+
+### HueSlider
+![IB](http://i.imgur.com/YJuVTFX.png)
+
+
+## Images in use
+### ImagePixelPicker
+![In use](http://i.imgur.com/8yaZiBF.png)
+
+### HSBWheel
 ![In use](http://i.imgur.com/AVtix56.png)
 
 ### HSBSpectrum
-
-![IB](http://i.imgur.com/AAL8lMB.png)
-
 ![In use](http://i.imgur.com/Rak6ukf.png)
 
-
 ### RGBSliderGroup
-
-![IB](http://i.imgur.com/rCY68tR.png)
-
 ![In use](http://i.imgur.com/jUmgXb0.png)
 
-
 ### HSBSliderGroup
-
-![IB](http://i.imgur.com/SL0F2DT.png)
-
 ![In use](http://i.imgur.com/PFIWWLa.png)
 
-
 ### CMYKSliderGroup
-
-![IB](http://i.imgur.com/t3vyZvY.png)
-
 ![In use](http://i.imgur.com/jWvX44n.png)
 
 ### GradientSlider
-
-![IB](http://i.imgur.com/BJjK7Me.png)
-
 ![In use](http://i.imgur.com/hX2MQ9q.png)
 
 ### HueSlider
-
-![IB](http://i.imgur.com/YJuVTFX.png)
-
 ![In use](http://i.imgur.com/7IUiq1b.png)
-
