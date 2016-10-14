@@ -110,7 +110,7 @@ private let invalidPositionValue = CGFloat(-1.0)
     }
     
     private var _color: UIColor = .white
-    @IBInspectable public var color: UIColor {
+    /* @IBInspectable */ public var color: UIColor {
         get {
             let rgb = spectrumView.colorForPoint(position)
             return UIColor(red: rgb.red, green: rgb.green, blue: rgb.blue, alpha: 1.0)

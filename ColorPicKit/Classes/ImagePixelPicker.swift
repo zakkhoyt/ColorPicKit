@@ -88,7 +88,7 @@ private let invalidPositionValue = CGFloat(-1.0)
     }
     
     private var _color: UIColor = .white
-    @IBInspectable public var color: UIColor {
+    /*@IBInspectable*/ public var color: UIColor {
         get {
             guard let pixelBuffer = self.pixelBuffer else {
                 print("No pixelBuffer to look at")

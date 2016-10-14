@@ -90,7 +90,7 @@ private let invalidPositionValue = CGFloat(-1.0)
     }
     
     private var _color: UIColor = .white
-    @IBInspectable public var color: UIColor {
+    /*@IBInspectable*/ public var color: UIColor {
         get {
             let invertedPoint = CGPoint(x: position.x, y: bounds.height - position.y)
             let rgb = wheelView.colorForPoint(invertedPoint)
