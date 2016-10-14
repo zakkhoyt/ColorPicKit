@@ -5,8 +5,7 @@ Pod::Spec.new do |s|
   s.summary      = "Various UIControls for selecting colors along with some useful categories on UIColor"
   s.author        = { "Zakk Hoyt" => "vaporwarewolf@gmail.com" }
   s.homepage      = "http://github.com/zakkhoyt/ColorPicKit"
-  s.platforms = { :ios => 10.0,
-                    :tvos => 10.0
+  s.platforms = { :ios => 10.0
                 }
   s.license = { :type => 'MIT',
                 :text =>  <<-LICENSE
@@ -18,5 +17,4 @@ Pod::Spec.new do |s|
   s.source_files  = 'ColorPicKit/**/*.{swift}'
   s.requires_arc = true
   s.ios.deployment_target = '10.0'
-  s.tvos.deployment_target = '10.0'
 end
