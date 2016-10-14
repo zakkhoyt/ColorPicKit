@@ -1,4 +1,3 @@
-Â
 
 Pod::Spec.new do |s|
   s.name         = "ColorPicKit"
