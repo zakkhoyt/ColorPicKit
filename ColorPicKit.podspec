@@ -1,4 +1,4 @@
-
+Â
 
 Pod::Spec.new do |s|
   s.name         = "ColorPicKit"
@@ -6,9 +6,9 @@ Pod::Spec.new do |s|
   s.summary      = "Various UIControls for selecting colors along with some useful categories on UIColor"
   s.author        = { "Zakk Hoyt" => "vaporwarewolf@gmail.com" }
   s.homepage      = "http://github.com/zakkhoyt/ColorPicKit"
-  s.platforms = { 
-                  :ios => 10.0
-                  :tvos => 10.0
+  s.platforms = {
+                  :ios => '10.0',
+                  :tvos => '10.0'
                 }
 
   s.license = { :type => 'MIT',
