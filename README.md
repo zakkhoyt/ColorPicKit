@@ -122,7 +122,7 @@ ColorPicKit includes a full example project. Clone this repository and open Colo
 This pod is not yet in the cocooapods trunk, so you will need to be install it using a tag.
 
 ````
-pod 'ColorPicKit', :git => 'https://github.com/zakkhoyt/ColorPicKit', :tag => '1.1'
+pod 'ColorPicKit', :git => 'https://github.com/zakkhoyt/ColorPicKit', :tag => '1.2.0'
 ````
 
 Alternatively you can use the unstable master branch:
