@@ -42,7 +42,7 @@ extension UIColor {
     public class func colorWith(hsb: HSB, alpha: CGFloat = 1.0) -> UIColor
     public class func colorWith(cmyk: CMYK, alpha: CGFloat = 1.0) -> UIColor
 
-    public class func interpolateAt(percent: CGFloat, betweenColor1 color1: UIColor, andColor2 color2: UIColor) -> UIColor
+    public class func interpolateAt(value: CGFloat, betweenColor1 color1: UIColor, andColor2 color2: UIColor) -> UIColor
     public class func rgbToCMYK(rgb: RGB) -> CMYK
     public class func rgbToHSB(rgb: RGB) -> HSB
     public class func hsbToRGB(hsb: HSB) -> RGB

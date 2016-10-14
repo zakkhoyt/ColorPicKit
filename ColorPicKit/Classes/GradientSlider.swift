@@ -114,7 +114,7 @@ import UIKit
     
     public var color: UIColor {
         get {
-            return UIColor.interpolateAt(percent: value, betweenColor1: color1, andColor2: color2)
+            return UIColor.interpolateAt(value: value, betweenColor1: color1, andColor2: color2)
         }
     }
  
@@ -239,8 +239,8 @@ import UIKit
     }
     
     private func updateKnobColor() {
-        knobView.color = UIColor.interpolateAt(percent: value, betweenColor1: color1, andColor2: color2)
-//        knobView.borderColor = UIColor.interpolateAt(percent: value, betweenColor1: color1, andColor2: color2)
+        knobView.color = UIColor.interpolateAt(value: value, betweenColor1: color1, andColor2: color2)
+//        knobView.borderColor = UIColor.interpolateAt(value: value, betweenColor1: color1, andColor2: color2)
     }
     
     private func frameForGradientView() -> CGRect {

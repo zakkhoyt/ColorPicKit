@@ -14,21 +14,19 @@ private let invalidPositionValue = CGFloat(-1.0)
     
     // MARK: Variables
     
-    private var _roundedCornders: Bool = true
+    private var _roundedCornders: Bool = false
     @IBInspectable public var roundedCorners: Bool {
         get {
             return _roundedCornders
         }
         set {
-            if _roundedCornders != newValue {
-                _roundedCornders = newValue
-                if _roundedCornders == false {
-                    self.layer.masksToBounds = false
-                    self.layer.cornerRadius = 0
-                } else {
-                    self.layer.masksToBounds = true
-                    self.layer.cornerRadius = 8.0
-                }
+            _roundedCornders = newValue
+            if _roundedCornders == false {
+                self.layer.masksToBounds = false
+                self.layer.cornerRadius = 0
+            } else {
+                self.layer.masksToBounds = true
+                self.layer.cornerRadius = 40.0
             }
         }
     }
@@ -39,11 +37,9 @@ private let invalidPositionValue = CGFloat(-1.0)
             return _borderColor
         }
         set {
-            if _borderColor != newValue {
-                _borderColor = newValue
-                self.layer.borderColor = newValue.cgColor
-                knobView.borderColor = newValue
-            }
+            _borderColor = newValue
+            self.layer.borderColor = newValue.cgColor
+            knobView.borderColor = newValue
         }
     }
     
@@ -53,11 +49,9 @@ private let invalidPositionValue = CGFloat(-1.0)
             return _borderWidth
         }
         set {
-            if _borderWidth != newValue {
-                _borderWidth = newValue
-                self.layer.borderWidth = newValue
-                knobView.borderWidth = newValue
-            }
+            _borderWidth = newValue
+            self.layer.borderWidth = newValue
+            knobView.borderWidth = newValue
         }
     }
     
@@ -113,16 +107,12 @@ private let invalidPositionValue = CGFloat(-1.0)
         }
         set {
             // Throttle brightness changes as the cause the gradient to redraw
-            let now = Date()
-            if now.timeIntervalSince(_brightnessDate) > 0.1 {
-                
+            Throttle.limitTo(every: 0.1) {
                 if _brightness != newValue {
                     _brightness = newValue
                     wheelView.brightness = newValue
                     updateKnob()
                 }
-
-                _brightnessDate = now
             }
         }
     }
@@ -167,6 +157,11 @@ private let invalidPositionValue = CGFloat(-1.0)
     
     fileprivate func commonInit() {
         self.backgroundColor = UIColor.clear
+        
+        
+        self.roundedCorners = _roundedCornders
+        self.borderWidth = _borderWidth
+        self.borderColor = _borderColor
         
         // SpectrumView
         wheelView.borderWidth = borderWidth

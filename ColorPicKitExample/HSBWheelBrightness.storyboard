@@ -24,6 +24,12 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="c43-pS-Z5U" secondAttribute="height" multiplier="1:1" id="j0z-Jf-Ujx"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="roundedCorners" value="NO"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="colorWheelTouchDown:" destination="XjD-Lg-ApU" eventType="touchDown" id="OM6-1Y-rn6"/>
                                     <action selector="colorWheelTouchUpInside:" destination="XjD-Lg-ApU" eventType="touchUpInside" id="KnY-zt-Whw"/>

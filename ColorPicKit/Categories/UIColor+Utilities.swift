@@ -165,19 +165,19 @@ public extension UIColor {
     }
     
     
-    public class func interpolateAt(percent: CGFloat, betweenColor1 color1: UIColor, andColor2 color2: UIColor) -> UIColor {
+    public class func interpolateAt(value: CGFloat, betweenColor1 color1: UIColor, andColor2 color2: UIColor) -> UIColor {
         
         let rgb1 = color1.rgb()
         let rgb2 = color2.rgb()
         
         let redDiff = rgb2.red - rgb1.red
-        let red = rgb1.red  + redDiff * percent
+        let red = rgb1.red  + redDiff * value
         
         let greenDiff = rgb2.green - rgb1.green
-        let green = rgb1.green  + greenDiff * percent
+        let green = rgb1.green  + greenDiff * value
         
         let blueDiff = rgb2.blue - rgb1.blue
-        let blue = rgb1.blue  + blueDiff * percent
+        let blue = rgb1.blue  + blueDiff * value
         
         //print("red: \(red) green: \(green) blue: \(blue)")
         return UIColor(red: red, green: green, blue: blue, alpha: 1.0)

@@ -13,21 +13,19 @@ private let invalidPositionValue = CGFloat(-1.0)
 
     // MARK: Variables
     
-    private var _roundedCornders: Bool = true
+    private var _roundedCornders: Bool = false
     @IBInspectable public var roundedCorners: Bool {
         get {
             return _roundedCornders
         }
         set {
-            if _roundedCornders != newValue {
-                _roundedCornders = newValue
-                if _roundedCornders == false {
-                    self.layer.masksToBounds = false
-                    self.layer.cornerRadius = 0
-                } else {
-                    self.layer.masksToBounds = true
-                    self.layer.cornerRadius = 8.0
-                }
+            _roundedCornders = newValue
+            if _roundedCornders == false {
+                self.layer.masksToBounds = false
+                self.layer.cornerRadius = 0
+            } else {
+                self.layer.masksToBounds = true
+                self.layer.cornerRadius = 40.0
             }
         }
     }
@@ -38,10 +36,9 @@ private let invalidPositionValue = CGFloat(-1.0)
             return _borderColor
         }
         set {
-            if _borderColor != newValue {
-                _borderColor = newValue
-                self.layer.borderColor = newValue.cgColor
-            }
+            _borderColor = newValue
+            self.layer.borderColor = newValue.cgColor
+            knobView.borderColor = newValue
         }
     }
     
@@ -51,10 +48,9 @@ private let invalidPositionValue = CGFloat(-1.0)
             return _borderWidth
         }
         set {
-            if _borderWidth != newValue {
-                _borderWidth = newValue
-                self.layer.borderWidth = newValue
-            }
+            _borderWidth = newValue
+            self.layer.borderWidth = newValue
+            knobView.borderWidth = newValue
         }
     }
     
@@ -112,7 +108,8 @@ private let invalidPositionValue = CGFloat(-1.0)
     private var _color: UIColor = .white
     /* @IBInspectable */ public var color: UIColor {
         get {
-            let rgb = spectrumView.colorForPoint(position)
+            let invertedPoint = CGPoint(x: position.x, y: bounds.height - position.y)
+            let rgb = spectrumView.colorForPoint(invertedPoint)
             return UIColor(red: rgb.red, green: rgb.green, blue: rgb.blue, alpha: 1.0)
         }
     }
@@ -136,7 +133,11 @@ private let invalidPositionValue = CGFloat(-1.0)
     
     fileprivate func commonInit() {
         self.backgroundColor = UIColor.clear
-                
+        
+        self.roundedCorners = _roundedCornders
+        self.borderWidth = _borderWidth
+        self.borderColor = _borderColor
+        
         // SpectrumView
         spectrumView.borderWidth = borderWidth
         spectrumView.borderColor = borderColor
