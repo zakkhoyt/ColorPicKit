@@ -1,7 +1,5 @@
 ## ColorPicKit
 
-Written in Swift 3.0
-
 This repository provides several UIControls for picking colors as well as class extensions for UIColor and UIImage which are related to colors.
 
 * ImagePixelPicker - Get the color of any individual pixel.
@@ -176,6 +174,3 @@ pod 'ColorPicKit', :git => 'https://github.com/zakkhoyt/ColorPicKit', :branch =>
 
 ![In use](http://i.imgur.com/7IUiq1b.png)
 
-## Contributions
-
-See the issues page for new features, bugs, and improvements.
