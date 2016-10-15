@@ -32,6 +32,15 @@ class ImagePixelPickerViewController: BaseViewController {
     override func reset() {
         imagePixelPicker.position = CGPoint(x: imagePixelPicker.bounds.midX, y: imagePixelPicker.bounds.midY)
         updateBackgroundColor()
+        
+//        // Get color of center pixel
+//        guard let image = UIImage(named: "mars_earth") else {
+//            return
+//        }
+//        let center = CGPoint(x: image.size.width / 2.0, y: image.size.height / 2.0)
+//        let color = image.pixelColorAt(point: center)
+        
+        
     }
 
     
