@@ -27,15 +27,25 @@
                                     <action selector="grayscaleSliderValueChanged:" destination="qqW-XO-3df" eventType="valueChanged" id="IEQ-FF-Ucd"/>
                                 </connections>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CoA-3o-rlT">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="vWf-VV-t25"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="27M-FV-EM9" firstAttribute="leading" secondItem="kpP-qO-J85" secondAttribute="leadingMargin" id="8kM-1w-Q3f"/>
                             <constraint firstItem="27M-FV-EM9" firstAttribute="centerY" secondItem="kpP-qO-J85" secondAttribute="centerY" id="V96-vv-xLR"/>
+                            <constraint firstItem="CoA-3o-rlT" firstAttribute="leading" secondItem="kpP-qO-J85" secondAttribute="leadingMargin" id="b3g-Oh-Czh"/>
                             <constraint firstItem="27M-FV-EM9" firstAttribute="trailing" secondItem="kpP-qO-J85" secondAttribute="trailingMargin" id="cZn-k4-aCq"/>
+                            <constraint firstItem="4rr-qS-e0Q" firstAttribute="top" secondItem="CoA-3o-rlT" secondAttribute="bottom" constant="20" id="iC5-8A-hak"/>
+                            <constraint firstItem="CoA-3o-rlT" firstAttribute="trailing" secondItem="kpP-qO-J85" secondAttribute="trailingMargin" id="lvO-KF-FmC"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="colorView" destination="CoA-3o-rlT" id="p5x-05-DKc"/>
                         <outlet property="hueSlider" destination="27M-FV-EM9" id="1La-Mj-OJz"/>
                     </connections>
                 </viewController>

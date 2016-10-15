@@ -30,15 +30,23 @@
                                     <action selector="imagePixelPickerValueChanged:" destination="WtT-Um-q71" eventType="valueChanged" id="hv1-Ea-KYe"/>
                                 </connections>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tEh-19-PtH">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="CXH-bT-m7g" firstAttribute="top" secondItem="tEh-19-PtH" secondAttribute="bottom" constant="20" id="5Kr-YR-S65"/>
                             <constraint firstItem="K0V-0L-8u9" firstAttribute="centerY" secondItem="VfG-yA-gYb" secondAttribute="centerY" id="K0G-OK-hJA"/>
+                            <constraint firstItem="tEh-19-PtH" firstAttribute="leading" secondItem="VfG-yA-gYb" secondAttribute="leading" constant="20" id="gbE-iz-oQH"/>
                             <constraint firstAttribute="trailing" secondItem="K0V-0L-8u9" secondAttribute="trailing" id="k1c-7U-wXK"/>
+                            <constraint firstItem="tEh-19-PtH" firstAttribute="top" secondItem="K0V-0L-8u9" secondAttribute="bottom" constant="20" id="kjr-NL-E6d"/>
                             <constraint firstItem="K0V-0L-8u9" firstAttribute="leading" secondItem="VfG-yA-gYb" secondAttribute="leading" id="l0n-ip-hNq"/>
+                            <constraint firstAttribute="trailing" secondItem="tEh-19-PtH" secondAttribute="trailing" constant="20" id="qMY-MP-7uJ"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="colorView" destination="tEh-19-PtH" id="xsZ-ic-hrc"/>
                         <outlet property="hsbWheel" destination="K0V-0L-8u9" id="egf-yj-jMj"/>
                     </connections>
                 </viewController>

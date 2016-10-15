@@ -26,7 +26,7 @@ class HSBSliderGroupViewController: BaseViewController {
     }
     
     private func updateBackgroundColor() {
-        view.backgroundColor = hsbSliderGroup.color
+        colorView.backgroundColor = hsbSliderGroup.color
     }
     
     override func reset() {

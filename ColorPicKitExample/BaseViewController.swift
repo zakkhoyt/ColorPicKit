@@ -13,15 +13,30 @@ class BaseViewController: UIViewController {
     let resetColor = UIColor.cyan
     let resetValue = CGFloat(0.5)
 
+    @IBOutlet weak var colorView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Reset bar button item
         let resetBarb = UIBarButtonItem(title: "Reset", style: .plain, target: self, action: #selector(resetBarbAction))
         navigationItem.rightBarButtonItem = resetBarb
+        
+
+        
+        
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        
+        // ColorView 
+        colorView.layer.borderWidth = 0.5
+        colorView.layer.borderColor = UIColor.lightGray.cgColor
+        colorView.layer.masksToBounds = true
+        colorView.layer.cornerRadius = 8.0
+        
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.01) { 
             self.reset()
         }

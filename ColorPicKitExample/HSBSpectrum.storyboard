@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -30,15 +31,23 @@
                                     <action selector="imagePixelPickerValueChanged:" destination="dyJ-Jn-gYC" eventType="valueChanged" id="7lF-vf-XwR"/>
                                 </connections>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jIh-3n-u9k">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="jIh-3n-u9k" firstAttribute="top" secondItem="cX7-9V-JgS" secondAttribute="bottom" constant="20" id="IAQ-YA-ia6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jIh-3n-u9k" secondAttribute="trailing" constant="20" id="Nk9-f7-kY5"/>
+                            <constraint firstItem="Jrh-3Q-plF" firstAttribute="top" secondItem="jIh-3n-u9k" secondAttribute="bottom" constant="20" id="SMP-K7-Azz"/>
+                            <constraint firstItem="jIh-3n-u9k" firstAttribute="leading" secondItem="prt-NC-g2W" secondAttribute="leadingMargin" constant="20" id="Ujc-us-aUH"/>
                             <constraint firstItem="cX7-9V-JgS" firstAttribute="leading" secondItem="prt-NC-g2W" secondAttribute="leading" id="Zb8-sK-cQR"/>
                             <constraint firstAttribute="trailing" secondItem="cX7-9V-JgS" secondAttribute="trailing" id="o91-S6-efg"/>
                             <constraint firstItem="cX7-9V-JgS" firstAttribute="centerY" secondItem="prt-NC-g2W" secondAttribute="centerY" id="rfF-TY-SyE"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="colorView" destination="jIh-3n-u9k" id="L3e-La-o7q"/>
                         <outlet property="hsbSpectrum" destination="cX7-9V-JgS" id="Xjn-MT-UyN"/>
                     </connections>
                 </viewController>

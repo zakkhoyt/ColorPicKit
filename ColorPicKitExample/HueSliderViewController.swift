@@ -30,7 +30,8 @@ class HueSliderViewController: BaseViewController {
     }
     
     private func updateBackgroundColor() {
-        view.backgroundColor = hueSlider.color
+ //       view.backgroundColor = hueSlider.color
+        colorView.backgroundColor = hueSlider.color
     }
     
     override func reset() {

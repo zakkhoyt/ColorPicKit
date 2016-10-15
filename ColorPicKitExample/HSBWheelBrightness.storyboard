@@ -25,9 +25,6 @@
                                     <constraint firstAttribute="width" secondItem="c43-pS-Z5U" secondAttribute="height" multiplier="1:1" id="j0z-Jf-Ujx"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="6"/>
-                                    </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="roundedCorners" value="NO"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -58,19 +55,27 @@
                                     <action selector="brightnessSliderValueChanged:" destination="XjD-Lg-ApU" eventType="valueChanged" id="WAe-7f-z6B"/>
                                 </connections>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="26a-wk-ao3">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="q1r-Ho-bcj" firstAttribute="top" secondItem="c43-pS-Z5U" secondAttribute="bottom" constant="8" id="6fv-nV-AAM"/>
                             <constraint firstAttribute="trailing" secondItem="c43-pS-Z5U" secondAttribute="trailing" id="7gX-GW-5Zc"/>
+                            <constraint firstAttribute="trailing" secondItem="26a-wk-ao3" secondAttribute="trailing" constant="20" id="Cio-86-qqK"/>
                             <constraint firstAttribute="trailing" secondItem="q1r-Ho-bcj" secondAttribute="trailing" constant="20" id="MWa-0U-chg"/>
+                            <constraint firstItem="nHz-bA-kbE" firstAttribute="top" secondItem="26a-wk-ao3" secondAttribute="bottom" constant="20" id="X7k-1G-pAS"/>
                             <constraint firstItem="c43-pS-Z5U" firstAttribute="leading" secondItem="AhZ-Xg-lwF" secondAttribute="leading" id="cn5-QT-PAP"/>
                             <constraint firstItem="c43-pS-Z5U" firstAttribute="centerY" secondItem="AhZ-Xg-lwF" secondAttribute="centerY" id="flx-Jn-Fbb"/>
+                            <constraint firstItem="26a-wk-ao3" firstAttribute="leading" secondItem="AhZ-Xg-lwF" secondAttribute="leading" constant="20" id="gIl-A7-L0M"/>
                             <constraint firstItem="q1r-Ho-bcj" firstAttribute="leading" secondItem="AhZ-Xg-lwF" secondAttribute="leading" constant="20" id="lya-WS-Bth"/>
+                            <constraint firstItem="26a-wk-ao3" firstAttribute="top" secondItem="q1r-Ho-bcj" secondAttribute="bottom" constant="20" id="sfH-RG-W3v"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="brightnessSlider" destination="q1r-Ho-bcj" id="Pog-mL-Mrg"/>
+                        <outlet property="colorView" destination="26a-wk-ao3" id="pNE-jl-pvV"/>
                         <outlet property="hsbWheel" destination="c43-pS-Z5U" id="opf-Fo-slp"/>
                     </connections>
                 </viewController>

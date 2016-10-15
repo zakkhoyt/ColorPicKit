@@ -36,15 +36,23 @@
                                     <action selector="imagePixelPickerValueChanged:" destination="2K6-Aw-pNc" eventType="valueChanged" id="yjb-Oa-iV2"/>
                                 </connections>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3PK-mQ-Drk">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="3PK-mQ-Drk" firstAttribute="top" secondItem="hS1-lM-2fw" secondAttribute="bottom" constant="20" id="23F-qm-nIk"/>
+                            <constraint firstItem="3PK-mQ-Drk" firstAttribute="leading" secondItem="QfI-aE-Obb" secondAttribute="leading" constant="20" id="A8b-ud-UAy"/>
                             <constraint firstAttribute="trailing" secondItem="hS1-lM-2fw" secondAttribute="trailing" id="Ig5-sn-9iZ"/>
+                            <constraint firstItem="QjU-bF-0jI" firstAttribute="top" secondItem="3PK-mQ-Drk" secondAttribute="bottom" constant="20" id="PHC-0j-GXb"/>
+                            <constraint firstAttribute="trailing" secondItem="3PK-mQ-Drk" secondAttribute="trailing" constant="20" id="Vrd-sp-fgn"/>
                             <constraint firstItem="hS1-lM-2fw" firstAttribute="centerY" secondItem="QfI-aE-Obb" secondAttribute="centerY" id="XF3-SB-xBo"/>
                             <constraint firstItem="hS1-lM-2fw" firstAttribute="leading" secondItem="QfI-aE-Obb" secondAttribute="leading" id="eHB-9Q-2l9"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="colorView" destination="3PK-mQ-Drk" id="Wml-yz-YV1"/>
                         <outlet property="imagePixelPicker" destination="hS1-lM-2fw" id="jwL-tA-VOk"/>
                     </connections>
                 </viewController>

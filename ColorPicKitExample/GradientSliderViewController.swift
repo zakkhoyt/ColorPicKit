@@ -31,7 +31,7 @@ class GradientSliderViewController: BaseViewController {
     }
     
     private func updateBackgroundColor() {
-        view.backgroundColor = gradientSlider.color
+        colorView.backgroundColor = gradientSlider.color
     }
     
     override func reset() {

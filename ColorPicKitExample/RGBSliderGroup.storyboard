@@ -26,15 +26,25 @@
                                     <action selector="grayscaleSliderValueChanged:" destination="q77-8J-POf" eventType="valueChanged" id="Jm1-at-a8v"/>
                                 </connections>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HOw-HU-1AT">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="3g8-TQ-aiQ"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ufi-EU-Nlq" firstAttribute="centerY" secondItem="QHp-4S-vas" secondAttribute="centerY" id="2Gu-oS-KRc"/>
+                            <constraint firstAttribute="trailing" secondItem="HOw-HU-1AT" secondAttribute="trailing" constant="20" id="BMK-UR-Vfh"/>
+                            <constraint firstItem="RbU-2o-g5w" firstAttribute="top" secondItem="HOw-HU-1AT" secondAttribute="bottom" constant="20" id="HVg-tr-Fqt"/>
+                            <constraint firstItem="HOw-HU-1AT" firstAttribute="leading" secondItem="QHp-4S-vas" secondAttribute="leading" constant="20" id="NWE-jh-LcP"/>
                             <constraint firstAttribute="trailing" secondItem="ufi-EU-Nlq" secondAttribute="trailing" constant="20" id="gJr-Fz-DxM"/>
                             <constraint firstItem="ufi-EU-Nlq" firstAttribute="leading" secondItem="QHp-4S-vas" secondAttribute="leading" constant="20" id="z83-Mr-Drq"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="colorView" destination="HOw-HU-1AT" id="UtJ-yW-txC"/>
                         <outlet property="rgbSliderGroup" destination="ufi-EU-Nlq" id="OqT-Ux-dqS"/>
                     </connections>
                 </viewController>

@@ -39,11 +39,10 @@ private let invalidPositionValue = CGFloat(-1.0)
         set {
             _borderColor = newValue
             self.layer.borderColor = newValue.cgColor
-            knobView.borderColor = newValue
         }
     }
     
-    private var _borderWidth: CGFloat = 0.5
+    private var _borderWidth: CGFloat = 0.0
     @IBInspectable public var borderWidth: CGFloat{
         get {
             return _borderWidth
@@ -51,7 +50,6 @@ private let invalidPositionValue = CGFloat(-1.0)
         set {
             _borderWidth = newValue
             self.layer.borderWidth = newValue
-            knobView.borderWidth = newValue
         }
     }
     
@@ -172,11 +170,8 @@ private let invalidPositionValue = CGFloat(-1.0)
         // KnobView
         let frame = CGRect(x: 0, y: 0, width: self.intrinsicContentSize.width, height: self.intrinsicContentSize.height)
         wheelView.frame = frame
-//        wheelView.frame = self.bounds
         wheelView.setNeedsLayout()
 
-        knobView.borderWidth = borderWidth
-        knobView.borderColor = borderColor
         addSubview(knobView)
     }
     

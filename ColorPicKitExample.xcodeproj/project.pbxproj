@@ -265,6 +265,7 @@
 				C6D87F9C1DA9F2E3004CB7E3 /* HSBSpectrum.swift */,
 				C6D87F9D1DA9F2E3004CB7E3 /* HSBWheel.swift */,
 				C6D87F991DA9F2E3004CB7E3 /* ImagePixelPicker.swift */,
+				C6D87F9A1DA9F2E3004CB7E3 /* KnobView.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -407,7 +408,6 @@
 				C6D87F931DA9F2E3004CB7E3 /* GradientData.swift */,
 				C6D87F951DA9F2E3004CB7E3 /* GradientView.swift */,
 				C6D87F981DA9F2E3004CB7E3 /* HueView.swift */,
-				C6D87F9A1DA9F2E3004CB7E3 /* KnobView.swift */,
 				C6D87FF31DA9F506004CB7E3 /* HSBSpectrumView.swift */,
 				C6D87FF51DA9F50F004CB7E3 /* HSBWheelView.swift */,
 			);

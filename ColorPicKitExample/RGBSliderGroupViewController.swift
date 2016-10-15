@@ -26,7 +26,7 @@ class RGBSliderGroupViewController: BaseViewController {
     }
     
     private func updateBackgroundColor() {
-        view.backgroundColor = rgbSliderGroup.color
+        colorView.backgroundColor = rgbSliderGroup.color
     }
     
     override func reset() {

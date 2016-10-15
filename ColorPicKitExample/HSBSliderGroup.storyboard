@@ -27,15 +27,25 @@
                                     <action selector="grayscaleSliderValueChanged:" destination="iDW-Re-Q2k" eventType="valueChanged" id="f62-UR-6ne"/>
                                 </connections>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3mC-FY-HiP">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="ava-5A-rOC"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="AJe-bn-UDM" firstAttribute="trailing" secondItem="sRS-dI-BXJ" secondAttribute="trailingMargin" id="E1K-h3-vdy"/>
                             <constraint firstItem="AJe-bn-UDM" firstAttribute="centerY" secondItem="sRS-dI-BXJ" secondAttribute="centerY" id="Ibp-7R-olu"/>
+                            <constraint firstItem="PFM-sA-8Qc" firstAttribute="top" secondItem="3mC-FY-HiP" secondAttribute="bottom" constant="20" id="MIS-4M-bse"/>
+                            <constraint firstItem="3mC-FY-HiP" firstAttribute="leading" secondItem="sRS-dI-BXJ" secondAttribute="leading" constant="20" id="P1k-ey-UVR"/>
+                            <constraint firstAttribute="trailing" secondItem="3mC-FY-HiP" secondAttribute="trailing" constant="20" id="rfg-2c-AeB"/>
                             <constraint firstItem="AJe-bn-UDM" firstAttribute="leading" secondItem="sRS-dI-BXJ" secondAttribute="leadingMargin" id="y3V-yQ-wgf"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="colorView" destination="3mC-FY-HiP" id="MlG-Q2-UeO"/>
                         <outlet property="hsbSliderGroup" destination="AJe-bn-UDM" id="sHB-sw-VcH"/>
                     </connections>
                 </viewController>

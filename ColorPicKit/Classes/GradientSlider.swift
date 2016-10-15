@@ -93,6 +93,7 @@ import UIKit
     
 
     private var _value: CGFloat = 0.5
+    
     @IBInspectable public var value: CGFloat {
         get {
             return _value

@@ -29,7 +29,7 @@
                                         <color key="value" red="0.87462022569999998" green="0.0" blue="0.01457700376" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="color2">
-                                        <color key="value" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="roundedCorners" value="YES"/>
                                 </userDefinedRuntimeAttributes>
@@ -39,15 +39,26 @@
                                     <action selector="grayscaleSliderValueChanged:" destination="atJ-OO-c7x" eventType="valueChanged" id="Hte-PT-cdA"/>
                                 </connections>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MZx-oS-ULp">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="CB1-yY-vUM"/>
+                                    <constraint firstAttribute="height" constant="64" id="PWW-8b-IJL"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="VRJ-lU-8iY" firstAttribute="trailing" secondItem="imJ-m3-2Sh" secondAttribute="trailingMargin" id="22z-pU-MNf"/>
+                            <constraint firstItem="MZx-oS-ULp" firstAttribute="trailing" secondItem="imJ-m3-2Sh" secondAttribute="trailingMargin" id="HZj-Hb-8yC"/>
                             <constraint firstItem="VRJ-lU-8iY" firstAttribute="centerY" secondItem="imJ-m3-2Sh" secondAttribute="centerY" id="KzT-1v-pOt"/>
+                            <constraint firstItem="MZx-oS-ULp" firstAttribute="leading" secondItem="imJ-m3-2Sh" secondAttribute="leadingMargin" id="jeL-q8-BcI"/>
+                            <constraint firstItem="seR-ar-h5Q" firstAttribute="top" secondItem="MZx-oS-ULp" secondAttribute="bottom" constant="20" id="uVC-t6-wrW"/>
                             <constraint firstItem="VRJ-lU-8iY" firstAttribute="leading" secondItem="imJ-m3-2Sh" secondAttribute="leadingMargin" id="wUc-Ob-GlP"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="colorView" destination="MZx-oS-ULp" id="L9b-OT-XtQ"/>
                         <outlet property="gradientSlider" destination="VRJ-lU-8iY" id="Bkb-Vk-BiJ"/>
                     </connections>
                 </viewController>

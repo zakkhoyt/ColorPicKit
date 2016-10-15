@@ -53,7 +53,7 @@ class HSBWheelBrightnessViewController: BaseViewController {
     private func updateBackgroundColor() {
         let brightness = brightnessSlider.value
         hsbWheel.brightness = brightness
-        view.backgroundColor = hsbWheel.color
+        colorView.backgroundColor = hsbWheel.color
     }
     
     override func reset() {

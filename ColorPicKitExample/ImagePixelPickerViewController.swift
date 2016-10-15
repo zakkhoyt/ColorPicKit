@@ -26,7 +26,7 @@ class ImagePixelPickerViewController: BaseViewController {
     }
     
     private func updateBackgroundColor() {
-        view.backgroundColor = imagePixelPicker.color
+        colorView.backgroundColor = imagePixelPicker.color
     }
 
     override func reset() {

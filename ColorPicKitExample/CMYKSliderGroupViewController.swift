@@ -25,7 +25,7 @@ class CMYKSliderGroupViewController: BaseViewController {
     }
     
     private func updateBackgroundColor() {
-        view.backgroundColor = cmykSliderGroup.color
+        colorView.backgroundColor = cmykSliderGroup.color
     }
     
     override func reset() {

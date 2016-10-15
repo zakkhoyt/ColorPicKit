@@ -27,16 +27,26 @@
                                     <action selector="grayscaleSliderValueChanged:" destination="g06-aW-YqY" eventType="valueChanged" id="4R0-W1-Se5"/>
                                 </connections>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Rj-Ir-GEI">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="Nim-cQ-0er"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="GhC-lv-1Oj" firstAttribute="centerY" secondItem="paF-Ng-aHl" secondAttribute="centerY" id="JAM-Uj-qgt"/>
+                            <constraint firstItem="6Rj-Ir-GEI" firstAttribute="leading" secondItem="paF-Ng-aHl" secondAttribute="leading" constant="20" id="T6I-wB-flA"/>
                             <constraint firstItem="GhC-lv-1Oj" firstAttribute="leading" secondItem="paF-Ng-aHl" secondAttribute="leadingMargin" id="ZWi-DZ-hFV"/>
+                            <constraint firstItem="pyL-OS-NtQ" firstAttribute="top" secondItem="6Rj-Ir-GEI" secondAttribute="bottom" constant="20" id="mQ8-iV-Kdu"/>
                             <constraint firstItem="GhC-lv-1Oj" firstAttribute="trailing" secondItem="paF-Ng-aHl" secondAttribute="trailingMargin" id="rFD-gA-iX1"/>
+                            <constraint firstAttribute="trailing" secondItem="6Rj-Ir-GEI" secondAttribute="trailing" constant="20" id="y40-GE-uV9"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="cmykSliderGroup" destination="GhC-lv-1Oj" id="Qqo-Wm-bHt"/>
+                        <outlet property="colorView" destination="6Rj-Ir-GEI" id="tWe-ud-TNf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6vW-Uo-9OY" userLabel="First Responder" sceneMemberID="firstResponder"/>

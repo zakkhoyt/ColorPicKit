@@ -26,7 +26,7 @@ class HSBSpectrumViewController: BaseViewController {
     }
     
     private func updateBackgroundColor() {
-        view.backgroundColor = hsbSpectrum.color
+        colorView.backgroundColor = hsbSpectrum.color
     }
     
     override func reset() {

@@ -25,7 +25,7 @@ class HSBWheelViewController: BaseViewController {
     }
     
     private func updateBackgroundColor() {
-        view.backgroundColor = hsbWheel.color
+        colorView.backgroundColor = hsbWheel.color
     }
     
     override func reset() {

@@ -9,35 +9,84 @@
 import UIKit
 
 
+/// Tuple where red, green, and blue range from 0.0 to 1.0
 public typealias RGB = (red: CGFloat, green: CGFloat, blue: CGFloat)
+
+/// Tuple where cyan, magenta, yellow,and black range from 0.0 to 1.0
 public typealias CMYK = (cyan: CGFloat, magenta: CGFloat, yellow: CGFloat, black: CGFloat)
+
+/// Tuple where hue, saturation, and brightness range from 0.0 to 1.0
 public typealias HSB = (hue: CGFloat, saturation: CGFloat, brightness: CGFloat)
 
 
 public extension UIColor {
 
     // MARK: Class factory
+    
+    
+    /// Create a UIColor with a hex string
+    ///
+    /// - parameter hexString: RRGGBB or #RRGGBB where RR, GG, and BB range from "00" to "FF"
+    /// - parameter alpha:     Alpha value from 0.0 to 1.0
+    ///
+    /// - returns: UIColor instance
     public class func colorWith(hexString: String, alpha: CGFloat = 1.0) -> UIColor {
         return UIColor(hexString: hexString, alpha: alpha)
     }
     
+    
+    /// Create a wide UIColor
+    ///
+    /// - parameter rgbP3: An instance of RGB tuple
+    /// - parameter alpha: Alpha value from 0.0 to 1.0
+    ///
+    /// - returns: UIColor instance
     public class func colorWith(rgbP3: RGB, alpha: CGFloat = 1.0) -> UIColor {
         return UIColor(rgb: rgbP3, alpha: alpha)
     }
 
+    
+    /// Create a UIColor
+    ///
+    /// - parameter rgb:   An instance of RGB tuple
+    /// - parameter alpha: An alpha value from 0.0 to 1.0
+    ///
+    /// - returns: UIColor instance
     public class func colorWith(rgb: RGB, alpha: CGFloat = 1.0) -> UIColor {
         return UIColor(rgb: rgb, alpha: alpha)
     }
 
+    
+    /// Create a UIColor from Hue, Saturation, and Brightness
+    ///
+    /// - parameter hsb:   An instance of HSB tuple
+    /// - parameter alpha: An alpha value from 0.0 to 1.0
+    ///
+    /// - returns: UIColor instance
     public class func colorWith(hsb: HSB, alpha: CGFloat = 1.0) -> UIColor {
         return UIColor(hsb: hsb, alpha: alpha)
     }
 
+    
+    /// Create a UIColor from Cyan, Magenta, Yellow, and Black
+    ///
+    /// - parameter cmyk:  An instance of CMYK tuple
+    /// - parameter alpha: An alpha value from 0.0 to 1.0
+    ///
+    /// - returns: UIColor instance
     public class func colorWith(cmyk: CMYK, alpha: CGFloat = 1.0) -> UIColor {
         return UIColor(cmyk: cmyk, alpha: alpha)
     }
     
     // MARK: Init methods
+    
+    
+    /// Create a UIColor with a hex string
+    ///
+    /// - parameter hexString: RRGGBB or #RRGGBB
+    /// - parameter alpha:     An alpha value from 0.0 to 1.0
+    ///
+    /// - returns: UIColor instance
     public convenience init(hexString:String, alpha: CGFloat = 1.0) {
         let scanner = Scanner(string: hexString)
         

@@ -39,7 +39,6 @@ private let invalidPositionValue = CGFloat(-1.0)
         set {
             _borderColor = newValue
             self.layer.borderColor = newValue.cgColor
-            knobView.borderColor = newValue
         }
     }
     
@@ -51,7 +50,6 @@ private let invalidPositionValue = CGFloat(-1.0)
         set {
             _borderWidth = newValue
             self.layer.borderWidth = newValue
-            knobView.borderWidth = newValue
         }
     }
     
@@ -176,8 +174,6 @@ private let invalidPositionValue = CGFloat(-1.0)
 
         
         // KnobView
-        knobView.borderWidth = borderWidth
-        knobView.borderColor = borderColor
         updateKnobSize()
         addSubview(knobView)
     }
@@ -197,8 +193,6 @@ private let invalidPositionValue = CGFloat(-1.0)
         }
 
         // KnobView
-        knobView.borderWidth = borderWidth
-        knobView.borderColor = borderColor
         updateKnob()
     }
     
