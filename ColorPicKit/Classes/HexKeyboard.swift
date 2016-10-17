@@ -8,10 +8,8 @@
 
 import UIKit
 
-@IBDesignable public class HexKeyboard: UIControl, Colorable {
+@IBDesignable public class HexKeyboard: UIControl, Colorable, ColorControl {
 
-
-    
     private var _roundedCornders: Bool = false
     @IBInspectable public var roundedCorners: Bool {
         get {
@@ -85,10 +83,6 @@ import UIKit
     private var _color: UIColor = .white
     @IBInspectable public var color: UIColor {
         get {
-//            let invertedPoint = CGPoint(x: position.x, y: bounds.height - position.y)
-//            let rgb = wheelView.colorForPoint(invertedPoint)
-            //return UIColor(red: rgb.red, green: rgb.green, blue: rgb.blue, alpha: 1.0)
-            
             if let hexString = hexLabel.text {
                 let color = UIColor(hexString: hexString)
                 return color
@@ -173,38 +167,6 @@ import UIKit
         super.layoutSubviews()
         
         
-//        let quarterWidth = bounds.width / 4.0
-//        let quarterHeight = (bounds.height - hexLabelHeight) / 4.0
-//        for i in 0..<16 {
-//            let x: CGFloat = CGFloat(i % 4) * quarterWidth
-//            let y: CGFloat = hexLabelHeight + CGFloat(i / 4) * quarterHeight
-//            let w: CGFloat = quarterWidth
-//            let h: CGFloat = quarterHeight
-//            let frame = CGRect(x: x, y: y, width: w, height: h)
-//            let button = keys[i]
-//            button.frame = frame
-//            button.titleLabel?.font = font
-//            button.setTitleColor(textColor, for: .normal)
-//
-//        }
-//        
-//        
-//        let labelFrame = CGRect(x: 0, y: 0, width: bounds.width, height: hexLabelHeight)
-//        hexLabel.frame = labelFrame
-//        hexLabel.backgroundColor = UIColor.clear
-//        hexLabel.font = font
-//        hexLabel.textColor = textColor
-//        
-//        
-//        backspace.frame = CGRect(x: bounds.width - hexLabelHeight, y: 0, width: hexLabelHeight, height: hexLabelHeight)
-//        backspace.titleLabel?.font = font
-//        backspace.setTitleColor(textColor, for: .normal)
-//        
-//        clear.frame = CGRect(x: 0, y: 0, width: hexLabelHeight, height: hexLabelHeight)
-//        clear.titleLabel?.font = font
-//        clear.setTitleColor(textColor, for: .normal)
-        
-        
         let quarterWidth = bounds.width / 4.0
         let fifthHeight = bounds.height / 5.0
         for i in 0..<16 {
@@ -236,8 +198,6 @@ import UIKit
         clear.titleLabel?.font = font
         clear.setTitleColor(textColor, for: .normal)
 
-
-        
     }
     
     func clearKeyTouchDown(sender: UIButton) {
@@ -246,7 +206,7 @@ import UIKit
     }
     
     
-    func backspaceKeyTouchDown(sender: UIButton) {
+    @objc private func backspaceKeyTouchDown(sender: UIButton) {
         guard var hexString = hexLabel.text else {
             return
         }
@@ -261,12 +221,12 @@ import UIKit
         valueChanged()
     }
     
-    func hexKeyTouchUpInside(sender: UIButton) {
+    @objc private func hexKeyTouchUpInside(sender: UIButton) {
         valueChanged()
         touchUpInside()
     }
     
-    func hexKeyTouchDown(sender: UIButton) {
+    @objc private func hexKeyTouchDown(sender: UIButton) {
         print("key \(sender.tag) pressed")
         
         if (hexLabel.text?.characters.count)! >= 6 {
