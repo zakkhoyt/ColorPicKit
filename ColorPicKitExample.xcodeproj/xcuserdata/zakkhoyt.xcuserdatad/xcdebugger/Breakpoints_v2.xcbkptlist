@@ -67,30 +67,44 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ColorPicKitExample/BaseViewController.swift"
-            timestampString = "498248099.437077"
+            filePath = "ColorPicKit/Classes/GradientData.swift"
+            timestampString = "498363334.929315"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "viewWillAppear(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ColorPicKitExample/BaseViewController.swift"
-            timestampString = "498248099.437077"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "viewDidLayoutSubviews()"
-            landmarkType = "7">
+            startingLineNumber = "6"
+            endingLineNumber = "6">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ColorPicKitExample.GradientData.init (red : Swift.UInt8, green : Swift.UInt8, blue : Swift.UInt8) -&gt; ColorPicKitExample.GradientData"
+                  moduleName = "ColorPicKitExample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zakkhoyt/Code/repositories/vwwGithub/ColorPicKit/ColorPicKit/Classes/GradientData.swift"
+                  timestampString = "498371180.812307"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ColorPicKitExample.GradientData.init () -&gt; ColorPicKitExample.GradientData"
+                  moduleName = "ColorPicKitExample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/zakkhoyt/Code/repositories/vwwGithub/ColorPicKit/ColorPicKit/Classes/GradientData.swift"
+                  timestampString = "498371180.813611"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

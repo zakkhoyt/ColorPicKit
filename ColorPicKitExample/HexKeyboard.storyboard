@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A320" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kx2-f6-b6g">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Hex Keyboard View Controller-->
+        <scene sceneID="AoU-VO-7ev">
+            <objects>
+                <viewController id="kx2-f6-b6g" customClass="HexKeyboardViewController" customModule="ColorPicKitExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gqM-Tj-dZr"/>
+                        <viewControllerLayoutGuide type="bottom" id="XQn-pQ-pRo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Mhy-vI-eiR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9EA-Yq-Ggd" customClass="HexKeyboard" customModule="ColorPicKitExample" customModuleProvider="target">
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="9EA-Yq-Ggd" secondAttribute="height" multiplier="1:1" id="7X9-77-nvG"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="roundedCorners" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="imagePixelPickerTouchDown:" destination="kx2-f6-b6g" eventType="touchDown" id="obl-E7-71q"/>
+                                    <action selector="imagePixelPickerTouchUpInside:" destination="kx2-f6-b6g" eventType="touchUpInside" id="uXV-Ww-wGU"/>
+                                    <action selector="imagePixelPickerValueChanged:" destination="kx2-f6-b6g" eventType="valueChanged" id="pIG-r0-M07"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oKs-jk-gEw">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oKs-jk-gEw" firstAttribute="leading" secondItem="Mhy-vI-eiR" secondAttribute="leading" constant="20" id="7gF-pn-tmP"/>
+                            <constraint firstItem="9EA-Yq-Ggd" firstAttribute="leading" secondItem="Mhy-vI-eiR" secondAttribute="leadingMargin" id="BDa-LP-mqw"/>
+                            <constraint firstItem="oKs-jk-gEw" firstAttribute="top" secondItem="9EA-Yq-Ggd" secondAttribute="bottom" constant="20" id="HXz-c0-wy7"/>
+                            <constraint firstAttribute="trailing" secondItem="oKs-jk-gEw" secondAttribute="trailing" constant="20" id="HdL-8V-bDI"/>
+                            <constraint firstItem="9EA-Yq-Ggd" firstAttribute="trailing" secondItem="Mhy-vI-eiR" secondAttribute="trailingMargin" id="SyG-Ef-DLr"/>
+                            <constraint firstItem="XQn-pQ-pRo" firstAttribute="top" secondItem="oKs-jk-gEw" secondAttribute="bottom" constant="20" id="tC1-hn-cHA"/>
+                            <constraint firstItem="9EA-Yq-Ggd" firstAttribute="centerY" secondItem="Mhy-vI-eiR" secondAttribute="centerY" id="wUa-OL-qxb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="colorView" destination="oKs-jk-gEw" id="UHg-xI-Dol"/>
+                        <outlet property="hexKeyboard" destination="9EA-Yq-Ggd" id="RhY-gU-bMM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B0v-Sl-eLz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23.199999999999999" y="240.62968515742131"/>
+        </scene>
+    </scenes>
+</document>

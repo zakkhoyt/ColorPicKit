@@ -166,6 +166,8 @@ private let invalidPositionValue = CGFloat(-1.0)
         self.roundedCorners = _roundedCornders
         self.borderWidth = _borderWidth
         self.borderColor = _borderColor
+        
+        
         // ImageView
         imageView.contentMode = .scaleAspectFit
         imageView.image = image
