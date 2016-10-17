@@ -1,4 +1,4 @@
-## ColorPicKit ![](https://img.shields.io/badge/Version-1.2.1-green.svg)
+## ColorPicKit ![](https://img.shields.io/badge/Version-1.2.2-green.svg)
 
 ##### A collection of UIControls and class extensions for selecting and defining colors
 
@@ -65,7 +65,9 @@ ColorPicKit includes a full example project. Clone this repository and open Colo
 This pod is not yet in the Cocoapods trunk, so you will need to install using a branch.
 
 ````
-pod 'ColorPicKit', :git => 'https://github.com/zakkhoyt/ColorPicKit', :branch => '1.2.1'
+
+pod 'ColorPicKit', :git => 'https://github.com/zakkhoyt/ColorPicKit', :branch => '1.2.2'
+
 ````
 
 ## UIColor utilities
