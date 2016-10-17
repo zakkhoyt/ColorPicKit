@@ -14,11 +14,11 @@
 		C607EEE41DA96F1400A73F51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C607EEE21DA96F1400A73F51 /* LaunchScreen.storyboard */; };
 		C607EEEF1DA96F1400A73F51 /* ColorPicKitExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C607EEEE1DA96F1400A73F51 /* ColorPicKitExampleTests.swift */; };
 		C607EEFA1DA96F1400A73F51 /* ColorPicKitExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C607EEF91DA96F1400A73F51 /* ColorPicKitExampleUITests.swift */; };
-		C65329A51DB4686C00D9EDD5 /* HexKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65329A41DB4686C00D9EDD5 /* HexKeyboard.swift */; };
+		C65329A51DB4686C00D9EDD5 /* HexKeypad.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65329A41DB4686C00D9EDD5 /* HexKeypad.swift */; };
 		C67547111DB18DD100C2CA45 /* Throttle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67547101DB18DD100C2CA45 /* Throttle.swift */; };
 		C68AF6961DAC0B8700DA93B5 /* PositionableControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68AF6951DAC0B8700DA93B5 /* PositionableControl.swift */; };
-		C6B016751DB47D9400B30B3E /* HexKeyboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B016741DB47D9400B30B3E /* HexKeyboardViewController.swift */; };
-		C6B016771DB47DAB00B30B3E /* HexKeyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6B016761DB47DAB00B30B3E /* HexKeyboard.storyboard */; };
+		C6B016751DB47D9400B30B3E /* HexKeypadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B016741DB47D9400B30B3E /* HexKeypadViewController.swift */; };
+		C6B016771DB47DAB00B30B3E /* HexKeypad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6B016761DB47DAB00B30B3E /* HexKeypad.storyboard */; };
 		C6D87FAA1DA9F2E3004CB7E3 /* CMYKSliderGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D87F921DA9F2E3004CB7E3 /* CMYKSliderGroup.swift */; };
 		C6D87FAB1DA9F2E3004CB7E3 /* GradientData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D87F931DA9F2E3004CB7E3 /* GradientData.swift */; };
 		C6D87FAC1DA9F2E3004CB7E3 /* GradientSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D87F941DA9F2E3004CB7E3 /* GradientSlider.swift */; };
@@ -96,14 +96,14 @@
 		C607EEF91DA96F1400A73F51 /* ColorPicKitExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPicKitExampleUITests.swift; sourceTree = "<group>"; };
 		C607EEFB1DA96F1400A73F51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C64730511DAD6BB8007BBAE7 /* ColorPicKit_protocol_class_diagram.svg */ = {isa = PBXFileReference; lastKnownFileType = text; path = ColorPicKit_protocol_class_diagram.svg; sourceTree = "<group>"; };
-		C65329A41DB4686C00D9EDD5 /* HexKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexKeyboard.swift; sourceTree = "<group>"; };
+		C65329A41DB4686C00D9EDD5 /* HexKeypad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexKeypad.swift; sourceTree = "<group>"; };
 		C67547101DB18DD100C2CA45 /* Throttle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Throttle.swift; sourceTree = "<group>"; };
 		C68AF68F1DAB3F8F00DA93B5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C68AF6901DAB3F8F00DA93B5 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		C68AF6911DAB3F8F00DA93B5 /* ColorPicKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ColorPicKit.podspec; sourceTree = "<group>"; };
 		C68AF6951DAC0B8700DA93B5 /* PositionableControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PositionableControl.swift; sourceTree = "<group>"; };
-		C6B016741DB47D9400B30B3E /* HexKeyboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexKeyboardViewController.swift; sourceTree = "<group>"; };
-		C6B016761DB47DAB00B30B3E /* HexKeyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HexKeyboard.storyboard; sourceTree = "<group>"; };
+		C6B016741DB47D9400B30B3E /* HexKeypadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexKeypadViewController.swift; sourceTree = "<group>"; };
+		C6B016761DB47DAB00B30B3E /* HexKeypad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HexKeypad.storyboard; sourceTree = "<group>"; };
 		C6D87F901DA9F2E3004CB7E3 /* Links.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Links.md; sourceTree = "<group>"; };
 		C6D87F921DA9F2E3004CB7E3 /* CMYKSliderGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CMYKSliderGroup.swift; sourceTree = "<group>"; };
 		C6D87F931DA9F2E3004CB7E3 /* GradientData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientData.swift; sourceTree = "<group>"; };
@@ -272,7 +272,7 @@
 				C6D87F9D1DA9F2E3004CB7E3 /* HSBWheel.swift */,
 				C6D87F991DA9F2E3004CB7E3 /* ImagePixelPicker.swift */,
 				C6D87F9A1DA9F2E3004CB7E3 /* KnobView.swift */,
-				C65329A41DB4686C00D9EDD5 /* HexKeyboard.swift */,
+				C65329A41DB4686C00D9EDD5 /* HexKeypad.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -324,8 +324,8 @@
 				C6D87FED1DA9F49D004CB7E3 /* HSBWheel */,
 				C6D87FEE1DA9F4A3004CB7E3 /* HSBWheelBrightness */,
 				C6D87FF01DA9F4AF004CB7E3 /* ImagePicker */,
-				C6B016741DB47D9400B30B3E /* HexKeyboardViewController.swift */,
-				C6B016761DB47DAB00B30B3E /* HexKeyboard.storyboard */,
+				C6B016741DB47D9400B30B3E /* HexKeypadViewController.swift */,
+				C6B016761DB47DAB00B30B3E /* HexKeypad.storyboard */,
 			);
 			name = Controls;
 			sourceTree = "<group>";
@@ -533,7 +533,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6B016771DB47DAB00B30B3E /* HexKeyboard.storyboard in Resources */,
+				C6B016771DB47DAB00B30B3E /* HexKeypad.storyboard in Resources */,
 				C6D87FE01DA9F448004CB7E3 /* CMYKSliderGroup.storyboard in Resources */,
 				C6D87FDA1DA9F42F004CB7E3 /* HueSlider.storyboard in Resources */,
 				C6D87FDC1DA9F437004CB7E3 /* RGBSliderGroup.storyboard in Resources */,
@@ -594,7 +594,7 @@
 				C6D87FCC1DA9F3DC004CB7E3 /* HSBSliderGroupViewController.swift in Sources */,
 				C6D87FD61DA9F41D004CB7E3 /* ImagePixelPickerViewController.swift in Sources */,
 				C6D87FB81DA9F2E3004CB7E3 /* Knob.swift in Sources */,
-				C6B016751DB47D9400B30B3E /* HexKeyboardViewController.swift in Sources */,
+				C6B016751DB47D9400B30B3E /* HexKeypadViewController.swift in Sources */,
 				C6D87FBA1DA9F2E3004CB7E3 /* SliderControl.swift in Sources */,
 				C6D87FD41DA9F40D004CB7E3 /* HSBWheelBrightnessViewController.swift in Sources */,
 				C6D87FBD1DA9F2E3004CB7E3 /* UIImage+Utilities.swift in Sources */,
@@ -602,7 +602,7 @@
 				C6D87FBE1DA9F2E3004CB7E3 /* UIView+Utilities.swift in Sources */,
 				C67547111DB18DD100C2CA45 /* Throttle.swift in Sources */,
 				C6D87FBC1DA9F2E3004CB7E3 /* UIColor+Utilities.swift in Sources */,
-				C65329A51DB4686C00D9EDD5 /* HexKeyboard.swift in Sources */,
+				C65329A51DB4686C00D9EDD5 /* HexKeypad.swift in Sources */,
 				C6D87FAE1DA9F2E3004CB7E3 /* HSBSliderGroup.swift in Sources */,
 				C6D87FC41DA9F3B1004CB7E3 /* BaseViewController.swift in Sources */,
 				C6D87FF41DA9F506004CB7E3 /* HSBSpectrumView.swift in Sources */,

@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Hex Keyboard View Controller-->
+        <!--Hex Keypad View Controller-->
         <scene sceneID="AoU-VO-7ev">
             <objects>
-                <viewController id="kx2-f6-b6g" customClass="HexKeyboardViewController" customModule="ColorPicKitExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="kx2-f6-b6g" customClass="HexKeypadViewController" customModule="ColorPicKitExample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gqM-Tj-dZr"/>
                         <viewControllerLayoutGuide type="bottom" id="XQn-pQ-pRo"/>
@@ -20,7 +20,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9EA-Yq-Ggd" customClass="HexKeyboard" customModule="ColorPicKitExample" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9EA-Yq-Ggd" customClass="HexKeypad" customModule="ColorPicKitExample" customModuleProvider="target">
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="9EA-Yq-Ggd" secondAttribute="height" multiplier="1:1" id="7X9-77-nvG"/>
                                 </constraints>

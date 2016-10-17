@@ -21,14 +21,15 @@ ColorPicKit provides the following UIControls:
 * HSBSliderGroup - 3 sliders to define hue, saturation, and brightness components.
 * CMYKSliderGroup - 4 sliders to define cyan, magenta, yellow, and black components.
 * GradientSlider - Interpolates a color between the two colors on the ends.
-* HueSlider- Select a hue value.
+* HueSlider - Select a hue value.
+* HexKeypad - Represents a color with a hex string where RRGGBB are chars from '0' ... 'F' 
 
 ## Usage
 
 ##### InterfaceBuilder
 ![](https://img.shields.io/badge/Supports-UIControl-green.svg)
 - Drag and drop a UIView onto your view controller
-- Using the Identity Inspector, set the view's class to GradientSlider, HueSlider, RGBSliderGroup, HSBSliderGroup, CMYKSliderGroup, HSBWheelPicker, HSBSpectrumPicker, or ImagePixelPicker.
+- Using the Identity Inspector, set the view's class to GradientSlider, HueSlider, RGBSliderGroup, HSBSliderGroup, CMYKSliderGroup, HSBWheelPicker, HSBSpectrumPicker, ImagePixelPicker, or HexKeypad.
 - Using the Attributes Inspector, configure IB properties (color, rounded corners, border color, knobSize, etc...)
 - Drag and drop your IBActions just like any other control. All controls support
   - ValueChanged
@@ -176,6 +177,10 @@ let color = image.pixelColorAt(point: center)
 #### HueSlider
 ![IB](http://i.imgur.com/YJuVTFX.png)
 
+#### HexKeypad
+![IB]()
+
+
 
 ## Images in use
 #### ImagePixelPicker
@@ -201,3 +206,7 @@ let color = image.pixelColorAt(point: center)
 
 #### HueSlider
 ![In use](http://i.imgur.com/7IUiq1b.png)
+
+#### HexKeypad
+![IB]()
+

@@ -1,5 +1,5 @@
 //
-//  HexKeyboard.swift
+//  HexKeypad.swift
 //  ColorPicKitExample
 //
 //  Created by Zakk Hoyt on 10/16/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-@IBDesignable public class HexKeyboard: UIControl, Colorable, ColorControl {
+@IBDesignable public class HexKeypad: UIControl, Colorable, ColorControl {
 
     private var _roundedCornders: Bool = false
     @IBInspectable public var roundedCorners: Bool {

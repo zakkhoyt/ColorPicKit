@@ -1,5 +1,5 @@
 //
-//  HexKeyboardViewController.swift
+//  HexKeypadViewController.swift
 //  ColorPicKitExample
 //
 //  Created by Zakk Hoyt on 10/16/16.
@@ -8,19 +8,19 @@
 
 import UIKit
 
-class HexKeyboardViewController: BaseViewController {
+class HexKeypadViewController: BaseViewController {
 
-    @IBOutlet weak var hexKeyboard: HexKeyboard!
+    @IBOutlet weak var hexKeyboard: HexKeypad!
     
-    @IBAction func imagePixelPickerTouchDown(_ sender: HexKeyboard) {
+    @IBAction func imagePixelPickerTouchDown(_ sender: HexKeypad) {
         updateBackgroundColor()
     }
     
-    @IBAction func imagePixelPickerTouchUpInside(_ sender: HexKeyboard) {
+    @IBAction func imagePixelPickerTouchUpInside(_ sender: HexKeypad) {
         updateBackgroundColor()
     }
     
-    @IBAction func imagePixelPickerValueChanged(_ sender: HexKeyboard) {
+    @IBAction func imagePixelPickerValueChanged(_ sender: HexKeypad) {
         updateBackgroundColor()
     }
     

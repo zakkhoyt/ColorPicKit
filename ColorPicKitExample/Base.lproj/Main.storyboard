@@ -75,7 +75,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aF9-PI-7qv">
-                                        <state key="normal" title="Hex string input"/>
+                                        <state key="normal" title="Hex Keypad"/>
                                         <connections>
                                             <segue destination="I02-Yu-Llb" kind="show" id="BEZ-uf-cAi"/>
                                         </connections>
@@ -187,10 +187,10 @@
             </objects>
             <point key="canvasLocation" x="1778" y="452"/>
         </scene>
-        <!--HexKeyboard-->
+        <!--HexKeypad-->
         <scene sceneID="8S8-b6-fs0">
             <objects>
-                <viewControllerPlaceholder storyboardName="HexKeyboard" id="I02-Yu-Llb" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="HexKeypad" id="I02-Yu-Llb" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jJF-RZ-DPy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1764" y="526"/>
