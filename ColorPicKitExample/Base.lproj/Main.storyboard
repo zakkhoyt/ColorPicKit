@@ -44,6 +44,12 @@
                                             <segue destination="Ozn-yM-Pkk" kind="show" id="r8x-1s-OoB"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZnM-aO-nbz">
+                                        <state key="normal" title="HSL Slider Group"/>
+                                        <connections>
+                                            <segue destination="sXG-PK-gND" kind="show" id="O6I-tV-iqB"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zn-CH-p9E">
                                         <state key="normal" title="CMYK Slider Group"/>
                                         <connections>
@@ -153,13 +159,21 @@
             </objects>
             <point key="canvasLocation" x="1777" y="163"/>
         </scene>
+        <!--HSLSliderGroup-->
+        <scene sceneID="DHu-e9-hWn">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HSLSliderGroup" id="sXG-PK-gND" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WyW-uU-420" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1796" y="206"/>
+        </scene>
         <!--CMYKSliderGroup-->
         <scene sceneID="uOD-S1-Q4y">
             <objects>
                 <viewControllerPlaceholder storyboardName="CMYKSliderGroup" id="ffB-QV-Dly" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AQk-Cd-j2f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1777" y="222"/>
+            <point key="canvasLocation" x="1777" y="258"/>
         </scene>
         <!--YUVSliderGroup-->
         <scene sceneID="DL0-mq-L4a">
@@ -167,7 +181,7 @@
                 <viewControllerPlaceholder storyboardName="YUVSliderGroup" id="atr-wc-h8N" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LKQ-OY-wEU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1786" y="276"/>
+            <point key="canvasLocation" x="1785" y="312"/>
         </scene>
         <!--HSBSpectrum-->
         <scene sceneID="5hd-ts-Sc8">
@@ -175,7 +189,7 @@
                 <viewControllerPlaceholder storyboardName="HSBSpectrum" id="SHr-3M-ohP" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QHg-dB-TkT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1777" y="336"/>
+            <point key="canvasLocation" x="1777" y="372"/>
         </scene>
         <!--HSBWheel-->
         <scene sceneID="8Vf-sD-w5j">
@@ -183,7 +197,7 @@
                 <viewControllerPlaceholder storyboardName="HSBWheel" id="w3I-G0-utt" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RJz-x7-9vm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1776" y="383"/>
+            <point key="canvasLocation" x="1776" y="419"/>
         </scene>
         <!--HSBWheelBrightness-->
         <scene sceneID="ZzT-jw-WYd">
@@ -191,7 +205,7 @@
                 <viewControllerPlaceholder storyboardName="HSBWheelBrightness" id="HXk-WY-bLa" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="chV-c3-JMc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1778" y="447"/>
+            <point key="canvasLocation" x="1778" y="483"/>
         </scene>
         <!--ImagePixelPicker-->
         <scene sceneID="nIS-WK-BnB">
@@ -199,7 +213,7 @@
                 <viewControllerPlaceholder storyboardName="ImagePixelPicker" id="Rv9-ir-wdN" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IeL-Dh-csU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1778" y="508"/>
+            <point key="canvasLocation" x="1778" y="544"/>
         </scene>
         <!--HexKeypad-->
         <scene sceneID="8S8-b6-fs0">
@@ -207,7 +221,7 @@
                 <viewControllerPlaceholder storyboardName="HexKeypad" id="I02-Yu-Llb" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jJF-RZ-DPy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1764" y="582"/>
+            <point key="canvasLocation" x="1764" y="618"/>
         </scene>
     </scenes>
 </document>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A320" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="xdX-ST-IkN">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Slider Group View Controller-->
+        <scene sceneID="MmH-KI-XHO">
+            <objects>
+                <viewController id="xdX-ST-IkN" customClass="HSLSliderGroupViewController" customModule="ColorPicKitExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xfC-7X-IQW"/>
+                        <viewControllerLayoutGuide type="bottom" id="QSd-zw-Y6f"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zMq-NM-JV7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o4y-X3-cSW" customClass="HSLSliderGroup" customModule="ColorPicKitExample" customModuleProvider="target">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="hslSliderTouchDown:" destination="xdX-ST-IkN" eventType="touchDown" id="tpi-Xk-lEB"/>
+                                    <action selector="hslSliderTouchUpInside:" destination="xdX-ST-IkN" eventType="touchUpInside" id="ZMp-cr-5r3"/>
+                                    <action selector="hslSliderValueChanged:" destination="xdX-ST-IkN" eventType="valueChanged" id="0Om-gB-ZAh"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o1K-4p-1Wv">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="uV3-rE-W1j"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="o4y-X3-cSW" firstAttribute="centerY" secondItem="zMq-NM-JV7" secondAttribute="centerY" id="2Nx-vx-QzD"/>
+                            <constraint firstAttribute="trailing" secondItem="o1K-4p-1Wv" secondAttribute="trailing" constant="20" id="Lyo-UX-UE4"/>
+                            <constraint firstItem="QSd-zw-Y6f" firstAttribute="top" secondItem="o1K-4p-1Wv" secondAttribute="bottom" constant="20" id="Qkf-Az-q8l"/>
+                            <constraint firstItem="o1K-4p-1Wv" firstAttribute="leading" secondItem="zMq-NM-JV7" secondAttribute="leading" constant="20" id="Qqf-KQ-W1l"/>
+                            <constraint firstItem="o4y-X3-cSW" firstAttribute="trailing" secondItem="zMq-NM-JV7" secondAttribute="trailingMargin" id="uTv-dW-C7a"/>
+                            <constraint firstItem="o4y-X3-cSW" firstAttribute="leading" secondItem="zMq-NM-JV7" secondAttribute="leadingMargin" id="zdC-sU-hgd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="colorView" destination="o1K-4p-1Wv" id="Xyj-tb-70R"/>
+                        <outlet property="hslSliderGroup" destination="o4y-X3-cSW" id="l9G-JF-tYA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tku-uY-DLr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="468" y="344"/>
+        </scene>
+    </scenes>
+</document>

@@ -110,6 +110,59 @@ extension UIColor {
         return hsba
     }
     
+    // http://www.easyrgb.com/index.php?X=MATH
+    public class func rgbaToHSLA(rgba: RGBA) -> HSLA {
+
+        
+        let var_R = rgba.red
+        let var_G = rgba.green
+        let var_B = rgba.blue
+        
+        
+        let var_Min = min(var_R, var_G, var_B)
+        let var_Max = max(var_R, var_G, var_B)
+        let del_Max = var_Max - var_Min
+
+        var hue: CGFloat = 0
+        var saturation: CGFloat = 0
+        let lightness: CGFloat = (var_Max + var_Min) / 2.0
+
+        
+        if del_Max == 0 {
+            hue = 0
+            saturation = 0
+        } else {
+            if lightness < 0.5 {
+                saturation = del_Max / (var_Max + var_Min)
+            } else {
+                saturation = del_Max / (2.0 - var_Max - var_Min)
+            }
+            
+            let del_R = (((var_Max - var_R ) / 6.0 ) + (del_Max / 2.0)) / del_Max
+            let del_G =  (((var_Max - var_G) / 6.0) + (del_Max / 2.0)) / del_Max
+            let del_B = (((var_Max - var_B) / 6.0) + (del_Max / 2.0)) / del_Max
+            
+            
+            if var_R == var_Max {
+                hue = del_B - del_G
+            } else if var_G == var_Max {
+                hue = (1.0 / 3.0) + del_R - del_B
+            } else if var_B == var_Max {
+                hue = (2.0 / 3.0) + del_G - del_R
+            }
+            
+            if hue < 0 {
+                hue += 1.0
+            }
+            
+            if hue > 1.0 {
+                hue -= 1.0
+            }
+        }
+        
+        return HSLA(hue: hue, saturation: saturation, lightness: lightness, alpha: rgba.alpha)
+    }
+    
     // http://www.pcmag.com/encyclopedia/term/55166/yuv-rgb-conversion-formulas
     public class func rgbaToYUVA(rgba: RGBA) -> YUVA {
         let y = 0.299 * rgba.red + 0.587 * rgba.green + 0.114 * rgba.blue
