@@ -52,6 +52,13 @@ public struct YUVA {
         return hsba
     }
     
+    public func hsla() -> HSLA {
+        let rgba = UIColor.yuvaToRGBA(yuva: self)
+        let hsla = UIColor.rgbaToHSLA(rgba: rgba)
+        return hsla
+    }
+
+    
     public func cmyka() -> CMYKA {
         let rgba = UIColor.yuvaToRGBA(yuva: self)
         let cmyka = UIColor.rgbaToCMYKA(rgba: rgba)
@@ -114,6 +121,13 @@ extension UIColor {
         let hsba = UIColor.rgbaToHSBA(rgba: rgba)
         return hsba
     }
+    
+    public class func yuvaToHSLA(yuva: YUVA) -> HSLA {
+        let rgba = UIColor.yuvaToRGBA(yuva: yuva)
+        let hsla = UIColor.rgbaToHSLA(rgba: rgba)
+        return hsla
+    }
+
     
     public class func yuvaToCMYKA(yuva: YUVA) -> CMYKA {
         let rgba = UIColor.yuvaToRGBA(yuva: yuva)

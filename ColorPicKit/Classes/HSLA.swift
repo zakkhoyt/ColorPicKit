@@ -42,6 +42,12 @@ public struct HSLA {
         return UIColor.hslaToRGBA(hsla: self)
     }
     
+    public func hsba() -> HSBA {
+        let rgba = UIColor.hslaToRGBA(hsla: self)
+        let hsba = UIColor.rgbaToHSBA(rgba: rgba)
+        return hsba
+
+    }
     
     public func cmyka() -> CMYKA {
         return UIColor.hslaToCMYKA(hsla: self)

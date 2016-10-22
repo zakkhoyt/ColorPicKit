@@ -11,6 +11,7 @@ import UIKit
 
 public struct RGBA {
     
+
     var red: CGFloat
     var green: CGFloat
     var blue: CGFloat
@@ -42,6 +43,10 @@ public struct RGBA {
     
     public func hsba() -> HSBA {
         return UIColor.rgbaToHSBA(rgba: self)
+    }
+    
+    public func hsla() -> HSLA {
+        return UIColor.rgbaToHSLA(rgba: self)   
     }
     
     public func cmyka() -> CMYKA {

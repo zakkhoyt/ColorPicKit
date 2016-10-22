@@ -47,6 +47,12 @@ public struct CMYKA {
         return UIColor.cmykaToHSBA(cmyka: self)
     }
     
+    public func hsla() -> HSLA {
+        let rgba = UIColor.cmykaToRGBA(cmyka: self)
+        let hsla = UIColor.rgbaToHSLA(rgba: rgba)
+        return hsla
+    }
+    
     // MARK: Static functions
     static func colorWith(cmyka: CMYKA) -> UIColor {
         return cmyka.color()
@@ -103,5 +109,17 @@ extension UIColor {
         let color = UIColor(red: rgba.red, green: rgba.green, blue: rgba.blue, alpha: rgba.alpha)
         let hsba = color.hsba()
         return hsba
+    }
+    
+    public class func cmykaToHSLA(cmyka: CMYKA) -> HSLA {
+        let rgba = UIColor.cmykaToRGBA(cmyka: cmyka)
+        let hsla = UIColor.rgbaToHSLA(rgba: rgba)
+        return hsla
+    }
+    
+    public class func cmykaToYUVA(cmyka: CMYKA) -> YUVA {
+        let rgba = UIColor.cmykaToRGBA(cmyka: cmyka)
+        let yuva = UIColor.rgbaToYUVA(rgba: rgba)
+        return yuva
     }
 }
