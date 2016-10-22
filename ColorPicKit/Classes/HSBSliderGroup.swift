@@ -108,10 +108,10 @@ import UIKit
             return color
         }
         set {
-            let hsb = newValue.hsb()
-            hueSlider.value = hsb.hue
-            saturationSlider.value = hsb.saturation
-            brightnessSlider.value = hsb.brightness
+            let hsba = newValue.hsba()
+            hueSlider.value = hsba.hue
+            saturationSlider.value = hsba.saturation
+            brightnessSlider.value = hsba.brightness
             updateSliderColors()
         }
     }
@@ -142,14 +142,14 @@ import UIKit
     private func commonInit() {
         backgroundColor = UIColor.clear
         
-        let hsb = color.hsb()
+        let hsba = color.hsba()
         
         hueSlider.roundedCorners = roundedCorners
         hueSlider.borderColor = borderColor
         hueSlider.borderWidth = borderWidth
         hueSlider.barHeight = barHeight
         hueSlider.knobSize = knobSize
-        hueSlider.value = hsb.hue
+        hueSlider.value = hsba.hue
         hueSlider.addTarget(self, action: #selector(hueSliderValueChanged), for: .valueChanged)
         hueSlider.addTarget(self, action: #selector(hueSliderTouchDown), for: .touchDown)
         hueSlider.addTarget(self, action: #selector(hueSliderTouchUpInside), for: .touchUpInside)
@@ -162,7 +162,7 @@ import UIKit
         saturationSlider.knobSize = knobSize
         saturationSlider.color1 = UIColor.black
         saturationSlider.color2 = UIColor.white
-        saturationSlider.value = hsb.saturation
+        saturationSlider.value = hsba.saturation
         saturationSlider.addTarget(self, action: #selector(saturationSliderValueChanged), for: .valueChanged)
         saturationSlider.addTarget(self, action: #selector(saturationSliderTouchDown), for: .touchDown)
         saturationSlider.addTarget(self, action: #selector(saturationSliderTouchUpInside), for: .touchUpInside)
@@ -176,7 +176,7 @@ import UIKit
         brightnessSlider.knobSize = knobSize
         brightnessSlider.color1 = UIColor.white
         brightnessSlider.color2 = UIColor.black
-        brightnessSlider.value = hsb.brightness
+        brightnessSlider.value = hsba.brightness
         brightnessSlider.addTarget(self, action: #selector(brightnessSliderValueChanged), for: .valueChanged)
         brightnessSlider.addTarget(self, action: #selector(brightnessSliderTouchDown), for: .touchDown)
         brightnessSlider.addTarget(self, action: #selector(brightnessSliderTouchUpInside), for: .touchUpInside)

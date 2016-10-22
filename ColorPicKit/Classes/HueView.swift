@@ -162,10 +162,10 @@ class HueView: UIView {
         for y in 0 ..< height {
             for x in 0 ..< width {
                 let point = CGPoint(x: CGFloat(x), y: CGFloat(y))
-                let rgb = colorForPoint(point)
-                let gradientData = GradientData(red: UInt8(rgb.red * CGFloat(255)),
-                                                green: UInt8(rgb.green * CGFloat(255)),
-                                                blue: UInt8(rgb.blue * CGFloat(255)))
+                let rgba = colorForPoint(point)
+                let gradientData = GradientData(red: UInt8(rgba.red * CGFloat(255)),
+                                                green: UInt8(rgba.green * CGFloat(255)),
+                                                blue: UInt8(rgba.blue * CGFloat(255)))
                 imageData.append(gradientData)
             }
         }
@@ -184,10 +184,10 @@ class HueView: UIView {
     }
     
     // MARK: Public methods
-    func colorForPoint(_ point: CGPoint) -> RGB {
+    func colorForPoint(_ point: CGPoint) -> RGBA {
         let hue = point.x / bounds.width
-        let rgb = UIColor.hsbToRGB(hsb: (hue, saturation, brightness))
-        return rgb
+        let rgba = UIColor.hsbaToRGBA(hsba: HSBA(hue: hue, saturation: saturation, brightness: brightness))
+        return rgba
     }
 
     

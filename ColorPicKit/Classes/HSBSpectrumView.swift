@@ -118,7 +118,7 @@ class HSBSpectrumView: UIView {
     
     // MARK: Public methods
     
-    func colorForPoint(_ point: CGPoint) -> RGB {
+    func colorForPoint(_ point: CGPoint) -> RGBA {
         
         let hue = point.y / bounds.height
         let normalizedX = (point.x / bounds.height) // 0...1
@@ -134,8 +134,8 @@ class HSBSpectrumView: UIView {
             saturation = 1.0
         }
         
-        let rgb = UIColor.hsbToRGB(hsb: (hue, saturation, brightness))
-        return rgb
+        let rgba = UIColor.hsbaToRGBA(hsba: HSBA(hue: hue, saturation: saturation, brightness: brightness))
+        return rgba
         
         
     }

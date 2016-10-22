@@ -111,17 +111,17 @@ import UIKit
             let magenta = magentaSlider.value
             let yellow = yellowSlider.value
             let black = blackSlider.value
-            let cmyk = CMYK(cyan, magenta, yellow, black)
-            let rgb = UIColor.cmykToRGB(cmyk: cmyk)
-            let color = UIColor(red: rgb.red, green: rgb.green, blue: rgb.blue, alpha: 1.0)
+            let cmyka = CMYKA(cyan: cyan, magenta: magenta, yellow: yellow, black: black, alpha: 1.0)
+            let rgba = UIColor.cmykaToRGBA(cmyka: cmyka)
+            let color = UIColor(red: rgba.red, green: rgba.green, blue: rgba.blue, alpha: 1.0)
             return color
         }
         set {
-            let cmyk = newValue.cmyk()
-            cyanSlider.value = cmyk.cyan
-            magentaSlider.value = cmyk.magenta
-            yellowSlider.value = cmyk.yellow
-            blackSlider.value = cmyk.black
+            let cmyka = newValue.cmyka()
+            cyanSlider.value = cmyka.cyan
+            magentaSlider.value = cmyka.magenta
+            yellowSlider.value = cmyka.yellow
+            blackSlider.value = cmyka.black
         }
     }
     
@@ -152,7 +152,7 @@ import UIKit
     private func commonInit() {
         backgroundColor = UIColor.clear
         
-        let rgb = color.rgb()
+        let rgba = color.rgba()
         cyanSlider.roundedCorners = roundedCorners
         cyanSlider.borderColor = borderColor
         cyanSlider.borderWidth = borderWidth
@@ -160,7 +160,7 @@ import UIKit
         cyanSlider.knobSize = knobSize
         cyanSlider.color1 = UIColor.white
         cyanSlider.color2 = UIColor.cyan
-        cyanSlider.value = rgb.red
+        cyanSlider.value = rgba.red
         cyanSlider.addTarget(self, action: #selector(cyanSliderValueChanged), for: .valueChanged)
         cyanSlider.addTarget(self, action: #selector(cyanSliderTouchDown), for: .touchDown)
         cyanSlider.addTarget(self, action: #selector(cyanSliderTouchUpInside), for: .touchUpInside)
@@ -173,7 +173,7 @@ import UIKit
         magentaSlider.knobSize = knobSize
         magentaSlider.color1 = UIColor.white
         magentaSlider.color2 = UIColor.magenta
-        magentaSlider.value = rgb.green
+        magentaSlider.value = rgba.green
         magentaSlider.addTarget(self, action: #selector(magentaSliderValueChanged), for: .valueChanged)
         magentaSlider.addTarget(self, action: #selector(magentaSliderTouchDown), for: .touchDown)
         magentaSlider.addTarget(self, action: #selector(magentaSliderTouchUpInside), for: .touchUpInside)
@@ -187,7 +187,7 @@ import UIKit
         yellowSlider.knobSize = knobSize
         yellowSlider.color1 = UIColor.white
         yellowSlider.color2 = UIColor.yellow
-        yellowSlider.value = rgb.blue
+        yellowSlider.value = rgba.blue
         yellowSlider.addTarget(self, action: #selector(yellowSliderValueChanged), for: .valueChanged)
         yellowSlider.addTarget(self, action: #selector(yellowSliderTouchDown), for: .touchDown)
         yellowSlider.addTarget(self, action: #selector(yellowSliderTouchUpInside), for: .touchUpInside)
@@ -198,7 +198,7 @@ import UIKit
         blackSlider.borderWidth = borderWidth
         blackSlider.color1 = UIColor.white
         blackSlider.color2 = UIColor.black
-        blackSlider.value = rgb.blue
+        blackSlider.value = rgba.blue
         blackSlider.addTarget(self, action: #selector(blackSliderValueChanged), for: .valueChanged)
         blackSlider.addTarget(self, action: #selector(blackSliderTouchDown), for: .touchDown)
         blackSlider.addTarget(self, action: #selector(blackSliderTouchUpInside), for: .touchUpInside)

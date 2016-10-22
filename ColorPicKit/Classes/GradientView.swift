@@ -108,11 +108,11 @@ class GradientView: UIView {
             return
         }
         
-        let rgb1 = color1.rgb()
-        let rgb2 = color2.rgb()
+        let rgba1 = color1.rgba()
+        let rgba2 = color2.rgba()
         let colors: [CGFloat] = [
-            CGFloat(rgb1.red), CGFloat(rgb1.green), CGFloat(rgb1.blue), 1.0,
-            CGFloat(rgb2.red), CGFloat(rgb2.green), CGFloat(rgb2.blue), 1.0,
+            CGFloat(rgba1.red), CGFloat(rgba1.green), CGFloat(rgba1.blue), 1.0,
+            CGFloat(rgba2.red), CGFloat(rgba2.green), CGFloat(rgba2.blue), 1.0,
             ]
         
         let colorSpace = CGColorSpaceCreateDeviceRGB()

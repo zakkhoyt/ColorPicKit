@@ -107,10 +107,10 @@ import UIKit
             return color
         }
         set {
-            let rgb = newValue.rgb()
-            redSlider.value = rgb.red
-            greenSlider.value = rgb.green
-            blueSlider.value = rgb.blue
+            let rgba = newValue.rgba()
+            redSlider.value = rgba.red
+            greenSlider.value = rgba.green
+            blueSlider.value = rgba.blue
         }
     }
     
@@ -140,7 +140,7 @@ import UIKit
     private func commonInit() {
         backgroundColor = UIColor.clear
         
-        let rgb = color.rgb()
+        let rgba = color.rgba()
         redSlider.roundedCorners = roundedCorners
         redSlider.borderColor = borderColor
         redSlider.borderWidth = borderWidth
@@ -148,7 +148,7 @@ import UIKit
         redSlider.knobSize = knobSize
         redSlider.color1 = UIColor.white
         redSlider.color2 = UIColor.red
-        redSlider.value = rgb.red
+        redSlider.value = rgba.red
         redSlider.addTarget(self, action: #selector(redSliderValueChanged), for: .valueChanged)
         redSlider.addTarget(self, action: #selector(redSliderTouchDown), for: .touchDown)
         redSlider.addTarget(self, action: #selector(redSliderTouchUpInside), for: .touchUpInside)
@@ -161,7 +161,7 @@ import UIKit
         greenSlider.knobSize = knobSize
         greenSlider.color1 = UIColor.white
         greenSlider.color2 = UIColor.green
-        greenSlider.value = rgb.green
+        greenSlider.value = rgba.green
         greenSlider.addTarget(self, action: #selector(greenSliderValueChanged), for: .valueChanged)
         greenSlider.addTarget(self, action: #selector(greenSliderTouchDown), for: .touchDown)
         greenSlider.addTarget(self, action: #selector(greenSliderTouchUpInside), for: .touchUpInside)
@@ -175,7 +175,7 @@ import UIKit
         blueSlider.knobSize = knobSize
         blueSlider.color1 = UIColor.white
         blueSlider.color2 = UIColor.blue
-        blueSlider.value = rgb.blue
+        blueSlider.value = rgba.blue
         blueSlider.addTarget(self, action: #selector(blueSliderValueChanged), for: .valueChanged)
         blueSlider.addTarget(self, action: #selector(blueSliderTouchDown), for: .touchDown)
         blueSlider.addTarget(self, action: #selector(blueSliderTouchUpInside), for: .touchUpInside)

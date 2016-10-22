@@ -72,46 +72,46 @@ pod 'ColorPicKit', :git => 'https://github.com/zakkhoyt/ColorPicKit', :branch =>
 
 ## UIColor utilities
 
-ColorPicKit also exposes several functions and data structures for working with hex strings, RGB, HSB, and CMYK, and interpolating a color between two known colors.
+ColorPicKit also exposes several functions and data structures for working with hex strings, RGBA, HSBA, and CMYKA, and interpolating a color between two known colors.
 
 ````
 
 extension UIColor {
 
     public convenience init(hexString:String)
-    public convenience init(rgb: RGB, alpha: CGFloat = 1.0)
-    public convenience init(hsb: HSB, alpha: CGFloat = 1.0)
-    public convenience init(cmyk: CMYK, alpha: CGFloat = 1.0)
+    public convenience init(rgb: RGBA, alpha: CGFloat = 1.0)
+    public convenience init(hsb: HSBA, alpha: CGFloat = 1.0)
+    public convenience init(cmyk: CMYKA, alpha: CGFloat = 1.0)
 
     public func hexString() -> String
-    public func rgb() -> RGB
-    public func hsb() -> HSB
-    public func cmyk() -> CMYK
+    public func rgb() -> RGBA
+    public func hsb() -> HSBA
+    public func cmyk() -> CMYKA
 
     public class func colorWith(hexString: String, alpha: CGFloat = 1.0) -> UIColor
-    public class func colorWith(rgb: RGB, alpha: CGFloat = 1.0) -> UIColor
-    public class func colorWith(hsb: HSB, alpha: CGFloat = 1.0) -> UIColor
-    public class func colorWith(cmyk: CMYK, alpha: CGFloat = 1.0) -> UIColor
+    public class func colorWith(rgb: RGBA, alpha: CGFloat = 1.0) -> UIColor
+    public class func colorWith(hsb: HSBA, alpha: CGFloat = 1.0) -> UIColor
+    public class func colorWith(cmyk: CMYKA, alpha: CGFloat = 1.0) -> UIColor
 
     public class func interpolateAt(value: CGFloat, betweenColor1 color1: UIColor, andColor2 color2: UIColor) -> UIColor
-    public class func rgbToCMYK(rgb: RGB) -> CMYK
-    public class func rgbToHSB(rgb: RGB) -> HSB
-    public class func hsbToRGB(hsb: HSB) -> RGB
-    public class func hsbToCMYK(hsb: HSB) -> CMYK
-    public class func cmykToRGB(cmyk: CMYK) -> RGB
-    public class func cmykToHSB(cmyk: CMYK) -> HSB
+    public class func rgbToCMYKA(rgb: RGBA) -> CMYKA
+    public class func rgbToHSBA(rgb: RGBA) -> HSBA
+    public class func hsbToRGBA(hsb: HSBA) -> RGBA
+    public class func hsbToCMYKA(hsb: HSBA) -> CMYKA
+    public class func cmykToRGBA(cmyk: CMYKA) -> RGBA
+    public class func cmykToHSBA(cmyk: CMYKA) -> HSBA
 
 }
 
 ````
 
-RGB, HSB, and CMYK are defined as tuples
+RGBA, HSBA, and CMYKA are defined as tuples
 
 ````
 {
-public typealias RGB = (red: CGFloat, green: CGFloat, blue: CGFloat)
-public typealias CMYK = (cyan: CGFloat, magenta: CGFloat, yellow: CGFloat, black: CGFloat)
-public typealias HSB = (hue: CGFloat, saturation: CGFloat, brightness: CGFloat)
+public typealias RGBA = (red: CGFloat, green: CGFloat, blue: CGFloat)
+public typealias CMYKA = (cyan: CGFloat, magenta: CGFloat, yellow: CGFloat, black: CGFloat)
+public typealias HSBA = (hue: CGFloat, saturation: CGFloat, brightness: CGFloat)
 }
 
 ````

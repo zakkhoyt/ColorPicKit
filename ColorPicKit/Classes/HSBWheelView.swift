@@ -76,7 +76,7 @@ class HSBWheelView: UIView {
     
     
     
-    func colorForPoint(_ point: CGPoint) -> RGB {
+    func colorForPoint(_ point: CGPoint) -> RGBA {
         //print("point: \(point) bounds: \(bounds)")
         let center = CGPoint(x: radius, y: radius)
         let angle = atan2(point.x - center.x, point.y - center.y) + CGFloat(M_PI)
@@ -89,14 +89,15 @@ class HSBWheelView: UIView {
         
         sat = min(sat, 1.0)
         sat = max(sat, 0.0)
-        let rgb = UIColor.hsbToRGB(hsb: (hue, sat, brightness))
-        return rgb
+        //let rgb = UIColor.hsbaToRGBA(hsb: (hue, sat, brightness))
+        let rgba = UIColor.hsbaToRGBA(hsba: HSBA(hue: hue, saturation: sat, brightness: brightness))
+        return rgba
     }
     
     func pointForColor(color: UIColor) -> CGPoint {
-        let hsb = color.hsb()
-        let angle = (hsb.hue * CGFloat(2*M_PI)) + CGFloat(M_PI_2)
-        let distance = radius * hsb.saturation
+        let hsba = color.hsba()
+        let angle = (hsba.hue * CGFloat(2*M_PI)) + CGFloat(M_PI_2)
+        let distance = radius * hsba.saturation
         let center = CGPoint(x: bounds.midX, y: bounds.midY)
         let x = center.x + distance * cos(angle)
         let y = center.y + distance * sin(angle)

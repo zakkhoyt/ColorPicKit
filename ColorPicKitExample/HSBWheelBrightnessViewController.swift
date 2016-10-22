@@ -45,8 +45,8 @@ class HSBWheelBrightnessViewController: BaseViewController {
     
     private func updateBrightnessSlider() {
         
-        let hsb = hsbWheel.color.hsb()
-        let color = UIColor(hue: hsb.hue, saturation: 1.0, brightness: 1.0, alpha: 1.0)
+        let hsba = hsbWheel.color.hsba()
+        let color = UIColor(hue: hsba.hue, saturation: 1.0, brightness: 1.0, alpha: 1.0)
         brightnessSlider.color2 = color
     }
     
