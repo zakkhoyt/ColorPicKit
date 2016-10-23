@@ -6,7 +6,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             scope = "0"
@@ -25,7 +25,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "105"
             endingLineNumber = "105"
-            landmarkName = "HSBASpectum"
+            landmarkName = "HSBSpectum"
             landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
@@ -41,14 +41,14 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "104"
             endingLineNumber = "104"
-            landmarkName = "HSBASpectum"
+            landmarkName = "HSBSpectum"
             landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ColorPicKit/Classes/HSBSpectrum.swift"
@@ -64,7 +64,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ColorPicKit/Classes/GradientData.swift"
@@ -75,14 +75,14 @@
             endingLineNumber = "6">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "ColorPicKitExample.GradientData.init (red : Swift.UInt8, green : Swift.UInt8, blue : Swift.UInt8) -&gt; ColorPicKitExample.GradientData"
                   moduleName = "ColorPicKitExample"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/zakkhoyt/Code/repositories/vwwGithub/ColorPicKit/ColorPicKit/Classes/GradientData.swift"
-                  timestampString = "498870764.349245"
+                  timestampString = "498890426.322772"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -90,14 +90,14 @@
                   offsetFromSymbolStart = "12">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "ColorPicKitExample.GradientData.init () -&gt; ColorPicKitExample.GradientData"
                   moduleName = "ColorPicKitExample"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/zakkhoyt/Code/repositories/vwwGithub/ColorPicKit/ColorPicKit/Classes/GradientData.swift"
-                  timestampString = "498870764.35042"
+                  timestampString = "498890426.325388"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "12"
@@ -105,6 +105,38 @@
                   offsetFromSymbolStart = "4">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ColorPicKit/Classes/YUVA.swift"
+            timestampString = "498890425.240183"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
+            landmarkName = "yuvaToRGBA(yuva:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ColorPicKit/Classes/RGBA.swift"
+            timestampString = "498888654.561249"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "200"
+            endingLineNumber = "200"
+            landmarkName = "rgbaToYUVA(rgba:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

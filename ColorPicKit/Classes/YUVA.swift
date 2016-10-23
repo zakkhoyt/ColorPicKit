@@ -10,10 +10,6 @@ import UIKit
 
 public struct YUVA {
     
-    
-    
-    
-    
     var y: CGFloat // intensity
     var u: CGFloat // blue
     var v: CGFloat // red
@@ -32,6 +28,13 @@ public struct YUVA {
         self.u = u
         self.v = v
         self.alpha = 1.0
+    }
+    
+    public func description() -> String {
+        return "y: " + String(format: "%.2f", y) +
+            "u: " + String(format: "%.2f", u) +
+            "v: " + String(format: "%.2f", v) +
+            "alpha: " + String(format: "%.2f", alpha)
     }
     
     public func color() -> UIColor {
@@ -70,12 +73,8 @@ public struct YUVA {
     static func colorWith(yuva: YUVA) -> UIColor {
         return yuva.color()
     }
-
-    
-    
-
-    
 }
+
 
 
 extension UIColor {
@@ -108,10 +107,100 @@ extension UIColor {
     }
     
     // http://www.pcmag.com/encyclopedia/term/55166/yuv-rgb-conversion-formulas
+    
+
+    
     public class func yuvaToRGBA(yuva: YUVA) -> RGBA {
-        let red = yuva.y + 1.140 * yuva.v
-        let green = yuva.y - 0.395 * yuva.u - 0.581 * yuva.v
-        let blue = yuva.y + 2.032 * yuva.u
+//        var red = yuva.y + 1.140 * yuva.v
+//        var green = yuva.y - 0.395 * yuva.u - 0.581 * yuva.v
+//        var blue = yuva.y + 2.032 * yuva.u
+        
+//        R  = Y +                       + (Cr - 128) *  1.40200
+//        G  = Y + (Cb - 128) * -0.34414 + (Cr - 128) * -0.71414
+//        B  = Y + (Cb - 128) *  1.77200
+        
+//        var red     = yuva.y +                             (yuva.u - 0.5) *  1.40200
+//        var green   = yuva.y + (yuva.v - 0.5) * -0.34414 + (yuva.u - 0.5) * -0.71414
+//        var blue    = yuva.y + (yuva.y - 0.5) *  1.77200
+        
+        
+        
+        // http://www.equasys.de/colorconversion.html
+        var red = yuva.y * 1.0 + (yuva.u - 0.5) * 0.0 + (yuva.v - 0.5) * 1.140
+        var green = yuva.y * 1.0 + (yuva.u - 0.5) * -0.395 + (yuva.v - 0.5) * -0.581
+        var blue = yuva.y * 1.0 + (yuva.u - 0.5) * 2.032 + (yuva.v - 0.5) * 0
+        
+        
+        // Experimenting with normalizing since RGB values go will above and below 0...1
+//        (lldb) po redMin
+//        -0.07
+//        
+//        
+//        (lldb) po redMax
+//        1.06724637681159
+//        
+//        
+//        (lldb) po greenMin
+//        0.0143574879227053
+//        
+//        
+//        (lldb) po greenMax
+//        0.988
+//        
+//        
+//        (lldb) po blueMin
+//        -0.516
+//        
+//        
+//        (lldb) po blueMax
+//        1.51109178743961
+//
+//        let redMax: CGFloat = 1.06724637681159
+//        let redMin: CGFloat = -0.07
+//        let redDiff = redMax - redMin
+//        red = red - redMin / redDiff
+//        
+//        
+//        let greenMax: CGFloat = 0.988
+//        let greenMin: CGFloat = 0.0143574879227053
+//        let greenDiff = greenMax - greenMin
+//        green = green - greenMin / greenDiff
+//
+//        
+//        let blueMax: CGFloat = 1.51109178743961
+//        let blueMin: CGFloat = -0.516
+//        let blueDiff = blueMax - blueMin
+//        blue = blue - blueMin / blueDiff
+
+        
+
+        
+        
+        if red > 1.0 {
+            red = 1.0
+            
+        }
+        if red < 0 {
+            red = 0
+        }
+        
+        if green > 1.0 {
+            green = 1.0
+
+        }
+        if green < 0 {
+            green = 0
+        }
+
+        if blue > 1.0 {
+            blue = 1.0
+            
+        }
+        if blue < 0 {
+            blue = 0
+        }
+        
+        
         let rgba = RGBA(red: red, green: green, blue: blue, alpha: yuva.alpha)
         return rgba
     }

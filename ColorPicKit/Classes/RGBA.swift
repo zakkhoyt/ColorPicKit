@@ -32,6 +32,15 @@ public struct RGBA {
         self.alpha = 1.0
     }
     
+    
+    public func description() -> String {
+        return "red: " + String(format: "%.2f", red) +
+        "green: " + String(format: "%.2f", green) +
+        "blue: " + String(format: "%.2f", blue) +
+        "alpha: " + String(format: "%.2f", alpha)
+    }
+
+    
     func color() -> UIColor {
         let color = UIColor(red: red, green: green, blue: blue, alpha: alpha)
         return color
@@ -170,11 +179,39 @@ extension UIColor {
     
     // http://www.pcmag.com/encyclopedia/term/55166/yuv-rgb-conversion-formulas
     public class func rgbaToYUVA(rgba: RGBA) -> YUVA {
-        let y = 0.299 * rgba.red + 0.587 * rgba.green + 0.114 * rgba.blue
-        let u = 0.492 * (rgba.blue - y)
-        let v = 0.877 * (rgba.red - y)
+//        let y = 0.299 * rgba.red + 0.587 * rgba.green + 0.114 * rgba.blue
+//        let u = 0.492 * (rgba.blue - y)
+//        let v = 0.877 * (rgba.red - y)
+//        let yuva = YUVA(y: y, u: u, v: v, alpha: rgba.alpha)
+//        return yuva
+        
+//        Y  = R *  0.29900 + G *  0.58700 + B *  0.11400
+//        Cb = R * -0.16874 + G * -0.33126 + B *  0.50000 + 128
+//        Cr = R *  0.50000 + G * -0.41869 + B * -0.08131 + 128
+        
+        
+//        let y = rgba.red * 0.29900 + rgba.green *  0.58700 + rgba.blue * 0.11400
+//        let u = rgba.red * -0.16874 + rgba.green * -0.33126 + rgba.blue *  0.50000 + 128
+//        let v = rgba.red *  0.50000 + rgba.green * -0.41869 + rgba.blue * -0.08131 + 128
+//        let yuva = YUVA(y: y, u: u, v: v, alpha: rgba.alpha)
+//        return yuva
+
+//        let y = rgba.red * 0.29900 + rgba.green * 0.58700 + rgba.blue * 0.11400
+//        let u = rgba.red * -0.16874 + rgba.green * -0.33126 + rgba.blue *  0.50000 + 0.5
+//        let v = rgba.red *  0.50000 + rgba.green * -0.41869 + rgba.blue * -0.08131 + 0.5
+//        let yuva = YUVA(y: y, u: u, v: v, alpha: rgba.alpha)
+        
+        
+        // http://www.equasys.de/colorconversion.html
+        let y = rgba.red * 0.299 + rgba.green * 0.587 + rgba.blue * 0.114
+        let u = rgba.red * -0.147 + rgba.green * -0.289 + rgba.blue * 0.436 + 0.5
+        let v = rgba.red * 0.615 + rgba.green * -0.515 + rgba.blue * -0.100 + 0.5
         let yuva = YUVA(y: y, u: u, v: v, alpha: rgba.alpha)
+        
+        
         return yuva
+
+        
     }
     
 }

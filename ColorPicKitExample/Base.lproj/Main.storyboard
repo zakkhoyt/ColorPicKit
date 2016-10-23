@@ -68,6 +68,12 @@
                                             <segue destination="SHr-3M-ohP" kind="show" id="5Sh-d1-a0D"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QMP-Ok-ezP">
+                                        <state key="normal" title="YUV Spectrum"/>
+                                        <connections>
+                                            <segue destination="WCR-g4-CZS" kind="show" id="z4i-4A-iNc"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PPS-sK-0e4">
                                         <state key="normal" title="HSB Wheel"/>
                                         <connections>
@@ -191,13 +197,21 @@
             </objects>
             <point key="canvasLocation" x="1777" y="372"/>
         </scene>
+        <!--YUVSpectrum-->
+        <scene sceneID="vgQ-7N-2CA">
+            <objects>
+                <viewControllerPlaceholder storyboardName="YUVSpectrum" id="WCR-g4-CZS" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yrM-7t-gXi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1812" y="415"/>
+        </scene>
         <!--HSBWheel-->
         <scene sceneID="8Vf-sD-w5j">
             <objects>
                 <viewControllerPlaceholder storyboardName="HSBWheel" id="w3I-G0-utt" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RJz-x7-9vm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1776" y="419"/>
+            <point key="canvasLocation" x="1774" y="469"/>
         </scene>
         <!--HSBWheelBrightness-->
         <scene sceneID="ZzT-jw-WYd">
@@ -205,7 +219,7 @@
                 <viewControllerPlaceholder storyboardName="HSBWheelBrightness" id="HXk-WY-bLa" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="chV-c3-JMc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1778" y="483"/>
+            <point key="canvasLocation" x="1776" y="533"/>
         </scene>
         <!--ImagePixelPicker-->
         <scene sceneID="nIS-WK-BnB">
@@ -213,7 +227,7 @@
                 <viewControllerPlaceholder storyboardName="ImagePixelPicker" id="Rv9-ir-wdN" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IeL-Dh-csU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1778" y="544"/>
+            <point key="canvasLocation" x="1776" y="594"/>
         </scene>
         <!--HexKeypad-->
         <scene sceneID="8S8-b6-fs0">
@@ -221,7 +235,7 @@
                 <viewControllerPlaceholder storyboardName="HexKeypad" id="I02-Yu-Llb" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jJF-RZ-DPy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1764" y="618"/>
+            <point key="canvasLocation" x="1762" y="668"/>
         </scene>
     </scenes>
 </document>

@@ -31,6 +31,15 @@ public struct HSBA {
         self.alpha = 1.0
     }
     
+    public func description() -> String {
+        return "hue: " + String(format: "%.2f", hue) +
+            "saturation: " + String(format: "%.2f", saturation) +
+            "brightness: " + String(format: "%.2f", brightness) +
+            "alpha: " + String(format: "%.2f", alpha)
+    }
+
+    
+    
     public func color() -> UIColor {
         let color = UIColor(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha)
         return color

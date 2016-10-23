@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A320" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LiZ-SE-4uk">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Spectrum View Controller-->
+        <scene sceneID="F8n-Au-keh">
+            <objects>
+                <viewController id="LiZ-SE-4uk" customClass="YUVSpectrumViewController" customModule="ColorPicKitExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rRh-1v-1Dh"/>
+                        <viewControllerLayoutGuide type="bottom" id="d9M-wc-OPy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JFI-E8-AqX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yl9-46-2cY">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d1U-JO-5tN" customClass="YUVSpectrum" customModule="ColorPicKitExample" customModuleProvider="target">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="d1U-JO-5tN" secondAttribute="height" multiplier="1:1" id="hI6-hq-qA9"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="imagePixelPickerTouchDown:" destination="LiZ-SE-4uk" eventType="touchDown" id="UQe-ll-nwW"/>
+                                    <action selector="imagePixelPickerTouchUpInside:" destination="LiZ-SE-4uk" eventType="touchUpInside" id="G3x-Sd-fjn"/>
+                                    <action selector="imagePixelPickerValueChanged:" destination="LiZ-SE-4uk" eventType="valueChanged" id="DnE-cO-ndK"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Yl9-46-2cY" firstAttribute="top" secondItem="d1U-JO-5tN" secondAttribute="bottom" constant="20" id="CWt-xC-d0L"/>
+                            <constraint firstItem="d1U-JO-5tN" firstAttribute="centerY" secondItem="JFI-E8-AqX" secondAttribute="centerY" id="S5S-Q6-t7u"/>
+                            <constraint firstAttribute="trailing" secondItem="d1U-JO-5tN" secondAttribute="trailing" id="Xw4-Y6-18X"/>
+                            <constraint firstItem="d1U-JO-5tN" firstAttribute="leading" secondItem="JFI-E8-AqX" secondAttribute="leading" id="km3-rU-ySa"/>
+                            <constraint firstItem="Yl9-46-2cY" firstAttribute="leading" secondItem="JFI-E8-AqX" secondAttribute="leading" constant="20" id="qeN-Q6-0cT"/>
+                            <constraint firstItem="d9M-wc-OPy" firstAttribute="top" secondItem="Yl9-46-2cY" secondAttribute="bottom" constant="20" id="sNu-xf-9m4"/>
+                            <constraint firstAttribute="trailing" secondItem="Yl9-46-2cY" secondAttribute="trailing" constant="20" id="yG4-Rm-LWI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="colorView" destination="Yl9-46-2cY" id="Odm-wA-a79"/>
+                        <outlet property="yuvSpectrum" destination="d1U-JO-5tN" id="zXr-67-iZA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TcA-pC-e0a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="516" y="59.820089955022496"/>
+        </scene>
+    </scenes>
+</document>

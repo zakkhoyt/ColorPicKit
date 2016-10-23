@@ -32,6 +32,14 @@ public struct CMYKA {
         self.alpha = 1.0
     }
     
+    public func description() -> String {
+        return "cyan: " + String(format: "%.2f", cyan) +
+            "magenta: " + String(format: "%.2f", magenta) +
+            "yellow: " + String(format: "%.2f", yellow) +
+            "black: " + String(format: "%.2f", black) +
+            "alpha: " + String(format: "%.2f", alpha)
+    }
+    
     public func color() -> UIColor {
         let rgba = UIColor.cmykaToRGBA(cmyka: self)
         return rgba.color()

@@ -36,6 +36,14 @@ public struct HSLA {
         return color
     }
     
+    public func description() -> String {
+        return "hue: " + String(format: "%.2f", hue) +
+            "saturation: " + String(format: "%.2f", saturation) +
+            "lightness: " + String(format: "%.2f", lightness) +
+            "alpha: " + String(format: "%.2f", alpha)
+    }
+
+    
     // MARK: Converstions
     
     public func rgba() -> RGBA {
