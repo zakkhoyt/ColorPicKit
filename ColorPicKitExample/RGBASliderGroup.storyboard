@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A320" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mad-6D-HG4">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Slider Group View Controller-->
+        <scene sceneID="qFw-oZ-2w2">
+            <objects>
+                <viewController id="mad-6D-HG4" customClass="RGBASliderGroupViewController" customModule="ColorPicKitExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dCp-NY-X9E"/>
+                        <viewControllerLayoutGuide type="bottom" id="KMp-uB-I6G"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZGi-Or-Gne">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wLZ-1V-8n9">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="oRv-hR-WkO"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YS4-fi-tK1" customClass="RGBASliderGroup" customModule="ColorPicKitExample" customModuleProvider="target">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="grayscaleSliderTouchDown:" destination="mad-6D-HG4" eventType="touchDown" id="FGa-bm-Zlu"/>
+                                    <action selector="grayscaleSliderTouchUpInside:" destination="mad-6D-HG4" eventType="touchUpInside" id="pT7-b1-v9f"/>
+                                    <action selector="grayscaleSliderValueChanged:" destination="mad-6D-HG4" eventType="valueChanged" id="EzE-3y-634"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YS4-fi-tK1" firstAttribute="leading" secondItem="ZGi-Or-Gne" secondAttribute="leadingMargin" id="K4R-2N-b9b"/>
+                            <constraint firstItem="wLZ-1V-8n9" firstAttribute="leading" secondItem="ZGi-Or-Gne" secondAttribute="leading" constant="20" id="KkB-lm-9fv"/>
+                            <constraint firstItem="YS4-fi-tK1" firstAttribute="trailing" secondItem="ZGi-Or-Gne" secondAttribute="trailingMargin" id="MxK-JY-low"/>
+                            <constraint firstAttribute="trailing" secondItem="wLZ-1V-8n9" secondAttribute="trailing" constant="20" id="Qdm-xe-aTy"/>
+                            <constraint firstItem="YS4-fi-tK1" firstAttribute="centerY" secondItem="ZGi-Or-Gne" secondAttribute="centerY" id="Rk0-YO-9AY"/>
+                            <constraint firstItem="KMp-uB-I6G" firstAttribute="top" secondItem="wLZ-1V-8n9" secondAttribute="bottom" constant="20" id="cTQ-kc-Ng2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="colorView" destination="wLZ-1V-8n9" id="vKG-vE-GdC"/>
+                        <outlet property="rgbaSliderGroup" destination="YS4-fi-tK1" id="fNm-EM-CRS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uv4-xL-Dqg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="229.59999999999999" y="199.25037481259372"/>
+        </scene>
+    </scenes>
+</document>

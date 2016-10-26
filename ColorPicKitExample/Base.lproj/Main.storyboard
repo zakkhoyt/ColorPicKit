@@ -38,6 +38,12 @@
                                             <segue destination="u3e-4C-EWr" kind="show" id="2Dp-YN-22O"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewh-Pq-gFs">
+                                        <state key="normal" title="RGBA Slider Group"/>
+                                        <connections>
+                                            <segue destination="5Ur-kh-muP" kind="show" id="uo5-Xr-SFr"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Otd-iV-ETP">
                                         <state key="normal" title="HSB Slider Group"/>
                                         <connections>
@@ -51,7 +57,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zn-CH-p9E">
-                                        <state key="normal" title="CMYK Slider Group"/>
+                                        <state key="normal" title="CMYKA Slider Group"/>
                                         <connections>
                                             <segue destination="ffB-QV-Dly" kind="show" id="fvO-ey-5dd"/>
                                         </connections>
@@ -127,7 +133,7 @@
                 <viewControllerPlaceholder storyboardName="GradientSlider" id="aJ5-Og-NlE" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UOe-7l-iTk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2267" y="-463"/>
+            <point key="canvasLocation" x="2266" y="-545"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Bs0-ta-TLN">
@@ -153,7 +159,7 @@
                 <viewControllerPlaceholder storyboardName="HueSlider" id="l1y-ZD-tJi" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Je3-rc-B4r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2262" y="-413"/>
+            <point key="canvasLocation" x="2261" y="-496"/>
         </scene>
         <!--RGBSliderGroup-->
         <scene sceneID="7bz-aI-fXv">
@@ -161,7 +167,15 @@
                 <viewControllerPlaceholder storyboardName="RGBSliderGroup" id="u3e-4C-EWr" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hGi-4J-Kbl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2266" y="-351"/>
+            <point key="canvasLocation" x="2265" y="-434"/>
+        </scene>
+        <!--RGBASliderGroup-->
+        <scene sceneID="BTx-Qr-Lf9">
+            <objects>
+                <viewControllerPlaceholder storyboardName="RGBASliderGroup" id="5Ur-kh-muP" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bk3-5g-9mV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2276" y="-370"/>
         </scene>
         <!--HSBSliderGroup-->
         <scene sceneID="A2o-xc-MPE">
@@ -179,18 +193,18 @@
             </objects>
             <point key="canvasLocation" x="2286" y="-259"/>
         </scene>
-        <!--CMYKSliderGroup-->
+        <!--CMYKASliderGroup-->
         <scene sceneID="uOD-S1-Q4y">
             <objects>
-                <viewControllerPlaceholder storyboardName="CMYKSliderGroup" id="ffB-QV-Dly" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="CMYKASliderGroup" id="ffB-QV-Dly" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AQk-Cd-j2f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2266" y="-208"/>
         </scene>
-        <!--YUVSliderGroup-->
+        <!--YUVASliderGroup-->
         <scene sceneID="DL0-mq-L4a">
             <objects>
-                <viewControllerPlaceholder storyboardName="YUVSliderGroup" id="atr-wc-h8N" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="YUVASliderGroup" id="atr-wc-h8N" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LKQ-OY-wEU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2274" y="-154"/>

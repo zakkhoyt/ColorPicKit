@@ -10,7 +10,7 @@
         <!--Slider Group View Controller-->
         <scene sceneID="fFD-N9-BDC">
             <objects>
-                <viewController id="g06-aW-YqY" customClass="CMYKSliderGroupViewController" customModule="ColorPicKitExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="g06-aW-YqY" customClass="CMYKASliderGroupViewController" customModule="ColorPicKitExample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rJT-1M-1Yp"/>
                         <viewControllerLayoutGuide type="bottom" id="pyL-OS-NtQ"/>
@@ -19,12 +19,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GhC-lv-1Oj" customClass="CMYKSliderGroup" customModule="ColorPicKitExample" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GhC-lv-1Oj" customClass="CMYKASliderGroup" customModule="ColorPicKitExample" customModuleProvider="target">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <action selector="grayscaleSliderTouchDown:" destination="g06-aW-YqY" eventType="touchDown" id="OAE-QN-drD"/>
-                                    <action selector="grayscaleSliderTouchUpInside:" destination="g06-aW-YqY" eventType="touchUpInside" id="6j4-9q-Z9G"/>
-                                    <action selector="grayscaleSliderValueChanged:" destination="g06-aW-YqY" eventType="valueChanged" id="4R0-W1-Se5"/>
+                                    <action selector="cmykaSliderTouchDown:" destination="g06-aW-YqY" eventType="touchDown" id="gIY-lq-qui"/>
+                                    <action selector="cmykaSliderTouchUpInside:" destination="g06-aW-YqY" eventType="touchUpInside" id="RKB-xq-2Uv"/>
+                                    <action selector="cmykaSliderValueChanged:" destination="g06-aW-YqY" eventType="valueChanged" id="Lef-J8-LsH"/>
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Rj-Ir-GEI">
@@ -45,7 +45,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="cmykSliderGroup" destination="GhC-lv-1Oj" id="Qqo-Wm-bHt"/>
+                        <outlet property="cmykaSliderGroup" destination="GhC-lv-1Oj" id="O8x-8A-ae0"/>
                         <outlet property="colorView" destination="6Rj-Ir-GEI" id="tWe-ud-TNf"/>
                     </connections>
                 </viewController>

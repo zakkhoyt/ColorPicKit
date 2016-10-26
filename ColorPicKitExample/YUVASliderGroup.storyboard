@@ -9,7 +9,7 @@
         <!--Slider Group View Controller-->
         <scene sceneID="eu8-8A-rkD">
             <objects>
-                <viewController id="CzS-V3-j0Z" customClass="YUVSliderGroupViewController" customModule="ColorPicKitExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="CzS-V3-j0Z" customClass="YUVASliderGroupViewController" customModule="ColorPicKitExample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vuI-75-iO7"/>
                         <viewControllerLayoutGuide type="bottom" id="bmF-t8-don"/>
@@ -24,12 +24,12 @@
                                     <constraint firstAttribute="height" constant="64" id="Ll7-39-Ex4"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mnP-ON-6ma" customClass="YUVSliderGroup" customModule="ColorPicKitExample" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mnP-ON-6ma" customClass="YUVASliderGroup" customModule="ColorPicKitExample" customModuleProvider="target">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <action selector="yuvSliderTouchDown:" destination="CzS-V3-j0Z" eventType="touchDown" id="fE3-4a-cTj"/>
-                                    <action selector="yuvSliderTouchUpInside:" destination="CzS-V3-j0Z" eventType="touchUpInside" id="OMd-k6-GO0"/>
-                                    <action selector="yuvSliderValueChanged:" destination="CzS-V3-j0Z" eventType="valueChanged" id="aKJ-uJ-uWX"/>
+                                    <action selector="yuvaSliderTouchDown:" destination="CzS-V3-j0Z" eventType="touchDown" id="LXm-oR-I84"/>
+                                    <action selector="yuvaSliderTouchUpInside:" destination="CzS-V3-j0Z" eventType="touchUpInside" id="j30-Yk-OaG"/>
+                                    <action selector="yuvaSliderValueChanged:" destination="CzS-V3-j0Z" eventType="valueChanged" id="ZOS-ro-zhf"/>
                                 </connections>
                             </view>
                         </subviews>
@@ -44,8 +44,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="colorView" destination="qFj-vH-AVj" id="CHA-pE-KGJ"/>
-                        <outlet property="yuvSliderGroup" destination="mnP-ON-6ma" id="ptm-lY-Kvz"/>
+                        <outlet property="colorView" destination="qFj-vH-AVj" id="IBI-np-ML0"/>
+                        <outlet property="yuvaSliderGroup" destination="mnP-ON-6ma" id="XJ0-zL-gma"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ibI-rK-BHf" userLabel="First Responder" sceneMemberID="firstResponder"/>
