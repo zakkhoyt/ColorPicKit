@@ -32,12 +32,6 @@
                                             <segue destination="l1y-ZD-tJi" kind="show" id="NPj-oE-tIn"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aaB-XR-ny4">
-                                        <state key="normal" title="RGB Slider Group"/>
-                                        <connections>
-                                            <segue destination="u3e-4C-EWr" kind="show" id="2Dp-YN-22O"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewh-Pq-gFs">
                                         <state key="normal" title="RGBA Slider Group"/>
                                         <connections>
@@ -63,7 +57,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uPe-si-yT7">
-                                        <state key="normal" title="YUV Slider Group"/>
+                                        <state key="normal" title="YUVA Slider Group"/>
                                         <connections>
                                             <segue destination="atr-wc-h8N" kind="show" id="jQL-iS-W4x"/>
                                         </connections>
@@ -160,14 +154,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Je3-rc-B4r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2261" y="-496"/>
-        </scene>
-        <!--RGBSliderGroup-->
-        <scene sceneID="7bz-aI-fXv">
-            <objects>
-                <viewControllerPlaceholder storyboardName="RGBSliderGroup" id="u3e-4C-EWr" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hGi-4J-Kbl" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2265" y="-434"/>
         </scene>
         <!--RGBASliderGroup-->
         <scene sceneID="BTx-Qr-Lf9">
