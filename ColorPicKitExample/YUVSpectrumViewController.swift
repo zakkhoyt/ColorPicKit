@@ -12,27 +12,27 @@ import UIKit
 
 class YUVSpectrumViewController: BaseViewController {
     
-    @IBOutlet weak var yuvSpectrum: YUVSpectrum!
+    @IBOutlet weak var yuvaSpectrum: YUVASpectrum!
     
     
-    @IBAction func imagePixelPickerTouchDown(_ sender: YUVSpectrum) {
+    @IBAction func yuvaSpectrumTouchDown(_ sender: YUVASpectrum) {
         updateBackgroundColor()
     }
     
-    @IBAction func imagePixelPickerTouchUpInside(_ sender: YUVSpectrum) {
+    @IBAction func yuvaSpectrumTouchUpInside(_ sender: YUVASpectrum) {
         updateBackgroundColor()
     }
     
-    @IBAction func imagePixelPickerValueChanged(_ sender: YUVSpectrum) {
+    @IBAction func yuvaSpectrumValueChanged(_ sender: YUVASpectrum) {
         updateBackgroundColor()
     }
     
     private func updateBackgroundColor() {
-        colorView.backgroundColor = yuvSpectrum.color
+        colorView.backgroundColor = yuvaSpectrum.color
     }
     
     override func reset() {
-        yuvSpectrum.position = CGPoint(x: yuvSpectrum.bounds.midX, y: yuvSpectrum.bounds.midY)
+        yuvaSpectrum.position = CGPoint(x: yuvaSpectrum.bounds.midX, y: yuvaSpectrum.bounds.midY)
         updateBackgroundColor()
     }
 }

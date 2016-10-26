@@ -20,15 +20,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cX7-9V-JgS" customClass="HSBSpectum" customModule="ColorPicKitExample" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cX7-9V-JgS" customClass="HSBASpectum" customModule="ColorPicKitExample" customModuleProvider="target">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="cX7-9V-JgS" secondAttribute="height" multiplier="1:1" id="28K-1W-Fir"/>
                                 </constraints>
                                 <connections>
-                                    <action selector="imagePixelPickerTouchDown:" destination="dyJ-Jn-gYC" eventType="touchDown" id="1vM-qk-CQD"/>
-                                    <action selector="imagePixelPickerTouchUpInside:" destination="dyJ-Jn-gYC" eventType="touchUpInside" id="T8Y-na-esX"/>
-                                    <action selector="imagePixelPickerValueChanged:" destination="dyJ-Jn-gYC" eventType="valueChanged" id="7lF-vf-XwR"/>
+                                    <action selector="hsbaSpectrumTouchDown:" destination="dyJ-Jn-gYC" eventType="touchDown" id="mQo-ZZ-pOJ"/>
+                                    <action selector="hsbaSpectrumTouchUpInside:" destination="dyJ-Jn-gYC" eventType="touchUpInside" id="BnL-iU-SrU"/>
+                                    <action selector="hsbaSpectrumValueChanged:" destination="dyJ-Jn-gYC" eventType="valueChanged" id="MXq-EL-ryc"/>
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jIh-3n-u9k">
@@ -48,7 +48,7 @@
                     </view>
                     <connections>
                         <outlet property="colorView" destination="jIh-3n-u9k" id="L3e-La-o7q"/>
-                        <outlet property="hsbSpectrum" destination="cX7-9V-JgS" id="Xjn-MT-UyN"/>
+                        <outlet property="hsbaSpectrum" destination="cX7-9V-JgS" id="64C-zn-W4l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jlN-9e-EAX" userLabel="First Responder" sceneMemberID="firstResponder"/>

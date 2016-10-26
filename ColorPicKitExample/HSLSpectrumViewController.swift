@@ -11,26 +11,26 @@ import UIKit
 class HSLSpectrumViewController: BaseViewController {
     
     
-    @IBOutlet weak var hslSpectrum: HSLSpectrum!
+    @IBOutlet weak var hslaSpectrum: HSLASpectrum!
     
-    @IBAction func imagePixelPickerTouchDown(_ sender: HSLSpectrum) {
+    @IBAction func hslaSpectrumTouchDown(_ sender: HSLASpectrum) {
         updateBackgroundColor()
     }
     
-    @IBAction func imagePixelPickerTouchUpInside(_ sender: HSLSpectrum) {
+    @IBAction func hslaSpectrumTouchUpInside(_ sender: HSLASpectrum) {
         updateBackgroundColor()
     }
     
-    @IBAction func imagePixelPickerValueChanged(_ sender: HSLSpectrum) {
+    @IBAction func hslaSpectrumValueChanged(_ sender: HSLASpectrum) {
         updateBackgroundColor()
     }
     
     private func updateBackgroundColor() {
-        colorView.backgroundColor = hslSpectrum.color
+        colorView.backgroundColor = hslaSpectrum.color
     }
     
     override func reset() {
-        hslSpectrum.position = CGPoint(x: hslSpectrum.bounds.midX, y: hslSpectrum.bounds.midY)
+        hslaSpectrum.position = CGPoint(x: hslaSpectrum.bounds.midX, y: hslaSpectrum.bounds.midY)
         updateBackgroundColor()
     }
 }

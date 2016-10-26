@@ -1,15 +1,15 @@
 //
-//  HSBSpectum.swift
+//  Spectrum.swift
 //  ColorPicKitExample
 //
-//  Created by Zakk Hoyt on 10/8/16.
+//  Created by Zakk Hoyt on 10/26/16.
 //  Copyright © 2016 Zakk Hoyt. All rights reserved.
 //
 
 import UIKit
 
 private let invalidPositionValue = CGFloat(-1.0)
-@IBDesignable public class HSBSpectum: UIControl, PositionableControl, Colorable {
+@IBDesignable public class Spectrum: UIControl, PositionableControl, Colorable {
     
     // MARK: Variables
     
@@ -107,15 +107,18 @@ private let invalidPositionValue = CGFloat(-1.0)
     /* @IBInspectable */ public var color: UIColor {
         get {
             let invertedPoint = CGPoint(x: position.x, y: bounds.height - position.y)
-            let rgb = spectrumView.rgbaFor(point: invertedPoint)
-            return UIColor(red: rgb.red, green: rgb.green, blue: rgb.blue, alpha: 1.0)
+            return colorAt(position: invertedPoint)
         }
     }
     
     
+    func colorAt(position: CGPoint) -> UIColor {
+        assert(false, "Child must implement")
+    }
     
     
-    private var spectrumView: HSBSpectrumView = HSBSpectrumView()
+    //private var spectrumView: HSBSpectrumView = HSBSpectrumView()
+    var spectrumView: UIView!
     
     // MARK: Init
     
@@ -136,10 +139,11 @@ private let invalidPositionValue = CGFloat(-1.0)
         self.borderWidth = _borderWidth
         self.borderColor = _borderColor
         
-        // SpectrumView
-        spectrumView.borderWidth = borderWidth
-        spectrumView.borderColor = borderColor
-        addSubview(spectrumView)
+//        // SpectrumView
+//        spectrumView.borderWidth = borderWidth
+//        spectrumView.borderColor = borderColor
+//        addSubview(spectrumView)
+        configureSpectrum()
         
         
         // KnobView
@@ -148,6 +152,11 @@ private let invalidPositionValue = CGFloat(-1.0)
     }
     
     
+    
+    
+    func configureSpectrum() {
+        assert(false, "Child must implement")
+    }
     
     override open func layoutSubviews() {
         super.layoutSubviews()

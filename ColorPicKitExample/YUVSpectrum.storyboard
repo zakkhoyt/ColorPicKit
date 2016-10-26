@@ -22,15 +22,15 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yl9-46-2cY">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d1U-JO-5tN" customClass="YUVSpectrum" customModule="ColorPicKitExample" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d1U-JO-5tN" customClass="YUVASpectrum" customModule="ColorPicKitExample" customModuleProvider="target">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="d1U-JO-5tN" secondAttribute="height" multiplier="1:1" id="hI6-hq-qA9"/>
                                 </constraints>
                                 <connections>
-                                    <action selector="imagePixelPickerTouchDown:" destination="LiZ-SE-4uk" eventType="touchDown" id="UQe-ll-nwW"/>
-                                    <action selector="imagePixelPickerTouchUpInside:" destination="LiZ-SE-4uk" eventType="touchUpInside" id="G3x-Sd-fjn"/>
-                                    <action selector="imagePixelPickerValueChanged:" destination="LiZ-SE-4uk" eventType="valueChanged" id="DnE-cO-ndK"/>
+                                    <action selector="yuvaSpectrumTouchDown:" destination="LiZ-SE-4uk" eventType="touchDown" id="5pT-0y-8Gg"/>
+                                    <action selector="yuvaSpectrumTouchUpInside:" destination="LiZ-SE-4uk" eventType="touchUpInside" id="RAt-PN-zxQ"/>
+                                    <action selector="yuvaSpectrumValueChanged:" destination="LiZ-SE-4uk" eventType="valueChanged" id="VZ8-fE-T7F"/>
                                 </connections>
                             </view>
                         </subviews>
@@ -47,7 +47,7 @@
                     </view>
                     <connections>
                         <outlet property="colorView" destination="Yl9-46-2cY" id="Odm-wA-a79"/>
-                        <outlet property="yuvSpectrum" destination="d1U-JO-5tN" id="zXr-67-iZA"/>
+                        <outlet property="yuvaSpectrum" destination="d1U-JO-5tN" id="scx-dU-Qfs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TcA-pC-e0a" userLabel="First Responder" sceneMemberID="firstResponder"/>
