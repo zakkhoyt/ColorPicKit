@@ -244,7 +244,6 @@ import UIKit
         lightnessSlider.color2 = color
         
         hueSlider.saturation = saturation
-        
         hueSlider.brightness = lightness
     }
     

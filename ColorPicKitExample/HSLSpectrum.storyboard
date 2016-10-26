@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A320" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kH3-6Q-EdZ">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Spectrum View Controller-->
+        <scene sceneID="vj0-MC-vr0">
+            <objects>
+                <viewController id="kH3-6Q-EdZ" customClass="HSLSpectrumViewController" customModule="ColorPicKitExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="whK-D3-LUT"/>
+                        <viewControllerLayoutGuide type="bottom" id="SPx-6U-kaO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rfi-aS-Ovk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TwR-Vb-hOk" customClass="HSLSpectrum" customModule="ColorPicKitExample" customModuleProvider="target">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="TwR-Vb-hOk" secondAttribute="height" multiplier="1:1" id="a02-5O-oQY"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="imagePixelPickerTouchUpInside:" destination="kH3-6Q-EdZ" eventType="touchUpInside" id="LDq-pr-FxM"/>
+                                    <action selector="imagePixelPickerTouchUpInside:" destination="kH3-6Q-EdZ" eventType="touchDown" id="wyx-N1-rSw"/>
+                                    <action selector="imagePixelPickerValueChanged:" destination="kH3-6Q-EdZ" eventType="valueChanged" id="yYT-Ut-vcQ"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bgq-1i-Snp">
+                                <frame key="frameInset" minX="16" minY="541" width="343" height="106"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bgq-1i-Snp" firstAttribute="top" secondItem="TwR-Vb-hOk" secondAttribute="bottom" constant="20" id="EoB-9H-oxj"/>
+                            <constraint firstItem="SPx-6U-kaO" firstAttribute="top" secondItem="bgq-1i-Snp" secondAttribute="bottom" constant="20" id="PN4-Wr-YB3"/>
+                            <constraint firstItem="TwR-Vb-hOk" firstAttribute="centerY" secondItem="rfi-aS-Ovk" secondAttribute="centerY" id="RVK-kl-nVO"/>
+                            <constraint firstAttribute="trailing" secondItem="TwR-Vb-hOk" secondAttribute="trailing" id="Xbl-h7-f2a"/>
+                            <constraint firstItem="TwR-Vb-hOk" firstAttribute="leading" secondItem="rfi-aS-Ovk" secondAttribute="leading" id="eBK-6e-DWv"/>
+                            <constraint firstItem="bgq-1i-Snp" firstAttribute="leading" secondItem="rfi-aS-Ovk" secondAttribute="leading" constant="20" id="kVL-7E-Dlj"/>
+                            <constraint firstAttribute="trailing" secondItem="bgq-1i-Snp" secondAttribute="trailing" constant="20" id="yMd-eK-YmN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="colorView" destination="bgq-1i-Snp" id="UVQ-S8-dFl"/>
+                        <outlet property="hslSpectrum" destination="TwR-Vb-hOk" id="bsh-CK-2TQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BcR-bs-E4M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="184.80000000000001" y="188.45577211394306"/>
+        </scene>
+    </scenes>
+</document>

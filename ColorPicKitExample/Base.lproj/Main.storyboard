@@ -68,6 +68,12 @@
                                             <segue destination="SHr-3M-ohP" kind="show" id="5Sh-d1-a0D"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UlH-KE-0bf">
+                                        <state key="normal" title="HSL Spectrum"/>
+                                        <connections>
+                                            <segue destination="ZEx-tT-b6Q" kind="show" id="0BV-ss-MG3"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QMP-Ok-ezP">
                                         <state key="normal" title="YUV Spectrum"/>
                                         <connections>
@@ -121,7 +127,7 @@
                 <viewControllerPlaceholder storyboardName="GradientSlider" id="aJ5-Og-NlE" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UOe-7l-iTk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1778" y="2"/>
+            <point key="canvasLocation" x="2267" y="-463"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Bs0-ta-TLN">
@@ -147,7 +153,7 @@
                 <viewControllerPlaceholder storyboardName="HueSlider" id="l1y-ZD-tJi" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Je3-rc-B4r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1773" y="53"/>
+            <point key="canvasLocation" x="2262" y="-413"/>
         </scene>
         <!--RGBSliderGroup-->
         <scene sceneID="7bz-aI-fXv">
@@ -155,7 +161,7 @@
                 <viewControllerPlaceholder storyboardName="RGBSliderGroup" id="u3e-4C-EWr" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hGi-4J-Kbl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1778" y="115"/>
+            <point key="canvasLocation" x="2266" y="-351"/>
         </scene>
         <!--HSBSliderGroup-->
         <scene sceneID="A2o-xc-MPE">
@@ -163,7 +169,7 @@
                 <viewControllerPlaceholder storyboardName="HSBSliderGroup" id="Ozn-yM-Pkk" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B8y-ez-oIw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1777" y="163"/>
+            <point key="canvasLocation" x="2266" y="-302"/>
         </scene>
         <!--HSLSliderGroup-->
         <scene sceneID="DHu-e9-hWn">
@@ -171,7 +177,7 @@
                 <viewControllerPlaceholder storyboardName="HSLSliderGroup" id="sXG-PK-gND" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WyW-uU-420" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1796" y="206"/>
+            <point key="canvasLocation" x="2286" y="-259"/>
         </scene>
         <!--CMYKSliderGroup-->
         <scene sceneID="uOD-S1-Q4y">
@@ -179,7 +185,7 @@
                 <viewControllerPlaceholder storyboardName="CMYKSliderGroup" id="ffB-QV-Dly" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AQk-Cd-j2f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1777" y="258"/>
+            <point key="canvasLocation" x="2266" y="-208"/>
         </scene>
         <!--YUVSliderGroup-->
         <scene sceneID="DL0-mq-L4a">
@@ -187,7 +193,7 @@
                 <viewControllerPlaceholder storyboardName="YUVSliderGroup" id="atr-wc-h8N" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LKQ-OY-wEU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1785" y="312"/>
+            <point key="canvasLocation" x="2274" y="-154"/>
         </scene>
         <!--HSBSpectrum-->
         <scene sceneID="5hd-ts-Sc8">
@@ -195,7 +201,15 @@
                 <viewControllerPlaceholder storyboardName="HSBSpectrum" id="SHr-3M-ohP" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QHg-dB-TkT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1777" y="372"/>
+            <point key="canvasLocation" x="2266" y="-94"/>
+        </scene>
+        <!--HSLSpectrum-->
+        <scene sceneID="vf8-Zs-UkD">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HSLSpectrum" id="ZEx-tT-b6Q" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lfQ-uV-3d2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2299" y="-42"/>
         </scene>
         <!--YUVSpectrum-->
         <scene sceneID="vgQ-7N-2CA">
@@ -203,7 +217,7 @@
                 <viewControllerPlaceholder storyboardName="YUVSpectrum" id="WCR-g4-CZS" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yrM-7t-gXi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1812" y="415"/>
+            <point key="canvasLocation" x="2275" y="13"/>
         </scene>
         <!--HSBWheel-->
         <scene sceneID="8Vf-sD-w5j">
@@ -211,7 +225,7 @@
                 <viewControllerPlaceholder storyboardName="HSBWheel" id="w3I-G0-utt" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RJz-x7-9vm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1774" y="469"/>
+            <point key="canvasLocation" x="2238" y="67"/>
         </scene>
         <!--HSBWheelBrightness-->
         <scene sceneID="ZzT-jw-WYd">
@@ -219,7 +233,7 @@
                 <viewControllerPlaceholder storyboardName="HSBWheelBrightness" id="HXk-WY-bLa" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="chV-c3-JMc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1776" y="533"/>
+            <point key="canvasLocation" x="2242" y="130"/>
         </scene>
         <!--ImagePixelPicker-->
         <scene sceneID="nIS-WK-BnB">
@@ -227,7 +241,7 @@
                 <viewControllerPlaceholder storyboardName="ImagePixelPicker" id="Rv9-ir-wdN" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IeL-Dh-csU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1776" y="594"/>
+            <point key="canvasLocation" x="2242" y="193"/>
         </scene>
         <!--HexKeypad-->
         <scene sceneID="8S8-b6-fs0">
@@ -235,7 +249,7 @@
                 <viewControllerPlaceholder storyboardName="HexKeypad" id="I02-Yu-Llb" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jJF-RZ-DPy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1762" y="668"/>
+            <point key="canvasLocation" x="2226" y="265"/>
         </scene>
     </scenes>
 </document>

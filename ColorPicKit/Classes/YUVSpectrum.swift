@@ -109,7 +109,7 @@ private let invalidPositionValue = CGFloat(-1.0)
     /* @IBInspectable */ public var color: UIColor {
         get {
             let invertedPoint = CGPoint(x: position.x, y: bounds.height - position.y)
-            let rgb = spectrumView.colorForPoint(invertedPoint)
+            let rgb = spectrumView.rgbaFor(point: invertedPoint)
             return UIColor(red: rgb.red, green: rgb.green, blue: rgb.blue, alpha: 1.0)
         }
     }

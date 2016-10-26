@@ -124,91 +124,69 @@ extension UIColor {
         return hsba
     }
     
-    // http://www.easyrgb.com/index.php?X=MATH
+
     public class func rgbaToHSLA(rgba: RGBA) -> HSLA {
 
-        
-        let var_R = rgba.red
-        let var_G = rgba.green
-        let var_B = rgba.blue
-        
-        
-        let var_Min = min(var_R, var_G, var_B)
-        let var_Max = max(var_R, var_G, var_B)
-        let del_Max = var_Max - var_Min
 
+        // http://www.easyrgb.com/index.php?X=MATH
+        // http://stackoverflow.com/questions/2353211/hsl-to-rgb-color-conversion
+        
+        let red = rgba.red
+        let green = rgba.green
+        let blue = rgba.blue
+        let alpha = rgba.alpha
+        
+        let rgbMin = min( red, green, blue )
+        let rgbMax = max( red, green, blue )
+        let delta = rgbMax - rgbMin
+        
         var hue: CGFloat = 0
         var saturation: CGFloat = 0
-        let lightness: CGFloat = (var_Max + var_Min) / 2.0
-
+        let lightness: CGFloat = ( rgbMax + rgbMin ) / 2
         
-        if del_Max == 0 {
+        
+        if delta == 0 {
             hue = 0
             saturation = 0
         } else {
             if lightness < 0.5 {
-                saturation = del_Max / (var_Max + var_Min)
+                saturation = delta / ( rgbMax + rgbMin )
             } else {
-                saturation = del_Max / (2.0 - var_Max - var_Min)
+                saturation = delta / ( 2.0 - rgbMax - rgbMin )
             }
             
-            let del_R = (((var_Max - var_R ) / 6.0 ) + (del_Max / 2.0)) / del_Max
-            let del_G =  (((var_Max - var_G) / 6.0) + (del_Max / 2.0)) / del_Max
-            let del_B = (((var_Max - var_B) / 6.0) + (del_Max / 2.0)) / del_Max
+            let del_R = ( ( ( rgbMax - red ) / 6 ) + ( delta / 2 ) ) / delta
+            let del_G = ( ( ( rgbMax - green ) / 6 ) + ( delta / 2 ) ) / delta
+            let del_B = ( ( ( rgbMax - blue ) / 6 ) + ( delta / 2 ) ) / delta
             
-            
-            if var_R == var_Max {
+            if red == rgbMax {
                 hue = del_B - del_G
-            } else if var_G == var_Max {
-                hue = (1.0 / 3.0) + del_R - del_B
-            } else if var_B == var_Max {
-                hue = (2.0 / 3.0) + del_G - del_R
+            } else if green == rgbMax {
+                hue = ( 1 / 3 ) + del_R - del_B
+            } else if blue == rgbMax {
+                hue = ( 2 / 3 ) + del_G - del_R
             }
             
             if hue < 0 {
-                hue += 1.0
+                hue += 1
             }
-            
-            if hue > 1.0 {
-                hue -= 1.0
+            if hue > 1 {
+                hue -= 1
             }
         }
-        
-        return HSLA(hue: hue, saturation: saturation, lightness: lightness, alpha: rgba.alpha)
+        return HSLA(hue: hue, saturation: saturation, lightness: lightness, alpha: alpha)
     }
     
-    // http://www.pcmag.com/encyclopedia/term/55166/yuv-rgb-conversion-formulas
+    
     public class func rgbaToYUVA(rgba: RGBA) -> YUVA {
-//        let y = 0.299 * rgba.red + 0.587 * rgba.green + 0.114 * rgba.blue
-//        let u = 0.492 * (rgba.blue - y)
-//        let v = 0.877 * (rgba.red - y)
-//        let yuva = YUVA(y: y, u: u, v: v, alpha: rgba.alpha)
-//        return yuva
-        
-//        Y  = R *  0.29900 + G *  0.58700 + B *  0.11400
-//        Cb = R * -0.16874 + G * -0.33126 + B *  0.50000 + 128
-//        Cr = R *  0.50000 + G * -0.41869 + B * -0.08131 + 128
-        
-        
-//        let y = rgba.red * 0.29900 + rgba.green *  0.58700 + rgba.blue * 0.11400
-//        let u = rgba.red * -0.16874 + rgba.green * -0.33126 + rgba.blue *  0.50000 + 128
-//        let v = rgba.red *  0.50000 + rgba.green * -0.41869 + rgba.blue * -0.08131 + 128
-//        let yuva = YUVA(y: y, u: u, v: v, alpha: rgba.alpha)
-//        return yuva
-
-//        let y = rgba.red * 0.29900 + rgba.green * 0.58700 + rgba.blue * 0.11400
-//        let u = rgba.red * -0.16874 + rgba.green * -0.33126 + rgba.blue *  0.50000 + 0.5
-//        let v = rgba.red *  0.50000 + rgba.green * -0.41869 + rgba.blue * -0.08131 + 0.5
-//        let yuva = YUVA(y: y, u: u, v: v, alpha: rgba.alpha)
-        
-        
+        // http://www.pcmag.com/encyclopedia/term/55166/yuv-rgb-conversion-formulas
         // http://www.equasys.de/colorconversion.html
+        
+        // Multiply matrices
         let y = rgba.red * 0.299 + rgba.green * 0.587 + rgba.blue * 0.114
         let u = rgba.red * -0.147 + rgba.green * -0.289 + rgba.blue * 0.436 + 0.5
         let v = rgba.red * 0.615 + rgba.green * -0.515 + rgba.blue * -0.100 + 0.5
         let yuva = YUVA(y: y, u: u, v: v, alpha: rgba.alpha)
-        
-        
         return yuva
 
         

@@ -1,16 +1,16 @@
 //
-//  HSBSpectum.swift
+//  HSLSpectrum.swift
 //  ColorPicKitExample
 //
-//  Created by Zakk Hoyt on 10/8/16.
+//  Created by Zakk Hoyt on 10/23/16.
 //  Copyright © 2016 Zakk Hoyt. All rights reserved.
 //
 
 import UIKit
 
 private let invalidPositionValue = CGFloat(-1.0)
-@IBDesignable public class HSBSpectum: UIControl, PositionableControl, Colorable {
-
+@IBDesignable public class HSLSpectrum: UIControl, PositionableControl, Colorable {
+    
     // MARK: Variables
     
     private var _roundedCornders: Bool = false
@@ -112,10 +112,10 @@ private let invalidPositionValue = CGFloat(-1.0)
         }
     }
     
-
     
     
-    private var spectrumView: HSBSpectrumView = HSBSpectrumView()
+    
+    private var spectrumView: HSLSpectrumView = HSLSpectrumView()
     
     // MARK: Init
     
@@ -146,7 +146,7 @@ private let invalidPositionValue = CGFloat(-1.0)
         updateKnobSize()
         addSubview(knobView)
     }
-
+    
     
     override open func layoutSubviews() {
         super.layoutSubviews()
@@ -190,7 +190,7 @@ private let invalidPositionValue = CGFloat(-1.0)
             valueChanged()
         }
     }
-
+    
     
     
     func touchDown() {
@@ -252,3 +252,4 @@ private let invalidPositionValue = CGFloat(-1.0)
     }
     
 }
+
