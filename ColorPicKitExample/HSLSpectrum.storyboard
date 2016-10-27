@@ -30,8 +30,7 @@
                                     <action selector="hslaSpectrumValueChanged:" destination="kH3-6Q-EdZ" eventType="valueChanged" id="Slx-sX-fLQ"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bgq-1i-Snp">
-                                <frame key="frameInset" minX="16" minY="541" width="343" height="106"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bgq-1i-Snp">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>

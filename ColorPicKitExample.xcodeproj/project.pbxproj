@@ -20,20 +20,17 @@
 		C6125D691DBC0097002B5971 /* YUVA.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6125D651DBC0097002B5971 /* YUVA.swift */; };
 		C6125D6E1DBC054E002B5971 /* YUVASliderGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6125D6D1DBC054E002B5971 /* YUVASliderGroupViewController.swift */; };
 		C6125D701DBC055B002B5971 /* YUVASliderGroup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6125D6F1DBC055B002B5971 /* YUVASliderGroup.storyboard */; };
-		C6125D721DBC05C2002B5971 /* YUVSliderGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6125D711DBC05C2002B5971 /* YUVSliderGroup.swift */; };
 		C6125D751DBC1DAA002B5971 /* HSLA.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6125D741DBC1DAA002B5971 /* HSLA.swift */; };
 		C6125D771DBC27A7002B5971 /* HSLSliderGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6125D761DBC27A7002B5971 /* HSLSliderGroup.swift */; };
 		C6125D791DBC28C7002B5971 /* HSLSliderGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6125D781DBC28C7002B5971 /* HSLSliderGroupViewController.swift */; };
 		C6125D7B1DBC28D7002B5971 /* HSLSliderGroup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6125D7A1DBC28D7002B5971 /* HSLSliderGroup.storyboard */; };
 		C6125D7E1DBC680A002B5971 /* YUVSpectumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6125D7D1DBC680A002B5971 /* YUVSpectumView.swift */; };
-		C6125D801DBC691C002B5971 /* YUVSpectrum.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6125D7F1DBC691C002B5971 /* YUVSpectrum.swift */; };
 		C6125D821DBC696B002B5971 /* YUVSpectrumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6125D811DBC696B002B5971 /* YUVSpectrumViewController.swift */; };
 		C6125D841DBC697B002B5971 /* YUVSpectrum.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6125D831DBC697B002B5971 /* YUVSpectrum.storyboard */; };
 		C647DB171DC05B1500A52D02 /* SpectrumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C647DB161DC05B1500A52D02 /* SpectrumView.swift */; };
 		C647DB1A1DC0600100A52D02 /* WheelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C647DB191DC0600100A52D02 /* WheelView.swift */; };
 		C65329A51DB4686C00D9EDD5 /* HexKeypad.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65329A41DB4686C00D9EDD5 /* HexKeypad.swift */; };
 		C65CDFF31DBD6871005981F3 /* HSLSpectrumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65CDFF21DBD6871005981F3 /* HSLSpectrumView.swift */; };
-		C65CDFF51DBD68C6005981F3 /* HSLSpectrum.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65CDFF41DBD68C6005981F3 /* HSLSpectrum.swift */; };
 		C65CDFF71DBD68FB005981F3 /* HSLSpectrumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65CDFF61DBD68FB005981F3 /* HSLSpectrumViewController.swift */; };
 		C65CDFFC1DBD6928005981F3 /* HSLSpectrum.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C65CDFFB1DBD6928005981F3 /* HSLSpectrum.storyboard */; };
 		C67547111DB18DD100C2CA45 /* Throttle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67547101DB18DD100C2CA45 /* Throttle.swift */; };
@@ -47,6 +44,8 @@
 		C68242771DC1748900EFFEFD /* HSBASpectrum.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68242761DC1748900EFFEFD /* HSBASpectrum.swift */; };
 		C68242791DC1768800EFFEFD /* HSLASpectrum.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68242781DC1768800EFFEFD /* HSLASpectrum.swift */; };
 		C682427B1DC1776000EFFEFD /* YUVASpectrum.swift in Sources */ = {isa = PBXBuildFile; fileRef = C682427A1DC1776000EFFEFD /* YUVASpectrum.swift */; };
+		C682427E1DC178CE00EFFEFD /* Slider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C682427D1DC178CE00EFFEFD /* Slider.swift */; };
+		C68242801DC1794700EFFEFD /* SliderBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C682427F1DC1794700EFFEFD /* SliderBackgroundView.swift */; };
 		C68AF6961DAC0B8700DA93B5 /* PositionableControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68AF6951DAC0B8700DA93B5 /* PositionableControl.swift */; };
 		C6B016751DB47D9400B30B3E /* HexKeypadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B016741DB47D9400B30B3E /* HexKeypadViewController.swift */; };
 		C6B016771DB47DAB00B30B3E /* HexKeypad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6B016761DB47DAB00B30B3E /* HexKeypad.storyboard */; };
@@ -58,7 +57,6 @@
 		C6D87FB01DA9F2E3004CB7E3 /* HueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D87F981DA9F2E3004CB7E3 /* HueView.swift */; };
 		C6D87FB11DA9F2E3004CB7E3 /* ImagePixelPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D87F991DA9F2E3004CB7E3 /* ImagePixelPicker.swift */; };
 		C6D87FB21DA9F2E3004CB7E3 /* KnobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D87F9A1DA9F2E3004CB7E3 /* KnobView.swift */; };
-		C6D87FB41DA9F2E3004CB7E3 /* HSBSpectrum.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D87F9C1DA9F2E3004CB7E3 /* HSBSpectrum.swift */; };
 		C6D87FB51DA9F2E3004CB7E3 /* HSBWheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D87F9D1DA9F2E3004CB7E3 /* HSBWheel.swift */; };
 		C6D87FB61DA9F2E3004CB7E3 /* Colorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D87F9F1DA9F2E3004CB7E3 /* Colorable.swift */; };
 		C6D87FB71DA9F2E3004CB7E3 /* ColorControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D87FA01DA9F2E3004CB7E3 /* ColorControl.swift */; };
@@ -128,13 +126,11 @@
 		C6125D651DBC0097002B5971 /* YUVA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YUVA.swift; sourceTree = "<group>"; };
 		C6125D6D1DBC054E002B5971 /* YUVASliderGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YUVASliderGroupViewController.swift; sourceTree = "<group>"; };
 		C6125D6F1DBC055B002B5971 /* YUVASliderGroup.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = YUVASliderGroup.storyboard; sourceTree = "<group>"; };
-		C6125D711DBC05C2002B5971 /* YUVSliderGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YUVSliderGroup.swift; sourceTree = "<group>"; };
 		C6125D741DBC1DAA002B5971 /* HSLA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSLA.swift; sourceTree = "<group>"; };
 		C6125D761DBC27A7002B5971 /* HSLSliderGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSLSliderGroup.swift; sourceTree = "<group>"; };
 		C6125D781DBC28C7002B5971 /* HSLSliderGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSLSliderGroupViewController.swift; sourceTree = "<group>"; };
 		C6125D7A1DBC28D7002B5971 /* HSLSliderGroup.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HSLSliderGroup.storyboard; sourceTree = "<group>"; };
 		C6125D7D1DBC680A002B5971 /* YUVSpectumView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YUVSpectumView.swift; sourceTree = "<group>"; };
-		C6125D7F1DBC691C002B5971 /* YUVSpectrum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YUVSpectrum.swift; sourceTree = "<group>"; };
 		C6125D811DBC696B002B5971 /* YUVSpectrumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YUVSpectrumViewController.swift; sourceTree = "<group>"; };
 		C6125D831DBC697B002B5971 /* YUVSpectrum.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = YUVSpectrum.storyboard; sourceTree = "<group>"; };
 		C64730511DAD6BB8007BBAE7 /* ColorPicKit_protocol_class_diagram.svg */ = {isa = PBXFileReference; lastKnownFileType = text; path = ColorPicKit_protocol_class_diagram.svg; sourceTree = "<group>"; };
@@ -142,7 +138,6 @@
 		C647DB191DC0600100A52D02 /* WheelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WheelView.swift; sourceTree = "<group>"; };
 		C65329A41DB4686C00D9EDD5 /* HexKeypad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexKeypad.swift; sourceTree = "<group>"; };
 		C65CDFF21DBD6871005981F3 /* HSLSpectrumView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSLSpectrumView.swift; sourceTree = "<group>"; };
-		C65CDFF41DBD68C6005981F3 /* HSLSpectrum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSLSpectrum.swift; sourceTree = "<group>"; };
 		C65CDFF61DBD68FB005981F3 /* HSLSpectrumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSLSpectrumViewController.swift; sourceTree = "<group>"; };
 		C65CDFFB1DBD6928005981F3 /* HSLSpectrum.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HSLSpectrum.storyboard; sourceTree = "<group>"; };
 		C67547101DB18DD100C2CA45 /* Throttle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Throttle.swift; sourceTree = "<group>"; };
@@ -156,6 +151,8 @@
 		C68242761DC1748900EFFEFD /* HSBASpectrum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSBASpectrum.swift; sourceTree = "<group>"; };
 		C68242781DC1768800EFFEFD /* HSLASpectrum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSLASpectrum.swift; sourceTree = "<group>"; };
 		C682427A1DC1776000EFFEFD /* YUVASpectrum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YUVASpectrum.swift; sourceTree = "<group>"; };
+		C682427D1DC178CE00EFFEFD /* Slider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Slider.swift; sourceTree = "<group>"; };
+		C682427F1DC1794700EFFEFD /* SliderBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderBackgroundView.swift; sourceTree = "<group>"; };
 		C68AF68F1DAB3F8F00DA93B5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C68AF6901DAB3F8F00DA93B5 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		C68AF6911DAB3F8F00DA93B5 /* ColorPicKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ColorPicKit.podspec; sourceTree = "<group>"; };
@@ -171,7 +168,6 @@
 		C6D87F981DA9F2E3004CB7E3 /* HueView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HueView.swift; sourceTree = "<group>"; };
 		C6D87F991DA9F2E3004CB7E3 /* ImagePixelPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePixelPicker.swift; sourceTree = "<group>"; };
 		C6D87F9A1DA9F2E3004CB7E3 /* KnobView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KnobView.swift; sourceTree = "<group>"; };
-		C6D87F9C1DA9F2E3004CB7E3 /* HSBSpectrum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSBSpectrum.swift; sourceTree = "<group>"; };
 		C6D87F9D1DA9F2E3004CB7E3 /* HSBWheel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSBWheel.swift; sourceTree = "<group>"; };
 		C6D87F9F1DA9F2E3004CB7E3 /* Colorable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colorable.swift; sourceTree = "<group>"; };
 		C6D87FA01DA9F2E3004CB7E3 /* ColorControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorControl.swift; sourceTree = "<group>"; };
@@ -399,7 +395,6 @@
 				C67E67AC1DC16DB0004E6160 /* CMYKASliderGroup.swift */,
 				C6D87F961DA9F2E3004CB7E3 /* HSBSliderGroup.swift */,
 				C6125D761DBC27A7002B5971 /* HSLSliderGroup.swift */,
-				C6125D711DBC05C2002B5971 /* YUVSliderGroup.swift */,
 				C682426D1DC170FE00EFFEFD /* YUVASliderGroup.swift */,
 			);
 			name = SliderGroup;
@@ -410,13 +405,20 @@
 			children = (
 				C68242731DC1738900EFFEFD /* Spectrum.swift */,
 				C68242761DC1748900EFFEFD /* HSBASpectrum.swift */,
-				C6D87F9C1DA9F2E3004CB7E3 /* HSBSpectrum.swift */,
-				C65CDFF41DBD68C6005981F3 /* HSLSpectrum.swift */,
 				C68242781DC1768800EFFEFD /* HSLASpectrum.swift */,
-				C6125D7F1DBC691C002B5971 /* YUVSpectrum.swift */,
 				C682427A1DC1776000EFFEFD /* YUVASpectrum.swift */,
 			);
 			name = Spectrum;
+			sourceTree = "<group>";
+		};
+		C682427C1DC178C100EFFEFD /* Slider */ = {
+			isa = PBXGroup;
+			children = (
+				C682427D1DC178CE00EFFEFD /* Slider.swift */,
+				C6D87F941DA9F2E3004CB7E3 /* GradientSlider.swift */,
+				C6D87F971DA9F2E3004CB7E3 /* HueSlider.swift */,
+			);
+			name = Slider;
 			sourceTree = "<group>";
 		};
 		C6D87F8F1DA9F2E3004CB7E3 /* Documents */ = {
@@ -433,8 +435,7 @@
 			isa = PBXGroup;
 			children = (
 				C6D87FF21DA9F4DF004CB7E3 /* Helpers */,
-				C6D87F941DA9F2E3004CB7E3 /* GradientSlider.swift */,
-				C6D87F971DA9F2E3004CB7E3 /* HueSlider.swift */,
+				C682427C1DC178C100EFFEFD /* Slider */,
 				C67E67AB1DC16D95004E6160 /* SliderGroup */,
 				C68242751DC1739000EFFEFD /* Spectrum */,
 				C6D87F9D1DA9F2E3004CB7E3 /* HSBWheel.swift */,
@@ -577,6 +578,7 @@
 			isa = PBXGroup;
 			children = (
 				C6D87F931DA9F2E3004CB7E3 /* GradientData.swift */,
+				C682427F1DC1794700EFFEFD /* SliderBackgroundView.swift */,
 				C6D87F951DA9F2E3004CB7E3 /* GradientView.swift */,
 				C6D87F981DA9F2E3004CB7E3 /* HueView.swift */,
 				C647DB181DC05FED00A52D02 /* Spectrum */,
@@ -746,7 +748,6 @@
 				C6D87FB51DA9F2E3004CB7E3 /* HSBWheel.swift in Sources */,
 				C607EEDA1DA96F1400A73F51 /* AppDelegate.swift in Sources */,
 				C6125D791DBC28C7002B5971 /* HSLSliderGroupViewController.swift in Sources */,
-				C6125D721DBC05C2002B5971 /* YUVSliderGroup.swift in Sources */,
 				C6D87FAF1DA9F2E3004CB7E3 /* HueSlider.swift in Sources */,
 				C6D87FF61DA9F50F004CB7E3 /* HSBWheelView.swift in Sources */,
 				C682426E1DC170FE00EFFEFD /* YUVASliderGroup.swift in Sources */,
@@ -759,11 +760,8 @@
 				C68242791DC1768800EFFEFD /* HSLASpectrum.swift in Sources */,
 				C68AF6961DAC0B8700DA93B5 /* PositionableControl.swift in Sources */,
 				C682427B1DC1776000EFFEFD /* YUVASpectrum.swift in Sources */,
-				C65CDFF51DBD68C6005981F3 /* HSLSpectrum.swift in Sources */,
 				C647DB171DC05B1500A52D02 /* SpectrumView.swift in Sources */,
 				C6D87FAD1DA9F2E3004CB7E3 /* GradientView.swift in Sources */,
-				C6125D801DBC691C002B5971 /* YUVSpectrum.swift in Sources */,
-				C6D87FB41DA9F2E3004CB7E3 /* HSBSpectrum.swift in Sources */,
 				C6125D691DBC0097002B5971 /* YUVA.swift in Sources */,
 				C6D87FB11DA9F2E3004CB7E3 /* ImagePixelPicker.swift in Sources */,
 				C6D87FB71DA9F2E3004CB7E3 /* ColorControl.swift in Sources */,
@@ -780,6 +778,7 @@
 				C67E67A31DC1609B004E6160 /* RGBASliderGroupViewController.swift in Sources */,
 				C6D87FBB1DA9F2E3004CB7E3 /* SliderControlGroup.swift in Sources */,
 				C6D87FBE1DA9F2E3004CB7E3 /* UIView+Utilities.swift in Sources */,
+				C68242801DC1794700EFFEFD /* SliderBackgroundView.swift in Sources */,
 				C67547111DB18DD100C2CA45 /* Throttle.swift in Sources */,
 				C6D87FBC1DA9F2E3004CB7E3 /* UIColor+Utilities.swift in Sources */,
 				C65329A51DB4686C00D9EDD5 /* HexKeypad.swift in Sources */,
@@ -791,6 +790,7 @@
 				C67E67A11DC1604B004E6160 /* RGBASliderGroup.swift in Sources */,
 				C6D87FC41DA9F3B1004CB7E3 /* BaseViewController.swift in Sources */,
 				C6D87FF41DA9F506004CB7E3 /* HSBSpectrumView.swift in Sources */,
+				C682427E1DC178CE00EFFEFD /* Slider.swift in Sources */,
 				C6D87FB61DA9F2E3004CB7E3 /* Colorable.swift in Sources */,
 				C65CDFF31DBD6871005981F3 /* HSLSpectrumView.swift in Sources */,
 				C6D87FB21DA9F2E3004CB7E3 /* KnobView.swift in Sources */,

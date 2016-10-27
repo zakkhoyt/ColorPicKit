@@ -8,44 +8,8 @@
 
 import UIKit
 
-class GradientView: UIView {
+class GradientView: SliderBackgroundView {
  
-    
-    private var _roundedCornders: Bool = false
-    @IBInspectable public var roundedCorners: Bool {
-        get {
-            return _roundedCornders
-        }
-        set {
-            _roundedCornders = newValue
-            setNeedsDisplay()
-        }
-    }
-    
-    private var _borderColor: UIColor = .lightGray
-    @IBInspectable public var borderColor: UIColor{
-        get {
-            return _borderColor
-        }
-        set {
-            _borderColor = newValue
-            layer.borderColor = newValue.cgColor
-            setNeedsDisplay()
-        }
-    }
-    
-    private var _borderWidth: CGFloat = 0.5
-    @IBInspectable public var borderWidth: CGFloat{
-        get {
-            return _borderWidth
-        }
-        set {
-            _borderWidth = newValue
-            layer.borderWidth = newValue
-            setNeedsDisplay()
-        }
-    }
-    
     
     private var _color1: UIColor = .black
     var color1: UIColor  {
@@ -68,46 +32,9 @@ class GradientView: UIView {
             setNeedsDisplay()
         }
     }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        commonInit()
-    }
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        commonInit()
-    }
-    
-    private func commonInit() {
-        backgroundColor = UIColor.clear
-    }
 
     
-    
-    
-    override public func draw(_ rect: CGRect) {
-        
-        backgroundColor = UIColor.clear
-        
-        // Round corners
-        if roundedCorners {
-            self.layer.masksToBounds = true
-            self.layer.cornerRadius = bounds.midY
-        } else {
-            self.layer.masksToBounds = false
-            self.layer.cornerRadius = 0
-        }
-        
-        self.layer.borderColor = borderColor.cgColor
-        self.layer.borderWidth = borderWidth
-        
-        
-        guard let context = UIGraphicsGetCurrentContext() else {
-            print("No Context")
-            return
-        }
-        
+    override func drawBackground(context: CGContext) {
         let rgba1 = color1.rgba()
         let rgba2 = color2.rgba()
         let colors: [CGFloat] = [
@@ -135,5 +62,4 @@ class GradientView: UIView {
         context.addRect(rect)
         context.drawPath(using: .stroke)
     }
-    
 }
