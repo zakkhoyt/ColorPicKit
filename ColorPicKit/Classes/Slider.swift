@@ -20,7 +20,7 @@ import UIKit
         }
         set {
             _roundedCornders = newValue
-            backgroundView.roundedCorners = newValue
+            sliderView.roundedCorners = newValue
         }
     }
     
@@ -32,7 +32,7 @@ import UIKit
         set {
             _borderColor = newValue
             knobView.borderColor = newValue
-            backgroundView.borderColor = newValue
+            sliderView.borderColor = newValue
         }
     }
     
@@ -44,7 +44,7 @@ import UIKit
         set {
             _borderWidth = newValue
             knobView.borderWidth = newValue
-            backgroundView.borderWidth = newValue
+            sliderView.borderWidth = newValue
         }
     }
     
@@ -119,8 +119,7 @@ import UIKit
         assert(false, "Child must implement")
     }
     
-    //private var hueView = HueView()
-    var backgroundView: SliderBackgroundView!
+    var sliderView: SliderView!
     
     
     // MARK: Init
@@ -151,7 +150,7 @@ import UIKit
     override open func layoutSubviews() {
         super.layoutSubviews()
         
-        backgroundView.frame = frameForHueView()
+        sliderView.frame = frameForSliderView()
         updateKnob()
     }
     
@@ -222,7 +221,7 @@ import UIKit
         knobView.color = color
     }
     
-    private func frameForHueView() -> CGRect {
+    private func frameForSliderView() -> CGRect {
         let x: CGFloat = 0
         let y: CGFloat = (bounds.height - barHeight) / 2.0
         let w: CGFloat = bounds.width

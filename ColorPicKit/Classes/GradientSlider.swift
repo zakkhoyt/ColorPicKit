@@ -35,7 +35,7 @@ import UIKit
         }
     }
     
-    fileprivate var gradientView = GradientView()
+    fileprivate var gradientView = GradientSliderView()
     
     override func configureBackgroundView() {
 
@@ -43,7 +43,7 @@ import UIKit
         gradientView.borderWidth = borderWidth
         gradientView.roundedCorners = roundedCorners
         addSubview(gradientView)
-        self.backgroundView = gradientView
+        self.sliderView = gradientView
         
     }
 

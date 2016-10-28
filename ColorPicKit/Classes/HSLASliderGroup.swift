@@ -19,7 +19,7 @@ import UIKit
     
     
     
-    fileprivate var hueSlider: HueSlider!
+    fileprivate var hslaSlider: HSLASlider!
     fileprivate var saturationSlider: GradientSlider!
     fileprivate var lightnessSlider: GradientSlider!
     fileprivate var alphaSlider: GradientSlider!
@@ -28,18 +28,18 @@ import UIKit
     override func configureSliders() {
         let hsla = color.hsla()
         
-        hueSlider = HueSlider()
-        hueSlider.roundedCorners = roundedCorners
-        hueSlider.borderColor = borderColor
-        hueSlider.borderWidth = borderWidth
-        hueSlider.barHeight = barHeight
-        hueSlider.knobSize = knobSize
-        hueSlider.value = hsla.hue
-        hueSlider.addTarget(self, action: #selector(sliderValueChanged), for: .valueChanged)
-        hueSlider.addTarget(self, action: #selector(sliderTouchDown), for: .touchDown)
-        hueSlider.addTarget(self, action: #selector(sliderTouchUpInside), for: .touchUpInside)
-        addSubview(hueSlider)
-        sliders.append(hueSlider)
+        hslaSlider = HSLASlider()
+        hslaSlider.roundedCorners = roundedCorners
+        hslaSlider.borderColor = borderColor
+        hslaSlider.borderWidth = borderWidth
+        hslaSlider.barHeight = barHeight
+        hslaSlider.knobSize = knobSize
+        hslaSlider.value = hsla.hue
+        hslaSlider.addTarget(self, action: #selector(sliderValueChanged), for: .valueChanged)
+        hslaSlider.addTarget(self, action: #selector(sliderTouchDown), for: .touchDown)
+        hslaSlider.addTarget(self, action: #selector(sliderTouchUpInside), for: .touchUpInside)
+        addSubview(hslaSlider)
+        sliders.append(hslaSlider)
         
         saturationSlider = GradientSlider()
         saturationSlider.roundedCorners = roundedCorners
@@ -92,7 +92,7 @@ import UIKit
     
     override func colorFromSliders() -> UIColor {
         
-        guard let _ = hueSlider,
+        guard let _ = hslaSlider,
             let _ = saturationSlider,
             let _ = lightnessSlider,
             let _ = alphaSlider else {
@@ -100,7 +100,7 @@ import UIKit
                 return UIColor.clear
         }
         
-        let hue = hueSlider.value
+        let hue = hslaSlider.value
         let saturation = saturationSlider.value
         let lightness = lightnessSlider.value
         let alpha = alphaSlider.value
@@ -110,7 +110,7 @@ import UIKit
     
     override func slidersFrom(color: UIColor) {
         let hsla = color.hsla()
-        hueSlider.value = hsla.hue
+        hslaSlider.value = hsla.hue
         saturationSlider.value = hsla.saturation
         lightnessSlider.value = hsla.lightness
         alphaSlider.value = hsla.alpha
@@ -118,7 +118,7 @@ import UIKit
     }
     
     override func updateSliderColors() {
-        let hue = hueSlider.value
+        let hue = hslaSlider.value
         //let color = UIColor(hue: hue, saturation: 1.0, brightness: 1.0, alpha: 1.0)
         let hsla = HSLA(hue: hue, saturation: 1.0, lightness: 1.0)
         let color = hsla.color()
@@ -127,10 +127,10 @@ import UIKit
         lightnessSlider.color2 = color
         
         let saturation = saturationSlider.value
-        hueSlider.saturation = saturation
+        hslaSlider.saturation = saturation
         
         let lightness = lightnessSlider.value
-        hueSlider.brightness = lightness
+        hslaSlider.lightness = lightness
     }
     
 }

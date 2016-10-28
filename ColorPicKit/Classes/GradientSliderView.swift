@@ -1,5 +1,5 @@
 //
-//  GradientView.swift
+//  GradientSliderView.swift
 //  ColorPicKitExample
 //
 //  Created by Zakk Hoyt on 10/8/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GradientView: SliderBackgroundView {
+class GradientSliderView: SliderView {
  
     
     private var _color1: UIColor = .black

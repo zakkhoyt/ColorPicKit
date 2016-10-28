@@ -1,5 +1,5 @@
 //
-//  SliderBackgroundView.swift
+//  SliderView.swift
 //  ColorPicKitExample
 //
 //  Created by Zakk Hoyt on 10/26/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SliderBackgroundView: UIView {
+public class SliderView: UIView {
     
     
     private var _roundedCornders: Bool = false
@@ -48,12 +48,12 @@ class SliderBackgroundView: UIView {
     
     
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit()
     }
     
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
     }
