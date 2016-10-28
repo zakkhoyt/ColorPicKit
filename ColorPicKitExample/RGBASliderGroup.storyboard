@@ -27,6 +27,9 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YS4-fi-tK1" customClass="RGBASliderGroup" customModule="ColorPicKitExample" customModuleProvider="target">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="showAlphaSlider" value="NO"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="grayscaleSliderTouchDown:" destination="mad-6D-HG4" eventType="touchDown" id="FGa-bm-Zlu"/>
                                     <action selector="grayscaleSliderTouchUpInside:" destination="mad-6D-HG4" eventType="touchUpInside" id="pT7-b1-v9f"/>

@@ -10,27 +10,27 @@ import UIKit
 
 class HSBSliderGroupViewController: BaseViewController {
 
-    @IBOutlet weak var hsbSliderGroup: HSBSliderGroup!
+    @IBOutlet weak var hsbaSliderGroup: HSBASliderGroup!
     
     
-    @IBAction func grayscaleSliderValueChanged(_ sender: HSBSliderGroup) {
+    @IBAction func hsbaSliderGroupValueChanged(_ sender: HSBASliderGroup) {
         updateBackgroundColor()
     }
     
-    @IBAction func grayscaleSliderTouchDown(_ sender: HSBSliderGroup) {
+    @IBAction func hsbaSliderGroupTouchDown(_ sender: HSBASliderGroup) {
         updateBackgroundColor()
     }
     
-    @IBAction func grayscaleSliderTouchUpInside(_ sender: HSBSliderGroup) {
+    @IBAction func hsbaSliderGroupTouchUpInside(_ sender: HSBASliderGroup) {
         updateBackgroundColor()
     }
     
     private func updateBackgroundColor() {
-        colorView.backgroundColor = hsbSliderGroup.color
+        colorView.backgroundColor = hsbaSliderGroup.color
     }
     
     override func reset() {
-        hsbSliderGroup.color = resetColor
+        hsbaSliderGroup.color = resetColor
         updateBackgroundColor()
     }
 }

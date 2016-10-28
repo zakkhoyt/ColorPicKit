@@ -74,7 +74,7 @@ import UIKit
         addSubview(blueSlider)
         sliders.append(blueSlider)
         
-        
+//        if showAlphaSlider {
         alphaSlider = GradientSlider()
         alphaSlider.roundedCorners = roundedCorners
         alphaSlider.borderColor = borderColor
@@ -83,12 +83,13 @@ import UIKit
         alphaSlider.knobSize = knobSize
         alphaSlider.color1 = UIColor.clear
         alphaSlider.color2 = UIColor.white
-        alphaSlider.value = rgba.blue
+        alphaSlider.value = rgba.alpha
         alphaSlider.addTarget(self, action: #selector(sliderValueChanged), for: .valueChanged)
         alphaSlider.addTarget(self, action: #selector(sliderTouchDown), for: .touchDown)
         alphaSlider.addTarget(self, action: #selector(sliderTouchUpInside), for: .touchUpInside)
         addSubview(alphaSlider)
         sliders.append(alphaSlider)
+//        }
         
     }
     

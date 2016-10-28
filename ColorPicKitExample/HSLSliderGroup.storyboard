@@ -19,12 +19,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o4y-X3-cSW" customClass="HSLSliderGroup" customModule="ColorPicKitExample" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o4y-X3-cSW" customClass="HSLASliderGroup" customModule="ColorPicKitExample" customModuleProvider="target">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <action selector="hslSliderTouchDown:" destination="xdX-ST-IkN" eventType="touchDown" id="tpi-Xk-lEB"/>
-                                    <action selector="hslSliderTouchUpInside:" destination="xdX-ST-IkN" eventType="touchUpInside" id="ZMp-cr-5r3"/>
-                                    <action selector="hslSliderValueChanged:" destination="xdX-ST-IkN" eventType="valueChanged" id="0Om-gB-ZAh"/>
+                                    <action selector="hslaSliderTouchDown:" destination="xdX-ST-IkN" eventType="touchDown" id="cdg-7H-qkE"/>
+                                    <action selector="hslaSliderTouchUpInside:" destination="xdX-ST-IkN" eventType="touchUpInside" id="hI6-YE-ZYS"/>
+                                    <action selector="hslaSliderValueChanged:" destination="xdX-ST-IkN" eventType="valueChanged" id="WOr-1B-f4X"/>
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o1K-4p-1Wv">
@@ -46,7 +46,7 @@
                     </view>
                     <connections>
                         <outlet property="colorView" destination="o1K-4p-1Wv" id="Xyj-tb-70R"/>
-                        <outlet property="hslSliderGroup" destination="o4y-X3-cSW" id="l9G-JF-tYA"/>
+                        <outlet property="hslaSliderGroup" destination="o4y-X3-cSW" id="oOo-oD-xhg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tku-uY-DLr" userLabel="First Responder" sceneMemberID="firstResponder"/>

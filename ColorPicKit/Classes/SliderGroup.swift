@@ -105,6 +105,16 @@ import UIKit
         }
     }
     
+//    fileprivate var _showAlphaSlider: Bool = true
+//    @IBInspectable public var showAlphaSlider: Bool {
+//        get {
+//            return _showAlphaSlider
+//        }
+//        set {
+//            _showAlphaSlider = newValue
+//        }
+//    }
+    
     func colorFromSliders() -> UIColor {
         assert(false, "child must implement");
         return UIColor.clear
@@ -115,11 +125,11 @@ import UIKit
     }
     
     
-    let spacing: CGFloat = 10
+    let spacing: CGFloat = 4
     let sliderHeight: CGFloat = 40
     
     
-    var sliders: [GradientSlider] = [GradientSlider]()
+    var sliders: [Slider] = [Slider]()
 
     // MARK: Init
     required public init?(coder aDecoder: NSCoder) {
@@ -178,15 +188,22 @@ import UIKit
  
     func sliderValueChanged(sender: GradientSlider) {
         valueChanged()
+        updateSliderColors()
     }
     func sliderTouchDown(sender: GradientSlider) {
         valueChanged()
         touchDown()
+        updateSliderColors()
     }
     
     func sliderTouchUpInside(sender: GradientSlider) {
         valueChanged()
         touchUpInside()
+        updateSliderColors()
+    }
+    
+    func updateSliderColors() {
+        print("Child class CAN implement (not required)")
     }
 
     

@@ -11,27 +11,27 @@ import Foundation
 class HSLSliderGroupViewController: BaseViewController {
     
     
-    @IBOutlet weak var hslSliderGroup: HSLSliderGroup!
+    @IBOutlet weak var hslaSliderGroup: HSLASliderGroup!
     
     
-    @IBAction func hslSliderValueChanged(_ sender: HSLSliderGroup) {
+    @IBAction func hslaSliderValueChanged(_ sender: HSLASliderGroup) {
         updateBackgroundColor()
     }
     
-    @IBAction func hslSliderTouchDown(_ sender: HSLSliderGroup) {
+    @IBAction func hslaSliderTouchDown(_ sender: HSLASliderGroup) {
         updateBackgroundColor()
     }
     
-    @IBAction func hslSliderTouchUpInside(_ sender: HSLSliderGroup) {
+    @IBAction func hslaSliderTouchUpInside(_ sender: HSLASliderGroup) {
         updateBackgroundColor()
     }
     
     private func updateBackgroundColor() {
-        colorView.backgroundColor = hslSliderGroup.color
+        colorView.backgroundColor = hslaSliderGroup.color
     }
     
     override func reset() {
-        hslSliderGroup.color = resetColor
+        hslaSliderGroup.color = resetColor
         updateBackgroundColor()
     }
     
