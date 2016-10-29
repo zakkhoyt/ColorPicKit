@@ -13,44 +13,22 @@ import UIKit
     
     // MARK: Variables
     
-    private var _roundedCornders: Bool = true
-    @IBInspectable public var roundedCorners: Bool {
+    private var _value: CGFloat = 0.5
+    @IBInspectable public var value: CGFloat {
         get {
-            return _roundedCornders
+            return _value
         }
         set {
-            _roundedCornders = newValue
-            sliderView.roundedCorners = newValue
-        }
-    }
-    
-    private var _borderColor: UIColor = .lightGray
-    @IBInspectable public var borderColor: UIColor{
-        get {
-            return _borderColor
-        }
-        set {
-            _borderColor = newValue
-            knobView.borderColor = newValue
-            sliderView.borderColor = newValue
-        }
-    }
-    
-    private var _borderWidth: CGFloat = 0.5
-    @IBInspectable public var borderWidth: CGFloat{
-        get {
-            return _borderWidth
-        }
-        set {
-            _borderWidth = newValue
-            knobView.borderWidth = newValue
-            sliderView.borderWidth = newValue
-        }
-    }
-    
-    public override var intrinsicContentSize: CGSize  {
-        get {
-            return CGSize(width: bounds.width, height: 20)
+            if _value != newValue {
+                if newValue < 0 {
+                    _value = 0
+                } else if newValue > 1.0 {
+                    _value = 1.0
+                } else {
+                    _value = newValue
+                }
+                updateKnob()
+            }
         }
     }
     
@@ -89,24 +67,53 @@ import UIKit
         }
     }
     
-    private var _value: CGFloat = 0.5
-    @IBInspectable public var value: CGFloat {
+    
+
+    
+    private var _borderColor: UIColor = .lightGray
+    @IBInspectable public var borderColor: UIColor{
         get {
-            return _value
+            return _borderColor
         }
         set {
-            if _value != newValue {
-                if newValue < 0 {
-                    _value = 0
-                } else if newValue > 1.0 {
-                    _value = 1.0
-                } else {
-                    _value = newValue
-                }
-                updateKnob()
-            }
+            _borderColor = newValue
+            knobView.borderColor = newValue
+            sliderView.borderColor = newValue
         }
     }
+    
+    private var _borderWidth: CGFloat = 0.5
+    @IBInspectable public var borderWidth: CGFloat{
+        get {
+            return _borderWidth
+        }
+        set {
+            _borderWidth = newValue
+            knobView.borderWidth = newValue
+            sliderView.borderWidth = newValue
+        }
+    }
+    
+    
+    private var _roundedCornders: Bool = true
+    @IBInspectable public var roundedCorners: Bool {
+        get {
+            return _roundedCornders
+        }
+        set {
+            _roundedCornders = newValue
+            sliderView.roundedCorners = newValue
+        }
+    }
+    
+    public override var intrinsicContentSize: CGSize  {
+        get {
+            return CGSize(width: bounds.width, height: 20)
+        }
+    }
+    
+
+
     
 
     public var color: UIColor {

@@ -13,48 +13,28 @@ private let invalidPositionValue = CGFloat(-1.0)
     
     // MARK: Variables
     
-    private var _roundedCornders: Bool = false
-    @IBInspectable public var roundedCorners: Bool {
+
+    
+    
+    private var _position: CGPoint = CGPoint(x: invalidPositionValue, y: invalidPositionValue)
+    @IBInspectable public var position: CGPoint {
         get {
-            return _roundedCornders
+            return _position
         }
         set {
-            _roundedCornders = newValue
-            if _roundedCornders == false {
-                self.layer.masksToBounds = false
-                self.layer.cornerRadius = 0
-            } else {
-                self.layer.masksToBounds = true
-                self.layer.cornerRadius = 40.0
+            // We don't want to accept infinities or NaN
+            if fabs(newValue.x) == CGFloat.infinity ||
+                fabs(newValue.y) == CGFloat.infinity {
+                return
             }
-        }
-    }
-    
-    private var _borderColor: UIColor = .lightGray
-    @IBInspectable public var borderColor: UIColor{
-        get {
-            return _borderColor
-        }
-        set {
-            _borderColor = newValue
-            self.layer.borderColor = newValue.cgColor
-        }
-    }
-    
-    private var _borderWidth: CGFloat = 0
-    @IBInspectable public var borderWidth: CGFloat{
-        get {
-            return _borderWidth
-        }
-        set {
-            _borderWidth = newValue
-            self.layer.borderWidth = newValue
-        }
-    }
-    
-    public override var intrinsicContentSize: CGSize  {
-        get {
-            return CGSize(width: bounds.width, height: bounds.width)
+            if newValue.x == CGFloat.nan || newValue.y == CGFloat.nan {
+                return
+            }
+            
+            if _position != newValue {
+                updatePositionFrom(point: newValue)
+                updateKnob()
+            }
         }
     }
     
@@ -80,25 +60,43 @@ private let invalidPositionValue = CGFloat(-1.0)
         }
     }
     
+
     
-    private var _position: CGPoint = CGPoint(x: invalidPositionValue, y: invalidPositionValue)
-    @IBInspectable public var position: CGPoint {
+    private var _borderColor: UIColor = .lightGray
+    @IBInspectable public var borderColor: UIColor{
         get {
-            return _position
+            return _borderColor
         }
         set {
-            // We don't want to accept infinities or NaN
-            if fabs(newValue.x) == CGFloat.infinity ||
-                fabs(newValue.y) == CGFloat.infinity {
-                return
-            }
-            if newValue.x == CGFloat.nan || newValue.y == CGFloat.nan {
-                return
-            }
-            
-            if _position != newValue {
-                updatePositionFrom(point: newValue)
-                updateKnob()
+            _borderColor = newValue
+            self.layer.borderColor = newValue.cgColor
+        }
+    }
+    
+    private var _borderWidth: CGFloat = 0
+    @IBInspectable public var borderWidth: CGFloat{
+        get {
+            return _borderWidth
+        }
+        set {
+            _borderWidth = newValue
+            self.layer.borderWidth = newValue
+        }
+    }
+    
+    private var _roundedCornders: Bool = false
+    @IBInspectable public var roundedCorners: Bool {
+        get {
+            return _roundedCornders
+        }
+        set {
+            _roundedCornders = newValue
+            if _roundedCornders == false {
+                self.layer.masksToBounds = false
+                self.layer.cornerRadius = 0
+            } else {
+                self.layer.masksToBounds = true
+                self.layer.cornerRadius = 40.0
             }
         }
     }
@@ -111,6 +109,14 @@ private let invalidPositionValue = CGFloat(-1.0)
         }
     }
     
+    
+    public override var intrinsicContentSize: CGSize  {
+        get {
+            return CGSize(width: bounds.width, height: bounds.width)
+        }
+    }
+    
+
     
     func colorAt(position: CGPoint) -> UIColor {
         assert(false, "Child must implement")

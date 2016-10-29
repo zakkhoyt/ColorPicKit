@@ -352,6 +352,7 @@
 		C647DB181DC05FED00A52D02 /* Spectrum */ = {
 			isa = PBXGroup;
 			children = (
+				C68242731DC1738900EFFEFD /* Spectrum.swift */,
 				C647DB161DC05B1500A52D02 /* SpectrumView.swift */,
 				C6D87FF31DA9F506004CB7E3 /* HSBSpectrumView.swift */,
 				C65CDFF21DBD6871005981F3 /* HSLSpectrumView.swift */,
@@ -421,14 +422,6 @@
 				C67E67A71DC166C2004E6160 /* SliderGroup.swift */,
 			);
 			name = SliderGroup;
-			sourceTree = "<group>";
-		};
-		C67FC2951DC417A00079AAE2 /* Spectrum */ = {
-			isa = PBXGroup;
-			children = (
-				C68242731DC1738900EFFEFD /* Spectrum.swift */,
-			);
-			name = Spectrum;
 			sourceTree = "<group>";
 		};
 		C67FC2961DC417AF0079AAE2 /* Wheel */ = {
@@ -662,7 +655,6 @@
 			children = (
 				C67FC29B1DC417D10079AAE2 /* Model */,
 				C67FC29A1DC417CC0079AAE2 /* View */,
-				C67FC2951DC417A00079AAE2 /* Spectrum */,
 				C67FC2931DC417810079AAE2 /* Slider */,
 				C67FC2941DC417920079AAE2 /* SliderGroup */,
 				C647DB181DC05FED00A52D02 /* Spectrum */,
@@ -734,7 +726,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Zakk Hoyt";
 				TargetAttributes = {
 					C607EED51DA96F1400A73F51 = {
@@ -959,6 +951,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -1009,6 +1002,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

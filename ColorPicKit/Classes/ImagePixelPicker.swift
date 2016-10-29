@@ -14,96 +14,6 @@ private let invalidPositionValue = CGFloat(-1.0)
     
     // MARK: Variables
     
-    private var _roundedCornders: Bool = false
-    @IBInspectable public var roundedCorners: Bool {
-        get {
-            return _roundedCornders
-        }
-        set {
-            _roundedCornders = newValue
-            if _roundedCornders == false {
-                self.layer.masksToBounds = false
-                self.layer.cornerRadius = 0
-            } else {
-                self.layer.masksToBounds = true
-                self.layer.cornerRadius = 40.0
-            }
-        }
-    }
-    
-    private var _borderColor: UIColor = .lightGray
-    @IBInspectable public var borderColor: UIColor{
-        get {
-            return _borderColor
-        }
-        set {
-            _borderColor = newValue
-            self.layer.borderColor = newValue.cgColor
-        }
-    }
-    
-    private var _borderWidth: CGFloat = 0.5
-    @IBInspectable public var borderWidth: CGFloat{
-        get {
-            return _borderWidth
-        }
-        set {
-            _borderWidth = newValue
-            self.layer.borderWidth = newValue
-        }
-    }
-    
-    public override var intrinsicContentSize: CGSize  {
-        get {
-            return CGSize(width: bounds.width, height: bounds.width)
-        }
-    }
-    
-    private var _knobView: KnobView = KnobView()
-    public var knobView: KnobView {
-        get {
-            return _knobView
-        }
-        set {
-            _knobView = newValue
-            updateKnob()
-        }
-    }
-    
-    private var _knobSize: CGSize = CGSize(width: 30, height: 30)
-    @IBInspectable public var knobSize: CGSize {
-        get {
-            return _knobSize
-        }
-        set {
-            _knobSize = newValue
-            updateKnob()
-        }
-    }
-    
-    private var _color: UIColor = .white
-    /*@IBInspectable*/ public var color: UIColor {
-        get {
-            guard let pixelBuffer = self.pixelBuffer else {
-                print("No pixelBuffer to look at")
-                return _color
-            }
-            
-            
-            let point = knobViewPointWithinImage()
-            
-            if let color = UIImage.getColorAt(point: point, in: pixelBuffer) {
-                return color
-            } else {
-                print("Failed to get color from pixel buffer")
-            }
-            
-            return _color
-        }
-    }
-    
-    
-    
     private var _image: UIImage = UIImage()
     @IBInspectable public var image: UIImage {
         get {
@@ -140,6 +50,102 @@ private let invalidPositionValue = CGFloat(-1.0)
             }
         }
     }
+    
+    private var _knobView: KnobView = KnobView()
+    public var knobView: KnobView {
+        get {
+            return _knobView
+        }
+        set {
+            _knobView = newValue
+            updateKnob()
+        }
+    }
+    
+    private var _knobSize: CGSize = CGSize(width: 30, height: 30)
+    @IBInspectable public var knobSize: CGSize {
+        get {
+            return _knobSize
+        }
+        set {
+            _knobSize = newValue
+            updateKnob()
+        }
+    }
+    
+
+    
+    private var _borderColor: UIColor = .lightGray
+    @IBInspectable public var borderColor: UIColor{
+        get {
+            return _borderColor
+        }
+        set {
+            _borderColor = newValue
+            self.layer.borderColor = newValue.cgColor
+        }
+    }
+    
+    private var _borderWidth: CGFloat = 0.5
+    @IBInspectable public var borderWidth: CGFloat{
+        get {
+            return _borderWidth
+        }
+        set {
+            _borderWidth = newValue
+            self.layer.borderWidth = newValue
+        }
+    }
+    
+    private var _roundedCornders: Bool = false
+    @IBInspectable public var roundedCorners: Bool {
+        get {
+            return _roundedCornders
+        }
+        set {
+            _roundedCornders = newValue
+            if _roundedCornders == false {
+                self.layer.masksToBounds = false
+                self.layer.cornerRadius = 0
+            } else {
+                self.layer.masksToBounds = true
+                self.layer.cornerRadius = 40.0
+            }
+        }
+    }
+    
+    public override var intrinsicContentSize: CGSize  {
+        get {
+            return CGSize(width: bounds.width, height: bounds.width)
+        }
+    }
+    
+
+    
+    private var _color: UIColor = .white
+    /*@IBInspectable*/ public var color: UIColor {
+        get {
+            guard let pixelBuffer = self.pixelBuffer else {
+                print("No pixelBuffer to look at")
+                return _color
+            }
+            
+            
+            let point = knobViewPointWithinImage()
+            
+            if let color = UIImage.getColorAt(point: point, in: pixelBuffer) {
+                return color
+            } else {
+                print("Failed to get color from pixel buffer")
+            }
+            
+            return _color
+        }
+    }
+    
+    
+    
+
 
     
     

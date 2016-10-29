@@ -14,48 +14,44 @@ private let invalidPositionValue = CGFloat(-1.0)
     
     // MARK: Variables
     
-    private var _roundedCornders: Bool = false
-    @IBInspectable public var roundedCorners: Bool {
+    
+    private var _position: CGPoint = CGPoint(x: invalidPositionValue, y: invalidPositionValue)
+    @IBInspectable public var position: CGPoint {
         get {
-            return _roundedCornders
+            return _position
         }
         set {
-            _roundedCornders = newValue
-            if _roundedCornders == false {
-                self.layer.masksToBounds = false
-                self.layer.cornerRadius = 0
-            } else {
-                self.layer.masksToBounds = true
-                self.layer.cornerRadius = 40.0
+            // We don't want to accept infinities or NaN
+            if fabs(newValue.x) == CGFloat.infinity ||
+                fabs(newValue.y) == CGFloat.infinity {
+                return
+            }
+            if newValue.x == CGFloat.nan || newValue.y == CGFloat.nan {
+                return
+            }
+            
+            if _position != newValue {
+                updatePositionFrom(point: newValue)
+                updateKnob()
             }
         }
     }
     
-    private var _borderColor: UIColor = .lightGray
-    @IBInspectable public var borderColor: UIColor{
+    private var _brightnessDate = Date(timeInterval: -1000, since: Date())
+    private var _brightness: CGFloat = 1.0
+    @IBInspectable public var brightness: CGFloat {
         get {
-            return _borderColor
+            return _brightness
         }
         set {
-            _borderColor = newValue
-            self.layer.borderColor = newValue.cgColor
-        }
-    }
-    
-    private var _borderWidth: CGFloat = 0.0
-    @IBInspectable public var borderWidth: CGFloat{
-        get {
-            return _borderWidth
-        }
-        set {
-            _borderWidth = newValue
-            self.layer.borderWidth = newValue
-        }
-    }
-    
-    public override var intrinsicContentSize: CGSize  {
-        get {
-            return CGSize(width: bounds.width, height: bounds.width)
+            // Throttle brightness changes as the cause the gradient to redraw
+            Throttle.limitTo(every: 0.1) {
+                if _brightness != newValue {
+                    _brightness = newValue
+                    wheelView.brightness = newValue
+                    updateKnob()
+                }
+            }
         }
     }
     
@@ -81,6 +77,55 @@ private let invalidPositionValue = CGFloat(-1.0)
         }
     }
     
+
+    
+    private var _borderColor: UIColor = .lightGray
+    @IBInspectable public var borderColor: UIColor{
+        get {
+            return _borderColor
+        }
+        set {
+            _borderColor = newValue
+            self.layer.borderColor = newValue.cgColor
+        }
+    }
+    
+    private var _borderWidth: CGFloat = 0.0
+    @IBInspectable public var borderWidth: CGFloat{
+        get {
+            return _borderWidth
+        }
+        set {
+            _borderWidth = newValue
+            self.layer.borderWidth = newValue
+        }
+    }
+    
+    private var _roundedCornders: Bool = false
+    @IBInspectable public var roundedCorners: Bool {
+        get {
+            return _roundedCornders
+        }
+        set {
+            _roundedCornders = newValue
+            if _roundedCornders == false {
+                self.layer.masksToBounds = false
+                self.layer.cornerRadius = 0
+            } else {
+                self.layer.masksToBounds = true
+                self.layer.cornerRadius = 40.0
+            }
+        }
+    }
+    
+    public override var intrinsicContentSize: CGSize  {
+        get {
+            return CGSize(width: bounds.width, height: bounds.width)
+        }
+    }
+    
+
+    
     private var _color: UIColor = .white
     /*@IBInspectable*/ public var color: UIColor {
         get {
@@ -96,48 +141,6 @@ private let invalidPositionValue = CGFloat(-1.0)
 
         }
     }
-    
-    private var _brightnessDate = Date(timeInterval: -1000, since: Date())
-    private var _brightness: CGFloat = 1.0
-    @IBInspectable public var brightness: CGFloat {
-        get {
-            return _brightness
-        }
-        set {
-            // Throttle brightness changes as the cause the gradient to redraw
-            Throttle.limitTo(every: 0.1) {
-                if _brightness != newValue {
-                    _brightness = newValue
-                    wheelView.brightness = newValue
-                    updateKnob()
-                }
-            }
-        }
-    }
-    
-    
-    private var _position: CGPoint = CGPoint(x: invalidPositionValue, y: invalidPositionValue)
-    @IBInspectable public var position: CGPoint {
-        get {
-            return _position
-        }
-        set {
-            // We don't want to accept infinities or NaN
-            if fabs(newValue.x) == CGFloat.infinity ||
-                fabs(newValue.y) == CGFloat.infinity {
-                return
-            }
-            if newValue.x == CGFloat.nan || newValue.y == CGFloat.nan {
-                return
-            }
-            
-            if _position != newValue {
-                updatePositionFrom(point: newValue)
-                updateKnob()
-            }
-        }
-    }
-    
     
     private var wheelView: HSBWheelView = HSBWheelView()
     

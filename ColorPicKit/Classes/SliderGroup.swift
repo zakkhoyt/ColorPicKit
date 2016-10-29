@@ -13,20 +13,61 @@ import UIKit
     
     // MARK: Variables
     
-    private var _roundedCornders: Bool = true
-    @IBInspectable public var roundedCorners: Bool {
+    fileprivate var _showAlphaSlider: Bool = true
+    @IBInspectable public var showAlphaSlider: Bool {
         get {
-            return _roundedCornders
+            return _showAlphaSlider
         }
         set {
-            if _roundedCornders != newValue {
-                _roundedCornders = newValue
-                
+            _showAlphaSlider = newValue
+            
+            for slider in sliders {
+                slider.removeFromSuperview()
+            }
+            sliders.removeAll()
+            
+            commonInit()
+        }
+    }
+    
+    @IBInspectable public var color: UIColor {
+        get {
+            return colorFromSliders()
+        }
+        set {
+            slidersFrom(color: newValue)
+        }
+    }
+    
+    
+    private var _barHeight: CGFloat = 10
+    @IBInspectable public var barHeight: CGFloat {
+        get {
+            return _barHeight
+        }
+        set {
+            if _barHeight != newValue {
+                _barHeight = newValue
                 for slider in sliders {
-                    slider.roundedCorners = newValue
+                    slider.barHeight = newValue
+                }
+                
+            }
+        }
+    }
+    
+    private var _knobSize: CGSize = CGSize(width: 30, height: 30)
+    @IBInspectable public var knobSize: CGSize {
+        get {
+            return _knobSize
+        }
+        set {
+            if _knobSize != newValue {
+                _knobSize = newValue
+                for slider in sliders {
+                    slider.knobSize = newValue
                 }
             }
-            
         }
     }
     
@@ -63,64 +104,23 @@ import UIKit
         }
     }
     
-    
-    private var _barHeight: CGFloat = 10
-    @IBInspectable public var barHeight: CGFloat {
+    private var _roundedCornders: Bool = true
+    @IBInspectable public var roundedCorners: Bool {
         get {
-            return _barHeight
+            return _roundedCornders
         }
         set {
-            if _barHeight != newValue {
-                _barHeight = newValue
+            if _roundedCornders != newValue {
+                _roundedCornders = newValue
+                
                 for slider in sliders {
-                    slider.barHeight = newValue
-                }
-
-            }
-        }
-    }
-    
-    private var _knobSize: CGSize = CGSize(width: 30, height: 30)
-    @IBInspectable public var knobSize: CGSize {
-        get {
-            return _knobSize
-        }
-        set {
-            if _knobSize != newValue {
-                _knobSize = newValue
-                for slider in sliders {
-                    slider.knobSize = newValue
+                    slider.roundedCorners = newValue
                 }
             }
-        }
-    }
-    
-    
-    @IBInspectable public var color: UIColor {
-        get {
-            return colorFromSliders()
-        }
-        set {
-            slidersFrom(color: newValue)
-        }
-    }
-    
-    fileprivate var _showAlphaSlider: Bool = true
-    @IBInspectable public var showAlphaSlider: Bool {
-        get {
-            return _showAlphaSlider
-        }
-        set {
-            _showAlphaSlider = newValue
             
-            for slider in sliders {
-                slider.removeFromSuperview()
-            }
-            sliders.removeAll()
-
-            commonInit()
         }
     }
+
     
     func colorFromSliders() -> UIColor {
         assert(false, "child must implement");
