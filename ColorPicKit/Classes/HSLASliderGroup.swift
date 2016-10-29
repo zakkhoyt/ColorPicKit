@@ -12,8 +12,13 @@ import UIKit
     
     public override var intrinsicContentSize: CGSize {
         get {
-            let height = 3 * spacing + 4.0 * sliderHeight
-            return CGSize(width: bounds.width, height: height)
+            if showAlphaSlider {
+                let height = 3 * spacing + 4.0 * sliderHeight
+                return CGSize(width: bounds.width, height: height)
+            } else {
+                let height = 2 * spacing + 3.0 * sliderHeight
+                return CGSize(width: bounds.width, height: height)
+            }
         }
     }
     
@@ -72,21 +77,22 @@ import UIKit
         addSubview(lightnessSlider)
         sliders.append(lightnessSlider)
         
-        
-        alphaSlider = GradientSlider()
-        alphaSlider.roundedCorners = roundedCorners
-        alphaSlider.borderColor = borderColor
-        alphaSlider.borderWidth = borderWidth
-        alphaSlider.barHeight = barHeight
-        alphaSlider.knobSize = knobSize
-        alphaSlider.color1 = UIColor.clear
-        alphaSlider.color2 = UIColor.white
-        alphaSlider.value = hsla.alpha
-        alphaSlider.addTarget(self, action: #selector(sliderValueChanged), for: .valueChanged)
-        alphaSlider.addTarget(self, action: #selector(sliderTouchDown), for: .touchDown)
-        alphaSlider.addTarget(self, action: #selector(sliderTouchUpInside), for: .touchUpInside)
-        addSubview(alphaSlider)
-        sliders.append(alphaSlider)
+        if showAlphaSlider {
+            alphaSlider = GradientSlider()
+            alphaSlider.roundedCorners = roundedCorners
+            alphaSlider.borderColor = borderColor
+            alphaSlider.borderWidth = borderWidth
+            alphaSlider.barHeight = barHeight
+            alphaSlider.knobSize = knobSize
+            alphaSlider.color1 = UIColor.clear
+            alphaSlider.color2 = UIColor.white
+            alphaSlider.value = hsla.alpha
+            alphaSlider.addTarget(self, action: #selector(sliderValueChanged), for: .valueChanged)
+            alphaSlider.addTarget(self, action: #selector(sliderTouchDown), for: .touchDown)
+            alphaSlider.addTarget(self, action: #selector(sliderTouchUpInside), for: .touchUpInside)
+            addSubview(alphaSlider)
+            sliders.append(alphaSlider)
+        }
         
     }
     

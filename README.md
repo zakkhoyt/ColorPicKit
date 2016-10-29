@@ -12,14 +12,23 @@
 
 ColorPicKit provides the following UIControls:
 * ImagePixelPicker - Obtain the color of any individual pixel.
-* HSBWheel - Hue vs saturation.
-* HSBSpectrum - Hue vs brightness & saturation where
+* HSBAWheel - Hue vs saturation.
+* HSBASpectrum - Hue vs brightness & saturation where
     * y = hue
     * x = saturation from 0.0 ..< 0.5
     * x = brightness from 0.5 >.. 1.0
-* RGBSliderGroup - 3 sliders to define red, green, and blue components.
-* HSBSliderGroup - 3 sliders to define hue, saturation, and brightness components.
-* CMYKSliderGroup - 4 sliders to define cyan, magenta, yellow, and black components.
+* HSLASpectrum - Hue vs brightness & saturation where
+    * y = hue
+    * x = saturation from 0.0 ..< 1.5
+    * where lightness = 0.5
+* YUVAASpectrum - Hue vs brightness & saturation where
+    * x = u component
+    * y = v component
+* RGBASliderGroup - 4 sliders to define red, green, blue, and alpha components.
+* HSBASliderGroup - 4 sliders to define hue, saturation, brightness, and alpha components.
+* HSLASliderGroup - 4 sliders to define hue, saturation, lightness, and alpha components.
+* CMYKASliderGroup - 5 sliders to define cyan, magenta, yellow, black, and alpha components.
+* YUVASliderGroup - 4 sliders to define y, u, v, and alpha components
 * GradientSlider - Interpolates a color between the two colors on the ends.
 * HueSlider - Select a hue value.
 * HexKeypad - Represents a color with a hex string where RRGGBB are chars from '0' ... 'F' 
@@ -29,7 +38,7 @@ ColorPicKit provides the following UIControls:
 ##### InterfaceBuilder
 ![](https://img.shields.io/badge/Supports-UIControl-green.svg)
 - Drag and drop a UIView onto your view controller
-- Using the Identity Inspector, set the view's class to GradientSlider, HueSlider, RGBSliderGroup, HSBSliderGroup, CMYKSliderGroup, HSBWheelPicker, HSBSpectrumPicker, ImagePixelPicker, or HexKeypad.
+- Using the Identity Inspector, set the view's class to GradientSlider, HueSlider, RGBASliderGroup, HSBASliderGroup, CMYKASliderGroup, HSBAWheelPicker, HSBASpectrumPicker, ImagePixelPicker, or HexKeypad.
 - Using the Attributes Inspector, configure IB properties (color, rounded corners, border color, knobSize, etc...)
 - Drag and drop your IBActions just like any other control. All controls support
   - ValueChanged
@@ -40,16 +49,16 @@ ColorPicKit provides the following UIControls:
 ![](https://img.shields.io/badge/Supports-init%28frame%29-green.svg)
 ![](https://img.shields.io/badge/Supports-init%28coder%29-green.svg)  
 
-- Create an instance of GradientSlider, HueSlider, RGBSliderGroup, HSBSliderGroup, CMYKSliderGroup, HSBWheelPicker, HSBSpectrumPicker, or ImagePixelPicker using init(frame) or init(coder).
+- Create an instance of GradientSlider, HueSlider, RGBASliderGroup, HSBASliderGroup, CMYKASliderGroup, HSBAWheelPicker, HSBASpectrumPicker, or ImagePixelPicker using init(frame) or init(coder).
 - Call addTarget() on the control to receive ValueChanged, TouchDown, or TouchUpInside events
 
 ````
 
 func setupWheel() {
-    self.hsbWheel = HSBWheel(frame: self.view.bounds)
+    self.hsbWheel = HSBAWheel(frame: self.view.bounds)
     hsbWheel.addTarget(self, action: #selector(hsbWheelValueChanged), for: .valueChanged)
 }
-func hsbWheelValueChanged(sender: HSBWheel) {
+func hsbWheelValueChanged(sender: HSBAWheel) {
     let color = sender.color
 }
 
@@ -66,7 +75,7 @@ This pod is not yet in the Cocoapods trunk, so you will need to install using a 
 
 ````
 
-pod 'ColorPicKit', :git => 'https://github.com/zakkhoyt/ColorPicKit', :branch => '1.2.2'
+pod 'ColorPicKit', :git => 'https://github.com/zakkhoyt/ColorPicKit', :branch => '1.2.3'
 
 ````
 
@@ -158,19 +167,19 @@ let color = image.pixelColorAt(point: center)
 #### ImagePixelPicker
 ![IB](http://i.imgur.com/Mf9Laoj.png)
 
-#### HSBWheel
+#### HSBAWheel
 ![IB](http://i.imgur.com/STCTD02.png)
 
-#### HSBSpectrum
+#### HSBASpectrum
 ![IB](http://i.imgur.com/AAL8lMB.png)
 
-#### RGBSliderGroup
+#### RGBASliderGroup
 ![IB](http://i.imgur.com/rCY68tR.png)
 
-#### HSBSliderGroup
+#### HSBASliderGroup
 ![IB](http://i.imgur.com/SL0F2DT.png)
 
-#### CMYKSliderGroup
+#### CMYKASliderGroup
 ![IB](http://i.imgur.com/t3vyZvY.png)
 
 #### GradientSlider
@@ -188,19 +197,19 @@ let color = image.pixelColorAt(point: center)
 #### ImagePixelPicker
 ![In use](http://i.imgur.com/8yaZiBF.png)
 
-#### HSBWheel
+#### HSBAWheel
 ![In use](http://i.imgur.com/AVtix56.png)
 
-#### HSBSpectrum
+#### HSBASpectrum
 ![In use](http://i.imgur.com/Rak6ukf.png)
 
-#### RGBSliderGroup
+#### RGBASliderGroup
 ![In use](http://i.imgur.com/jUmgXb0.png)
 
-#### HSBSliderGroup
+#### HSBASliderGroup
 ![In use](http://i.imgur.com/PFIWWLa.png)
 
-#### CMYKSliderGroup
+#### CMYKASliderGroup
 ![In use](http://i.imgur.com/jWvX44n.png)
 
 #### GradientSlider

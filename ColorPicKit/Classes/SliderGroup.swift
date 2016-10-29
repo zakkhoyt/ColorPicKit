@@ -105,15 +105,22 @@ import UIKit
         }
     }
     
-//    fileprivate var _showAlphaSlider: Bool = true
-//    @IBInspectable public var showAlphaSlider: Bool {
-//        get {
-//            return _showAlphaSlider
-//        }
-//        set {
-//            _showAlphaSlider = newValue
-//        }
-//    }
+    fileprivate var _showAlphaSlider: Bool = true
+    @IBInspectable public var showAlphaSlider: Bool {
+        get {
+            return _showAlphaSlider
+        }
+        set {
+            _showAlphaSlider = newValue
+            
+            for slider in sliders {
+                slider.removeFromSuperview()
+            }
+            sliders.removeAll()
+
+            commonInit()
+        }
+    }
     
     func colorFromSliders() -> UIColor {
         assert(false, "child must implement");
