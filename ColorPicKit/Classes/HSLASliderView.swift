@@ -25,7 +25,7 @@ public class HSLASliderView: HueSliderView {
     }
     
     
-    private var _lightness: CGFloat = 1.0
+    private var _lightness: CGFloat = 0.5
     public var lightness: CGFloat {
         get {
             return _lightness

@@ -34,7 +34,6 @@ import UIKit
     override func configureSliders() {
         
         
-        
         let rgba = color.rgba()
         
         redSlider = GradientSlider()
@@ -126,6 +125,48 @@ import UIKit
         greenSlider.value = rgba.green
         blueSlider.value = rgba.blue
         alphaSlider.value = rgba.alpha
+        
+        updateSliderColors()
+
+    }
+    
+    override func updateSliderColors() {
+        
+        if self.realtimeMix {
+            let rgba = self.color.rgba()
+            
+            redSlider.color1 = UIColor(red: 0, green: rgba.green, blue: rgba.blue, alpha: rgba.alpha)
+            redSlider.color2 = UIColor(red: 1.0, green: rgba.green, blue: rgba.blue, alpha: rgba.alpha)
+            
+            greenSlider.color1 = UIColor(red: rgba.red, green: 0, blue: rgba.blue, alpha: rgba.alpha)
+            greenSlider.color2 = UIColor(red: rgba.red, green: 1.0, blue: rgba.blue, alpha: rgba.alpha)
+            
+            blueSlider.color1 = UIColor(red: rgba.red, green: rgba.green, blue: 0.0, alpha: rgba.alpha)
+            blueSlider.color2 = UIColor(red: rgba.red, green: rgba.green, blue: 1.0, alpha: rgba.alpha)
+            
+//            alphaSlider.color1 = UIColor.clear
+//            alphaSlider.color2 = UIColor(red: rgba.red, green: rgba.green, blue: rgba.blue, alpha: 1.0)
+            
+        }
+        
     }
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

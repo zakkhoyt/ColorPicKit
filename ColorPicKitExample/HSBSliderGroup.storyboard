@@ -38,15 +38,32 @@
                                     <constraint firstAttribute="height" constant="64" id="ava-5A-rOC"/>
                                 </constraints>
                             </view>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="AcI-Ed-d91">
+                                <rect key="frame" x="310" y="427" width="51" height="31"/>
+                                <connections>
+                                    <action selector="realtimeMixerSwitchValueChanged:" destination="iDW-Re-Q2k" eventType="valueChanged" id="29y-cM-TIN"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Realtime Color Mixer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocP-Lj-gcp">
+                                <rect key="frame" x="16" y="432" width="286" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="AcI-Ed-d91" firstAttribute="top" secondItem="AJe-bn-UDM" secondAttribute="bottom" constant="8" id="3on-TA-FNO"/>
+                            <constraint firstItem="ocP-Lj-gcp" firstAttribute="centerY" secondItem="AcI-Ed-d91" secondAttribute="centerY" id="5do-AE-dG9"/>
                             <constraint firstItem="AJe-bn-UDM" firstAttribute="trailing" secondItem="sRS-dI-BXJ" secondAttribute="trailingMargin" id="E1K-h3-vdy"/>
+                            <constraint firstItem="AcI-Ed-d91" firstAttribute="leading" secondItem="ocP-Lj-gcp" secondAttribute="trailing" constant="8" id="I3d-dp-g5J"/>
                             <constraint firstItem="AJe-bn-UDM" firstAttribute="centerY" secondItem="sRS-dI-BXJ" secondAttribute="centerY" id="Ibp-7R-olu"/>
                             <constraint firstItem="PFM-sA-8Qc" firstAttribute="top" secondItem="3mC-FY-HiP" secondAttribute="bottom" constant="20" id="MIS-4M-bse"/>
                             <constraint firstItem="3mC-FY-HiP" firstAttribute="leading" secondItem="sRS-dI-BXJ" secondAttribute="leading" constant="20" id="P1k-ey-UVR"/>
+                            <constraint firstItem="AcI-Ed-d91" firstAttribute="trailing" secondItem="sRS-dI-BXJ" secondAttribute="trailingMargin" id="dd4-LM-bmA"/>
                             <constraint firstAttribute="trailing" secondItem="3mC-FY-HiP" secondAttribute="trailing" constant="20" id="rfg-2c-AeB"/>
                             <constraint firstItem="AJe-bn-UDM" firstAttribute="leading" secondItem="sRS-dI-BXJ" secondAttribute="leadingMargin" id="y3V-yQ-wgf"/>
+                            <constraint firstItem="ocP-Lj-gcp" firstAttribute="leading" secondItem="sRS-dI-BXJ" secondAttribute="leadingMargin" id="zti-N4-9Et"/>
                         </constraints>
                     </view>
                     <connections>

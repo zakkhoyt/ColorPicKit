@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A320" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="CzS-V3-j0Z">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="CzS-V3-j0Z">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,12 +23,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qFj-vH-AVj">
+                                <rect key="frame" x="20" y="583" width="335" height="64"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="Ll7-39-Ex4"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mnP-ON-6ma" customClass="YUVASliderGroup" customModule="ColorPicKitExample" customModuleProvider="target">
+                                <rect key="frame" x="20" y="247.5" width="335" height="172"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <action selector="yuvaSliderTouchDown:" destination="CzS-V3-j0Z" eventType="touchDown" id="LXm-oR-I84"/>
@@ -32,15 +38,32 @@
                                     <action selector="yuvaSliderValueChanged:" destination="CzS-V3-j0Z" eventType="valueChanged" id="ZOS-ro-zhf"/>
                                 </connections>
                             </view>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4gu-zm-Kw0">
+                                <rect key="frame" x="310" y="427" width="51" height="31"/>
+                                <connections>
+                                    <action selector="realtimeMixerSwitchValueChanged:" destination="CzS-V3-j0Z" eventType="valueChanged" id="auU-3x-8EF"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Realtime Color Mixer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5kX-WQ-Edm">
+                                <rect key="frame" x="16" y="432" width="286" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="mnP-ON-6ma" firstAttribute="centerY" secondItem="Ipx-Oi-BAs" secondAttribute="centerY" id="709-fq-IPu"/>
                             <constraint firstAttribute="trailing" secondItem="qFj-vH-AVj" secondAttribute="trailing" constant="20" id="DjQ-yO-whR"/>
+                            <constraint firstItem="4gu-zm-Kw0" firstAttribute="top" secondItem="mnP-ON-6ma" secondAttribute="bottom" constant="8" id="G25-e1-whs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4gu-zm-Kw0" secondAttribute="trailing" id="GDq-m7-JOt"/>
                             <constraint firstItem="bmF-t8-don" firstAttribute="top" secondItem="qFj-vH-AVj" secondAttribute="bottom" constant="20" id="PxO-Ts-RyL"/>
                             <constraint firstItem="mnP-ON-6ma" firstAttribute="leading" secondItem="Ipx-Oi-BAs" secondAttribute="leading" constant="20" id="Qev-7f-iqf"/>
                             <constraint firstItem="qFj-vH-AVj" firstAttribute="leading" secondItem="Ipx-Oi-BAs" secondAttribute="leading" constant="20" id="WQl-fc-xIe"/>
+                            <constraint firstItem="5kX-WQ-Edm" firstAttribute="centerY" secondItem="4gu-zm-Kw0" secondAttribute="centerY" id="XgL-SI-j9y"/>
                             <constraint firstAttribute="trailing" secondItem="mnP-ON-6ma" secondAttribute="trailing" constant="20" id="bvt-dj-YOa"/>
+                            <constraint firstItem="4gu-zm-Kw0" firstAttribute="leading" secondItem="5kX-WQ-Edm" secondAttribute="trailing" constant="8" id="ctu-rN-fb8"/>
+                            <constraint firstItem="5kX-WQ-Edm" firstAttribute="leading" secondItem="Ipx-Oi-BAs" secondAttribute="leadingMargin" id="dEB-Uk-oLq"/>
                         </constraints>
                     </view>
                     <connections>

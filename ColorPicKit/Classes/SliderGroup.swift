@@ -12,6 +12,19 @@ import UIKit
 @IBDesignable public class SliderGroup: UIControl, SliderControlGroup, Colorable {
     
     // MARK: Variables
+
+    fileprivate var _realtimeMix: Bool = false
+    @IBInspectable public var realtimeMix: Bool {
+        get {
+            return _realtimeMix
+        }
+        set {
+            _realtimeMix = newValue
+            commonInit()
+            updateSliderColors()
+            
+        }
+    }
     
     fileprivate var _showAlphaSlider: Bool = true
     @IBInspectable public var showAlphaSlider: Bool {
@@ -153,6 +166,11 @@ import UIKit
     private func commonInit() {
         backgroundColor = UIColor.clear
         
+        for slider in sliders {
+            slider.removeFromSuperview()
+        }
+        sliders.removeAll()
+
         configureSliders()
     }
     

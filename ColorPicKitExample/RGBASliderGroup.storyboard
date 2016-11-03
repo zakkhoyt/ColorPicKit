@@ -32,21 +32,41 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YS4-fi-tK1" customClass="RGBASliderGroup" customModule="ColorPicKitExample" customModuleProvider="target">
                                 <rect key="frame" x="16" y="247.5" width="343" height="172"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="realtimeMix" value="NO"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="grayscaleSliderTouchDown:" destination="mad-6D-HG4" eventType="touchDown" id="FGa-bm-Zlu"/>
                                     <action selector="grayscaleSliderTouchUpInside:" destination="mad-6D-HG4" eventType="touchUpInside" id="pT7-b1-v9f"/>
                                     <action selector="grayscaleSliderValueChanged:" destination="mad-6D-HG4" eventType="valueChanged" id="EzE-3y-634"/>
                                 </connections>
                             </view>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7UV-aE-PVF">
+                                <rect key="frame" x="310" y="427" width="51" height="31"/>
+                                <connections>
+                                    <action selector="realtimeMixerSwitchValueChanged:" destination="mad-6D-HG4" eventType="valueChanged" id="kTb-OW-Usa"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Realtime Color Mixer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nov-zv-3Sx">
+                                <rect key="frame" x="16" y="432" width="286" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="Nov-zv-3Sx" firstAttribute="centerY" secondItem="7UV-aE-PVF" secondAttribute="centerY" id="Cp7-j2-1N6"/>
+                            <constraint firstItem="Nov-zv-3Sx" firstAttribute="leading" secondItem="ZGi-Or-Gne" secondAttribute="leadingMargin" id="D2X-Qa-6JK"/>
+                            <constraint firstItem="7UV-aE-PVF" firstAttribute="leading" secondItem="Nov-zv-3Sx" secondAttribute="trailing" constant="8" id="J1T-wa-n0r"/>
                             <constraint firstItem="YS4-fi-tK1" firstAttribute="leading" secondItem="ZGi-Or-Gne" secondAttribute="leadingMargin" id="K4R-2N-b9b"/>
                             <constraint firstItem="wLZ-1V-8n9" firstAttribute="leading" secondItem="ZGi-Or-Gne" secondAttribute="leading" constant="20" id="KkB-lm-9fv"/>
                             <constraint firstItem="YS4-fi-tK1" firstAttribute="trailing" secondItem="ZGi-Or-Gne" secondAttribute="trailingMargin" id="MxK-JY-low"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7UV-aE-PVF" secondAttribute="trailing" id="OIb-Eg-9Hv"/>
                             <constraint firstAttribute="trailing" secondItem="wLZ-1V-8n9" secondAttribute="trailing" constant="20" id="Qdm-xe-aTy"/>
                             <constraint firstItem="YS4-fi-tK1" firstAttribute="centerY" secondItem="ZGi-Or-Gne" secondAttribute="centerY" id="Rk0-YO-9AY"/>
                             <constraint firstItem="KMp-uB-I6G" firstAttribute="top" secondItem="wLZ-1V-8n9" secondAttribute="bottom" constant="20" id="cTQ-kc-Ng2"/>
+                            <constraint firstItem="7UV-aE-PVF" firstAttribute="top" secondItem="YS4-fi-tK1" secondAttribute="bottom" constant="8" id="nmd-Ry-P6Y"/>
                         </constraints>
                     </view>
                     <connections>

@@ -24,6 +24,10 @@ class CMYKASliderGroupViewController: BaseViewController {
         updateBackgroundColor()
     }
     
+    @IBAction func realtimeMixerSwitchValueChanged(_ sender: UISwitch) {
+        cmykaSliderGroup.realtimeMix = sender.isOn
+    }
+    
     private func updateBackgroundColor() {
         colorView.backgroundColor = cmykaSliderGroup.color
     }

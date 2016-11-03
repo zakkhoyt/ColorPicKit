@@ -9,7 +9,7 @@
 import UIKit
 
 class HSLASlider: Slider {
-    private var _saturation: CGFloat = 1.0
+    private var _saturation: CGFloat = 0.5
     @IBInspectable public var saturation: CGFloat {
         get {
             return _saturation
@@ -17,12 +17,12 @@ class HSLASlider: Slider {
         set {
             if _saturation != newValue {
                 _saturation = newValue
-                hueView.saturation = newValue
+                hslaView.saturation = newValue
             }
         }
     }
     
-    private var _lightness: CGFloat = 1.0
+    private var _lightness: CGFloat = 0.5
     public var lightness: CGFloat {
         get {
             return _lightness
@@ -30,20 +30,20 @@ class HSLASlider: Slider {
         set {
             if _lightness != newValue {
                 _lightness = newValue
-                hueView.lightness = newValue
+                hslaView.lightness = newValue
             }
         }
     }
     
-    fileprivate var hueView = HSLASliderView()
+    fileprivate var hslaView = HSLASliderView()
     
     
     override func configureBackgroundView() {
-        hueView.borderColor = borderColor
-        hueView.borderWidth = borderWidth
-        hueView.roundedCorners = roundedCorners
-        addSubview(hueView)
-        self.sliderView = hueView
+        hslaView.borderColor = borderColor
+        hslaView.borderWidth = borderWidth
+        hslaView.roundedCorners = roundedCorners
+        addSubview(hslaView)
+        self.sliderView = hslaView
     }
     
     

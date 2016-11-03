@@ -75,6 +75,20 @@ public struct RGBA {
     
 }
 
+//extension RGBA: ColorString {
+//    func floatingPointString() -> String {
+//        
+//    }
+//    func eightBitString() -> String {
+//        
+//    }
+//    func hexString() -> String {
+//        return String(format: "%02X", red) + String(format: "%02X", green) + String(format: "%02X", blue)
+//    }
+//   
+//}
+
+
 extension UIColor {
     
     // MARK: UIColor to self

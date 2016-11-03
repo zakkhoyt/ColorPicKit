@@ -123,7 +123,45 @@ import UIKit
         vSlider.value = yuva.v
         alphaSlider.value = yuva.alpha
         
+        updateSliderColors()
     }
+    
+    
+    override func updateSliderColors() {
+        
+        if self.realtimeMix {
+            
+            var y1 = self.color.yuva()
+            y1.y = 0
+            ySlider.color1 = y1.color()
+            var y2 = self.color.yuva()
+            y2.y = 1.0
+            ySlider.color2 = y2.color()
+            
+            var u1 = self.color.yuva()
+            u1.u = 0
+            uSlider.color1 = u1.color()
+            var u2 = self.color.yuva()
+            u2.u = 1.0
+            uSlider.color2 = u2.color()
+            
+            var v1 = self.color.yuva()
+            v1.v = 0
+            vSlider.color1 = v1.color()
+            var v2 = self.color.yuva()
+            v2.v = 1.0
+            vSlider.color2 = v2.color()
+
+            
+//            alphaSlider.color1 = UIColor.clear
+//            var alpha2 = self.color.yuva()
+//            alpha2.alpha = 1.0
+//            alphaSlider.color2 = alpha2.color()
+   
+        }
+        
+    }
+
     
 }
 

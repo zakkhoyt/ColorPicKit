@@ -6,7 +6,7 @@
 //  Copyright © 2016 Zakk Hoyt. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class HSLSliderGroupViewController: BaseViewController {
     
@@ -26,9 +26,14 @@ class HSLSliderGroupViewController: BaseViewController {
         updateBackgroundColor()
     }
     
+    @IBAction func realtimeMixerSwitchValueChanged(_ sender: UISwitch) {
+        hslaSliderGroup.realtimeMix = sender.isOn
+    }
+    
     private func updateBackgroundColor() {
         colorView.backgroundColor = hslaSliderGroup.color
     }
+    
     
     override func reset() {
         hslaSliderGroup.color = resetColor

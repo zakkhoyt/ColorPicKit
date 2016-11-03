@@ -78,16 +78,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ColorPicKit/Classes/HueSliderView.swift"
-            timestampString = "499389671.426024"
+            filePath = "ColorPicKit/Classes/HSLASliderGroup.swift"
+            timestampString = "499888925.730867"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "drawBackground(context:)"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
+            landmarkName = "slidersFrom(color:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

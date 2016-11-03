@@ -18,7 +18,7 @@ public class HSBASlider: Slider {
         set {
             if _saturation != newValue {
                 _saturation = newValue
-                hueView.saturation = newValue
+                hsbaView.saturation = newValue
             }
         }
     }
@@ -31,20 +31,20 @@ public class HSBASlider: Slider {
         set {
             if _brightness != newValue {
                 _brightness = newValue
-                hueView.brightness = newValue
+                hsbaView.brightness = newValue
             }
         }
     }
     
-    fileprivate var hueView = HSBASliderView()
+    fileprivate var hsbaView = HSBASliderView()
     
     
     override func configureBackgroundView() {
-        hueView.borderColor = borderColor
-        hueView.borderWidth = borderWidth
-        hueView.roundedCorners = roundedCorners
-        addSubview(hueView)
-        self.sliderView = hueView
+        hsbaView.borderColor = borderColor
+        hsbaView.borderWidth = borderWidth
+        hsbaView.roundedCorners = roundedCorners
+        addSubview(hsbaView)
+        self.sliderView = hsbaView
     }
     
     

@@ -63,7 +63,6 @@ import UIKit
         sliders.append(saturationSlider)
         
         brightnessSlider = GradientSlider()
-        
         brightnessSlider.roundedCorners = roundedCorners
         brightnessSlider.borderColor = borderColor
         brightnessSlider.borderWidth = borderWidth
@@ -124,17 +123,25 @@ import UIKit
     }
     
     override func updateSliderColors() {
-        let hue = hsbaSlider.value
-        let color = UIColor(hue: hue, saturation: 1.0, brightness: 1.0, alpha: 1.0)
-        
-        saturationSlider.color2 = color
-        brightnessSlider.color2 = color
-        
-        let saturation = saturationSlider.value
-        hsbaSlider.saturation = saturation
-        
-        let brightness = brightnessSlider.value
-        hsbaSlider.brightness = brightness
+        if self.realtimeMix {
+            let hue = hsbaSlider.value
+            let saturation = saturationSlider.value
+            let brightness = brightnessSlider.value
+            
+            // Hue
+            hsbaSlider.brightness = brightness
+            hsbaSlider.saturation = saturation
+            
+            //let color = UIColor(hue: hue, saturation: 1.0, brightness: 1.0, alpha: 1.0)
+            // Saturation
+            saturationSlider.color1 = UIColor(hue: hue, saturation: 0.0, brightness: brightness, alpha: 1.0)
+            saturationSlider.color2 = UIColor(hue: hue, saturation: 1.0, brightness: brightness, alpha: 1.0)
+            
+            // Brightness
+            brightnessSlider.color1 = UIColor(hue: hue, saturation: saturation, brightness: 0.0, alpha: 1.0)
+            brightnessSlider.color2 = UIColor(hue: hue, saturation: saturation, brightness: 1.0, alpha: 1.0)
+            
+        }
     }
     
 }

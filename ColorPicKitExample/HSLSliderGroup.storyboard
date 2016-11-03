@@ -25,6 +25,12 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o4y-X3-cSW" customClass="HSLASliderGroup" customModule="ColorPicKitExample" customModuleProvider="target">
                                 <rect key="frame" x="16" y="247.5" width="343" height="172"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" red="0.74762294757746595" green="0.74743054467806036" blue="1" alpha="0.20751633986928106" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="showAlphaSlider" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="hslaSliderTouchDown:" destination="xdX-ST-IkN" eventType="touchDown" id="cdg-7H-qkE"/>
                                     <action selector="hslaSliderTouchUpInside:" destination="xdX-ST-IkN" eventType="touchUpInside" id="hI6-YE-ZYS"/>
@@ -38,14 +44,32 @@
                                     <constraint firstAttribute="height" constant="64" id="uV3-rE-W1j"/>
                                 </constraints>
                             </view>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KOA-2b-CfH">
+                                <rect key="frame" x="310" y="427" width="51" height="31"/>
+                                <connections>
+                                    <action selector="realtimeMixerSwitchValueChanged:" destination="xdX-ST-IkN" eventType="valueChanged" id="RQN-HZ-Qft"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Realtime Color Mixer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4x8-KY-UeJ">
+                                <rect key="frame" x="16" y="432" width="286" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="o4y-X3-cSW" firstAttribute="centerY" secondItem="zMq-NM-JV7" secondAttribute="centerY" id="2Nx-vx-QzD"/>
+                            <constraint firstItem="4x8-KY-UeJ" firstAttribute="leading" secondItem="zMq-NM-JV7" secondAttribute="leadingMargin" id="Auj-OC-Z0D"/>
                             <constraint firstAttribute="trailing" secondItem="o1K-4p-1Wv" secondAttribute="trailing" constant="20" id="Lyo-UX-UE4"/>
+                            <constraint firstItem="KOA-2b-CfH" firstAttribute="leading" secondItem="4x8-KY-UeJ" secondAttribute="trailing" constant="8" id="M9y-ml-lJ8"/>
                             <constraint firstItem="QSd-zw-Y6f" firstAttribute="top" secondItem="o1K-4p-1Wv" secondAttribute="bottom" constant="20" id="Qkf-Az-q8l"/>
                             <constraint firstItem="o1K-4p-1Wv" firstAttribute="leading" secondItem="zMq-NM-JV7" secondAttribute="leading" constant="20" id="Qqf-KQ-W1l"/>
+                            <constraint firstItem="KOA-2b-CfH" firstAttribute="top" secondItem="o4y-X3-cSW" secondAttribute="bottom" constant="8" id="hIs-QB-s99"/>
+                            <constraint firstItem="KOA-2b-CfH" firstAttribute="leading" secondItem="4x8-KY-UeJ" secondAttribute="trailing" constant="8" id="mTf-JB-fB5"/>
                             <constraint firstItem="o4y-X3-cSW" firstAttribute="trailing" secondItem="zMq-NM-JV7" secondAttribute="trailingMargin" id="uTv-dW-C7a"/>
+                            <constraint firstItem="KOA-2b-CfH" firstAttribute="trailing" secondItem="zMq-NM-JV7" secondAttribute="trailingMargin" id="uy6-Ih-TxB"/>
+                            <constraint firstItem="4x8-KY-UeJ" firstAttribute="centerY" secondItem="KOA-2b-CfH" secondAttribute="centerY" id="wKZ-TB-oIE"/>
                             <constraint firstItem="o4y-X3-cSW" firstAttribute="leading" secondItem="zMq-NM-JV7" secondAttribute="leadingMargin" id="zdC-sU-hgd"/>
                         </constraints>
                     </view>

@@ -41,14 +41,31 @@
                                     <constraint firstAttribute="height" constant="64" id="Nim-cQ-0er"/>
                                 </constraints>
                             </view>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nzZ-RX-jHT">
+                                <rect key="frame" x="310" y="449" width="51" height="31"/>
+                                <connections>
+                                    <action selector="realtimeMixerSwitchValueChanged:" destination="g06-aW-YqY" eventType="valueChanged" id="f3V-po-cZ8"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Realtime Color Mixer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8e-UA-GbB">
+                                <rect key="frame" x="16" y="454" width="286" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="nzZ-RX-jHT" firstAttribute="trailing" secondItem="paF-Ng-aHl" secondAttribute="trailingMargin" id="1MJ-BC-Ij7"/>
+                            <constraint firstItem="c8e-UA-GbB" firstAttribute="centerY" secondItem="nzZ-RX-jHT" secondAttribute="centerY" id="4ep-Ir-EW6"/>
                             <constraint firstItem="GhC-lv-1Oj" firstAttribute="centerY" secondItem="paF-Ng-aHl" secondAttribute="centerY" id="JAM-Uj-qgt"/>
                             <constraint firstItem="6Rj-Ir-GEI" firstAttribute="leading" secondItem="paF-Ng-aHl" secondAttribute="leading" constant="20" id="T6I-wB-flA"/>
+                            <constraint firstItem="c8e-UA-GbB" firstAttribute="leading" secondItem="paF-Ng-aHl" secondAttribute="leadingMargin" id="Umu-T0-r8A"/>
+                            <constraint firstItem="nzZ-RX-jHT" firstAttribute="leading" secondItem="c8e-UA-GbB" secondAttribute="trailing" constant="8" id="Vb2-8n-g2B"/>
                             <constraint firstItem="GhC-lv-1Oj" firstAttribute="leading" secondItem="paF-Ng-aHl" secondAttribute="leadingMargin" id="ZWi-DZ-hFV"/>
                             <constraint firstItem="pyL-OS-NtQ" firstAttribute="top" secondItem="6Rj-Ir-GEI" secondAttribute="bottom" constant="20" id="mQ8-iV-Kdu"/>
                             <constraint firstItem="GhC-lv-1Oj" firstAttribute="trailing" secondItem="paF-Ng-aHl" secondAttribute="trailingMargin" id="rFD-gA-iX1"/>
+                            <constraint firstItem="nzZ-RX-jHT" firstAttribute="top" secondItem="GhC-lv-1Oj" secondAttribute="bottom" constant="8" id="w7a-YX-4aA"/>
                             <constraint firstAttribute="trailing" secondItem="6Rj-Ir-GEI" secondAttribute="trailing" constant="20" id="y40-GE-uV9"/>
                         </constraints>
                     </view>

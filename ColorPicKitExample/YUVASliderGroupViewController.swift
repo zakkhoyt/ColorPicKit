@@ -6,7 +6,7 @@
 //  Copyright © 2016 Zakk Hoyt. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 
 class YUVASliderGroupViewController: BaseViewController {
@@ -24,6 +24,10 @@ class YUVASliderGroupViewController: BaseViewController {
     
     @IBAction func yuvaSliderTouchUpInside(_ sender: YUVASliderGroup) {
         updateBackgroundColor()
+    }
+    
+    @IBAction func realtimeMixerSwitchValueChanged(_ sender: UISwitch) {
+        yuvaSliderGroup.realtimeMix = sender.isOn
     }
     
     private func updateBackgroundColor() {

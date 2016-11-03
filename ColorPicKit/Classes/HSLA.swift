@@ -97,10 +97,10 @@ extension UIColor {
     }
     
     /* Name collision with UIColor */
-    //    public class func colorWith(hue: CGFloat, saturation: CGFloat, lightness: CGFloat, alpha: CGFloat) -> UIColor {
-    //        let hsla = HSLA(hue: hue, saturation: saturation, lightness: lightness, alpha: alpha)
-    //        return hsla.color()
-    //    }
+    public class func colorWith(hue: CGFloat, saturation: CGFloat, lightness: CGFloat, alpha: CGFloat) -> UIColor {
+        let hsla = HSLA(hue: hue, saturation: saturation, lightness: lightness, alpha: alpha)
+        return hsla.color()
+    }
     
     
     // MARK: conversions

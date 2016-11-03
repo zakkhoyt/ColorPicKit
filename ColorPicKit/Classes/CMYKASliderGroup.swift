@@ -140,7 +140,46 @@ import UIKit
         yellowSlider.value = cmyka.yellow
         blackSlider.value = cmyka.black
         alphaSlider.value = cmyka.alpha
-
+        updateSliderColors()
     }
+    
+    
+    override func updateSliderColors() {
+        
+        if self.realtimeMix {
+            
+            var cyan1 = self.color.cmyka()
+            cyan1.cyan = 0
+            cyanSlider.color1 = cyan1.color()
+            var cyan2 = self.color.cmyka()
+            cyan2.cyan = 1.0
+            cyanSlider.color2 = cyan2.color()
+            
+            var magenta1 = self.color.cmyka()
+            magenta1.magenta = 0
+            magentaSlider.color1 = magenta1.color()
+            var magenta2 = self.color.cmyka()
+            magenta2.magenta = 1.0
+            magentaSlider.color2 = magenta2.color()
+            
+            var yellow1 = self.color.cmyka()
+            yellow1.yellow = 0
+            yellowSlider.color1 = yellow1.color()
+            var yellow2 = self.color.cmyka()
+            yellow2.yellow = 1.0
+            yellowSlider.color2 = yellow2.color()
+
+            var black1 = self.color.cmyka()
+            black1.black = 0
+            blackSlider.color1 = black1.color()
+            var black2 = self.color.cmyka()
+            black2.black = 1.0
+            blackSlider.color2 = black2.color()
+
+
+        }
+        
+    }
+    
     
 }

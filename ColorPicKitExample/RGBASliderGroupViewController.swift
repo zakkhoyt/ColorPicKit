@@ -25,6 +25,11 @@ class RGBASliderGroupViewController: BaseViewController {
         updateBackgroundColor()
     }
     
+    @IBAction func realtimeMixerSwitchValueChanged(_ sender: UISwitch) {
+        rgbaSliderGroup.realtimeMix = sender.isOn
+    }
+
+    
     private func updateBackgroundColor() {
         colorView.backgroundColor = rgbaSliderGroup.color
     }

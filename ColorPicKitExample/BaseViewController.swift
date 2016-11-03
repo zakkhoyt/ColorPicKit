@@ -22,7 +22,7 @@ class BaseViewController: UIViewController {
         let resetBarb = UIBarButtonItem(title: "Reset", style: .plain, target: self, action: #selector(resetBarbAction))
         navigationItem.rightBarButtonItem = resetBarb
         
-
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         
         
     }
