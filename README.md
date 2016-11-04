@@ -1,4 +1,4 @@
-## ColorPicKit ![](https://img.shields.io/badge/Version-1.2.2-green.svg)
+## ColorPicKit ![](https://img.shields.io/badge/Version-1.2.3-green.svg)
 
 ##### A collection of UIControls and class extensions for selecting and defining colors
 
