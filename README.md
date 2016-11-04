@@ -42,7 +42,7 @@ ColorPicKit provides the following UIControls:
 - Drag and drop a UIView onto your view controller
 - Using the Identity Inspector, set the view's class to GradientSlider, HueSlider, RGBASliderGroup, HSBASliderGroup, CMYKASliderGroup, HSBAWheelPicker, HSBASpectrumPicker, ImagePixelPicker, or HexKeypad.
 - Using the Attributes Inspector, configure IB properties (color, rounded corners, border color, knobSize, etc...)
-- Drag and drop your IBActions just like any other control. All controls support
+- Drag and drop your IBActions just like any other control. All controls support.
   - ValueChanged
   - TouchDown
   - TouchUpInside
