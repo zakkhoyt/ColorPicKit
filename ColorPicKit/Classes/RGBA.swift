@@ -9,6 +9,7 @@
 import UIKit
 
 
+
 public struct RGBA {
     
 
@@ -65,7 +66,6 @@ public struct RGBA {
     public func yuva() -> YUVA {
         return UIColor.rgbaToYUVA(rgba: self)
     }
-    
     
     // MARK: Static functions
     

@@ -13,15 +13,15 @@ class RGBASliderGroupViewController: BaseViewController {
     
     @IBOutlet weak var rgbaSliderGroup: RGBASliderGroup!
     
-    @IBAction func grayscaleSliderValueChanged(_ sender: RGBASliderGroup) {
+    @IBAction func rgbaSliderGroupValueChanged(_ sender: RGBASliderGroup) {
         updateBackgroundColor()
     }
     
-    @IBAction func grayscaleSliderTouchDown(_ sender: RGBASliderGroup) {
+    @IBAction func rgbaSliderGroupTouchDown(_ sender: RGBASliderGroup) {
         updateBackgroundColor()
     }
     
-    @IBAction func grayscaleSliderTouchUpInside(_ sender: RGBASliderGroup) {
+    @IBAction func rgbaSliderGroupTouchUpInside(_ sender: RGBASliderGroup) {
         updateBackgroundColor()
     }
     

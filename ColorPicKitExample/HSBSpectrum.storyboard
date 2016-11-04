@@ -40,6 +40,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="jIh-3n-u9k" firstAttribute="top" secondItem="cX7-9V-JgS" secondAttribute="bottom" constant="20" id="IAQ-YA-ia6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="jIh-3n-u9k" secondAttribute="trailing" constant="20" id="Nk9-f7-kY5"/>

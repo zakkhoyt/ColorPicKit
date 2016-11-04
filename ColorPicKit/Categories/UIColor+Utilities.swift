@@ -35,48 +35,6 @@ public extension UIColor {
     }
     
     
-//    /// Create a wide UIColor
-//    ///
-//    /// - parameter rgbP3: An instance of RGBA tuple
-//    /// - parameter alpha: Alpha value from 0.0 to 1.0
-//    ///
-//    /// - returns: UIColor instance
-//    public class func colorWith(rgbP3: RGBA, alpha: CGFloat = 1.0) -> UIColor {
-//        //return UIColor(rgb: rgbP3, alpha: alpha)
-//        return UIColor(rgba: <#T##RGBA#>, alpha: <#T##CGFloat#>)
-//    }
-//    /// Create a UIColor
-//    ///
-//    /// - parameter rgb:   An instance of RGBA tuple
-//    /// - parameter alpha: An alpha value from 0.0 to 1.0
-//    ///
-//    /// - returns: UIColor instance
-//    public class func colorWith(rgba: RGBA, alpha: CGFloat = 1.0) -> UIColor {
-//        return UIColor(rgba: rgba, alpha: alpha)
-//    }
-//
-//    
-//    /// Create a UIColor from Hue, Saturation, and Brightness
-//    ///
-//    /// - parameter hsb:   An instance of HSBA tuple
-//    /// - parameter alpha: An alpha value from 0.0 to 1.0
-//    ///
-//    /// - returns: UIColor instance
-//    public class func colorWith(hsba: HSBA, alpha: CGFloat = 1.0) -> UIColor {
-//        return UIColor(hsba: hsba, alpha: alpha)
-//    }
-//
-//    
-//    /// Create a UIColor from Cyan, Magenta, Yellow, and Black
-//    ///
-//    /// - parameter cmyk:  An instance of CMYKA tuple
-//    /// - parameter alpha: An alpha value from 0.0 to 1.0
-//    ///
-//    /// - returns: UIColor instance
-//    public class func colorWith(cmyka: CMYKA, alpha: CGFloat = 1.0) -> UIColor {
-//        return UIColor(cmyka: cmyka, alpha: alpha)
-//    }
-    
     // MARK: Init methods
     
     
@@ -108,23 +66,7 @@ public extension UIColor {
         self.init(red:red, green:green, blue:blue, alpha:alpha)
     }
 
-//    public convenience init(rgbP3: RGBA, alpha: CGFloat = 1.0) {
-//        self.init(red:rgbP3.red, green:rgbP3.green, blue:rgbP3.blue, alpha:alpha)
-//    }
-//
-//    
-//    public convenience init(rgb: RGBA, alpha: CGFloat = 1.0) {
-//        self.init(red:rgb.red, green:rgb.green, blue:rgb.blue, alpha:alpha)
-//    }
-//
-//    public convenience init(hsb: HSBA, alpha: CGFloat = 1.0) {
-//        self.init(hue: hsb.hue, saturation: hsb.saturation, brightness: hsb.brightness, alpha: alpha)
-//    }
-//
-//    public convenience init(cmyk: CMYKA, alpha: CGFloat = 1.0) {
-//        let rgb = UIColor.cmykToRGBA(cmyk: cmyk)
-//        self.init(red:rgb.red, green:rgb.green, blue:rgb.blue, alpha:alpha)
-//    }
+
 
     // MARK: Helpers
     public func hexString() -> String {
@@ -140,78 +82,7 @@ public extension UIColor {
         return String(format:"%06x", rgb).uppercased()
     }
     
-    
-//    public func rgb() -> RGBA {
-//        var red: CGFloat = 0
-//        var green: CGFloat = 0
-//        var blue: CGFloat = 0
-//        var alpha: CGFloat = 0
-//        
-//        self.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
-//        return (red, green, blue)
-//    }
-//    public func hsb() -> HSBA {
-//        var hue: CGFloat = 0
-//        var saturation: CGFloat = 0
-//        var brightness: CGFloat = 0
-//        var alpha: CGFloat = 0
-//        
-//        self.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha)
-//        return (hue, saturation, brightness)
-//    }
-//    
-//    public func cmyk() -> CMYKA {
-//        let rgb = self.rgb()
-//        return UIColor.rgbToCMYKA(rgb: rgb)
-//    }
-//    
-//    // MARK: Class helpers
-//    
-//    // http://www.rapidtables.com/convert/color/rgb-to-cmyk.htm
-//    public class func rgbToCMYKA(rgb: RGBA) -> CMYKA {
-//        // Let's use almostOne so we don't end up with NaN
-//        let almostOne = CGFloat(1.00000000000001)
-//        let black = 1 - max(rgb.red, rgb.green, rgb.blue)
-//        let cyan =  (1.0 - rgb.red - black) / (almostOne - black)
-//        let magenta =  (1.0 - rgb.green - black) / (almostOne - black)
-//        let yellow =  (1.0 - rgb.blue - black) / (almostOne - black)
-//        return (cyan, magenta, yellow, black)
-//    }
-//    
-//    public class func rgbToHSBA(rgb: RGBA) -> HSBA {
-//        let color = UIColor(red: rgb.red, green: rgb.green, blue: rgb.blue, alpha: 1.0)
-//        let hsb = color.hsb()
-//        return hsb
-//    }
-//    
-//    
-//    public class func hsbToRGBA(hsb: HSBA) -> RGBA {
-//        let color = UIColor(hue: hsb.hue, saturation: hsb.saturation, brightness: hsb.brightness, alpha: 1.0)
-//        return color.rgb()
-//    }
-//    
-//    // http://www.rapidtables.com/convert/color/cmyk-to-rgb.htm
-//    public class func cmykToRGBA(cmyk: CMYKA) -> RGBA {
-//        let red = (1.0 - cmyk.cyan) * (1.0 - cmyk.black)
-//        let green = (1.0 - cmyk.magenta) * (1.0 - cmyk.black)
-//        let blue = (1.0 - cmyk.yellow) * (1.0 - cmyk.black)
-//        return (red, green, blue)
-//    }
-//    
-//    
-//    public class func hsbToCMYKA(hsb: HSBA) -> CMYKA {
-//        let color = UIColor(hue: hsb.hue, saturation: hsb.saturation, brightness: hsb.brightness, alpha: 1.0)
-//        let cmyk = color.cmyk()
-//        return cmyk
-//    }
-//    
-//    public class func cmykToHSBA(cmyk: CMYKA) -> HSBA {
-//        let rgb = UIColor.cmykToRGBA(cmyk: cmyk)
-//        let color = UIColor(red: rgb.red, green: rgb.green, blue: rgb.blue, alpha: 1.0)
-//        let hsb = color.hsb()
-//        return hsb
-//    }
-    
+ 
     
     public class func interpolateAt(value: CGFloat, betweenColor1 color1: UIColor, andColor2 color2: UIColor) -> UIColor {
         
