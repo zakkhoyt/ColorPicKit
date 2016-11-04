@@ -9,6 +9,8 @@
 [![ColorPicKit Video](http://i.imgur.com/Mxuv4EO.png)](https://www.youtube.com/watch?v=7y1uZWaqHRM)
 
 
+![](https://zippy.gfycat.com/BlandSpeedyCoyote.webm)  
+
 ##### UIControls
 
 ColorPicKit provides the following UIControls:
