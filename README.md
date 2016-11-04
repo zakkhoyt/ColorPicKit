@@ -6,7 +6,9 @@
 ![](https://img.shields.io/badge/Supports-Xcode 8-green.svg)
 ![](https://img.shields.io/badge/Supports-Cocoapods-green.svg)  
 
-![](http://i.imgur.com/GHkQixd.png)
+
+![](https://www.youtube.com/watch?v=7y1uZWaqHRM)  
+
 
 ##### UIControls
 
@@ -31,7 +33,7 @@ ColorPicKit provides the following UIControls:
 * YUVASliderGroup - 4 sliders to define y, u, v, and alpha components
 * GradientSlider - Interpolates a color between the two colors on the ends.
 * HueSlider - Select a hue value.
-* HexKeypad - Represents a color with a hex string where RRGGBB are chars from '0' ... 'F' 
+* HexKeypad - Represents a color with a hex string where RRGGBB are chars from '0' ... 'F'
 
 ## Usage
 
@@ -81,47 +83,51 @@ pod 'ColorPicKit', :git => 'https://github.com/zakkhoyt/ColorPicKit', :branch =>
 
 ## UIColor utilities
 
-ColorPicKit also exposes several functions and data structures for working with hex strings, RGBA, HSBA, and CMYKA, and interpolating a color between two known colors.
+ColorPicKit also exposes several functions and data structures for working with hex strings, RGBA, HSBA, HSLA, CMYKA, YUVA, and interpolating a color between two known colors.
 
 ````
 
 extension UIColor {
 
     public convenience init(hexString:String)
-    public convenience init(rgb: RGBA, alpha: CGFloat = 1.0)
-    public convenience init(hsb: HSBA, alpha: CGFloat = 1.0)
-    public convenience init(cmyk: CMYKA, alpha: CGFloat = 1.0)
-
     public func hexString() -> String
-    public func rgb() -> RGBA
-    public func hsb() -> HSBA
-    public func cmyk() -> CMYKA
-
     public class func colorWith(hexString: String, alpha: CGFloat = 1.0) -> UIColor
-    public class func colorWith(rgb: RGBA, alpha: CGFloat = 1.0) -> UIColor
-    public class func colorWith(hsb: HSBA, alpha: CGFloat = 1.0) -> UIColor
-    public class func colorWith(cmyk: CMYKA, alpha: CGFloat = 1.0) -> UIColor
-
     public class func interpolateAt(value: CGFloat, betweenColor1 color1: UIColor, andColor2 color2: UIColor) -> UIColor
-    public class func rgbToCMYKA(rgb: RGBA) -> CMYKA
-    public class func rgbToHSBA(rgb: RGBA) -> HSBA
-    public class func hsbToRGBA(hsb: HSBA) -> RGBA
-    public class func hsbToCMYKA(hsb: HSBA) -> CMYKA
-    public class func cmykToRGBA(cmyk: CMYKA) -> RGBA
-    public class func cmykToHSBA(cmyk: CMYKA) -> HSBA
 
+    // Create a color with any color type struct
+    init(rgba: RGBA)
+    init(hsba: HSBA)
+    init(hsla: HSLA)
+    init(cmyka: CMYKA)
+    init(yuva: YUVA)
+
+    // Easily convert to a different color format
+    func rgba() -> RGBA
+    func hsba() -> HSBA
+    func hsla() -> HSLA
+    func cmyka() -> CMYKA
+    func yuva() -> YUVA
 }
 
 ````
 
-RGBA, HSBA, and CMYKA are defined as tuples
+Where RGBA, HSBA, HSLA, CMYKA, and YUVA are defined as structs
 
 ````
-{
-public typealias RGBA = (red: CGFloat, green: CGFloat, blue: CGFloat)
-public typealias CMYKA = (cyan: CGFloat, magenta: CGFloat, yellow: CGFloat, black: CGFloat)
-public typealias HSBA = (hue: CGFloat, saturation: CGFloat, brightness: CGFloat)
-}
+// RGBA
+init(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat)
+
+// HSBA
+init(hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat)
+
+// HSLA
+init(hue: CGFloat, saturation: CGFloat, lightness: CGFloat, alpha: CGFloat)
+
+// CMYKA
+init(cyan: CGFloat, magenta: CGFloat, yellow: CGFloat, black: CGFloat, alpha: CGFloat)
+
+// YUVA
+init(y: CGFloat, u: CGFloat, v: CGFloat, alpha: CGFloat)
 
 ````
 
@@ -134,17 +140,16 @@ Additionally, ColorPicKit exposes instance methods and class functions which all
 extension UIImage {
 
     // Class functions
-    public class func pixelBufferOf(image: UIImage) -> CVPixelBuffer?
+    public class func pixelColorOf(image: UIImage, at point: CGPoint) -> UIColor?
     public class func pixelBufferPropertiesOf(image: UIImage) -> (pixelBuffer: CVPixelBuffer?, size:CGSize, bytesPerRow: Int)
+    public class func pixelBufferOf(image: UIImage) -> CVPixelBuffer?
     public class func getSizeOf(pixelBuffer: CVPixelBuffer) -> CGSize
     public class func getBytesPerRowOf(pixelBuffer: CVPixelBuffer) -> Int
-    public class func pixelColorOf(image: UIImage, at point: CGPoint) -> UIColor?
 
     // Instance methods
-    public func pixelBuffer() -> CVPixelBuffer? {
-    public func pixelColorAt(point: CGPoint) -> UIColor? {
+    public func pixelColorAt(point: CGPoint) -> UIColor?
+    public func pixelBuffer() -> CVPixelBuffer?
     public func pixelBufferProperties() -> (pixelBuffer: CVPixelBuffer?, size:CGSize, bytesPerRow: Int)
-
 }
 
 ````
@@ -157,67 +162,7 @@ guard let image = UIImage(named: "mars_earth") else {
     return
 }
 let center = CGPoint(x: image.size.width / 2.0, y: image.size.height / 2.0)
-let color = image.pixelColorAt(point: center)
+let color = image.pixelColorOf(point: center)
 
 
 ````
-
-
-## Interface Builder Images
-#### ImagePixelPicker
-![IB](http://i.imgur.com/Mf9Laoj.png)
-
-#### HSBAWheel
-![IB](http://i.imgur.com/STCTD02.png)
-
-#### HSBASpectrum
-![IB](http://i.imgur.com/AAL8lMB.png)
-
-#### RGBASliderGroup
-![IB](http://i.imgur.com/rCY68tR.png)
-
-#### HSBASliderGroup
-![IB](http://i.imgur.com/SL0F2DT.png)
-
-#### CMYKASliderGroup
-![IB](http://i.imgur.com/t3vyZvY.png)
-
-#### GradientSlider
-![IB](http://i.imgur.com/BJjK7Me.png)
-
-#### HueSlider
-![IB](http://i.imgur.com/YJuVTFX.png)
-
-#### HexKeypad
-![IB]()
-
-
-
-## Images in use
-#### ImagePixelPicker
-![In use](http://i.imgur.com/8yaZiBF.png)
-
-#### HSBAWheel
-![In use](http://i.imgur.com/AVtix56.png)
-
-#### HSBASpectrum
-![In use](http://i.imgur.com/Rak6ukf.png)
-
-#### RGBASliderGroup
-![In use](http://i.imgur.com/jUmgXb0.png)
-
-#### HSBASliderGroup
-![In use](http://i.imgur.com/PFIWWLa.png)
-
-#### CMYKASliderGroup
-![In use](http://i.imgur.com/jWvX44n.png)
-
-#### GradientSlider
-![In use](http://i.imgur.com/hX2MQ9q.png)
-
-#### HueSlider
-![In use](http://i.imgur.com/7IUiq1b.png)
-
-#### HexKeypad
-![IB]()
-
