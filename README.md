@@ -6,9 +6,6 @@
 ![](https://img.shields.io/badge/Supports-Xcode 8-green.svg)
 ![](https://img.shields.io/badge/Supports-Cocoapods-green.svg)  
 
-
-![ColorPicKit Video](https://www.youtube.com/watch?v=7y1uZWaqHRM)  
-
 [![ColorPicKit Video](http://i.imgur.com/Mxuv4EO.png)](https://www.youtube.com/watch?v=7y1uZWaqHRM)
 
 
