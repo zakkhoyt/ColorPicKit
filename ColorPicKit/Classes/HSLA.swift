@@ -73,6 +73,33 @@ public struct HSLA {
     
 }
 
+extension HSLA: ColorString {
+    
+    func stringFor(type: ColorStringType) -> String {
+        
+        let format = type.format()
+        let factor = type.factor()
+        
+        if type == .baseOne {
+            let hue360 = String(format: "%.1f°", hue * 360.0)
+            let hueString = String(format: format, (hue * factor))
+            let saturationString = String(format: format, (saturation * factor))
+            let lightnessString = String(format: format, (lightness * factor))
+            let alphaString = String(format: format, (alpha * factor))
+            let hsbaString = "HSLA: (\(hue360)) (\(hueString), \(saturationString), \(lightnessString), \(alphaString))"
+            return hsbaString
+        } else {
+            let hue360 = String(format: "%.1f°", hue * 360.0)
+            let hueString = String(format: format, Int(hue * factor))
+            let saturationString = String(format: format, Int(saturation * factor))
+            let lightnessString = String(format: format, Int(lightness * factor))
+            let alphaString = String(format: format, Int(alpha * factor))
+            let hsbaString = "HSLA: (\(hue360)) (\(hueString), \(saturationString), \(lightnessString), \(alphaString))"
+            return hsbaString
+        }
+    }
+}
+
 extension UIColor {
     
     // MARK: self to struct

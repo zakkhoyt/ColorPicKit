@@ -70,6 +70,32 @@ public struct CMYKA {
 }
 
 
+extension CMYKA: ColorString {
+    
+    func stringFor(type: ColorStringType) -> String {
+        
+        let format = type.format()
+        let factor = type.factor()
+        
+        if type == .baseOne {
+            let cyanString = String(format: format, (cyan * factor))
+            let magentaString = String(format: format, (magenta * factor))
+            let yellowString = String(format: format, (yellow * factor))
+            let blackString = String(format: format, (black * factor))
+            let alphaString = String(format: format, (alpha * factor))
+            let cmykaString = "CMYKA: (\(cyanString), \(magentaString), \(yellowString), \(blackString), \(alphaString))"
+            return cmykaString
+        } else {
+            let cyanString = String(format: format, Int(cyan * factor))
+            let magentaString = String(format: format, Int(magenta * factor))
+            let yellowString = String(format: format, Int(yellow * factor))
+            let blackString = String(format: format, Int(black * factor))
+            let alphaString = String(format: format, Int(alpha * factor))
+            let cmykaString = "CMYKA: (\(cyanString), \(magentaString), \(yellowString), \(blackString), \(alphaString))"
+            return cmykaString
+        }
+    }
+}
 
 extension UIColor {
     

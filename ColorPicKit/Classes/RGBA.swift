@@ -75,18 +75,30 @@ public struct RGBA {
     
 }
 
-//extension RGBA: ColorString {
-//    func floatingPointString() -> String {
-//        
-//    }
-//    func eightBitString() -> String {
-//        
-//    }
-//    func hexString() -> String {
-//        return String(format: "%02X", red) + String(format: "%02X", green) + String(format: "%02X", blue)
-//    }
-//   
-//}
+extension RGBA: ColorString {
+    
+    func stringFor(type: ColorStringType) -> String {
+        
+        let format = type.format()
+        let factor = type.factor()
+        
+        if type == .baseOne {
+            let redString = String(format: format, (red * factor))
+            let greenString = String(format: format, (green * factor))
+            let blueString = String(format: format, (blue * factor))
+            let alphaString = String(format: format, (alpha * factor))
+            let rgbString = "RGBA: (\(redString), \(greenString), \(blueString), \(alphaString))"
+            return rgbString
+        } else {
+            let redString = String(format: format, Int(red * factor))
+            let greenString = String(format: format, Int(green * factor))
+            let blueString = String(format: format, Int(blue * factor))
+            let alphaString = String(format: format, Int(alpha * factor))
+            let rgbString = "RGBA: (\(redString), \(greenString), \(blueString), \(alphaString))"
+            return rgbString
+        }
+    }
+}
 
 
 extension UIColor {

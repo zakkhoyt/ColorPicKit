@@ -31,12 +31,12 @@ class YUVASliderGroupViewController: BaseViewController {
     }
     
     private func updateBackgroundColor() {
-        colorView.backgroundColor = yuvaSliderGroup.color
+        colorView.color = yuvaSliderGroup.color
+        colorView.hexLabel.text = yuvaSliderGroup.color.yuva().stringFor(type: .baseOne)
     }
     
     override func reset() {
         yuvaSliderGroup.color = resetColor
         updateBackgroundColor()
     }
-    
 }

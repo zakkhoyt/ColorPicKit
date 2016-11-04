@@ -38,7 +38,7 @@
                                     <action selector="hslaSliderValueChanged:" destination="xdX-ST-IkN" eventType="valueChanged" id="WOr-1B-f4X"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o1K-4p-1Wv">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o1K-4p-1Wv" customClass="ColorView" customModule="ColorPicKitExample" customModuleProvider="target">
                                 <rect key="frame" x="20" y="583" width="335" height="64"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>

@@ -78,6 +78,32 @@ public struct YUVA {
 
 
 
+extension YUVA: ColorString {
+    
+    func stringFor(type: ColorStringType) -> String {
+        
+        let format = type.format()
+        let factor = type.factor()
+        
+        if type == .baseOne {
+            let yString = String(format: format, (y * factor))
+            let uString = String(format: format, (u * factor))
+            let vString = String(format: format, (v * factor))
+            let alphaString = String(format: format, (alpha * factor))
+            let yuva = "YUVA: (\(yString), \(uString), \(vString), \(alphaString))"
+            return yuva
+        } else {
+            let yString = String(format: format, Int(y * factor))
+            let uString = String(format: format, Int(u * factor))
+            let vString = String(format: format, Int(v * factor))
+            let alphaString = String(format: format, Int(alpha * factor))
+            let yuva = "YUVA: (\(yString), \(uString), \(vString), \(alphaString))"
+            return yuva
+        }
+    }
+}
+
+
 extension UIColor {
     
     // MARK: self to struct

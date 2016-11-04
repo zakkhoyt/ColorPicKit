@@ -31,9 +31,9 @@ class HSLSliderGroupViewController: BaseViewController {
     }
     
     private func updateBackgroundColor() {
-        colorView.backgroundColor = hslaSliderGroup.color
+        colorView.color = hslaSliderGroup.color
+        colorView.hexLabel.text = hslaSliderGroup.color.hsla().stringFor(type: .baseOne)
     }
-    
     
     override func reset() {
         hslaSliderGroup.color = resetColor

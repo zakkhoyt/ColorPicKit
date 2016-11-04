@@ -34,7 +34,7 @@
                                     <action selector="hsbaSliderGroupValueChanged:" destination="iDW-Re-Q2k" eventType="valueChanged" id="7NX-lD-sEV"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3mC-FY-HiP">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3mC-FY-HiP" customClass="ColorView" customModule="ColorPicKitExample" customModuleProvider="target">
                                 <rect key="frame" x="20" y="583" width="335" height="64"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -70,7 +70,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="colorView" destination="3mC-FY-HiP" id="MlG-Q2-UeO"/>
+                        <outlet property="colorView" destination="3mC-FY-HiP" id="ja4-F0-L0Z"/>
                         <outlet property="hsbaSliderGroup" destination="AJe-bn-UDM" id="zEw-8O-hnL"/>
                     </connections>
                 </viewController>

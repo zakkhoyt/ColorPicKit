@@ -13,7 +13,7 @@ class BaseViewController: UIViewController {
     let resetColor = UIColor.cyan
     let resetValue = CGFloat(0.5)
 
-    @IBOutlet weak var colorView: UIView!
+    @IBOutlet weak var colorView: ColorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,9 +36,11 @@ class BaseViewController: UIViewController {
         colorView.layer.masksToBounds = true
         colorView.layer.cornerRadius = 8.0
         
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.01) { 
-            self.reset()
+        // TODO: Can we get rid of the need for this?
+        DispatchQueue.once {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.01) {
+                self.reset()
+            }
         }
     }
     

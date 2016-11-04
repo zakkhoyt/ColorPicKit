@@ -10,7 +10,5 @@ import Foundation
 
 
 protocol ColorString {
-//    func floatingPointString() -> String
-//    func eightBitString() -> String
-//    func hexString() -> String
+    func stringFor(type: ColorStringType) -> String
 }

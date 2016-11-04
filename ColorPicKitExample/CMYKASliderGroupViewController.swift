@@ -29,7 +29,8 @@ class CMYKASliderGroupViewController: BaseViewController {
     }
     
     private func updateBackgroundColor() {
-        colorView.backgroundColor = cmykaSliderGroup.color
+        colorView.color = cmykaSliderGroup.color
+        colorView.hexLabel.text = cmykaSliderGroup.color.cmyka().stringFor(type: .baseOne)
     }
     
     override func reset() {
