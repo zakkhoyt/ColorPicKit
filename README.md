@@ -7,7 +7,9 @@
 ![](https://img.shields.io/badge/Supports-Cocoapods-green.svg)  
 
 
-![](https://www.youtube.com/watch?v=7y1uZWaqHRM)  
+![ColorPicKit Video](https://www.youtube.com/watch?v=7y1uZWaqHRM)  
+
+[![ColorPicKit Video](http://i.imgur.com/Mxuv4EO.png)](https://www.youtube.com/watch?v=7y1uZWaqHRM)
 
 
 ##### UIControls
