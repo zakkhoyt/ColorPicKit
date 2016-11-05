@@ -17,18 +17,15 @@ public struct HSBA {
     
 
     init(hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat) {
-        self.hue = hue
-        self.saturation = saturation
-        self.brightness = brightness
-        self.alpha = alpha
+        self.hue = clip(hue)
+        self.saturation = clip(saturation)
+        self.brightness = clip(brightness)
+        self.alpha = clip(alpha)
     }
 
     
     init(hue: CGFloat, saturation: CGFloat, brightness: CGFloat) {
-        self.hue = hue
-        self.saturation = saturation
-        self.brightness = brightness
-        self.alpha = 1.0
+        self.init(hue: hue, saturation: saturation, brightness: brightness, alpha: 1.0)
     }
     
     public func description() -> String {
@@ -102,7 +99,6 @@ extension HSBA: ColorString {
 }
 
 
-
 extension UIColor {
     
     // MARK: self to struct
@@ -154,3 +150,15 @@ extension UIColor {
     }
 
 }
+
+extension UIImage {
+    public func hsbaPixels() -> [HSBA] {
+        var pixels = [HSBA]()
+        for rgba in self.rgbaPixels() {
+            let hsba = rgba.hsba()
+            pixels.append(hsba)
+        }
+        return pixels
+    }
+}
+

@@ -120,6 +120,9 @@ extension UIImage {
     }
     
     
+
+    
+    
     // MARK: Internal methods
     
     func getPixelColor(point: CGPoint) -> UIColor? {

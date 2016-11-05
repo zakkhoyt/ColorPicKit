@@ -18,17 +18,14 @@ public struct YUVA {
 
     
     init(y: CGFloat, u: CGFloat, v: CGFloat, alpha: CGFloat) {
-        self.y = y
-        self.u = u
-        self.v = v
-        self.alpha = alpha
+        self.y = clip(y)
+        self.u = clip(u)
+        self.v = clip(v)
+        self.alpha = clip(alpha)
     }
     
     init(y: CGFloat, u: CGFloat, v: CGFloat) {
-        self.y = y
-        self.u = u
-        self.v = v
-        self.alpha = 1.0
+        self.init(y: y, u: u, v: v, alpha: 1.0)
     }
     
     public func description() -> String {
@@ -152,10 +149,22 @@ extension UIColor {
         
         
         
+//        // http://www.equasys.de/colorconversion.html
+//        let red = yuva.y * 1.0 + (yuva.u - 0.5) * 0.0 + (yuva.v - 0.5) * 1.140
+//        let green = yuva.y * 1.0 + (yuva.u - 0.5) * -0.395 + (yuva.v - 0.5) * -0.581
+//        let blue = yuva.y * 1.0 + (yuva.u - 0.5) * 2.032 + (yuva.v - 0.5) * 0
+        
+        
+//        // http://www.equasys.de/colorconversion.html
+//        let red =   yuva.y * 1.0000 + yuva.u * 0.0000 +     yuva.v * 1.1402     // 0.0 ... 1.0
+//        let green = (yuva.y * 1.0000 + yuva.u * -0.3440 +    yuva.v * -0.7140) + 0.5    // -0.5 ... 0.5
+//        let blue =  yuva.y * 1.0000 + yuva.u * 1.7720 +     yuva.v * 0.0000     // 0.0 ... 1.0
+        
         // http://www.equasys.de/colorconversion.html
-        var red = yuva.y * 1.0 + (yuva.u - 0.5) * 0.0 + (yuva.v - 0.5) * 1.140
-        var green = yuva.y * 1.0 + (yuva.u - 0.5) * -0.395 + (yuva.v - 0.5) * -0.581
-        var blue = yuva.y * 1.0 + (yuva.u - 0.5) * 2.032 + (yuva.v - 0.5) * 0
+        let red =   yuva.y * 1.0000 + (yuva.u - 0.5) * 0.0000 +     (yuva.v - 0.5) * 1.1402     // 0.0 ... 1.0
+        let green = (yuva.y * 1.0000 + (yuva.u - 0.5) * -0.3440 +   (yuva.v - 0.5) * -0.7140)   // -0.5 ... 0.5
+        let blue =  yuva.y * 1.0000 + (yuva.u - 0.5) * 1.7720 +     (yuva.v - 0.5) * 0.0000     // 0.0 ... 1.0
+
         
         
         // Experimenting with normalizing since RGB values go will above and below 0...1
@@ -199,33 +208,30 @@ extension UIColor {
 //        let blueDiff = blueMax - blueMin
 //        blue = blue - blueMin / blueDiff
 
-        
-
-        
-        
-        if red > 1.0 {
-            red = 1.0
-            
-        }
-        if red < 0 {
-            red = 0
-        }
-        
-        if green > 1.0 {
-            green = 1.0
-
-        }
-        if green < 0 {
-            green = 0
-        }
-
-        if blue > 1.0 {
-            blue = 1.0
-            
-        }
-        if blue < 0 {
-            blue = 0
-        }
+    
+//        if red > 1.0 {
+//            red = 1.0
+//            
+//        }
+//        if red < 0 {
+//            red = 0
+//        }
+//        
+//        if green > 1.0 {
+//            green = 1.0
+//
+//        }
+//        if green < 0 {
+//            green = 0
+//        }
+//
+//        if blue > 1.0 {
+//            blue = 1.0
+//            
+//        }
+//        if blue < 0 {
+//            blue = 0
+//        }
         
         
         let rgba = RGBA(red: red, green: green, blue: blue, alpha: yuva.alpha)
@@ -253,3 +259,15 @@ extension UIColor {
 
     
 }
+
+extension UIImage {
+    public func yuvaPixels() -> [YUVA] {
+        var pixels = [YUVA]()
+        for rgba in self.rgbaPixels() {
+            let yuva = rgba.yuva()
+            pixels.append(yuva)
+        }
+        return pixels
+    }
+}
+

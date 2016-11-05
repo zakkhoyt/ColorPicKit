@@ -16,18 +16,15 @@ public struct HSLA {
     
     
     init(hue: CGFloat, saturation: CGFloat, lightness: CGFloat, alpha: CGFloat) {
-        self.hue = hue
-        self.saturation = saturation
-        self.lightness = lightness
-        self.alpha = alpha
+        self.hue = clip(hue)
+        self.saturation = clip(saturation)
+        self.lightness = clip(lightness)
+        self.alpha = clip(alpha)
     }
     
     
     init(hue: CGFloat, saturation: CGFloat, lightness: CGFloat) {
-        self.hue = hue
-        self.saturation = saturation
-        self.lightness = lightness
-        self.alpha = 1.0
+        self.init(hue: hue, saturation: saturation, lightness: lightness, alpha: 1.0)
     }
     
     public func color() -> UIColor {
@@ -195,3 +192,15 @@ extension UIColor {
     }
     
 }
+
+extension UIImage {
+    public func hslaPixels() -> [HSLA] {
+        var pixels = [HSLA]()
+        for rgba in self.rgbaPixels() {
+            let hsla = rgba.hsla()
+            pixels.append(hsla)
+        }
+        return pixels
+    }
+}
+

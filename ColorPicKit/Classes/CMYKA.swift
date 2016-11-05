@@ -17,19 +17,15 @@ public struct CMYKA {
     
 
     init(cyan: CGFloat, magenta: CGFloat, yellow: CGFloat, black: CGFloat, alpha: CGFloat) {
-        self.cyan = cyan
-        self.magenta = magenta
-        self.yellow = yellow
-        self.black = black
-        self.alpha = alpha
+        self.cyan = clip(cyan)
+        self.magenta = clip(magenta)
+        self.yellow = clip(yellow)
+        self.black = clip(black)
+        self.alpha = clip(alpha)
     }
     
     init(cyan: CGFloat, magenta: CGFloat, yellow: CGFloat, black: CGFloat) {
-        self.cyan = cyan
-        self.magenta = magenta
-        self.yellow = yellow
-        self.black = black
-        self.alpha = 1.0
+        self.init(cyan: cyan, magenta: magenta, yellow: yellow, black: black, alpha: 1.0)
     }
     
     public func description() -> String {
@@ -157,3 +153,15 @@ extension UIColor {
         return yuva
     }
 }
+
+extension UIImage {
+    public func cmykaPixels() -> [CMYKA] {
+        var pixels = [CMYKA]()
+        for rgba in self.rgbaPixels() {
+            let cmyka = rgba.cmyka()
+            pixels.append(cmyka)
+        }
+        return pixels
+    }
+}
+

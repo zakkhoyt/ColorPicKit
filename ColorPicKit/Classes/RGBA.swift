@@ -20,17 +20,14 @@ public struct RGBA {
     
     
     init(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) {
-        self.red = red
-        self.green = green
-        self.blue = blue
-        self.alpha = alpha
+        self.red = clip(red)
+        self.green = clip(green)
+        self.blue = clip(blue)
+        self.alpha = clip(alpha)
     }
     
     init(red: CGFloat, green: CGFloat, blue: CGFloat) {
-        self.red = red
-        self.green = green
-        self.blue = blue
-        self.alpha = 1.0
+        self.init(red: red, green: green, blue: blue, alpha: 1.0)
     }
     
     
@@ -99,6 +96,7 @@ extension RGBA: ColorString {
         }
     }
 }
+
 
 
 extension UIColor {
@@ -208,19 +206,65 @@ extension UIColor {
         // http://www.pcmag.com/encyclopedia/term/55166/yuv-rgb-conversion-formulas
         // http://www.equasys.de/colorconversion.html
         
+//        // Multiply matrices
+//        let y = rgba.red * 0.299 + rgba.green * 0.587 + rgba.blue * 0.114
+//        let u = rgba.red * -0.147 + rgba.green * -0.289 + rgba.blue * 0.436 + 0.5
+//        let v = rgba.red * 0.615 + rgba.green * -0.515 + rgba.blue * -0.100 + 0.5
+//        let yuva = YUVA(y: y, u: u, v: v, alpha: rgba.alpha)
+//        return yuva
+        
+
+        // https://en.wikipedia.org/wiki/YCbCr
+        // YPbPr
         // Multiply matrices
-        let y = rgba.red * 0.299 + rgba.green * 0.587 + rgba.blue * 0.114
-        let u = rgba.red * -0.147 + rgba.green * -0.289 + rgba.blue * 0.436 + 0.5
-        let v = rgba.red * 0.615 + rgba.green * -0.515 + rgba.blue * -0.100 + 0.5
+        let y = rgba.red * 0.299 +      rgba.green * 0.587 +        rgba.blue * 0.114       // 0.0 ... 1.0
+        let u = (rgba.red * -0.168736 +  rgba.green * -0.331264 +    rgba.blue * 0.5) + 0.5         // 0.0 ... 1.0
+        let v = (rgba.red * 0.5 +        rgba.green * -0.418688 +    rgba.blue * -0.081312) + 0.5   // -0.5 ... 0.5
         let yuva = YUVA(y: y, u: u, v: v, alpha: rgba.alpha)
         return yuva
+
 
         
     }
     
 }
 
-
+extension UIImage {
+    public func rgbaPixels() -> [RGBA] {
+        
+        let pixelData = self.cgImage!.dataProvider!.data
+        let data: UnsafePointer<UInt8> = CFDataGetBytePtr(pixelData)
+        let length = CFDataGetLength(pixelData)
+        let bytesPerRow = Int(length / Int(size.height))
+        
+        var pixels = [RGBA]()
+        for y in 0 ..< Int(size.width) {
+            for x in 0 ..< Int(size.height) {
+                let index = y * bytesPerRow + x * 4
+                
+                if index < 0 {
+                    print("Error: index out of bounds")
+                    break
+                } else if index > Int(Int(size.width) * Int(size.height) * 4) {
+                    print("Error: index out of bounds")
+                    break
+                }
+                
+                //        print("w:\(Int(size.width)) h:\(Int(size.height))")
+                //        print("x:\(Int(point.x)) y:\(Int(point.y)) index:\(index)")
+                let blue = CGFloat(data[index]) / CGFloat(255.0)
+                let green = CGFloat(data[index+1]) / CGFloat(255.0)
+                let red = CGFloat(data[index+2]) / CGFloat(255.0)
+                let alpha = CGFloat(data[index+3]) / CGFloat(255.0)
+                
+                let rgba = RGBA(red: red, green: green, blue: blue, alpha: alpha)
+                pixels.append(rgba)
+            }
+        }
+        
+        return pixels
+    }
+}
 
 
 
