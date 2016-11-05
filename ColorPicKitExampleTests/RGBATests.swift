@@ -266,40 +266,51 @@ class RGBATests: XCTestCase {
 
     }
     
-    func testRGBAToYUVA() {
-        
-        func rgbaToYUVA(rgba: RGBA, knownYUVA: YUVA) {
-            let yuva = rgba.yuva()
-            
-            print("yuva1: \(yuva.stringFor(type: .baseOne)), yuva1: \(knownYUVA.stringFor(type: .baseOne))")
-            XCTAssert(closeEnough(value: yuva.y, expected: knownYUVA.y), "\ny \(yuva.y) != \(knownYUVA.y)")
-            XCTAssert(closeEnough(value: yuva.u, expected: knownYUVA.u), "\nu \(yuva.u) != \(knownYUVA.u)")
-            XCTAssert(closeEnough(value: yuva.v, expected: knownYUVA.v), "\nv \(yuva.v) != \(knownYUVA.v)")
-        }
-        
-        // values taken from http://colorizer.org/
-        
-        
-//        do {
-//            let rgba = RGBA(red: by255(0), green: by255(134.93), blue: by255(0))
-//            let yuva = YUVA(y: 0.3, u: 0.5 + 0.5, v: -0.17 + 0.5)
-//            rgbaToYUVA(rgba: rgba, knownYUVA: yuva)
+//    func testRGBAToYUVA() {
+//        
+//        func rgbaToYUVA(rgba: RGBA, knownYUVA: YUVA) {
+//            let yuva = rgba.yuva()
+//            
+//            print("yuva1: \(yuva.stringFor(type: .baseOne)), yuva1: \(knownYUVA.stringFor(type: .baseOne))")
+//            XCTAssert(closeEnough(value: yuva.y, expected: knownYUVA.y), "\ny \(yuva.y) != \(knownYUVA.y)")
+//            XCTAssert(closeEnough(value: yuva.u, expected: knownYUVA.u), "\nu \(yuva.u) != \(knownYUVA.u)")
+//            XCTAssert(closeEnough(value: yuva.v, expected: knownYUVA.v), "\nv \(yuva.v) != \(knownYUVA.v)")
 //        }
-        
-
-        
+//        
+//        // values taken from http://colorizer.org/
+//        
+//        
+////        do {
+////            let rgba = RGBA(red: by255(0), green: by255(134.93), blue: by255(0))
+////            let yuva = YUVA(y: 0.3, u: 0.5 + 0.5, v: -0.17 + 0.5)
+////            rgbaToYUVA(rgba: rgba, knownYUVA: yuva)
+////        }
+//        
+//
+//        
+////        do {
+////            let rgba = RGBA(red: by255(255), green: by255(0), blue: by255(0))
+////            let yuva = YUVA(y: 0.3, u: 0.5, v: -0.17)
+////            rgbaToYUVA(rgba: rgba, knownYUVA: yuva)
+////        }
 //        do {
 //            let rgba = RGBA(red: by255(255), green: by255(0), blue: by255(0))
-//            let yuva = YUVA(y: 0.3, u: 0.5, v: -0.17)
+//            let yuva = YUVA(y: 0.3, u: -0.17, v: 0.5)
 //            rgbaToYUVA(rgba: rgba, knownYUVA: yuva)
 //        }
-        do {
-            let rgba = RGBA(red: by255(255), green: by255(0), blue: by255(0))
-            let yuva = YUVA(y: 0.3, u: -0.17, v: 0.5)
-            rgbaToYUVA(rgba: rgba, knownYUVA: yuva)
-        }
-
-
+//
+//
+//    }
+//    
+    func testYUVA() {
+        let yuva1 = YUVA(y: 0.3, u: 0.33, v: 1.0)
+        print("yuva1: " + yuva1.stringFor(type: .baseOne))
+        let rgba = yuva1.rgba()
+        print("rgba: " + rgba.stringFor(type: .baseOne))
+        let yuva2 = rgba.yuva()
+        print("yuva2: " + yuva2.stringFor(type: .baseOne))
+        
+        print("Done with YUVA")
     }
     
     // MARK: class functions
