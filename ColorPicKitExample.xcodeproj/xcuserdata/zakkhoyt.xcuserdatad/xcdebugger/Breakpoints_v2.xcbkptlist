@@ -103,8 +103,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "275"
             endingLineNumber = "275"
-            landmarkName = "rgbaToYUVA(rgba:knownYUVA:)"
-            landmarkType = "9">
+            landmarkName = "RGBATests"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

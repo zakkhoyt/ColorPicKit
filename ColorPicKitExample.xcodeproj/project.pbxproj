@@ -29,6 +29,8 @@
 		C616AD651DC6579B007B8EE5 /* ColorString.swift in Sources */ = {isa = PBXBuildFile; fileRef = C616AD641DC6579B007B8EE5 /* ColorString.swift */; };
 		C62EED5F1DCD840B00707DB3 /* RGBATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62EED5E1DCD840B00707DB3 /* RGBATests.swift */; };
 		C62EED621DCD86EE00707DB3 /* Clip.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62EED601DCD86A000707DB3 /* Clip.swift */; };
+		C632B5941DD2469A00C8727D /* SliderGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C632B5931DD2469A00C8727D /* SliderGroupsViewController.swift */; };
+		C632B5961DD246A500C8727D /* SliderGroups.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C632B5951DD246A500C8727D /* SliderGroups.storyboard */; };
 		C63DF2231DCD0179009D20B7 /* ColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63DF2221DCD0179009D20B7 /* ColorView.swift */; };
 		C63DF2261DCD01E0009D20B7 /* NibDefinable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63DF2251DCD01E0009D20B7 /* NibDefinable.swift */; };
 		C63DF2281DCD020E009D20B7 /* ColorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C63DF2271DCD020E009D20B7 /* ColorView.xib */; };
@@ -149,6 +151,8 @@
 		C616AD641DC6579B007B8EE5 /* ColorString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorString.swift; sourceTree = "<group>"; };
 		C62EED5E1DCD840B00707DB3 /* RGBATests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGBATests.swift; sourceTree = "<group>"; };
 		C62EED601DCD86A000707DB3 /* Clip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clip.swift; sourceTree = "<group>"; };
+		C632B5931DD2469A00C8727D /* SliderGroupsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderGroupsViewController.swift; sourceTree = "<group>"; };
+		C632B5951DD246A500C8727D /* SliderGroups.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SliderGroups.storyboard; sourceTree = "<group>"; };
 		C63DF2221DCD0179009D20B7 /* ColorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorView.swift; sourceTree = "<group>"; };
 		C63DF2251DCD01E0009D20B7 /* NibDefinable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibDefinable.swift; sourceTree = "<group>"; };
 		C63DF2271DCD020E009D20B7 /* ColorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorView.xib; sourceTree = "<group>"; };
@@ -379,6 +383,15 @@
 			name = "New Group";
 			sourceTree = "<group>";
 		};
+		C632B5971DD246AB00C8727D /* SliderGroups */ = {
+			isa = PBXGroup;
+			children = (
+				C632B5931DD2469A00C8727D /* SliderGroupsViewController.swift */,
+				C632B5951DD246A500C8727D /* SliderGroups.storyboard */,
+			);
+			name = SliderGroups;
+			sourceTree = "<group>";
+		};
 		C63DF2211DCD0167009D20B7 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -597,6 +610,7 @@
 			children = (
 				C607EEDD1DA96F1400A73F51 /* Main.storyboard */,
 				C607EEDB1DA96F1400A73F51 /* ViewController.swift */,
+				C632B5971DD246AB00C8727D /* SliderGroups */,
 				C6D87FC21DA9F3A0004CB7E3 /* Controls */,
 			);
 			name = ViewControllers;
@@ -828,6 +842,7 @@
 				C6125D7B1DBC28D7002B5971 /* HSLSliderGroup.storyboard in Resources */,
 				C67E67A51DC160A4004E6160 /* RGBASliderGroup.storyboard in Resources */,
 				C63DF2281DCD020E009D20B7 /* ColorView.xib in Resources */,
+				C632B5961DD246A500C8727D /* SliderGroups.storyboard in Resources */,
 				C6D87FD81DA9F428004CB7E3 /* GradientSlider.storyboard in Resources */,
 				C6D87FE81DA9F46C004CB7E3 /* ImagePixelPicker.storyboard in Resources */,
 				C6D87FDE1DA9F43F004CB7E3 /* HSBSliderGroup.storyboard in Resources */,
@@ -872,6 +887,7 @@
 				C6D87FC61DA9F3C2004CB7E3 /* GradientSliderViewController.swift in Sources */,
 				C6D87FB51DA9F2E3004CB7E3 /* HSBWheel.swift in Sources */,
 				C607EEDA1DA96F1400A73F51 /* AppDelegate.swift in Sources */,
+				C632B5941DD2469A00C8727D /* SliderGroupsViewController.swift in Sources */,
 				C63DF2261DCD01E0009D20B7 /* NibDefinable.swift in Sources */,
 				C6125D791DBC28C7002B5971 /* HSLSliderGroupViewController.swift in Sources */,
 				C6D87FAF1DA9F2E3004CB7E3 /* HueSlider.swift in Sources */,

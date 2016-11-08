@@ -160,17 +160,24 @@ extension UIColor {
 //        let green = (yuva.y * 1.0000 + yuva.u * -0.3440 +    yuva.v * -0.7140) + 0.5    // -0.5 ... 0.5
 //        let blue =  yuva.y * 1.0000 + yuva.u * 1.7720 +     yuva.v * 0.0000     // 0.0 ... 1.0
         
+        // http://www.equasys.de/colorconversion.html
+        let red =   yuva.y * 1.0000 + (yuva.u - 0.5) * 0.0000 +     (yuva.v - 0.5) * 1.1402     // 0.0 ... 1.0
+        let green = (yuva.y * 1.0000 + (yuva.u - 0.5) * -0.3440 +   (yuva.v - 0.5) * -0.7140)   // -0.5 ... 0.5
+        let blue =  yuva.y * 1.0000 + (yuva.u - 0.5) * 1.7720 +     (yuva.v - 0.5) * 0.0000     // 0.0 ... 1.0
+
+
 //        // http://www.equasys.de/colorconversion.html
-//        let red =   yuva.y * 1.0000 + (yuva.u - 0.5) * 0.0000 +     (yuva.v - 0.5) * 1.1402     // 0.0 ... 1.0
-//        let green = (yuva.y * 1.0000 + (yuva.u - 0.5) * -0.3440 +   (yuva.v - 0.5) * -0.7140)   // -0.5 ... 0.5
-//        let blue =  yuva.y * 1.0000 + (yuva.u - 0.5) * 1.7720 +     (yuva.v - 0.5) * 0.0000     // 0.0 ... 1.0
+//        let red =   yuva.y * 1.0000 + yuva.u * 0.0000 +     yuva.v - 0.5 * 1.1402     // 0.0 ... 1.0
+//        var green = yuva.y * 1.0000 + yuva.u * -0.3440 +   yuva.v - 0.5 * -0.7140     // -0.5 ... 0.5
+//        green += 0.5
+//        let blue =  yuva.y * 1.0000 + yuva.u * 1.7720 +     yuva.v - 0.5 * 0.0000     // 0.0 ... 1.0
 
         
-        // Took inverse matrix from RGBA to YUVA using this tool http://matrix.reshish.com/inverCalculation.php
-        let red     = yuva.y * 0.9998766121570952 + (yuva.v - 0.5) * 0.0000412426888942  + (yuva.u - 0.5) *  1.4020877012345512
-        let green   = yuva.y * 1.0000972642737906 + (yuva.v - 0.5) * -0.3441648864536546 + (yuva.u - 0.5) * -0.7141793967313819
-        let blue    = yuva.y * 0.9998227967982449 + (yuva.y - 0.5) * 1.7720390945080637  + (yuva.u - 0.5) * -0.0000080419983298
-
+//        // Took inverse matrix from RGBA to YUVA using this tool http://matrix.reshish.com/inverCalculation.php
+//        let red     = yuva.y * 0.9998766121570952 + (yuva.v - 0.5) * 0.0000412426888942  + (yuva.u - 0.5) *  1.4020877012345512
+//        let green   = yuva.y * 1.0000972642737906 + (yuva.v - 0.5) * -0.3441648864536546 + (yuva.u - 0.5) * -0.7141793967313819
+//        let blue    = yuva.y * 0.9998227967982449 + (yuva.y - 0.5) * 1.7720390945080637  + (yuva.u - 0.5) * -0.0000080419983298
+//
         
         // Experimenting with normalizing since RGB values go will above and below 0...1
 //        (lldb) po redMin

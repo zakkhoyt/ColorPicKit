@@ -213,11 +213,21 @@ extension UIColor {
 //        let yuva = YUVA(y: y, u: u, v: v, alpha: rgba.alpha)
 //        return yuva
         
+        //        // https://en.wikipedia.org/wiki/YCbCr
+        //        // YPbPr
+        //        // Multiply matrices
+        //        let y = rgba.red * 0.299 +      rgba.green * 0.587 +        rgba.blue * 0.114      // 0.0 ... 1.0
+        //        let u = rgba.red * -0.168736 +  rgba.green * -0.331264 +    rgba.blue * 0.5        // 0.0 ... 1.0
+        //        var v = rgba.red * 0.5 +        rgba.green * -0.418688 +    rgba.blue * -0.081312  // -0.5 ... 0.5
+        //        v = v + 0.5
+        //        let yuva = YUVA(y: y, u: u, v: v, alpha: rgba.alpha)
+        //        return yuva
 
+        
         // https://en.wikipedia.org/wiki/YCbCr
         // YPbPr
         // Multiply matrices
-        let y = rgba.red * 0.299 +      rgba.green * 0.587 +        rgba.blue * 0.114       // 0.0 ... 1.0
+        let y = rgba.red * 0.299 +      rgba.green * 0.587 +        rgba.blue * 0.114                 // 0.0 ... 1.0
         let u = (rgba.red * -0.168736 +  rgba.green * -0.331264 +    rgba.blue * 0.5) + 0.5         // 0.0 ... 1.0
         let v = (rgba.red * 0.5 +        rgba.green * -0.418688 +    rgba.blue * -0.081312) + 0.5   // -0.5 ... 0.5
         let yuva = YUVA(y: y, u: u, v: v, alpha: rgba.alpha)

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lAy-YN-SpT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Slider Groups View Controller-->
+        <scene sceneID="tt4-FM-hs4">
+            <objects>
+                <viewController id="lAy-YN-SpT" customClass="SliderGroupsViewController" customModule="ColorPicKitExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wjb-Ao-EMe"/>
+                        <viewControllerLayoutGuide type="bottom" id="xj9-Ef-arH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lqz-Ha-hPZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ou-1u-kx0">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gTo-j9-f54">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1089"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6KN-Yv-qbl" customClass="RGBASliderGroup" customModule="ColorPicKitExample" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="37" width="335" height="172"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <connections>
+                                                    <action selector="sliderGroupValueChanged:" destination="lAy-YN-SpT" eventType="valueChanged" id="KYT-Wd-qZb"/>
+                                                </connections>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RGBA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BKd-m0-lJg">
+                                                <rect key="frame" x="8" y="8" width="359" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HSBA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hee-dh-UJi">
+                                                <rect key="frame" x="8" y="217" width="359" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V1M-uB-XMl" customClass="HSBASliderGroup" customModule="ColorPicKitExample" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="246" width="335" height="172"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <connections>
+                                                    <action selector="sliderGroupValueChanged:" destination="lAy-YN-SpT" eventType="valueChanged" id="qQw-hr-KEN"/>
+                                                </connections>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HSLA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n5o-Qd-x7y">
+                                                <rect key="frame" x="8" y="426" width="359" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5e0-Zu-zFq" customClass="HSLASliderGroup" customModule="ColorPicKitExample" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="455" width="335" height="172"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <connections>
+                                                    <action selector="sliderGroupValueChanged:" destination="lAy-YN-SpT" eventType="valueChanged" id="y7v-NQ-Kft"/>
+                                                </connections>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CMYKA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FEn-r6-DUP">
+                                                <rect key="frame" x="8" y="635" width="359" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ULh-GC-wav" customClass="CMYKASliderGroup" customModule="ColorPicKitExample" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="664" width="335" height="216"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <connections>
+                                                    <action selector="sliderGroupValueChanged:" destination="lAy-YN-SpT" eventType="valueChanged" id="eEt-0m-d2G"/>
+                                                </connections>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YUV" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8YQ-Fp-C3s">
+                                                <rect key="frame" x="8" y="888" width="359" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DSa-W6-UOa" customClass="YUVASliderGroup" customModule="ColorPicKitExample" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="917" width="335" height="172"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <connections>
+                                                    <action selector="sliderGroupValueChanged:" destination="lAy-YN-SpT" eventType="valueChanged" id="gVk-f1-0E9"/>
+                                                </connections>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="FEn-r6-DUP" firstAttribute="top" secondItem="5e0-Zu-zFq" secondAttribute="bottom" constant="8" id="1tO-gW-yLC"/>
+                                            <constraint firstAttribute="trailing" secondItem="FEn-r6-DUP" secondAttribute="trailing" constant="8" id="2KU-Dh-LH5"/>
+                                            <constraint firstItem="V1M-uB-XMl" firstAttribute="top" secondItem="hee-dh-UJi" secondAttribute="bottom" constant="8" id="2w9-38-CzA"/>
+                                            <constraint firstAttribute="trailing" secondItem="ULh-GC-wav" secondAttribute="trailing" constant="20" id="9KB-RV-6vi"/>
+                                            <constraint firstItem="BKd-m0-lJg" firstAttribute="leading" secondItem="gTo-j9-f54" secondAttribute="leading" constant="8" id="9WS-3w-nTJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="n5o-Qd-x7y" secondAttribute="trailing" constant="8" id="AHP-oA-5S2"/>
+                                            <constraint firstItem="n5o-Qd-x7y" firstAttribute="leading" secondItem="gTo-j9-f54" secondAttribute="leading" constant="8" id="DXi-0M-KAj"/>
+                                            <constraint firstItem="FEn-r6-DUP" firstAttribute="leading" secondItem="gTo-j9-f54" secondAttribute="leading" constant="8" id="DrZ-EI-VU9"/>
+                                            <constraint firstItem="hee-dh-UJi" firstAttribute="leading" secondItem="gTo-j9-f54" secondAttribute="leading" constant="8" id="Euu-9h-cLh"/>
+                                            <constraint firstItem="5e0-Zu-zFq" firstAttribute="top" secondItem="n5o-Qd-x7y" secondAttribute="bottom" constant="8" id="H1Y-Pk-284"/>
+                                            <constraint firstItem="n5o-Qd-x7y" firstAttribute="top" secondItem="V1M-uB-XMl" secondAttribute="bottom" constant="8" id="HpY-ds-bhI"/>
+                                            <constraint firstAttribute="trailing" secondItem="BKd-m0-lJg" secondAttribute="trailing" constant="8" id="Kw0-zi-kVg"/>
+                                            <constraint firstAttribute="trailing" secondItem="V1M-uB-XMl" secondAttribute="trailing" constant="20" id="Kzx-sm-wxg"/>
+                                            <constraint firstItem="ULh-GC-wav" firstAttribute="leading" secondItem="gTo-j9-f54" secondAttribute="leading" constant="20" id="P2k-pF-cvQ"/>
+                                            <constraint firstItem="6KN-Yv-qbl" firstAttribute="top" secondItem="BKd-m0-lJg" secondAttribute="bottom" constant="8" id="S2j-Rx-aHu"/>
+                                            <constraint firstAttribute="trailing" secondItem="6KN-Yv-qbl" secondAttribute="trailing" constant="20" id="Sis-mo-5jO"/>
+                                            <constraint firstAttribute="bottom" secondItem="DSa-W6-UOa" secondAttribute="bottom" id="Uw4-gC-GX8"/>
+                                            <constraint firstItem="DSa-W6-UOa" firstAttribute="top" secondItem="8YQ-Fp-C3s" secondAttribute="bottom" constant="8" id="X8w-uR-UVQ"/>
+                                            <constraint firstItem="8YQ-Fp-C3s" firstAttribute="top" secondItem="ULh-GC-wav" secondAttribute="bottom" constant="8" id="XDB-pG-7Cb"/>
+                                            <constraint firstAttribute="trailing" secondItem="5e0-Zu-zFq" secondAttribute="trailing" constant="20" id="XUT-Sr-jcq"/>
+                                            <constraint firstAttribute="trailing" secondItem="DSa-W6-UOa" secondAttribute="trailing" constant="20" id="Y9Q-2V-SiQ"/>
+                                            <constraint firstItem="V1M-uB-XMl" firstAttribute="leading" secondItem="gTo-j9-f54" secondAttribute="leading" constant="20" id="bQk-Jr-mDu"/>
+                                            <constraint firstItem="hee-dh-UJi" firstAttribute="top" secondItem="6KN-Yv-qbl" secondAttribute="bottom" constant="8" id="bxy-gc-GUL"/>
+                                            <constraint firstItem="DSa-W6-UOa" firstAttribute="leading" secondItem="gTo-j9-f54" secondAttribute="leading" constant="20" id="dzl-Wj-O4L"/>
+                                            <constraint firstAttribute="trailing" secondItem="hee-dh-UJi" secondAttribute="trailing" constant="8" id="eeI-P4-KQF"/>
+                                            <constraint firstItem="ULh-GC-wav" firstAttribute="top" secondItem="FEn-r6-DUP" secondAttribute="bottom" constant="8" id="jfn-wN-Sgw"/>
+                                            <constraint firstAttribute="trailing" secondItem="8YQ-Fp-C3s" secondAttribute="trailing" constant="8" id="kqn-fl-Hp0"/>
+                                            <constraint firstItem="5e0-Zu-zFq" firstAttribute="leading" secondItem="gTo-j9-f54" secondAttribute="leading" constant="20" id="mJr-rx-y0C"/>
+                                            <constraint firstItem="6KN-Yv-qbl" firstAttribute="leading" secondItem="gTo-j9-f54" secondAttribute="leading" constant="20" id="nIX-DJ-TH7"/>
+                                            <constraint firstItem="8YQ-Fp-C3s" firstAttribute="leading" secondItem="gTo-j9-f54" secondAttribute="leading" constant="8" id="uAe-Cv-kV9"/>
+                                            <constraint firstItem="BKd-m0-lJg" firstAttribute="top" secondItem="gTo-j9-f54" secondAttribute="top" constant="8" id="xUR-bJ-ZyB"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="gTo-j9-f54" secondAttribute="bottom" id="9vq-UB-fJx"/>
+                                    <constraint firstItem="gTo-j9-f54" firstAttribute="leading" secondItem="6ou-1u-kx0" secondAttribute="leading" id="CWs-vc-Jqf"/>
+                                    <constraint firstAttribute="trailing" secondItem="gTo-j9-f54" secondAttribute="trailing" id="ica-bd-z6b"/>
+                                    <constraint firstItem="gTo-j9-f54" firstAttribute="top" secondItem="6ou-1u-kx0" secondAttribute="top" id="qph-d2-b3t"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6ou-1u-kx0" firstAttribute="leading" secondItem="lqz-Ha-hPZ" secondAttribute="leading" id="2U7-RX-LKA"/>
+                            <constraint firstAttribute="trailing" secondItem="6ou-1u-kx0" secondAttribute="trailing" id="CjX-gp-ffI"/>
+                            <constraint firstItem="gTo-j9-f54" firstAttribute="width" secondItem="lqz-Ha-hPZ" secondAttribute="width" id="ErC-s8-N2X"/>
+                            <constraint firstItem="xj9-Ef-arH" firstAttribute="top" secondItem="6ou-1u-kx0" secondAttribute="bottom" id="KOl-HE-XC2"/>
+                            <constraint firstItem="6ou-1u-kx0" firstAttribute="top" secondItem="lqz-Ha-hPZ" secondAttribute="top" id="a5d-Af-wr2"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="1200"/>
+                    <connections>
+                        <outlet property="cmykaSliderGroup" destination="ULh-GC-wav" id="P3R-KD-dSf"/>
+                        <outlet property="hsbaSliderGroup" destination="V1M-uB-XMl" id="uC6-po-U0q"/>
+                        <outlet property="hslaSliderGroup" destination="5e0-Zu-zFq" id="STb-g6-w5S"/>
+                        <outlet property="rgbaSliderGroup" destination="6KN-Yv-qbl" id="Xug-je-1up"/>
+                        <outlet property="yuvaSliderGroup" destination="DSa-W6-UOa" id="8RT-wz-YfY"/>
+                        <outletCollection property="sliderGroups" destination="6KN-Yv-qbl" collectionClass="NSMutableArray" id="fr0-d4-flb"/>
+                        <outletCollection property="sliderGroups" destination="V1M-uB-XMl" collectionClass="NSMutableArray" id="dyM-cZ-1vF"/>
+                        <outletCollection property="sliderGroups" destination="5e0-Zu-zFq" collectionClass="NSMutableArray" id="eiC-zj-INx"/>
+                        <outletCollection property="sliderGroups" destination="ULh-GC-wav" collectionClass="NSMutableArray" id="anp-IM-bRg"/>
+                        <outletCollection property="sliderGroups" destination="DSa-W6-UOa" collectionClass="NSMutableArray" id="TYi-fo-IFK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0oW-1e-6SZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="429.60000000000002" y="308.54572713643182"/>
+        </scene>
+    </scenes>
+</document>
