@@ -8,14 +8,14 @@
 
 import UIKit
 
-enum ColorStringType: Int {
+public enum ColorStringType: Int {
     case baseOne
     case baseTen
     case baseSixteen
     
     
     
-    func string() -> String {
+    public func string() -> String {
         switch self {
         case .baseSixteen:
             return "0x00-0xFF"

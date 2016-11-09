@@ -9,14 +9,14 @@
 import UIKit
 
 public struct CMYKA {
-    var cyan: CGFloat
-    var magenta: CGFloat
-    var yellow: CGFloat
-    var black: CGFloat
-    var alpha: CGFloat
+    public var cyan: CGFloat
+    public var magenta: CGFloat
+    public var yellow: CGFloat
+    public var black: CGFloat
+    public var alpha: CGFloat
     
 
-    init(cyan: CGFloat, magenta: CGFloat, yellow: CGFloat, black: CGFloat, alpha: CGFloat) {
+    public init(cyan: CGFloat, magenta: CGFloat, yellow: CGFloat, black: CGFloat, alpha: CGFloat) {
         self.cyan = clip(cyan)
         self.magenta = clip(magenta)
         self.yellow = clip(yellow)
@@ -24,7 +24,7 @@ public struct CMYKA {
         self.alpha = clip(alpha)
     }
     
-    init(cyan: CGFloat, magenta: CGFloat, yellow: CGFloat, black: CGFloat) {
+    public init(cyan: CGFloat, magenta: CGFloat, yellow: CGFloat, black: CGFloat) {
         self.init(cyan: cyan, magenta: magenta, yellow: yellow, black: black, alpha: 1.0)
     }
     
@@ -58,7 +58,7 @@ public struct CMYKA {
     }
     
     // MARK: Static functions
-    static func colorWith(cmyka: CMYKA) -> UIColor {
+    public static func colorWith(cmyka: CMYKA) -> UIColor {
         return cmyka.color()
     }
     
@@ -68,7 +68,7 @@ public struct CMYKA {
 
 extension CMYKA: ColorString {
     
-    func stringFor(type: ColorStringType) -> String {
+    public func stringFor(type: ColorStringType) -> String {
         
         let format = type.format()
         let factor = type.factor()
@@ -93,7 +93,7 @@ extension CMYKA: ColorString {
     }
 }
 
-extension UIColor {
+public extension UIColor {
     
     
     

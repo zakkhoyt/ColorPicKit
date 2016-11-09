@@ -15,7 +15,7 @@ public struct HSLA {
     var alpha: CGFloat
     
     
-    init(hue: CGFloat, saturation: CGFloat, lightness: CGFloat, alpha: CGFloat) {
+    public init(hue: CGFloat, saturation: CGFloat, lightness: CGFloat, alpha: CGFloat) {
         self.hue = clip(hue)
         self.saturation = clip(saturation)
         self.lightness = clip(lightness)
@@ -23,7 +23,7 @@ public struct HSLA {
     }
     
     
-    init(hue: CGFloat, saturation: CGFloat, lightness: CGFloat) {
+    public init(hue: CGFloat, saturation: CGFloat, lightness: CGFloat) {
         self.init(hue: hue, saturation: saturation, lightness: lightness, alpha: 1.0)
     }
     
@@ -64,7 +64,7 @@ public struct HSLA {
     
     // MARK: Static functions
     
-    static func colorWith(hsla: HSLA) -> UIColor {
+    public static func colorWith(hsla: HSLA) -> UIColor {
         return hsla.color()
     }
     
@@ -72,7 +72,7 @@ public struct HSLA {
 
 extension HSLA: ColorString {
     
-    func stringFor(type: ColorStringType) -> String {
+    public func stringFor(type: ColorStringType) -> String {
         
         let format = type.format()
         let factor = type.factor()
@@ -97,7 +97,7 @@ extension HSLA: ColorString {
     }
 }
 
-extension UIColor {
+public extension UIColor {
     
     // MARK: self to struct
     public func hsla(alpha: CGFloat = 1.0) -> HSLA {

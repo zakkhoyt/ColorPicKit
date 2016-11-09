@@ -9,6 +9,6 @@
 import Foundation
 
 
-protocol ColorString {
+public protocol ColorString {
     func stringFor(type: ColorStringType) -> String
 }

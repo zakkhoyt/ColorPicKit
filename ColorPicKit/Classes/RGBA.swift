@@ -13,20 +13,20 @@ import UIKit
 public struct RGBA {
     
 
-    var red: CGFloat
-    var green: CGFloat
-    var blue: CGFloat
-    var alpha: CGFloat
+    public var red: CGFloat
+    public var green: CGFloat
+    public var blue: CGFloat
+    public var alpha: CGFloat
     
     
-    init(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) {
+    public init(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) {
         self.red = clip(red)
         self.green = clip(green)
         self.blue = clip(blue)
         self.alpha = clip(alpha)
     }
     
-    init(red: CGFloat, green: CGFloat, blue: CGFloat) {
+    public init(red: CGFloat, green: CGFloat, blue: CGFloat) {
         self.init(red: red, green: green, blue: blue, alpha: 1.0)
     }
     
@@ -39,7 +39,7 @@ public struct RGBA {
     }
 
     
-    func color() -> UIColor {
+    public func color() -> UIColor {
         let color = UIColor(red: red, green: green, blue: blue, alpha: alpha)
         return color
     }
@@ -66,7 +66,7 @@ public struct RGBA {
     
     // MARK: Static functions
     
-    static func colorWith(rgba: RGBA) -> UIColor {
+    public static func colorWith(rgba: RGBA) -> UIColor {
         return rgba.color()
     }
     
@@ -74,7 +74,7 @@ public struct RGBA {
 
 extension RGBA: ColorString {
     
-    func stringFor(type: ColorStringType) -> String {
+    public func stringFor(type: ColorStringType) -> String {
         
         let format = type.format()
         let factor = type.factor()

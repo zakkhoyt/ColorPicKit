@@ -10,13 +10,13 @@ import UIKit
 
 
 public struct HSBA {
-    var hue: CGFloat
-    var saturation: CGFloat
-    var brightness: CGFloat
-    var alpha: CGFloat
+    public var hue: CGFloat
+    public var saturation: CGFloat
+    public var brightness: CGFloat
+    public var alpha: CGFloat
     
 
-    init(hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat) {
+    public init(hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat) {
         self.hue = clip(hue)
         self.saturation = clip(saturation)
         self.brightness = clip(brightness)
@@ -24,7 +24,7 @@ public struct HSBA {
     }
 
     
-    init(hue: CGFloat, saturation: CGFloat, brightness: CGFloat) {
+    public init(hue: CGFloat, saturation: CGFloat, brightness: CGFloat) {
         self.init(hue: hue, saturation: saturation, brightness: brightness, alpha: 1.0)
     }
     
@@ -65,7 +65,7 @@ public struct HSBA {
     
     // MARK: Static functions
     
-    static func colorWith(hsba: HSBA) -> UIColor {
+    public static func colorWith(hsba: HSBA) -> UIColor {
         return hsba.color()
     }
     
@@ -73,7 +73,7 @@ public struct HSBA {
 
 extension HSBA: ColorString {
     
-    func stringFor(type: ColorStringType) -> String {
+    public func stringFor(type: ColorStringType) -> String {
         
         let format = type.format()
         let factor = type.factor()

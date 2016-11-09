@@ -11,20 +11,20 @@ import UIKit
 
 public struct YUVA {
     
-    var y: CGFloat // intensity
-    var u: CGFloat // blue
-    var v: CGFloat // red
-    var alpha: CGFloat // alpha
+    public var y: CGFloat // intensity
+    public var u: CGFloat // blue
+    public var v: CGFloat // red
+    public var alpha: CGFloat // alpha
 
     
-    init(y: CGFloat, u: CGFloat, v: CGFloat, alpha: CGFloat) {
+    public init(y: CGFloat, u: CGFloat, v: CGFloat, alpha: CGFloat) {
         self.y = clip(y)
         self.u = clip(u)
         self.v = clip(v)
         self.alpha = clip(alpha)
     }
     
-    init(y: CGFloat, u: CGFloat, v: CGFloat) {
+    public init(y: CGFloat, u: CGFloat, v: CGFloat) {
         self.init(y: y, u: u, v: v, alpha: 1.0)
     }
     
@@ -68,7 +68,7 @@ public struct YUVA {
 
     
     // MARK: Static functions
-    static func colorWith(yuva: YUVA) -> UIColor {
+    public static func colorWith(yuva: YUVA) -> UIColor {
         return yuva.color()
     }
 }
@@ -77,7 +77,7 @@ public struct YUVA {
 
 extension YUVA: ColorString {
     
-    func stringFor(type: ColorStringType) -> String {
+    public func stringFor(type: ColorStringType) -> String {
         
         let format = type.format()
         let factor = type.factor()
@@ -101,7 +101,7 @@ extension YUVA: ColorString {
 }
 
 
-extension UIColor {
+public extension UIColor {
     
     // MARK: self to struct
     
