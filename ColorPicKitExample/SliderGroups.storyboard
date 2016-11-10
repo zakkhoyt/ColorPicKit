@@ -30,6 +30,9 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6KN-Yv-qbl" customClass="RGBASliderGroup" customModule="ColorPicKitExample" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="37" width="335" height="172"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="realtimeMix" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="sliderGroupValueChanged:" destination="lAy-YN-SpT" eventType="valueChanged" id="KYT-Wd-qZb"/>
                                                 </connections>
@@ -49,6 +52,9 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V1M-uB-XMl" customClass="HSBASliderGroup" customModule="ColorPicKitExample" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="246" width="335" height="172"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="realtimeMix" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="sliderGroupValueChanged:" destination="lAy-YN-SpT" eventType="valueChanged" id="qQw-hr-KEN"/>
                                                 </connections>
@@ -62,6 +68,9 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5e0-Zu-zFq" customClass="HSLASliderGroup" customModule="ColorPicKitExample" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="455" width="335" height="172"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="realtimeMix" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="sliderGroupValueChanged:" destination="lAy-YN-SpT" eventType="valueChanged" id="y7v-NQ-Kft"/>
                                                 </connections>
@@ -75,6 +84,9 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ULh-GC-wav" customClass="CMYKASliderGroup" customModule="ColorPicKitExample" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="664" width="335" height="216"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="realtimeMix" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="sliderGroupValueChanged:" destination="lAy-YN-SpT" eventType="valueChanged" id="eEt-0m-d2G"/>
                                                 </connections>
@@ -88,6 +100,9 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DSa-W6-UOa" customClass="YUVASliderGroup" customModule="ColorPicKitExample" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="917" width="335" height="172"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="realtimeMix" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="sliderGroupValueChanged:" destination="lAy-YN-SpT" eventType="valueChanged" id="gVk-f1-0E9"/>
                                                 </connections>

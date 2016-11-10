@@ -148,6 +148,11 @@ import UIKit
         knobView.borderWidth = borderWidth
         knobView.borderColor = borderColor
         addSubview(knobView)
+        
+        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(knobDidPan))
+        panGesture.minimumNumberOfTouches = 1
+        panGesture.maximumNumberOfTouches = 1
+        knobView.addGestureRecognizer(panGesture)
     }
     
     func configureBackgroundView() {
@@ -162,29 +167,61 @@ import UIKit
     }
     
     
-    // MARK: Touches
-    override open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        touchesHappened(touches, with: event)
-        touchDown()
+//    // MARK: Touches
+//    override open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        touchesHappened(touches, with: event)
+//        touchDown()
+//        
+//    }
+//    
+//    override open func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        touchesHappened(touches, with: event)
+//    }
+//    
+//    override open func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        touchesHappened(touches, with: event)
+//        touchUpInside()
+//    }
+    
+    fileprivate var knobStart: CGPoint!
+    fileprivate var panStart: CGPoint!
+
+    func knobDidPan(sender: UIPanGestureRecognizer) {
+
+        // Position
+        if sender.state == .began {
+            knobStart = knobView.center
+            panStart = sender.location(in: self)
+        } else {
+            let deltaX = sender.location(in: self).x - panStart.x
+            var newX = knobStart.x + deltaX
+            newX = max(0, newX)
+            newX = min(bounds.width, newX)
+            knobView.center = CGPoint(x: newX, y: knobStart.y)
+        }
+        
+        // Events
+        let point = sender.location(in: self)
+        if sender.state == .began {
+            touchesHappened(point)
+            touchDown()
+        } else if sender.state == .changed {
+            touchesHappened(point)
+        } else if sender.state == .ended {
+            touchesHappened(point)
+            touchUpInside()
+        }
         
     }
     
-    override open func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        touchesHappened(touches, with: event)
-    }
-    
-    override open func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        touchesHappened(touches, with: event)
-        touchUpInside()
-    }
-    
-    private func touchesHappened(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let touch = touches.first
-        if let point = touch?.location(in: self){
+    //private func touchesHappened(_ touches: Set<UITouch>, with event: UIEvent?) {
+    private func touchesHappened(_ point: CGPoint) {
+//        let touch = touches.first
+//        if let point = touch?.location(in: self){
             updateValueWith(point: point)
             updateKnob()
             valueChanged()
-        }
+//        }
     }
     
     func touchDown() {

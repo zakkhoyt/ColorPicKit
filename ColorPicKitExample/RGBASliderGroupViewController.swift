@@ -32,8 +32,8 @@ class RGBASliderGroupViewController: BaseViewController {
     
     private func updateBackgroundColor() {
         colorView.color = rgbaSliderGroup.color
-        //colorView.hexLabel.text = rgbaSliderGroup.color.rgba().stringFor(type: .baseOne)
-        colorView.hexLabel.text = rgbaSliderGroup.color.yuva().stringFor(type: .baseOne)
+        colorView.hexLabel.text = rgbaSliderGroup.color.rgba().stringFor(type: .baseOne)
+//        colorView.hexLabel.text = rgbaSliderGroup.color.yuva().stringFor(type: .baseOne)
     }
     
     override func reset() {
