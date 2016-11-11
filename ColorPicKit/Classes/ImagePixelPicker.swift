@@ -73,6 +73,16 @@ private let invalidPositionValue = CGFloat(-1.0)
         }
     }
     
+    private var _colorKnob: Bool = true
+    @IBInspectable public var colorKnob: Bool {
+        get {
+            return _colorKnob
+        }
+        set {
+            _colorKnob = newValue
+            updateKnob()
+        }
+    }
 
     
     private var _borderColor: UIColor = .lightGray
@@ -216,22 +226,6 @@ private let invalidPositionValue = CGFloat(-1.0)
     }
     
     
-//     MARK: Touches
-//    override open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        touchesHappened(touches, with: event)
-//        touchDown()
-//        
-//    }
-//    
-//    override open func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        touchesHappened(touches, with: event)
-//    }
-//    
-//    override open func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        touchesHappened(touches, with: event)
-//        touchUpInside()
-//    }
-    
     // MARK: Gestures
     
     fileprivate var knobStart: CGPoint!
@@ -282,14 +276,10 @@ private let invalidPositionValue = CGFloat(-1.0)
     }
     
     
-//    private func touchesHappened(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        let touch = touches.first
-//        if let point = touch?.location(in: self){
     private func touchesHappened(_ point: CGPoint) {
-            updatePositionFrom(point: point)
-            updateKnob()
-            valueChanged()
-//        }
+        updatePositionFrom(point: point)
+        updateKnob()
+        valueChanged()
     }
 
     
@@ -327,7 +317,11 @@ private let invalidPositionValue = CGFloat(-1.0)
     }
     
     private func updateKnobColor() {
-        knobView.color = color
+        if colorKnob {
+            knobView.color = color
+        } else {
+            knobView.color = .white
+        }
     }
 
     

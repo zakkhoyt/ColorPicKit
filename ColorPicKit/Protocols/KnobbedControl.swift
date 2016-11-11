@@ -11,4 +11,5 @@ import UIKit
 protocol KnobbedControl: ColorControl {
     var knobView: KnobView { get set }
     var knobSize: CGSize  { get set }
+    var colorKnob: Bool { get set }
 }

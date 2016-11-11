@@ -54,6 +54,17 @@ import UIKit
         }
     }
     
+    private var _colorKnob: Bool = true
+    @IBInspectable public var colorKnob: Bool {
+        get {
+            return _colorKnob
+        }
+        set {
+            _colorKnob = newValue
+            updateKnob()
+        }
+    }
+    
     private var _barHeight: CGFloat = 10
     @IBInspectable public var barHeight: CGFloat {
         get {
@@ -270,8 +281,11 @@ import UIKit
     }
     
     func updateKnobColor() {
-        //        knobView.borderColor = color
-        knobView.color = color
+        if colorKnob {
+            knobView.color = color
+        } else {
+            knobView.color = .white
+        }
     }
     
     private func frameForSliderView() -> CGRect {

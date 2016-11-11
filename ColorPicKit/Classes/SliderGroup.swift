@@ -84,6 +84,23 @@ import UIKit
         }
     }
     
+    private var _colorKnob: Bool = true
+    @IBInspectable public var colorKnob: Bool {
+        get {
+            return _colorKnob
+        }
+        set {
+            if _colorKnob != newValue {
+                _colorKnob = newValue
+                for slider in sliders {
+                    slider.colorKnob = newValue
+                }
+            }
+
+        }
+    }
+
+    
     private var _borderColor: UIColor = .lightGray
     @IBInspectable public var borderColor: UIColor{
         get {
@@ -172,6 +189,19 @@ import UIKit
         sliders.removeAll()
 
         configureSliders()
+        
+        for slider in sliders {
+            slider.roundedCorners = roundedCorners
+            slider.borderColor = borderColor
+            slider.borderWidth = borderWidth
+            slider.barHeight = barHeight
+            slider.knobSize = knobSize
+            slider.colorKnob = colorKnob
+            slider.addTarget(self, action: #selector(sliderValueChanged), for: .valueChanged)
+            slider.addTarget(self, action: #selector(sliderTouchDown), for: .touchDown)
+            slider.addTarget(self, action: #selector(sliderTouchUpInside), for: .touchUpInside)
+
+        }
     }
     
     func configureSliders() {

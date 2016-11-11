@@ -33,68 +33,34 @@ import UIKit
     
     override func configureSliders() {
         
-        
         let rgba = color.rgba()
         
         redSlider = GradientSlider()
-        redSlider.roundedCorners = roundedCorners
-        redSlider.borderColor = borderColor
-        redSlider.borderWidth = borderWidth
-        redSlider.barHeight = barHeight
-        redSlider.knobSize = knobSize
         redSlider.color1 = UIColor.white
         redSlider.color2 = UIColor.red
         redSlider.value = rgba.red
-        redSlider.addTarget(self, action: #selector(sliderValueChanged), for: .valueChanged)
-        redSlider.addTarget(self, action: #selector(sliderTouchDown), for: .touchDown)
-        redSlider.addTarget(self, action: #selector(sliderTouchUpInside), for: .touchUpInside)
         addSubview(redSlider)
         sliders.append(redSlider)
         
         greenSlider = GradientSlider()
-        greenSlider.roundedCorners = roundedCorners
-        greenSlider.borderColor = borderColor
-        greenSlider.borderWidth = borderWidth
-        greenSlider.barHeight = barHeight
-        greenSlider.knobSize = knobSize
         greenSlider.color1 = UIColor.white
         greenSlider.color2 = UIColor.green
         greenSlider.value = rgba.green
-        greenSlider.addTarget(self, action: #selector(sliderValueChanged), for: .valueChanged)
-        greenSlider.addTarget(self, action: #selector(sliderTouchDown), for: .touchDown)
-        greenSlider.addTarget(self, action: #selector(sliderTouchUpInside), for: .touchUpInside)
         addSubview(greenSlider)
         sliders.append(greenSlider)
         
         blueSlider = GradientSlider()
-        
-        blueSlider.roundedCorners = roundedCorners
-        blueSlider.borderColor = borderColor
-        blueSlider.borderWidth = borderWidth
-        blueSlider.barHeight = barHeight
-        blueSlider.knobSize = knobSize
         blueSlider.color1 = UIColor.white
         blueSlider.color2 = UIColor.blue
         blueSlider.value = rgba.blue
-        blueSlider.addTarget(self, action: #selector(sliderValueChanged), for: .valueChanged)
-        blueSlider.addTarget(self, action: #selector(sliderTouchDown), for: .touchDown)
-        blueSlider.addTarget(self, action: #selector(sliderTouchUpInside), for: .touchUpInside)
         addSubview(blueSlider)
         sliders.append(blueSlider)
         
         if showAlphaSlider {
             alphaSlider = GradientSlider()
-            alphaSlider.roundedCorners = roundedCorners
-            alphaSlider.borderColor = borderColor
-            alphaSlider.borderWidth = borderWidth
-            alphaSlider.barHeight = barHeight
-            alphaSlider.knobSize = knobSize
             alphaSlider.color1 = UIColor.clear
             alphaSlider.color2 = UIColor.white
             alphaSlider.value = rgba.alpha
-            alphaSlider.addTarget(self, action: #selector(sliderValueChanged), for: .valueChanged)
-            alphaSlider.addTarget(self, action: #selector(sliderTouchDown), for: .touchDown)
-            alphaSlider.addTarget(self, action: #selector(sliderTouchUpInside), for: .touchUpInside)
             addSubview(alphaSlider)
             sliders.append(alphaSlider)
         }

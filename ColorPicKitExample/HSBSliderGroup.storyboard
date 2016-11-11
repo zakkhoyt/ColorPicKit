@@ -25,9 +25,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AJe-bn-UDM" customClass="HSBASliderGroup" customModule="ColorPicKitExample" customModuleProvider="target">
                                 <rect key="frame" x="16" y="247.5" width="343" height="172"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="realtimeMix" value="YES"/>
-                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="hsbaSliderGroupTouchDown:" destination="iDW-Re-Q2k" eventType="touchDown" id="Qij-1M-5g4"/>
                                     <action selector="hsbaSliderGroupTouchUpInside:" destination="iDW-Re-Q2k" eventType="touchUpInside" id="f1a-Km-HhC"/>
