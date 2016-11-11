@@ -184,6 +184,17 @@ private let invalidPositionValue = CGFloat(-1.0)
         // KnobView
         updateKnobSize()
         addSubview(knobView)
+        
+        // Pan gesture
+        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(panGestureHappened))
+        panGesture.minimumNumberOfTouches = 1
+        panGesture.maximumNumberOfTouches = 1
+        self.addGestureRecognizer(panGesture)
+        
+        // Long press gesture
+        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(longPressGestureHappened))
+        self.addGestureRecognizer(longPressGesture)
+
     }
 
     
@@ -205,29 +216,80 @@ private let invalidPositionValue = CGFloat(-1.0)
     }
     
     
-    // MARK: Touches
-    override open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        touchesHappened(touches, with: event)
-        touchDown()
+//     MARK: Touches
+//    override open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        touchesHappened(touches, with: event)
+//        touchDown()
+//        
+//    }
+//    
+//    override open func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        touchesHappened(touches, with: event)
+//    }
+//    
+//    override open func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        touchesHappened(touches, with: event)
+//        touchUpInside()
+//    }
+    
+    // MARK: Gestures
+    
+    fileprivate var knobStart: CGPoint!
+    fileprivate var panStart: CGPoint!
+    
+    @objc private func panGestureHappened(sender: UIPanGestureRecognizer) {
         
+        // Position
+        if sender.state == .began {
+            knobStart = knobView.center
+            panStart = sender.location(in: self)
+        }
+        
+        let deltaX = sender.location(in: self).x - panStart.x
+        let newX = knobStart.x + deltaX
+        
+        let deltaY = sender.location(in: self).y - panStart.y
+        let newY = knobStart.y + deltaY
+        
+        let point = CGPoint(x: newX, y: newY)
+        knobView.center = point
+        
+        // Events
+        if sender.state == .began {
+            touchesHappened(point)
+            touchDown()
+        } else if sender.state == .changed {
+            touchesHappened(point)
+        } else if sender.state == .ended {
+            touchesHappened(point)
+            touchUpInside()
+        }
     }
     
-    override open func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        touchesHappened(touches, with: event)
+    @objc private func longPressGestureHappened(sender: UILongPressGestureRecognizer) {
+        
+        let point = sender.location(in: self)
+        
+        if sender.state == .began {
+            touchesHappened(point)
+            touchDown()
+        } else if sender.state == .changed {
+            touchesHappened(point)
+        } else if sender.state == .ended {
+            touchesHappened(point)
+            touchUpInside()
+        }
     }
     
-    override open func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        touchesHappened(touches, with: event)
-        touchUpInside()
-    }
     
-    private func touchesHappened(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let touch = touches.first
-        if let point = touch?.location(in: self){
+//    private func touchesHappened(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        let touch = touches.first
+//        if let point = touch?.location(in: self){
+    private func touchesHappened(_ point: CGPoint) {
             updatePositionFrom(point: point)
             updateKnob()
             valueChanged()
-        }
+//        }
     }
 
     
