@@ -376,13 +376,6 @@
 			name = HexKeypad;
 			sourceTree = "<group>";
 		};
-		C61841171DCBA71F00D5AA70 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "New Group";
-			sourceTree = "<group>";
-		};
 		C632B5971DD246AB00C8727D /* SliderGroups */ = {
 			isa = PBXGroup;
 			children = (
@@ -476,7 +469,6 @@
 			isa = PBXGroup;
 			children = (
 				C67E67A71DC166C2004E6160 /* SliderGroup.swift */,
-				C61841171DCBA71F00D5AA70 /* New Group */,
 			);
 			name = SliderGroup;
 			sourceTree = "<group>";

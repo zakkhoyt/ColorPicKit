@@ -11,7 +11,7 @@ import UIKit
 class GradientSliderView: SliderView {
  
     
-    private var _color1: UIColor = .black
+    private var _color1: UIColor = .clear
     var color1: UIColor  {
         get {
             return _color1

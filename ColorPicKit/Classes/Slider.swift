@@ -111,10 +111,6 @@ import UIKit
             return CGSize(width: bounds.width, height: 20)
         }
     }
-    
-
-
-    
 
     public var color: UIColor {
         get {
@@ -145,14 +141,20 @@ import UIKit
         
         configureBackgroundView()
         
+        // Knob view
         knobView.borderWidth = borderWidth
         knobView.borderColor = borderColor
         addSubview(knobView)
         
-        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(knobDidPan))
+        // Pan gesture
+        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(panGestureHappened))
         panGesture.minimumNumberOfTouches = 1
         panGesture.maximumNumberOfTouches = 1
-        knobView.addGestureRecognizer(panGesture)
+        self.addGestureRecognizer(panGesture)
+
+        // Long press gesture
+        let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(longPressGestureHappened))
+        self.addGestureRecognizer(longPressGesture)
     }
     
     func configureBackgroundView() {
@@ -167,41 +169,23 @@ import UIKit
     }
     
     
-//    // MARK: Touches
-//    override open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        touchesHappened(touches, with: event)
-//        touchDown()
-//        
-//    }
-//    
-//    override open func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        touchesHappened(touches, with: event)
-//    }
-//    
-//    override open func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        touchesHappened(touches, with: event)
-//        touchUpInside()
-//    }
-    
     fileprivate var knobStart: CGPoint!
     fileprivate var panStart: CGPoint!
 
-    func knobDidPan(sender: UIPanGestureRecognizer) {
+    @objc private func panGestureHappened(sender: UIPanGestureRecognizer) {
 
         // Position
         if sender.state == .began {
             knobStart = knobView.center
             panStart = sender.location(in: self)
-        } else {
-            let deltaX = sender.location(in: self).x - panStart.x
-            var newX = knobStart.x + deltaX
-            newX = max(0, newX)
-            newX = min(bounds.width, newX)
-            knobView.center = CGPoint(x: newX, y: knobStart.y)
         }
+
+        let deltaX = sender.location(in: self).x - panStart.x
+        let newX = knobStart.x + deltaX
+        
+        let point = CGPoint(x: newX, y: knobStart.y)
         
         // Events
-        let point = sender.location(in: self)
         if sender.state == .began {
             touchesHappened(point)
             touchDown()
@@ -214,14 +198,31 @@ import UIKit
         
     }
     
-    //private func touchesHappened(_ touches: Set<UITouch>, with event: UIEvent?) {
+    @objc private func longPressGestureHappened(sender: UILongPressGestureRecognizer) {
+        
+        let x = sender.location(in: self).x
+        let y = bounds.midY
+        let point = CGPoint(x: x, y: y)
+
+        
+        if sender.state == .began {
+            touchesHappened(point)
+            touchDown()
+        } else if sender.state == .changed {
+            touchesHappened(point)
+        } else if sender.state == .ended {
+            touchesHappened(point)
+            touchUpInside()
+        }
+
+    }
+    
+    
+
     private func touchesHappened(_ point: CGPoint) {
-//        let touch = touches.first
-//        if let point = touch?.location(in: self){
-            updateValueWith(point: point)
-            updateKnob()
-            valueChanged()
-//        }
+        updateValueWith(point: point)
+        updateKnob()
+        valueChanged()
     }
     
     func touchDown() {
@@ -236,17 +237,24 @@ import UIKit
         self.sendActions(for: .valueChanged)
     }
     
+    
     // MARK: Private methods
+    
+    private var inset: CGFloat {
+        get {
+            return knobSize.width / 2.0
+        }
+    }
+
     private func updateValueWith(point: CGPoint) {
         var x = point.x
-        if x < 0 {
-            x = 0
+        if x < inset {
+            x = inset
         }
-        if x > bounds.width {
-            x = bounds.width
+        if x > bounds.width - inset {
+            x = bounds.width - inset
         }
-        self.value = x / bounds.width
-        
+        self.value = (x - inset) / (bounds.width - 2*inset)
     }
     
     private func updateKnob() {
@@ -255,9 +263,10 @@ import UIKit
     }
     
     private func updateKnobPosition() {
-        let x = value * bounds.width
+        let x = inset + value * (bounds.width - 2*inset)
         knobView.bounds = CGRect(x: 0, y: 0, width: knobSize.width, height: knobSize.height)
         knobView.center = CGPoint(x: x, y:  bounds.midY)
+
     }
     
     func updateKnobColor() {
