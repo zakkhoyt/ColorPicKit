@@ -180,6 +180,9 @@ import UIKit
     }
     
     
+    fileprivate let lightFeedback = UIImpactFeedbackGenerator(style: .light)
+    fileprivate let mediumFeedback = UIImpactFeedbackGenerator(style: .medium)
+    
     fileprivate var knobStart: CGPoint!
     fileprivate var panStart: CGPoint!
 
@@ -219,6 +222,9 @@ import UIKit
         if sender.state == .began {
             touchesHappened(point)
             touchDown()
+//            let generator = UIImpactFeedbackGenerator(style: .light)
+//            generator.impactOccurred()
+
         } else if sender.state == .changed {
             touchesHappened(point)
         } else if sender.state == .ended {
@@ -257,6 +263,22 @@ import UIKit
         }
     }
 
+//    private var _impactValue: CGFloat = -1.0
+//    private var impactValue: CGFloat {
+//        set {
+//            
+//            if _impactValue != newValue {
+//                if newValue == 0 || newValue == 1.0 {
+//                    mediumFeedback.impactOccurred()
+//                }
+//                _impactValue = newValue
+//            }
+//        }
+//        get {
+//            return _impactValue
+//        }
+//    }
+    
     private func updateValueWith(point: CGPoint) {
         var x = point.x
         if x < inset {
@@ -266,6 +288,8 @@ import UIKit
             x = bounds.width - inset
         }
         self.value = (x - inset) / (bounds.width - 2*inset)
+     
+//        impactValue = value
     }
     
     private func updateKnob() {
@@ -295,4 +319,8 @@ import UIKit
         let h: CGFloat = barHeight
         return CGRect(x: x, y: y, width: w, height: h)
     }
+    
+    
+    
+    
 }
