@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0b3-ZH-CtV">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Video Pixel Picker View Controller-->
+        <scene sceneID="vVY-Cu-3Wh">
+            <objects>
+                <viewController id="0b3-ZH-CtV" customClass="VideoPixelPickerViewController" customModule="ColorPicKitExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DAS-3c-OW3"/>
+                        <viewControllerLayoutGuide type="bottom" id="r32-oJ-ylR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gLY-dj-xRs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ud-Cp-2IE">
+                                <rect key="frame" x="20" y="513" width="335" height="134"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cuB-ld-Nid" customClass="VideoPixelPicker" customModule="ColorPicKitExample" customModuleProvider="target">
+                                <rect key="frame" x="16" y="162" width="343" height="343"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="videoPixelPickerTouchDown:" destination="0b3-ZH-CtV" eventType="touchDown" id="AHF-3l-M2J"/>
+                                    <action selector="videoPixelPickerTouchUpInside:" destination="0b3-ZH-CtV" eventType="touchUpInside" id="cNn-ep-MmT"/>
+                                    <action selector="videoPixelPickerValueChanged:" destination="0b3-ZH-CtV" eventType="valueChanged" id="dkm-QL-Ivi"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cuB-ld-Nid" firstAttribute="leading" secondItem="gLY-dj-xRs" secondAttribute="leadingMargin" id="6Zz-Ii-acc"/>
+                            <constraint firstItem="cuB-ld-Nid" firstAttribute="centerY" secondItem="gLY-dj-xRs" secondAttribute="centerY" id="9tH-4W-yj8"/>
+                            <constraint firstItem="3ud-Cp-2IE" firstAttribute="top" secondItem="cuB-ld-Nid" secondAttribute="bottom" constant="8" id="J4D-FA-ha2"/>
+                            <constraint firstItem="cuB-ld-Nid" firstAttribute="trailing" secondItem="gLY-dj-xRs" secondAttribute="trailingMargin" id="SNA-cW-iIK"/>
+                            <constraint firstItem="3ud-Cp-2IE" firstAttribute="leading" secondItem="gLY-dj-xRs" secondAttribute="leading" constant="20" id="fpV-5G-fMa"/>
+                            <constraint firstAttribute="trailing" secondItem="3ud-Cp-2IE" secondAttribute="trailing" constant="20" id="gZq-B4-WGA"/>
+                            <constraint firstItem="r32-oJ-ylR" firstAttribute="top" secondItem="3ud-Cp-2IE" secondAttribute="bottom" constant="20" id="tOz-BD-4Up"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="colorView" destination="3ud-Cp-2IE" id="VSu-cD-HIh"/>
+                        <outlet property="videoPixelPicker" destination="cuB-ld-Nid" id="Px8-B9-Tpf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a4j-Sp-21C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="277.60000000000002" y="219.94002998500753"/>
+        </scene>
+    </scenes>
+</document>

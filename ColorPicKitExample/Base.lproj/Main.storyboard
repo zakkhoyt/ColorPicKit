@@ -25,133 +25,140 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sliders" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rhw-2Y-Oev">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="23.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="22.5"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="0.24524560397553516" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18x-aw-f6x">
-                                        <rect key="frame" x="0.0" y="23.5" width="375" height="35"/>
+                                        <rect key="frame" x="0.0" y="22.5" width="375" height="32.5"/>
                                         <state key="normal" title="Gradient Slider"/>
                                         <connections>
                                             <segue destination="aJ5-Og-NlE" kind="show" id="GEv-Pa-jRq"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kea-hP-2rR">
-                                        <rect key="frame" x="0.0" y="58.5" width="375" height="34.5"/>
+                                        <rect key="frame" x="0.0" y="55" width="375" height="33"/>
                                         <state key="normal" title="Hue Slider"/>
                                         <connections>
                                             <segue destination="l1y-ZD-tJi" kind="show" id="NPj-oE-tIn"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Slider Groups" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UrA-1C-Y28">
-                                        <rect key="frame" x="0.0" y="93" width="375" height="23.5"/>
+                                        <rect key="frame" x="0.0" y="88" width="375" height="22"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="0.24524560397553516" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewh-Pq-gFs">
-                                        <rect key="frame" x="0.0" y="116.5" width="375" height="34.5"/>
+                                        <rect key="frame" x="0.0" y="110" width="375" height="33"/>
                                         <state key="normal" title="RGBA Slider Group"/>
                                         <connections>
                                             <segue destination="5Ur-kh-muP" kind="show" id="uo5-Xr-SFr"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Otd-iV-ETP">
-                                        <rect key="frame" x="0.0" y="151" width="375" height="35"/>
+                                        <rect key="frame" x="0.0" y="143" width="375" height="32.5"/>
                                         <state key="normal" title="HSBA Slider Group"/>
                                         <connections>
                                             <segue destination="Ozn-yM-Pkk" kind="show" id="r8x-1s-OoB"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZnM-aO-nbz">
-                                        <rect key="frame" x="0.0" y="186" width="375" height="34.5"/>
+                                        <rect key="frame" x="0.0" y="175.5" width="375" height="33"/>
                                         <state key="normal" title="HSLA Slider Group"/>
                                         <connections>
                                             <segue destination="sXG-PK-gND" kind="show" id="O6I-tV-iqB"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0zn-CH-p9E">
-                                        <rect key="frame" x="0.0" y="220.5" width="375" height="34.5"/>
+                                        <rect key="frame" x="0.0" y="208.5" width="375" height="32.5"/>
                                         <state key="normal" title="CMYKA Slider Group"/>
                                         <connections>
                                             <segue destination="ffB-QV-Dly" kind="show" id="fvO-ey-5dd"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uPe-si-yT7">
-                                        <rect key="frame" x="0.0" y="255" width="375" height="34.5"/>
+                                        <rect key="frame" x="0.0" y="241" width="375" height="33"/>
                                         <state key="normal" title="YUVA Slider Group"/>
                                         <connections>
                                             <segue destination="atr-wc-h8N" kind="show" id="jQL-iS-W4x"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spectrums" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mj0-vu-EaB">
-                                        <rect key="frame" x="0.0" y="289.5" width="375" height="24"/>
+                                        <rect key="frame" x="0.0" y="274" width="375" height="22.5"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="0.24524560397553516" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="klB-H5-QHw">
-                                        <rect key="frame" x="0.0" y="313.5" width="375" height="34.5"/>
+                                        <rect key="frame" x="0.0" y="296.5" width="375" height="32.5"/>
                                         <state key="normal" title="HSBA Spectrum"/>
                                         <connections>
                                             <segue destination="SHr-3M-ohP" kind="show" id="5Sh-d1-a0D"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UlH-KE-0bf">
-                                        <rect key="frame" x="0.0" y="348" width="375" height="34.5"/>
+                                        <rect key="frame" x="0.0" y="329" width="375" height="33"/>
                                         <state key="normal" title="HSLA Spectrum"/>
                                         <connections>
                                             <segue destination="ZEx-tT-b6Q" kind="show" id="0BV-ss-MG3"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QMP-Ok-ezP">
-                                        <rect key="frame" x="0.0" y="382.5" width="375" height="34.5"/>
+                                        <rect key="frame" x="0.0" y="362" width="375" height="32.5"/>
                                         <state key="normal" title="YUVA Spectrum"/>
                                         <connections>
                                             <segue destination="WCR-g4-CZS" kind="show" id="z4i-4A-iNc"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wheels" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Og-BC-2xh">
-                                        <rect key="frame" x="0.0" y="417" width="375" height="24"/>
+                                        <rect key="frame" x="0.0" y="394.5" width="375" height="22.5"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="0.24524560397553516" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PPS-sK-0e4">
-                                        <rect key="frame" x="0.0" y="441" width="375" height="34.5"/>
+                                        <rect key="frame" x="0.0" y="417" width="375" height="32.5"/>
                                         <state key="normal" title="HSBA Wheel"/>
                                         <connections>
                                             <segue destination="w3I-G0-utt" kind="show" id="l95-Iz-Jy1"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Lj-9F-xU5">
-                                        <rect key="frame" x="0.0" y="475.5" width="375" height="34.5"/>
+                                        <rect key="frame" x="0.0" y="449.5" width="375" height="33"/>
                                         <state key="normal" title="HSBA Wheel + Brightness"/>
                                         <connections>
                                             <segue destination="HXk-WY-bLa" kind="show" id="R9p-hQ-Wem"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Other" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jrE-fO-L7N">
-                                        <rect key="frame" x="0.0" y="510" width="375" height="24"/>
+                                        <rect key="frame" x="0.0" y="482.5" width="375" height="22.5"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="0.24524560397553516" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6l-UH-i8S">
-                                        <rect key="frame" x="0.0" y="534" width="375" height="34.5"/>
+                                        <rect key="frame" x="0.0" y="505" width="375" height="32.5"/>
                                         <state key="normal" title="Image Pixel Picker"/>
                                         <connections>
                                             <segue destination="Rv9-ir-wdN" kind="show" id="7j6-88-3Pr"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Co3-eY-M5L">
+                                        <rect key="frame" x="0.0" y="537.5" width="375" height="33"/>
+                                        <state key="normal" title="Video Pixel Picker"/>
+                                        <connections>
+                                            <segue destination="3Zl-ux-t5q" kind="show" id="sdz-kQ-qdu"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aF9-PI-7qv">
-                                        <rect key="frame" x="0.0" y="568.5" width="375" height="34.5"/>
+                                        <rect key="frame" x="0.0" y="570.5" width="375" height="32.5"/>
                                         <state key="normal" title="Hex Keypad"/>
                                         <connections>
                                             <segue destination="I02-Yu-Llb" kind="show" id="BEZ-uf-cAi"/>
@@ -316,7 +323,15 @@
                 <viewControllerPlaceholder storyboardName="HexKeypad" id="I02-Yu-Llb" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jJF-RZ-DPy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2226" y="265"/>
+            <point key="canvasLocation" x="2217" y="318"/>
+        </scene>
+        <!--VideoPixelPicker-->
+        <scene sceneID="4hU-Wd-X8I">
+            <objects>
+                <viewControllerPlaceholder storyboardName="VideoPixelPicker" id="3Zl-ux-t5q" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X5n-NF-beT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2243" y="258"/>
         </scene>
     </scenes>
 </document>

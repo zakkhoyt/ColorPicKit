@@ -11,6 +11,7 @@ import UIKit
 extension UIImage {
     
     
+    
     // MARK: Public class functions
     public class func pixelColorOf(image: UIImage, at point: CGPoint) -> UIColor? {
         return image.pixelColorAt(point: point)
@@ -201,18 +202,48 @@ extension UIImage {
         return nil
     }
 
+}
 
-    
-    
 
-    
-    
-
-    
-
-    
-    
-
-    
+extension CVPixelBuffer {
+    public func getColorAt(point: CGPoint) -> UIColor? {
+        
+        // We don't want to accept infinities or NaN
+        if fabs(point.x) == CGFloat.infinity ||
+            fabs(point.y) == CGFloat.infinity {
+            print("Cannot get color at point (infinity): \(point)")
+            return nil
+        }
+        if point.x == CGFloat.nan || point.y == CGFloat.nan {
+            print("Cannot get color at point (NaN): \(point)")
+            return nil
+        }
+        
+        CVPixelBufferLockBaseAddress(self, [])
+        let baseAddress = CVPixelBufferGetBaseAddress(self)
+        let width = CVPixelBufferGetWidth(self)
+        let height = CVPixelBufferGetHeight(self)
+        let bytesPerRow = CVPixelBufferGetBytesPerRow(self)
+        let colorSpace = CGColorSpaceCreateDeviceRGB()
+        
+        let bitmapInfo = CGBitmapInfo(rawValue: CGImageAlphaInfo.premultipliedFirst.rawValue | CGBitmapInfo.byteOrder32Little.rawValue)
+        
+        guard let context = CGContext(data: baseAddress, width: width, height: height, bitsPerComponent: 8, bytesPerRow: bytesPerRow, space: colorSpace, bitmapInfo: bitmapInfo.rawValue) else {
+            print("Failed to create context for pixel buffer")
+            return nil
+        }
+        
+        let cgImage = context.makeImage()
+        
+        CVPixelBufferUnlockBaseAddress(self, [])
+        
+        let image = UIImage(cgImage: cgImage!)
+        
+        if let color = image.getPixelColor(point: point) {
+            return color
+        }
+        
+        return nil
+    }
 }
 

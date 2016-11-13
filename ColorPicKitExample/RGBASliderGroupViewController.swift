@@ -39,6 +39,8 @@ class RGBASliderGroupViewController: BaseViewController {
     override func reset() {
         rgbaSliderGroup.color = resetColor
         updateBackgroundColor()
+        
+    
     }
     
 }

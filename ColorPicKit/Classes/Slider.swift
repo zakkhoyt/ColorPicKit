@@ -65,6 +65,18 @@ import UIKit
         }
     }
     
+    private var _showHexPopup = true
+    @IBInspectable public var showHexPopup: Bool {
+        get {
+            return _showHexPopup
+        }
+        set {
+            _showHexPopup = newValue
+        }
+    }
+    
+    
+    
     private var _barHeight: CGFloat = 10
     @IBInspectable public var barHeight: CGFloat {
         get {
@@ -186,6 +198,8 @@ import UIKit
     fileprivate var knobStart: CGPoint!
     fileprivate var panStart: CGPoint!
 
+    fileprivate var hexPopupView: HexPopupView? = nil
+    
     @objc private func panGestureHappened(sender: UIPanGestureRecognizer) {
 
         // Position
@@ -203,13 +217,52 @@ import UIKit
         if sender.state == .began {
             touchesHappened(point)
             touchDown()
+            setHexPopupViewFrame(point: point)
         } else if sender.state == .changed {
             touchesHappened(point)
+            setHexPopupViewFrame(point: point)
         } else if sender.state == .ended {
             touchesHappened(point)
             touchUpInside()
+            removeHexPopupView()
         }
         
+    }
+    
+    fileprivate func removeHexPopupView() {
+        if showHexPopup {
+            if let hexPopupView = hexPopupView {
+                
+                UIView.animate(withDuration: 0.2, animations: {
+                    hexPopupView.alpha = 0
+                }, completion: { (animated) in
+                    hexPopupView.removeFromSuperview()
+                    self.hexPopupView = nil
+                })
+            }
+        }
+    }
+    
+    fileprivate func setHexPopupViewFrame(point: CGPoint) {
+        if showHexPopup {
+            let height: CGFloat = 30
+            let width: CGFloat = 60
+            let halfWidth = width / 2.0
+            let frame = CGRect(x: point.x - halfWidth, y: point.y - (height + knobSize.height / 2.0 + 8), width: width, height: height)
+            
+            if let hexPopupView = self.hexPopupView {
+                hexPopupView.frame = frame
+                return
+            } else {
+                hexPopupView = HexPopupView(frame: frame)
+                hexPopupView?.alpha = 0
+                addSubview(hexPopupView!)
+                UIView.animate(withDuration: 0.2, animations: {
+                    self.hexPopupView?.alpha = 1.0
+                })
+                
+            }
+        }
     }
     
     @objc private func longPressGestureHappened(sender: UILongPressGestureRecognizer) {
@@ -310,6 +363,10 @@ import UIKit
         } else {
             knobView.color = .white
         }
+        
+        let baseSixteen = 255 * value
+        let text = String(format: "0x%02X", UInt(baseSixteen))
+        hexPopupView?.setText(text: text)
     }
     
     private func frameForSliderView() -> CGRect {
