@@ -131,6 +131,7 @@ private let invalidPositionValue = CGFloat(-1.0)
     
     func colorAt(position: CGPoint) -> UIColor {
         assert(false, "Child must implement")
+        return .clear
     }
     
     

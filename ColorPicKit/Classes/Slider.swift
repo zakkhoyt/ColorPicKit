@@ -143,6 +143,7 @@ import UIKit
     
     func colorFrom(value: CGFloat) -> UIColor {
         assert(false, "Child must implement")
+        return .clear
     }
     
     var sliderView: SliderView!
