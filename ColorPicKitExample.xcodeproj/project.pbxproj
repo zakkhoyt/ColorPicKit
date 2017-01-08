@@ -173,6 +173,7 @@
 		C65CDFF21DBD6871005981F3 /* HSLSpectrumView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSLSpectrumView.swift; sourceTree = "<group>"; };
 		C65CDFF61DBD68FB005981F3 /* HSLSpectrumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSLSpectrumViewController.swift; sourceTree = "<group>"; };
 		C65CDFFB1DBD6928005981F3 /* HSLSpectrum.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HSLSpectrum.storyboard; sourceTree = "<group>"; };
+		C6752E821E221F6900243EFB /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		C67547101DB18DD100C2CA45 /* Throttle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Throttle.swift; sourceTree = "<group>"; };
 		C67E67A01DC1604B004E6160 /* RGBASliderGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGBASliderGroup.swift; sourceTree = "<group>"; };
 		C67E67A21DC1609B004E6160 /* RGBASliderGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGBASliderGroupViewController.swift; sourceTree = "<group>"; };
@@ -270,6 +271,7 @@
 		C607EECD1DA96F1400A73F51 = {
 			isa = PBXGroup;
 			children = (
+				C6752E821E221F6900243EFB /* Package.swift */,
 				C68AF68F1DAB3F8F00DA93B5 /* README.md */,
 				C68AF6901DAB3F8F00DA93B5 /* LICENSE */,
 				C68AF6911DAB3F8F00DA93B5 /* ColorPicKit.podspec */,

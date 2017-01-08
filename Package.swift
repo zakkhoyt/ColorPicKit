@@ -1,4 +1,3 @@
 import PackageDescription
 
-let package = Package(
-name: "ColorPicKit")
+let package = Package(name: "ColorPicKit/ColorPicKit")
