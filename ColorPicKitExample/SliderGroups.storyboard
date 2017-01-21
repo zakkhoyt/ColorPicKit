@@ -151,20 +151,42 @@
                                     <constraint firstItem="gTo-j9-f54" firstAttribute="top" secondItem="6ou-1u-kx0" secondAttribute="top" id="qph-d2-b3t"/>
                                 </constraints>
                             </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DiM-LT-5x8">
+                                <rect key="frame" x="0.0" y="1169.5" width="375" height="30.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wqO-Ta-BPg">
+                                        <rect key="frame" x="8" y="8" width="359" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="0.80064858490566038" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="wqO-Ta-BPg" secondAttribute="bottom" constant="8" id="1Ud-ts-EC4"/>
+                                    <constraint firstItem="wqO-Ta-BPg" firstAttribute="top" secondItem="DiM-LT-5x8" secondAttribute="top" constant="8" id="7j0-Ka-zGY"/>
+                                    <constraint firstAttribute="trailing" secondItem="wqO-Ta-BPg" secondAttribute="trailing" constant="8" id="8oX-hU-srW"/>
+                                    <constraint firstItem="wqO-Ta-BPg" firstAttribute="leading" secondItem="DiM-LT-5x8" secondAttribute="leading" constant="8" id="enj-WW-Elh"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="6ou-1u-kx0" firstAttribute="leading" secondItem="lqz-Ha-hPZ" secondAttribute="leading" id="2U7-RX-LKA"/>
+                            <constraint firstAttribute="trailing" secondItem="DiM-LT-5x8" secondAttribute="trailing" id="6xr-dh-Q75"/>
                             <constraint firstAttribute="trailing" secondItem="6ou-1u-kx0" secondAttribute="trailing" id="CjX-gp-ffI"/>
                             <constraint firstItem="gTo-j9-f54" firstAttribute="width" secondItem="lqz-Ha-hPZ" secondAttribute="width" id="ErC-s8-N2X"/>
                             <constraint firstItem="xj9-Ef-arH" firstAttribute="top" secondItem="6ou-1u-kx0" secondAttribute="bottom" id="KOl-HE-XC2"/>
+                            <constraint firstItem="xj9-Ef-arH" firstAttribute="top" secondItem="DiM-LT-5x8" secondAttribute="bottom" id="Zoo-Er-cDY"/>
                             <constraint firstItem="6ou-1u-kx0" firstAttribute="top" secondItem="lqz-Ha-hPZ" secondAttribute="top" id="a5d-Af-wr2"/>
+                            <constraint firstItem="DiM-LT-5x8" firstAttribute="leading" secondItem="lqz-Ha-hPZ" secondAttribute="leading" id="jpt-ub-JPK"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="1200"/>
                     <connections>
                         <outlet property="cmykaSliderGroup" destination="ULh-GC-wav" id="P3R-KD-dSf"/>
+                        <outlet property="colorLabel" destination="wqO-Ta-BPg" id="AFq-6L-uAO"/>
                         <outlet property="hsbaSliderGroup" destination="V1M-uB-XMl" id="uC6-po-U0q"/>
                         <outlet property="hslaSliderGroup" destination="5e0-Zu-zFq" id="STb-g6-w5S"/>
                         <outlet property="rgbaSliderGroup" destination="6KN-Yv-qbl" id="Xug-je-1up"/>

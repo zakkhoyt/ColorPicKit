@@ -19,6 +19,7 @@ public class HSBASlider: Slider {
             if _saturation != newValue {
                 _saturation = newValue
                 hsbaView.saturation = newValue
+                updateKnobColor()
             }
         }
     }
@@ -32,6 +33,7 @@ public class HSBASlider: Slider {
             if _brightness != newValue {
                 _brightness = newValue
                 hsbaView.brightness = newValue
+                updateKnobColor()
             }
         }
     }
@@ -50,7 +52,7 @@ public class HSBASlider: Slider {
     
     override func colorFrom(value: CGFloat) -> UIColor {
         let hue = value
-        let color = UIColor(hue: hue, saturation: 1.0, brightness: 1.0, alpha: 1.0)
+        let color = UIColor(hue: hue, saturation: saturation, brightness: brightness, alpha: 1.0)
         return color
     }
 

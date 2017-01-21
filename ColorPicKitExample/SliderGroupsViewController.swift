@@ -18,6 +18,7 @@ class SliderGroupsViewController: UIViewController {
     @IBOutlet weak var yuvaSliderGroup: HSLASliderGroup!
     
     @IBOutlet var sliderGroups: [SliderGroup]!
+    @IBOutlet weak var colorLabel: UILabel!
     
     
     override func viewDidLoad() {
@@ -52,6 +53,8 @@ class SliderGroupsViewController: UIViewController {
     @IBAction func sliderGroupValueChanged(_ sender: SliderGroup) {
         let color = sender.color
         
+        colorLabel.text = color.rgba().stringFor(type: .baseSixteen)
+        
         for sliderGroup in sliderGroups {
             if sender == sliderGroup {
                 
@@ -59,9 +62,6 @@ class SliderGroupsViewController: UIViewController {
                 sliderGroup.color = color
             }
         }
-        
-    
     }
-    
-
 }
+

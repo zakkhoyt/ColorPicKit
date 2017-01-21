@@ -18,6 +18,7 @@ class HSLASlider: Slider {
             if _saturation != newValue {
                 _saturation = newValue
                 hslaView.saturation = newValue
+                updateKnobColor()
             }
         }
     }
@@ -31,6 +32,7 @@ class HSLASlider: Slider {
             if _lightness != newValue {
                 _lightness = newValue
                 hslaView.lightness = newValue
+                updateKnobColor()
             }
         }
     }
@@ -49,7 +51,8 @@ class HSLASlider: Slider {
     
     override func colorFrom(value: CGFloat) -> UIColor {
         let hue = value
-        let color = UIColor(hue: hue, saturation: 1.0, brightness: 1.0, alpha: 1.0)
+        let hsla = HSLA(hue: hue, saturation: saturation, lightness: lightness)
+        let color = hsla.color()
         return color
     }
 
