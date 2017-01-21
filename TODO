@@ -1,0 +1,18 @@
+
+------- 1.2.3 release list
+Remove video from lib and example
+Remove keypad from lib and example
+
+Update README
+Update video
+    * Remove unwanted stuff
+    * Show off more gesture stuff
+    * Show off color conversion stuff (playground?)
+
+HSLA wheel?
+
+
+UIGesture fix for Y scrolling on groups
+
+
+

@@ -26,6 +26,10 @@ class SliderGroupsViewController: UIViewController {
         navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         
         // Do any additional setup after loading the view.
+        
+        for sliderGroup in sliderGroups {
+            sliderGroup.color = UIColor.red
+        }
     }
 
     override func didReceiveMemoryWarning() {

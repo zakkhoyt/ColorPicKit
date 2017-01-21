@@ -219,6 +219,7 @@ private let invalidPositionValue = CGFloat(-1.0)
 //        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(panGestureHappened))
 //        panGesture.minimumNumberOfTouches = 1
 //        panGesture.maximumNumberOfTouches = 1
+//        panGesture.delegate = self
 //        self.addGestureRecognizer(panGesture)
 //        
 //        // Long press gesture
@@ -430,4 +431,10 @@ private let invalidPositionValue = CGFloat(-1.0)
         
     }
 
+}
+
+extension VideoPixelPicker: UIGestureRecognizerDelegate {
+    public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
 }

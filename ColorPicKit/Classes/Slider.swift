@@ -65,7 +65,7 @@ import UIKit
         }
     }
     
-    private var _showHexPopup = true
+    private var _showHexPopup = false
     @IBInspectable public var showHexPopup: Bool {
         get {
             return _showHexPopup
@@ -174,7 +174,9 @@ import UIKit
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(panGestureHappened))
         panGesture.minimumNumberOfTouches = 1
         panGesture.maximumNumberOfTouches = 1
+        panGesture.delegate = self
         self.addGestureRecognizer(panGesture)
+        
 
         // Long press gesture
         let longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(longPressGestureHappened))
@@ -202,13 +204,12 @@ import UIKit
     fileprivate var hexPopupView: HexPopupView? = nil
     
     @objc private func panGestureHappened(sender: UIPanGestureRecognizer) {
-
         // Position
         if sender.state == .began {
             knobStart = knobView.center
             panStart = sender.location(in: self)
         }
-
+        
         let deltaX = sender.location(in: self).x - panStart.x
         let newX = knobStart.x + deltaX
         
@@ -377,8 +378,10 @@ import UIKit
         let h: CGFloat = barHeight
         return CGRect(x: x, y: y, width: w, height: h)
     }
-    
-    
-    
-    
+}
+
+extension Slider: UIGestureRecognizerDelegate {
+    public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
 }

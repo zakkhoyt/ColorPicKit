@@ -27,6 +27,7 @@
 		C6125D821DBC696B002B5971 /* YUVSpectrumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6125D811DBC696B002B5971 /* YUVSpectrumViewController.swift */; };
 		C6125D841DBC697B002B5971 /* YUVSpectrum.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6125D831DBC697B002B5971 /* YUVSpectrum.storyboard */; };
 		C616AD651DC6579B007B8EE5 /* ColorString.swift in Sources */ = {isa = PBXBuildFile; fileRef = C616AD641DC6579B007B8EE5 /* ColorString.swift */; };
+		C61C46921E2BEFB6004D469A /* TODO in Resources */ = {isa = PBXBuildFile; fileRef = C61C46911E2BEFB6004D469A /* TODO */; };
 		C62E956A1DD8198C005E2352 /* HexPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62E95691DD8198C005E2352 /* HexPopupView.swift */; };
 		C62EED5F1DCD840B00707DB3 /* RGBATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62EED5E1DCD840B00707DB3 /* RGBATests.swift */; };
 		C62EED621DCD86EE00707DB3 /* Clip.swift in Sources */ = {isa = PBXBuildFile; fileRef = C62EED601DCD86A000707DB3 /* Clip.swift */; };
@@ -154,6 +155,7 @@
 		C6125D811DBC696B002B5971 /* YUVSpectrumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YUVSpectrumViewController.swift; sourceTree = "<group>"; };
 		C6125D831DBC697B002B5971 /* YUVSpectrum.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = YUVSpectrum.storyboard; sourceTree = "<group>"; };
 		C616AD641DC6579B007B8EE5 /* ColorString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorString.swift; sourceTree = "<group>"; };
+		C61C46911E2BEFB6004D469A /* TODO */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TODO; sourceTree = "<group>"; };
 		C62E95691DD8198C005E2352 /* HexPopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexPopupView.swift; sourceTree = "<group>"; };
 		C62EED5E1DCD840B00707DB3 /* RGBATests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RGBATests.swift; sourceTree = "<group>"; };
 		C62EED601DCD86A000707DB3 /* Clip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clip.swift; sourceTree = "<group>"; };
@@ -270,6 +272,7 @@
 		C607EECD1DA96F1400A73F51 = {
 			isa = PBXGroup;
 			children = (
+				C61C46911E2BEFB6004D469A /* TODO */,
 				C68AF68F1DAB3F8F00DA93B5 /* README.md */,
 				C68AF6901DAB3F8F00DA93B5 /* LICENSE */,
 				C68AF6911DAB3F8F00DA93B5 /* ColorPicKit.podspec */,
@@ -868,6 +871,7 @@
 				C6DB7CF21DD909D5001ADB28 /* VideoPixelPicker.storyboard in Resources */,
 				C632B5961DD246A500C8727D /* SliderGroups.storyboard in Resources */,
 				C6D87FD81DA9F428004CB7E3 /* GradientSlider.storyboard in Resources */,
+				C61C46921E2BEFB6004D469A /* TODO in Resources */,
 				C6D87FE81DA9F46C004CB7E3 /* ImagePixelPicker.storyboard in Resources */,
 				C6D87FDE1DA9F43F004CB7E3 /* HSBSliderGroup.storyboard in Resources */,
 				C65CDFFC1DBD6928005981F3 /* HSLSpectrum.storyboard in Resources */,
