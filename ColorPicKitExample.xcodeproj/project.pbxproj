@@ -38,9 +38,10 @@
 		C63DF2281DCD020E009D20B7 /* ColorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C63DF2271DCD020E009D20B7 /* ColorView.xib */; };
 		C63DF22A1DCD03AA009D20B7 /* DispatchQueue+Once.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63DF2291DCD03AA009D20B7 /* DispatchQueue+Once.swift */; };
 		C63DF22C1DCD0511009D20B7 /* ColorStringType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C63DF22B1DCD0511009D20B7 /* ColorStringType.swift */; };
+		C6420ACD1E348595007225BB /* ColorTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6420ACB1E348595007225BB /* ColorTextField.swift */; };
+		C6420ACE1E348595007225BB /* HexKeyPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6420ACC1E348595007225BB /* HexKeyPadView.swift */; };
 		C647DB171DC05B1500A52D02 /* SpectrumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C647DB161DC05B1500A52D02 /* SpectrumView.swift */; };
 		C647DB1A1DC0600100A52D02 /* WheelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C647DB191DC0600100A52D02 /* WheelView.swift */; };
-		C65329A51DB4686C00D9EDD5 /* HexKeypad.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65329A41DB4686C00D9EDD5 /* HexKeypad.swift */; };
 		C6558BBB1DC7ACA3005017A8 /* AlphaSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6558BBA1DC7ACA3005017A8 /* AlphaSlider.swift */; };
 		C6558BBD1DC7AD07005017A8 /* AlphaSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6558BBC1DC7AD07005017A8 /* AlphaSliderView.swift */; };
 		C65CDFF31DBD6871005981F3 /* HSLSpectrumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65CDFF21DBD6871005981F3 /* HSLSpectrumView.swift */; };
@@ -68,6 +69,8 @@
 		C68AF6961DAC0B8700DA93B5 /* PositionableControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68AF6951DAC0B8700DA93B5 /* PositionableControl.swift */; };
 		C6B016751DB47D9400B30B3E /* HexKeypadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B016741DB47D9400B30B3E /* HexKeypadViewController.swift */; };
 		C6B016771DB47DAB00B30B3E /* HexKeypad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6B016761DB47DAB00B30B3E /* HexKeypad.storyboard */; };
+		C6B0F14C1E36738E00A3DA81 /* KeyPadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B0F14B1E36738E00A3DA81 /* KeyPadButton.swift */; };
+		C6B0F14E1E3675B000A3DA81 /* DeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B0F14D1E3675B000A3DA81 /* DeleteButton.swift */; };
 		C6D87FAB1DA9F2E3004CB7E3 /* GradientData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D87F931DA9F2E3004CB7E3 /* GradientData.swift */; };
 		C6D87FAC1DA9F2E3004CB7E3 /* GradientSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D87F941DA9F2E3004CB7E3 /* GradientSlider.swift */; };
 		C6D87FAD1DA9F2E3004CB7E3 /* GradientSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D87F951DA9F2E3004CB7E3 /* GradientSliderView.swift */; };
@@ -166,10 +169,11 @@
 		C63DF2271DCD020E009D20B7 /* ColorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorView.xib; sourceTree = "<group>"; };
 		C63DF2291DCD03AA009D20B7 /* DispatchQueue+Once.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Once.swift"; sourceTree = "<group>"; };
 		C63DF22B1DCD0511009D20B7 /* ColorStringType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorStringType.swift; sourceTree = "<group>"; };
+		C6420ACB1E348595007225BB /* ColorTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorTextField.swift; sourceTree = "<group>"; };
+		C6420ACC1E348595007225BB /* HexKeyPadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexKeyPadView.swift; sourceTree = "<group>"; };
 		C64730511DAD6BB8007BBAE7 /* ColorPicKit_protocol_class_diagram.svg */ = {isa = PBXFileReference; lastKnownFileType = text; path = ColorPicKit_protocol_class_diagram.svg; sourceTree = "<group>"; };
 		C647DB161DC05B1500A52D02 /* SpectrumView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpectrumView.swift; sourceTree = "<group>"; };
 		C647DB191DC0600100A52D02 /* WheelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WheelView.swift; sourceTree = "<group>"; };
-		C65329A41DB4686C00D9EDD5 /* HexKeypad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexKeypad.swift; sourceTree = "<group>"; };
 		C6558BBA1DC7ACA3005017A8 /* AlphaSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlphaSlider.swift; sourceTree = "<group>"; };
 		C6558BBC1DC7AD07005017A8 /* AlphaSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlphaSliderView.swift; sourceTree = "<group>"; };
 		C65CDFF21DBD6871005981F3 /* HSLSpectrumView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HSLSpectrumView.swift; sourceTree = "<group>"; };
@@ -200,6 +204,8 @@
 		C68AF6951DAC0B8700DA93B5 /* PositionableControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PositionableControl.swift; sourceTree = "<group>"; };
 		C6B016741DB47D9400B30B3E /* HexKeypadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexKeypadViewController.swift; sourceTree = "<group>"; };
 		C6B016761DB47DAB00B30B3E /* HexKeypad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HexKeypad.storyboard; sourceTree = "<group>"; };
+		C6B0F14B1E36738E00A3DA81 /* KeyPadButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyPadButton.swift; sourceTree = "<group>"; };
+		C6B0F14D1E3675B000A3DA81 /* DeleteButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeleteButton.swift; sourceTree = "<group>"; };
 		C6D87F901DA9F2E3004CB7E3 /* Links.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Links.md; sourceTree = "<group>"; };
 		C6D87F931DA9F2E3004CB7E3 /* GradientData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientData.swift; sourceTree = "<group>"; };
 		C6D87F941DA9F2E3004CB7E3 /* GradientSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientSlider.swift; sourceTree = "<group>"; };
@@ -505,7 +511,10 @@
 		C67FC2981DC417BA0079AAE2 /* Keypad */ = {
 			isa = PBXGroup;
 			children = (
-				C65329A41DB4686C00D9EDD5 /* HexKeypad.swift */,
+				C6420ACB1E348595007225BB /* ColorTextField.swift */,
+				C6420ACC1E348595007225BB /* HexKeyPadView.swift */,
+				C6B0F14B1E36738E00A3DA81 /* KeyPadButton.swift */,
+				C6B0F14D1E3675B000A3DA81 /* DeleteButton.swift */,
 			);
 			name = Keypad;
 			sourceTree = "<group>";
@@ -937,6 +946,7 @@
 				C68AF6961DAC0B8700DA93B5 /* PositionableControl.swift in Sources */,
 				C682427B1DC1776000EFFEFD /* YUVASpectrum.swift in Sources */,
 				C6558BBD1DC7AD07005017A8 /* AlphaSliderView.swift in Sources */,
+				C6420ACE1E348595007225BB /* HexKeyPadView.swift in Sources */,
 				C647DB171DC05B1500A52D02 /* SpectrumView.swift in Sources */,
 				C6D87FAD1DA9F2E3004CB7E3 /* GradientSliderView.swift in Sources */,
 				C62E956A1DD8198C005E2352 /* HexPopupView.swift in Sources */,
@@ -948,9 +958,11 @@
 				C62EED621DCD86EE00707DB3 /* Clip.swift in Sources */,
 				C6D87FAC1DA9F2E3004CB7E3 /* GradientSlider.swift in Sources */,
 				C6D87FCC1DA9F3DC004CB7E3 /* HSBSliderGroupViewController.swift in Sources */,
+				C6B0F14E1E3675B000A3DA81 /* DeleteButton.swift in Sources */,
 				C6D87FD61DA9F41D004CB7E3 /* ImagePixelPickerViewController.swift in Sources */,
 				C6D87FB81DA9F2E3004CB7E3 /* Knob.swift in Sources */,
 				C6558BBB1DC7ACA3005017A8 /* AlphaSlider.swift in Sources */,
+				C6B0F14C1E36738E00A3DA81 /* KeyPadButton.swift in Sources */,
 				C6B016751DB47D9400B30B3E /* HexKeypadViewController.swift in Sources */,
 				C6D87FBA1DA9F2E3004CB7E3 /* SliderControl.swift in Sources */,
 				C6D87FD41DA9F40D004CB7E3 /* HSBWheelBrightnessViewController.swift in Sources */,
@@ -965,7 +977,6 @@
 				C63DF22A1DCD03AA009D20B7 /* DispatchQueue+Once.swift in Sources */,
 				C6DB7CED1DD90945001ADB28 /* VideoPixelPicker.swift in Sources */,
 				C6D87FBC1DA9F2E3004CB7E3 /* UIColor+Utilities.swift in Sources */,
-				C65329A51DB4686C00D9EDD5 /* HexKeypad.swift in Sources */,
 				C647DB1A1DC0600100A52D02 /* WheelView.swift in Sources */,
 				C6DB7CF01DD909C7001ADB28 /* VideoPixelPickerViewController.swift in Sources */,
 				C68242771DC1748900EFFEFD /* HSBASpectrum.swift in Sources */,
@@ -974,6 +985,7 @@
 				C6D87FC41DA9F3B1004CB7E3 /* BaseViewController.swift in Sources */,
 				C6D87FF41DA9F506004CB7E3 /* HSBSpectrumView.swift in Sources */,
 				C682427E1DC178CE00EFFEFD /* Slider.swift in Sources */,
+				C6420ACD1E348595007225BB /* ColorTextField.swift in Sources */,
 				C6D87FB61DA9F2E3004CB7E3 /* Colorable.swift in Sources */,
 				C65CDFF31DBD6871005981F3 /* HSLSpectrumView.swift in Sources */,
 				C6D87FB21DA9F2E3004CB7E3 /* KnobView.swift in Sources */,

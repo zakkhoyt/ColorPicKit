@@ -36,12 +36,12 @@ class BaseViewController: UIViewController {
         colorView.layer.masksToBounds = true
         colorView.layer.cornerRadius = 8.0
         
-        // TODO: Can we get rid of the need for this?
-        DispatchQueue.once {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.01) {
-                self.reset()
-            }
-        }
+//        // TODO: Can we get rid of the need for this?
+//        DispatchQueue.once {
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 0.01) {
+//                self.reset()
+//            }
+//        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

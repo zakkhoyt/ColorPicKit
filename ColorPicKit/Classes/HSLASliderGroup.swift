@@ -107,6 +107,12 @@ import UIKit
             // Brightness
             lightnessSlider.color1 = HSLA(hue: hue, saturation: saturation, lightness: 0.0).color()
             lightnessSlider.color2 = HSLA(hue: hue, saturation: saturation, lightness: 1.0).color()
+            
+            hslaSlider.knobView.color = self.color
+            saturationSlider.knobView.color = self.color
+            lightnessSlider.knobView.color = self.color
+            alphaSlider.knobView.color = self.color
+
         }
     }
     

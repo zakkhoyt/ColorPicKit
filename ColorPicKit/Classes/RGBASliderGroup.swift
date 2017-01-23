@@ -110,10 +110,15 @@ import UIKit
             blueSlider.color1 = UIColor(red: rgba.red, green: rgba.green, blue: 0.0, alpha: rgba.alpha)
             blueSlider.color2 = UIColor(red: rgba.red, green: rgba.green, blue: 1.0, alpha: rgba.alpha)
             
-//            alphaSlider.color1 = UIColor.clear
-//            alphaSlider.color2 = UIColor(red: rgba.red, green: rgba.green, blue: rgba.blue, alpha: 1.0)
-            
+
+            redSlider.knobView.color = self.color
+            greenSlider.knobView.color = self.color
+            blueSlider.knobView.color = self.color
+            alphaSlider.knobView.color = self.color
+
         }
+        
+
         
     }
     

@@ -139,6 +139,12 @@ import UIKit
             blackSlider.color2 = black2.color()
 
 
+            cyanSlider.knobView.color = self.color
+            magentaSlider.knobView.color = self.color
+            yellowSlider.knobView.color = self.color
+            blackSlider.knobView.color = self.color
+            alphaSlider.knobView.color = self.color
+
         }
         
     }

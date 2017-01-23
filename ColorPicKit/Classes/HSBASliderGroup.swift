@@ -109,6 +109,12 @@ import UIKit
             brightnessSlider.color1 = UIColor(hue: hue, saturation: saturation, brightness: 0.0, alpha: 1.0)
             brightnessSlider.color2 = UIColor(hue: hue, saturation: saturation, brightness: 1.0, alpha: 1.0)
             
+            hsbaSlider.knobView.color = self.color
+            saturationSlider.knobView.color = self.color
+            brightnessSlider.knobView.color = self.color
+            alphaSlider.knobView.color = self.color
+
+            
         }
     }
     

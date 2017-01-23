@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A320" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kx2-f6-b6g">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kx2-f6-b6g">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,39 +21,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9EA-Yq-Ggd" customClass="HexKeypad" customModule="ColorPicKitExample" customModuleProvider="target">
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="9EA-Yq-Ggd" secondAttribute="height" multiplier="1:1" id="7X9-77-nvG"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7LA-ob-Xvj" customClass="ColorTextField" customModule="ColorPicKitExample" customModuleProvider="target">
+                                <rect key="frame" x="20" y="318" width="335" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="imagePixelPickerTouchDown:" destination="kx2-f6-b6g" eventType="touchDown" id="obl-E7-71q"/>
-                                    <action selector="imagePixelPickerTouchUpInside:" destination="kx2-f6-b6g" eventType="touchUpInside" id="uXV-Ww-wGU"/>
-                                    <action selector="imagePixelPickerValueChanged:" destination="kx2-f6-b6g" eventType="valueChanged" id="pIG-r0-M07"/>
+                                    <action selector="colorTextFieldValueChanged:" destination="kx2-f6-b6g" eventType="valueChanged" id="EQ8-B2-Ixy"/>
                                 </connections>
-                            </view>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LGR-Tf-nbn">
+                                <rect key="frame" x="20" y="356" width="335" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="alphabet"/>
+                            </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oKs-jk-gEw">
+                                <rect key="frame" x="20" y="20" width="335" height="278"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="oKs-jk-gEw" firstAttribute="leading" secondItem="Mhy-vI-eiR" secondAttribute="leading" constant="20" id="7gF-pn-tmP"/>
-                            <constraint firstItem="9EA-Yq-Ggd" firstAttribute="leading" secondItem="Mhy-vI-eiR" secondAttribute="leadingMargin" id="BDa-LP-mqw"/>
-                            <constraint firstItem="oKs-jk-gEw" firstAttribute="top" secondItem="9EA-Yq-Ggd" secondAttribute="bottom" constant="20" id="HXz-c0-wy7"/>
-                            <constraint firstAttribute="trailing" secondItem="oKs-jk-gEw" secondAttribute="trailing" constant="20" id="HdL-8V-bDI"/>
-                            <constraint firstItem="9EA-Yq-Ggd" firstAttribute="trailing" secondItem="Mhy-vI-eiR" secondAttribute="trailingMargin" id="SyG-Ef-DLr"/>
-                            <constraint firstItem="XQn-pQ-pRo" firstAttribute="top" secondItem="oKs-jk-gEw" secondAttribute="bottom" constant="20" id="tC1-hn-cHA"/>
-                            <constraint firstItem="9EA-Yq-Ggd" firstAttribute="centerY" secondItem="Mhy-vI-eiR" secondAttribute="centerY" id="wUa-OL-qxb"/>
+                            <constraint firstItem="oKs-jk-gEw" firstAttribute="top" secondItem="Mhy-vI-eiR" secondAttribute="top" constant="20" id="4aq-uh-ZNx"/>
+                            <constraint firstItem="7LA-ob-Xvj" firstAttribute="leading" secondItem="Mhy-vI-eiR" secondAttribute="leading" constant="20" id="69n-gn-WLb"/>
+                            <constraint firstItem="LGR-Tf-nbn" firstAttribute="top" secondItem="7LA-ob-Xvj" secondAttribute="bottom" constant="8" id="GdK-Uu-MjK"/>
+                            <constraint firstItem="oKs-jk-gEw" firstAttribute="leading" secondItem="Mhy-vI-eiR" secondAttribute="leading" constant="20" id="RQN-La-niw"/>
+                            <constraint firstItem="LGR-Tf-nbn" firstAttribute="width" secondItem="7LA-ob-Xvj" secondAttribute="width" id="Tgw-d3-hEQ"/>
+                            <constraint firstAttribute="trailing" secondItem="7LA-ob-Xvj" secondAttribute="trailing" constant="20" id="XUF-kq-kfm"/>
+                            <constraint firstItem="7LA-ob-Xvj" firstAttribute="centerY" secondItem="Mhy-vI-eiR" secondAttribute="centerY" id="aJU-Gg-JPR"/>
+                            <constraint firstItem="7LA-ob-Xvj" firstAttribute="top" secondItem="oKs-jk-gEw" secondAttribute="bottom" constant="20" id="cch-nB-fZ7"/>
+                            <constraint firstItem="LGR-Tf-nbn" firstAttribute="centerX" secondItem="7LA-ob-Xvj" secondAttribute="centerX" id="lNA-YL-f58"/>
+                            <constraint firstAttribute="trailing" secondItem="oKs-jk-gEw" secondAttribute="trailing" constant="20" id="nUS-xY-nJ5"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="colorTextField" destination="7LA-ob-Xvj" id="qXc-hi-Hb0"/>
                         <outlet property="colorView" destination="oKs-jk-gEw" id="UHg-xI-Dol"/>
-                        <outlet property="hexKeyboard" destination="9EA-Yq-Ggd" id="RhY-gU-bMM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B0v-Sl-eLz" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -124,6 +124,13 @@ import UIKit
 //            var alpha2 = self.color.yuva()
 //            alpha2.alpha = 1.0
 //            alphaSlider.color2 = alpha2.color()
+            
+            
+            ySlider.knobView.color = self.color
+            uSlider.knobView.color = self.color
+            vSlider.knobView.color = self.color
+            alphaSlider.knobView.color = self.color
+
    
         }
         
