@@ -30,13 +30,9 @@ class DeleteButton: KeyPadButton {
         let lineColor = UIColor.black.cgColor
         
         topLine = CAShapeLayer()
-        topLine?.fillColor = lineColor
-        topLine?.strokeColor = lineColor
         layer.addSublayer(topLine!)
         
         bottomLine = CAShapeLayer()
-        bottomLine?.fillColor = lineColor
-        bottomLine?.strokeColor = lineColor
         layer.addSublayer(bottomLine!)
 
 
@@ -58,11 +54,11 @@ class DeleteButton: KeyPadButton {
                 let y: CGFloat = centerY - 10.6
                 path.addLine(to: CGPoint(x: x, y: y))
             }
-            
+
+            topLine?.fillColor = lineColor
+            topLine?.strokeColor = lineColor
             topLine.path = path.cgPath
             topLine.lineWidth = 3.0
-            path.lineCapStyle = .round
-            path.stroke()
         }
         
         do {
@@ -78,10 +74,10 @@ class DeleteButton: KeyPadButton {
                 path.addLine(to: CGPoint(x: x, y: y))
             }
             
+            bottomLine?.fillColor = lineColor
+            bottomLine?.strokeColor = lineColor
             bottomLine.path = path.cgPath
             bottomLine.lineWidth = 3.0
-            path.lineCapStyle = .round
-            path.stroke()
         }
     }
 }

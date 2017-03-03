@@ -75,6 +75,33 @@ public enum ColorTextFieldStyle: Int {
         }
         
     }
+    
+    func format() -> String {
+        switch self {
+        case .rgb:
+            return "RRGGBB"
+        case .rgba:
+            return "RRGGBBAA"
+        case .hsb:
+            return "HHSSBB"
+        case .hsba:
+            return "HHSSBBAA"
+        case .hsl:
+            return "HHSSLL"
+        case .hsla:
+            return "HHSSLLAA"
+        case .cmyk:
+            return "CCMMYYKK"
+        case .cmyka:
+            return "CCMMYYKKAA"
+        case .yuv:
+            return "YYUUVV"
+        case .yuva:
+            return "YYUUVVAA"
+        }
+        
+    }
+
 }
 
 @IBDesignable public class ColorTextField: UITextField {
@@ -159,8 +186,9 @@ public enum ColorTextFieldStyle: Int {
             styleLabel = UILabel(frame: CGRect(x: leftPadding, y: 0, width: 20, height: 20))
         }
         styleLabel.font = self.font
-        styleLabel.text = style.title() + ":"
-        styleLabel.textColor = tintColor
+        styleLabel.text = "[" + style.format() + "]"
+        //styleLabel.textColor = tintColor
+        styleLabel.textColor = self.textColor?.withAlphaComponent(0.5)
         styleLabel.sizeToFit()
         
         
