@@ -125,11 +125,15 @@ private let invalidPositionValue = CGFloat(-1.0)
                 return _color
             }
 
-            guard let pixelBufferSize = self.pixelBufferSize else {
+            if self.pixelBufferSize == nil {
                 print("No pixel buffer size")
                 return _color
             }
 
+//            guard let pixelBufferSize = self.pixelBufferSize else {
+//                print("No pixel buffer size")
+//                return _color
+//            }
             
             
 //            let frame = frameForImageView()

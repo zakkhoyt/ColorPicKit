@@ -79,9 +79,9 @@ class WheelView: UIView {
     func colorForPoint(_ point: CGPoint) -> RGBA {
         //print("point: \(point) bounds: \(bounds)")
         let center = CGPoint(x: radius, y: radius)
-        let angle = atan2(point.x - center.x, point.y - center.y) + CGFloat(M_PI)
+        let angle = atan2(point.x - center.x, point.y - center.y) + CGFloat.pi
         let dist = pointDistance(point, CGPoint(x: center.x, y: center.y))
-        var hue  = angle / CGFloat(M_PI * 2.0)
+        var hue  = angle / CGFloat.pi * 2.0
         hue = min(hue, 1.0 - 0.0000001)
         hue = max(hue, 0.0)
         
@@ -96,7 +96,7 @@ class WheelView: UIView {
     
     func pointForColor(color: UIColor) -> CGPoint {
         let hsba = color.hsba()
-        let angle = (hsba.hue * CGFloat(2*M_PI)) + CGFloat(M_PI_2)
+        let angle = (hsba.hue * CGFloat.pi * 2.0) + CGFloat.pi / 2.0
         let distance = radius * hsba.saturation
         let center = CGPoint(x: bounds.midX, y: bounds.midY)
         let x = center.x + distance * cos(angle)
