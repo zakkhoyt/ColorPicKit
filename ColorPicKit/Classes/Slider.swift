@@ -195,8 +195,8 @@ import UIKit
     }
     
     
-    fileprivate let lightFeedback = UIImpactFeedbackGenerator(style: .light)
-    fileprivate let mediumFeedback = UIImpactFeedbackGenerator(style: .medium)
+    //fileprivate let lightFeedback = UIImpactFeedbackGenerator(style: .light)
+    //fileprivate let mediumFeedback = UIImpactFeedbackGenerator(style: .medium)
     
     fileprivate var knobStart: CGPoint!
     fileprivate var panStart: CGPoint!

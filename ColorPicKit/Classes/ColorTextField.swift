@@ -170,10 +170,9 @@ public enum ColorTextFieldStyle: Int {
         updateLeftView()
         updateRightView()
         
-        let font = self.font
         if let placeholder = placeholder {
             let attr = [NSForegroundColorAttributeName: tintColor.withAlphaComponent(0.5),
-                        NSFontAttributeName: font]
+                        NSFontAttributeName: self.font!] as [String : Any]
             attributedPlaceholder = NSAttributedString(string: placeholder, attributes: attr)
         }
     }

@@ -125,34 +125,39 @@ class VideoCaptureView: UIView {
     }
     
     func captureDeviceFor(position: AVCaptureDevicePosition) -> AVCaptureDevice? {
-        let deviceTypes = [AVCaptureDeviceType.builtInDuoCamera, AVCaptureDeviceType.builtInWideAngleCamera, AVCaptureDeviceType.builtInTelephotoCamera]
-        let discovery = AVCaptureDeviceDiscoverySession(deviceTypes: deviceTypes, mediaType: AVMediaTypeVideo, position: AVCaptureDevicePosition.unspecified)
-        let cameras = discovery?.devices
-        
-        if let cameras = cameras {
-            if position == .front {
-                for camera in cameras {
-                    if camera.position == .front {
-                        return camera
+        if #available(iOS 10.0, *) {
+            let deviceTypes = [AVCaptureDeviceType.builtInDuoCamera, AVCaptureDeviceType.builtInWideAngleCamera, AVCaptureDeviceType.builtInTelephotoCamera]
+            let discovery = AVCaptureDeviceDiscoverySession(deviceTypes: deviceTypes, mediaType: AVMediaTypeVideo, position: AVCaptureDevicePosition.unspecified)
+            let cameras = discovery?.devices
+            
+            if let cameras = cameras {
+                if position == .front {
+                    for camera in cameras {
+                        if camera.position == .front {
+                            return camera
+                        }
                     }
-                }
-            } else if position == .back {
-                // Prefer duo camera
-                for camera in cameras {
-                    if camera.deviceType == AVCaptureDeviceType.builtInDuoCamera {
-                        return camera
+                } else if position == .back {
+                    // Prefer duo camera
+                    for camera in cameras {
+                        if camera.deviceType == AVCaptureDeviceType.builtInDuoCamera {
+                            return camera
+                        }
                     }
-                }
-                
-                for camera in cameras {
-                    if camera.deviceType == AVCaptureDeviceType.builtInWideAngleCamera {
-                        return camera
+                    
+                    for camera in cameras {
+                        if camera.deviceType == AVCaptureDeviceType.builtInWideAngleCamera {
+                            return camera
+                        }
                     }
+                    
+                    return cameras.first
                 }
-                
-                return cameras.first
             }
+        } else {
+            // Fallback on earlier versions
         }
+        
         return nil
         
     }
