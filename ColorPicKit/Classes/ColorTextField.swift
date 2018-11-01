@@ -135,7 +135,6 @@ public enum ColorTextFieldStyle: Int {
     }
     
     
-    @IBInspectable
     public var style: ColorTextFieldStyle = .hsba
     
     
@@ -171,9 +170,9 @@ public enum ColorTextFieldStyle: Int {
         updateRightView()
         
         if let placeholder = placeholder {
-            let attr = [NSForegroundColorAttributeName: tintColor.withAlphaComponent(0.5),
-                        NSFontAttributeName: self.font!] as [String : Any]
-            attributedPlaceholder = NSAttributedString(string: placeholder, attributes: attr)
+            let attr = [convertFromNSAttributedStringKey(NSAttributedString.Key.foregroundColor): tintColor.withAlphaComponent(0.5),
+                        convertFromNSAttributedStringKey(NSAttributedString.Key.font): self.font!] as [String : Any]
+            attributedPlaceholder = NSAttributedString(string: placeholder, attributes: convertToOptionalNSAttributedStringKeyDictionary(attr))
         }
     }
     
@@ -297,7 +296,7 @@ extension ColorTextField: UITextFieldDelegate {
         }
         
         let requiredLength = style.requiredLength()
-        if text.characters.count < requiredLength {
+        if text.count < requiredLength {
             
         } else {
             textField.resignFirstResponder()
@@ -312,7 +311,7 @@ extension ColorTextField: HexKeyPadViewDelegate {
     func hexKeyPadView(_ hexKeyPadView: HexKeyPadView, didPressKey key: String) {
         if let text = self.text {
             let requiredLength = style.requiredLength()
-            if text.characters.count < requiredLength {
+            if text.count < requiredLength {
                 self.text = text + key
             }
         } else {
@@ -329,7 +328,7 @@ extension ColorTextField: HexKeyPadViewDelegate {
     
     func hexKeyPadViewDidPressDeleteKey(_ hexKeyPadView: HexKeyPadView) {
         if let text = self.text {
-            if text.characters.count > 0 {
+            if text.count > 0 {
 //                let truncated = text.substring(to: text.index(before: text.endIndex))
 //                self.text = truncated
                 self.deleteBackward()
@@ -341,4 +340,15 @@ extension ColorTextField: HexKeyPadViewDelegate {
     
     
     
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromNSAttributedStringKey(_ input: NSAttributedString.Key) -> String {
+	return input.rawValue
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToOptionalNSAttributedStringKeyDictionary(_ input: [String: Any]?) -> [NSAttributedString.Key: Any]? {
+	guard let input = input else { return nil }
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (NSAttributedString.Key(rawValue: key), value)})
 }

@@ -22,8 +22,8 @@ private let invalidPositionValue = CGFloat(-1.0)
         }
         set {
             // We don't want to accept infinities or NaN
-            if fabs(newValue.x) == CGFloat.infinity ||
-                fabs(newValue.y) == CGFloat.infinity {
+            if abs(newValue.x) == CGFloat.infinity ||
+                abs(newValue.y) == CGFloat.infinity {
                 return
             }
             if newValue.x == CGFloat.nan || newValue.y == CGFloat.nan {
@@ -312,8 +312,8 @@ private let invalidPositionValue = CGFloat(-1.0)
             
             let newPosition = CGPoint(x: center.x + vec2.x * wheelView.radius, y: center.y + vec2.y * wheelView.radius)
             // We don't want to accept infinities or NaN
-            if fabs(newPosition.x) == CGFloat.infinity ||
-                fabs(newPosition.y) == CGFloat.infinity {
+            if abs(newPosition.x) == CGFloat.infinity ||
+                abs(newPosition.y) == CGFloat.infinity {
                 print("Will not set position to infinity: \(newPosition)")
                 return
             }

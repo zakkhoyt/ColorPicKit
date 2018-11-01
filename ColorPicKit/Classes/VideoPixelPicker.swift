@@ -21,8 +21,8 @@ private let invalidPositionValue = CGFloat(-1.0)
         }
         set {
             // We don't want to accept infinities or NaN
-            if fabs(newValue.x) == CGFloat.infinity ||
-                fabs(newValue.y) == CGFloat.infinity {
+            if abs(newValue.x) == CGFloat.infinity ||
+                abs(newValue.y) == CGFloat.infinity {
                 return
             }
             if newValue.x == CGFloat.nan || newValue.y == CGFloat.nan {

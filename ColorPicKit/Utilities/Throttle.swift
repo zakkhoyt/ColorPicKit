@@ -12,13 +12,13 @@ public class Throttle {
 
     private static var _tokens = [String: Date]()
     
-    public class func limitTo(file: String = #file, function: String = #function, line: Int = #line, every: TimeInterval, block:(Void)->Void) {
+    public class func limitTo(file: String = #file, function: String = #function, line: Int = #line, every: TimeInterval, block:()->Void) {
         let token = file + ":" + function + ":" + String(line)
         limitTo(token: token, every:every, block: block)
     }
     
     
-    public class func limitTo(token: String, every: TimeInterval, block:(Void)->Void) {
+    public class func limitTo(token: String, every: TimeInterval, block:()->Void) {
         objc_sync_enter(self)
         defer { objc_sync_exit(self) }
         

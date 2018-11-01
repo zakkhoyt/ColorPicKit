@@ -241,17 +241,17 @@ import UIKit
     }
     
  
-    func sliderValueChanged(sender: GradientSlider) {
+    @objc func sliderValueChanged(sender: GradientSlider) {
         valueChanged()
         updateSliderColors()
     }
-    func sliderTouchDown(sender: GradientSlider) {
+    @objc func sliderTouchDown(sender: GradientSlider) {
         valueChanged()
         touchDown()
         updateSliderColors()
     }
     
-    func sliderTouchUpInside(sender: GradientSlider) {
+    @objc func sliderTouchUpInside(sender: GradientSlider) {
         valueChanged()
         touchUpInside()
         updateSliderColors()

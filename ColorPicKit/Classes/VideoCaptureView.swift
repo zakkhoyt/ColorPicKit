@@ -76,14 +76,15 @@ class VideoCaptureView: UIView {
         previewLayer.frame = self.bounds
         previewLayer.masksToBounds = true
         //previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
-        previewLayer.videoGravity = AVLayerVideoGravityResizeAspect
+        previewLayer.videoGravity = AVLayerVideoGravity(rawValue: convertFromAVLayerVideoGravity(AVLayerVideoGravity.resizeAspect))
         
 
         self.layer.addSublayer(previewLayer)
         
         // Set output (pixel callback)
         let pixelOutput = AVCaptureVideoDataOutput()
-        pixelOutput.videoSettings = [kCVPixelBufferPixelFormatTypeKey as AnyHashable: Int(kCVPixelFormatType_32BGRA)]
+        //pixelOutput.videoSettings = [kCVPixelBufferPixelFormatTypeKey as AnyHashable: Int(kCVPixelFormatType_32BGRA)] as! [String : Any]
+        pixelOutput.videoSettings = [kCVPixelBufferPixelFormatTypeKey as String: Int(kCVPixelFormatType_32BGRA)]
         pixelOutput.alwaysDiscardsLateVideoFrames = true
         pixelOutput.setSampleBufferDelegate(self, queue: DispatchQueue.main)
         if captureSession.canAddOutput(pixelOutput) {
@@ -96,14 +97,14 @@ class VideoCaptureView: UIView {
         captureSession.startRunning()
     }
     
-    func videoInputFor(position: AVCaptureDevicePosition) -> AVCaptureDeviceInput? {
+    func videoInputFor(position: AVCaptureDevice.Position) -> AVCaptureDeviceInput? {
         
         guard let videoCaptureDevice = captureDeviceFor(position: position) else {
             return nil
         }
 
         // White balance
-        if videoCaptureDevice.isWhiteBalanceModeSupported(AVCaptureWhiteBalanceMode.locked) {
+        if videoCaptureDevice.isWhiteBalanceModeSupported(AVCaptureDevice.WhiteBalanceMode.locked) {
             do {
                 try videoCaptureDevice.lockForConfiguration()
                 videoCaptureDevice.whiteBalanceMode = .locked
@@ -124,13 +125,13 @@ class VideoCaptureView: UIView {
         return nil
     }
     
-    func captureDeviceFor(position: AVCaptureDevicePosition) -> AVCaptureDevice? {
+    func captureDeviceFor(position: AVCaptureDevice.Position) -> AVCaptureDevice? {
         if #available(iOS 10.0, *) {
-            let deviceTypes = [AVCaptureDeviceType.builtInDuoCamera, AVCaptureDeviceType.builtInWideAngleCamera, AVCaptureDeviceType.builtInTelephotoCamera]
-            let discovery = AVCaptureDeviceDiscoverySession(deviceTypes: deviceTypes, mediaType: AVMediaTypeVideo, position: AVCaptureDevicePosition.unspecified)
-            let cameras = discovery?.devices
+            let deviceTypes = [AVCaptureDevice.DeviceType.builtInDuoCamera, AVCaptureDevice.DeviceType.builtInWideAngleCamera, AVCaptureDevice.DeviceType.builtInTelephotoCamera]
+            let discovery = AVCaptureDevice.DiscoverySession(deviceTypes: deviceTypes, mediaType: AVMediaType(rawValue: convertFromAVMediaType(AVMediaType.video)), position: AVCaptureDevice.Position.unspecified)
+            let cameras = discovery.devices
             
-            if let cameras = cameras {
+            //if let cameras = cameras {
                 if position == .front {
                     for camera in cameras {
                         if camera.position == .front {
@@ -140,20 +141,20 @@ class VideoCaptureView: UIView {
                 } else if position == .back {
                     // Prefer duo camera
                     for camera in cameras {
-                        if camera.deviceType == AVCaptureDeviceType.builtInDuoCamera {
+                        if camera.deviceType == AVCaptureDevice.DeviceType.builtInDuoCamera {
                             return camera
                         }
                     }
                     
                     for camera in cameras {
-                        if camera.deviceType == AVCaptureDeviceType.builtInWideAngleCamera {
+                        if camera.deviceType == AVCaptureDevice.DeviceType.builtInWideAngleCamera {
                             return camera
                         }
                     }
                     
                     return cameras.first
                 }
-            }
+//            }
         } else {
             // Fallback on earlier versions
         }
@@ -165,9 +166,9 @@ class VideoCaptureView: UIView {
 }
 
 extension VideoCaptureView: AVCaptureVideoDataOutputSampleBufferDelegate {
-    func captureOutput(_ captureOutput: AVCaptureOutput!,
-                       didOutputSampleBuffer sampleBuffer: CMSampleBuffer!,
-                       from connection: AVCaptureConnection!) {
+    func captureOutput(_ captureOutput: AVCaptureOutput,
+                       didOutput sampleBuffer: CMSampleBuffer,
+                       from connection: AVCaptureConnection) {
         print("captureOutput")
 //        
 //        
@@ -235,4 +236,14 @@ extension VideoCaptureView: AVCaptureVideoDataOutputSampleBufferDelegate {
 //        }
         
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromAVLayerVideoGravity(_ input: AVLayerVideoGravity) -> String {
+	return input.rawValue
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromAVMediaType(_ input: AVMediaType) -> String {
+	return input.rawValue
 }

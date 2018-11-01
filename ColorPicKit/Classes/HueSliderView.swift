@@ -65,7 +65,7 @@ public class HueSliderView: SliderView {
         
         let bitmapInfo: CGBitmapInfo = []
         
-        let callback: CGDataProviderReleaseDataCallback = { _ in
+        let callback: CGDataProviderReleaseDataCallback = { _,_,_  in
             
         }
         if let dataProvider = CGDataProvider(dataInfo: nil, data: &imageData, size: dataLength, releaseData: callback) {

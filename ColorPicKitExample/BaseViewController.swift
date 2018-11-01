@@ -50,7 +50,7 @@ class BaseViewController: UIViewController {
     }
     
     
-    func resetBarbAction(sender: UIBarButtonItem) {
+    @objc func resetBarbAction(sender: UIBarButtonItem) {
         trace()
         reset()
     }

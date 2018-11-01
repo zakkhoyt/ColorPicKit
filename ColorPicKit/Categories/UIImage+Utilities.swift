@@ -165,8 +165,8 @@ extension UIImage {
     class func getColorAt(point: CGPoint, in pixelBuffer: CVPixelBuffer) -> UIColor? {
         
         // We don't want to accept infinities or NaN
-        if fabs(point.x) == CGFloat.infinity ||
-            fabs(point.y) == CGFloat.infinity {
+        if abs(point.x) == CGFloat.infinity ||
+            abs(point.y) == CGFloat.infinity {
             print("Cannot get color at point (infinity): \(point)")
             return nil
         }
@@ -209,8 +209,8 @@ extension CVPixelBuffer {
     public func getColorAt(point: CGPoint) -> UIColor? {
         
         // We don't want to accept infinities or NaN
-        if fabs(point.x) == CGFloat.infinity ||
-            fabs(point.y) == CGFloat.infinity {
+        if abs(point.x) == CGFloat.infinity ||
+            abs(point.y) == CGFloat.infinity {
             print("Cannot get color at point (infinity): \(point)")
             return nil
         }
