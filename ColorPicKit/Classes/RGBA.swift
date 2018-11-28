@@ -102,7 +102,7 @@ extension RGBA: ColorString {
 extension UIColor {
     
     // MARK: UIColor to self
-    public func rgba(alpha: CGFloat = 1.0) -> RGBA {
+    func rgba(alpha: CGFloat = 1.0) -> RGBA {
         var red: CGFloat = 0
         var green: CGFloat = 0
         var blue: CGFloat = 0

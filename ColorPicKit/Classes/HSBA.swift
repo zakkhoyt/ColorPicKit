@@ -102,7 +102,7 @@ extension HSBA: ColorString {
 extension UIColor {
     
     // MARK: self to struct
-    public func hsba(alpha: CGFloat = 1.0) -> HSBA {
+    func hsba(alpha: CGFloat = 1.0) -> HSBA {
         var hue: CGFloat = 0
         var saturation: CGFloat = 0
         var brightness: CGFloat = 0
